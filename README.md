@@ -19,14 +19,6 @@ Each quarter, the company publishes updated datasets to [their website](https://
 **[Note]** Additionally, a new feature column was made during the EDA to transform the 'Start date' data type as a datetime() object. This allowed segmentation of transactions during various times of the day - categorized as 'morning', 'afternoon', and 'evening' rides. 
 
 
-   Duration           Start date             End date  Start station number                                Start station  End station number                             End station Bike number Member type
-0       679  2018-05-01 00:00:00  2018-05-01 00:11:19                 31302                 Wisconsin Ave & Newark St NW               31307  3000 Connecticut Ave NW / National Zoo      W22771      Member
-1       578  2018-05-01 00:00:20  2018-05-01 00:09:59                 31232    7th & F St NW / National Portrait Gallery               31609                   Maine Ave & 7th St SW      W21320      Casual
-2       580  2018-05-01 00:00:28  2018-05-01 00:10:09                 31232    7th & F St NW / National Portrait Gallery               31609                   Maine Ave & 7th St SW      W20863      Casual
-3       606  2018-05-01 00:01:22  2018-05-01 00:11:29                 31104                  Adams Mill & Columbia Rd NW               31509                New Jersey Ave & R St NW      W00822      Member
-4       582  2018-05-01 00:04:52  2018-05-01 00:14:34                 31129  15th St & Pennsylvania Ave NW/Pershing Park               31118                         3rd & Elm St NW      W21846      Member
-
-
 |   |Duration  |Start date            | End date           |Start station number | Start station                             |End station number |End station                            |Bike number  |Member type       |
 |---| -------- |:--------------------:| ------------------:| ------------------- |:-----------------------------------------:| -----------------:|--------------------------------------:|------------:|-----------------:|
 |0  |   679    |2018-05-01 00:00:00   |2018-05-01 00:11:19 |31302                |Wisconsin Ave & Newark St NW               |31307              |3000 Connecticut Ave NW / National Zoo |W22771       |Member            |
