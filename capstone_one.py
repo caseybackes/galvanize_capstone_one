@@ -12,11 +12,12 @@ def pd_csv_group(data_folder):
     '''Returns a DataFrame built from all csv/txt files in a directory'''
     files = listdir(data_folder)
     df_list = []
-
+    print("stacking dataframes....")
+    print('(Please be patient for ~ 30 seconds)')
     for file in listdir(data_folder):
         f = pd.read_csv(data_folder+file)
         df_list.append(f)
-        
+
     return pd.concat(df_list, axis=0, ignore_index=True)
 
 def lifetime(duration):
@@ -49,14 +50,8 @@ class BikeReport(object):
 
 if __name__ == '__main__':
     # Define the folder containing only data files (csv or txt)
-    data_folder = "/Users/casey/Documents/galvanize/capstone_one/data/"
+    data_folder = "data/"
     df = pd_csv_group(data_folder)
-
-    # Histogram of stations and their cumulative duration of rides started there. 
-    df[['Start station number','Duration']]\
-        .groupby('Start station number')\
-            .count().sort_values(by='Duration', ascending = False)\
-                .hist(bins = 100) 
     
     # Which bikes (by bike number) have been used the most (by duration)?
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
@@ -82,30 +77,12 @@ if __name__ == '__main__':
     evening_rides = df[df['Start time'] > dt.time(15,0,0)] # mask applied to df with start times after 3pm
 
 
-    # ###     grouped by start station and summing along 'Duration' column for each group
-        # popular_morning_stations = morning_rides.groupby('Start station').agg({'Duration':'sum'}).sort_values(by = 'Duration', ascending = False)
-        # ####        what are the top 10% of all stations
-        # top_morning_stations = popular_morning_stations[:popular_morning_stations.count()[0]//10-1].index # .index gives the station names in this DF
-        
-        # ###     grouped by start station and summing along 'Duration' column for each group
-        # popular_afternoon_stations = afternoon_rides.groupby('Start station').agg({'Duration':'sum'}).sort_values(by = 'Duration', ascending = False)
-        # ####        what are the top 10% of all stations
-        # top_afternoon_stations = popular_afternoon_stations[:popular_afternoon_stations.count()[0]//10-1].index # .index gives the station names in this DF
-        
-        # ###     grouped by start station and summing along 'Duration' column for each group
-        # popular_evening_stations = evening_rides.groupby('Start station').agg({'Duration':'sum'}).sort_values(by = 'Duration', ascending = False)
-        # ####        what are the top 10% of all stations
-        # top_evening_stations = popular_evening_stations[:popular_evening_stations.count()[0]//10-1].index # .index gives the station names in this DF
-    
-    # ------- SECOND TAKE AT ANALYSIS
+    # - - - Gather data by most popular station during time of day 
     popular_morning_stations = morning_rides['Start station'].value_counts()[0:10]
     popular_afternoon_stations = afternoon_rides['Start station'].value_counts()[0:10]
     popular_evening_stations = evening_rides['Start station'].value_counts()[0:10]
 
- 
-    '''Lets see a plot that compares the most popular start stations in the morning 
-    '''
-    # # - - - select a style
+    # - - - select a style
     plt.style.use('fivethirtyeight')
     fig,ax = plt.subplots(figsize=(20,10))
     
