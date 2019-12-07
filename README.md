@@ -31,3 +31,10 @@ Each quarter, the company publishes updated datasets to [their website](https://
 2       580  2018-05-01 00:00:28  2018-05-01 00:10:09                 31232    7th & F St NW / National Portrait Gallery               31609                   Maine Ave & 7th St SW      W20863      Casual
 3       606  2018-05-01 00:01:22  2018-05-01 00:11:29                 31104                  Adams Mill & Columbia Rd NW               31509                New Jersey Ave & R St NW      W00822      Member
 4       582  2018-05-01 00:04:52  2018-05-01 00:14:34                 31129  15th St & Pennsylvania Ave NW/Pershing Park               31118                         3rd & Elm St NW      W21846      Member
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
