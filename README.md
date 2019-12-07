@@ -15,5 +15,5 @@ Each quarter, the company publishes updated datasets to [their website](https://
 - Bike Number – Includes ID number of bike used for the trip
 - Member Type – Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass 3-Day Pass or 5-Day Pass)
 
-[Note]Additionally, a new feature column was made during the EDA to transform the 'Start date' data type as a datetime() object. This allowed segmentation of transactions during various times of the day - categorized as 'morning', 'afternoon', and 'evening' rides. 
+**[Note]** Additionally, a new feature column was made during the EDA to transform the 'Start date' data type as a datetime() object. This allowed segmentation of transactions during various times of the day - categorized as 'morning', 'afternoon', and 'evening' rides. 
 
