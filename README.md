@@ -3,6 +3,9 @@
 
 The [Capital Bikeshare](https://capitalbikeshare.com) company rents bikes to its member customers and casual users in most metro areas of Washington DC. These bikes are equiped with basic tracking devices and accumulate a fair amount of data per ride. In this EDA excercise, we will perform some fairly basic statistical analyses focused on the assets (bikes) and the infrastructure (stations) central to the Capital Bikeshare business model, and make some well-informed and data-driven recommendations to the company. 
 
+![Capitol Bikeshare][fig0]
+
+[fig0]: plots/capitolbikeshare.png "Capitol Bikeshare"
 
 ### About the Data
 Each quarter, the company publishes updated datasets to [their website](https://capitalbikeshare.com/system-data), as CSV files for each month in the latest quarter. Data is available as far back as 2010, though for this analysis we will focus on the last two years. Even this relatively small subset of the data consists of around 6.5M rows of transaction data. While this may be quite small compared to 'big data', it is of adequate sample size for basic EDA and determining statistical trends. The data has no missing values or NaNs, as the transaction data are automatically collected and preformatted. The only modification to the data has been to remove test transactions and engineering runs by the Capital Bikeshare staff. Below is the list of the (original) nine columns/features of each transaction occurance (row) as well as breif descriptions.
@@ -35,4 +38,4 @@ This allows us to frame three questions to pursure in this EDA:
 
 ![Top Ten Stations by Time of Day][fig1]
 
-[fig1]: plots/top_ten_stations_by_time_of_day.png "Logo Title Text 2"
+[fig1]: plots/top_ten_stations_by_time_of_day.png "Top Ten Stations by Time of Day"
