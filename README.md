@@ -33,8 +33,8 @@ Each quarter, the company publishes updated datasets to [their website](https://
 4       582  2018-05-01 00:04:52  2018-05-01 00:14:34                 31129  15th St & Pennsylvania Ave NW/Pershing Park               31118                         3rd & Elm St NW      W21846      Member
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tables        | Are           | Cool  | Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 | col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 | col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 | zebra stripes | are neat      |    $1 |
