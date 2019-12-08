@@ -2,22 +2,22 @@ import numpy as np
 import pandas as pd
 import datetime as dt
 import matplotlib.pyplot as plt
-from os import listdir
+import os
+from collections import OrderedDict
 
 # DATA SOURCE
 # https://s3.amazonaws.com/capitalbikeshare-data/index.html
 
 
-def pd_csv_group(data_folder, first_few=None):
+def pd_csv_group(data_folder):
     '''Returns a DataFrame built from all csv/txt files in a directory'''
-    if first_few:
-        files = listdir(data_folder)[0:first_few]
-    else:
-        files = listdir(data_folder)
+    #files = [f if os.path.isfile(f) f in listdir(data_folder) ]
+    files = [f for f in os.listdir(data_folder) if os.path.isfile(f)]
+
     df_list = []
     print("stacking dataframes....")
     print('(Please be patient for ~ 30 seconds)')
-    for file in listdir(data_folder):
+    for file in os.listdir(data_folder):
         f = pd.read_csv(data_folder+file)
         df_list.append(f)
 
@@ -68,7 +68,7 @@ class BikeReport(object):
 if __name__ == '__main__':
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
-    df = pd_csv_group(data_folder, first_few =4)
+    df = pd_csv_group(data_folder)
     
 
     # - - - FEATURE ENGINEERING OPPORTUNITY
@@ -76,10 +76,10 @@ if __name__ == '__main__':
     # https://opendata.dc.gov/datasets/capital-bike-share-locations;
     # detailed description of data from this file can be found here:
     # https://www.arcgis.com/sharing/rest/content/items/a1f7acf65795451d89f0a38565a975b3/info/metadata/metadata.xml?format=default&output=html
-    station_locations_df = pd.read_csv('Capital_Bike_Share_Locations.csv')   
+    station_locations_df = pd.read_csv('misc/Capital_Bike_Share_Locations.csv')   
 
     # taking only the location information from the locations dataset...
-    station_locations = station_locations[['TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE', 'X', 'Y']].copy()
+    station_locations = station_locations_df[['TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE', 'X', 'Y']].copy()
 
     # we can now merge the new dataset (subset) into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
@@ -153,9 +153,10 @@ if __name__ == '__main__':
     station_groups = df.groupby('Start station')
 
     # - - - list of hours in a day, from 0 to 24
-    time_steps = [str(x) for x in range(25)]
-
-
+    ### time_steps = [str(x) for x in range(25)]
+    time_steps = [f'{x%13}{("am" if x<12  else "pm")}' for x in range(0,25)]
+    time_steps.remove('0pm')
+    # - - - build the super dict
     for station in popular_morning_stations.index: #top three of top ten popular morning stations for starting a ride 
         # - - - get the 'nth' station group from the 'station_groups' group object
         station_by_hour = station_groups.get_group(station)
@@ -165,12 +166,16 @@ if __name__ == '__main__':
 
     # - - - Plot the ride frequency by hour for each bike station
 
+
     fig = plt.figure(figsize=(15,10))
     plt.style.use('ggplot')
     for i in range(len(popular_morning_stations)):
         ax = fig.add_subplot(5,2,i+1)
         st_name = popular_morning_stations.index[i]
         d = station_time_hist[st_name]
+        # keys are likely out of order - fix with OrderedDict()
+        d = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
+
         ax.bar(list(d.keys()), list(d.values()), color = 'r', width=0.8)
         ax.set_title(f'{st_name}')
         if i==0:
