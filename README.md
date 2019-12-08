@@ -1,6 +1,9 @@
 # Galvanize Capstone 1  
 ## EDA: Capitol BikeShare Open Data 
 
+Also another bike share data source, with LAT/LONG DATA!!!!!
+https://s3.amazonaws.com/tripdata/index.html
+
 The [Capitol Bikeshare](https://Capitolbikeshare.com) company rents bikes to its member customers and casual users in most metro areas of Washington DC. These bikes are equiped with basic tracking devices and accumulate a fair amount of data per ride. In this EDA excercise, we will perform some fairly basic statistical analyses focused on the assets (bikes) and the infrastructure (stations) central to the Capitol Bikeshare business model, and make some well-informed and data-driven recommendations to the company. 
 
 ![Capitol Bikeshare][fig0]
