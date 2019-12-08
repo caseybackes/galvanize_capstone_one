@@ -141,7 +141,13 @@ if __name__ == '__main__':
     ax.legend(loc='best', prop={'size':'small'})
     ax.set_title("Top 10 Popular Bike Stations by Time of Day")
     fig.tight_layout(pad=1)
+
+
     # ------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------
+
+
     # Now build a dictionary for each station where the keys are the time(by hour)
     # and the values are the counts of rides for that hour for that station. 
     # Each station's dictionary will all be stored in a 'super dictionary'
@@ -167,7 +173,7 @@ if __name__ == '__main__':
     # - - - Plot the ride frequency by hour for each bike station
 
 
-    fig = plt.figure(figsize=(15,10))
+    fig = plt.figure(figsize=(15,20))
     plt.style.use('ggplot')
     for i in range(len(popular_morning_stations)):
         ax = fig.add_subplot(5,2,i+1)
@@ -175,8 +181,9 @@ if __name__ == '__main__':
         d = station_time_hist[st_name]
         # keys are likely out of order - fix with OrderedDict()
         d = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
-
-        ax.bar(list(d.keys()), list(d.values()), color = 'r', width=0.8)
+        x = [i[0] for i in list(d.items())]   
+        y = [i[1] for i in list(d.items())]  
+        ax.bar(x, y, color = 'b', width=0.8)
         ax.set_title(f'{st_name}')
         if i==0:
             ylim = max(d.values())
@@ -184,7 +191,3 @@ if __name__ == '__main__':
     fig.suptitle('Top Ten Capitol Bikeshare Stations \n Bike Rentals Per Hour',fontsize=18)
     plt.subplots_adjust(hspace=0.5)
 
-
-    # for i in range(len(popular_morning_stations.index)):
-    #     d = station_time_hist[popular_morning_stations.index[0]]
-    #     ax.bar(list(d.keys()), list(d.values()), width=0.8);
