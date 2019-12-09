@@ -3,7 +3,11 @@ import pandas as pd
 import datetime as dt
 import matplotlib.pyplot as plt
 import os
+import utm
+import shapefile as shp
+import seaborn as sns
 from collections import OrderedDict
+import geopandas as gpd 
 
 # DATA SOURCE
 # https://s3.amazonaws.com/capitalbikeshare-data/index.html
@@ -65,6 +69,20 @@ class BikeReport(object):
         dct['seconds'] = (self.duration%86400)%3600%60
         return dct
 
+def read_shapefile(sf):
+    """
+    Read a shapefile into a Pandas dataframe with a 'coords' 
+    column holding the geometry information. This uses the pyshp
+    package
+    """
+    fields = [x[0] for x in sf.fields][1:]
+    records = sf.records()
+    shps = [s.points for s in sf.shapes()]
+    df = pd.DataFrame(columns=fields, data=records)
+    df = df.assign(coords=shps)
+    return df
+
+
 if __name__ == '__main__':
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
@@ -84,6 +102,8 @@ if __name__ == '__main__':
     # we can now merge the new dataset (subset) into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
 
+
+    # - - - CLASS OBJECT INSTANTIATION
     # - - - Which bikes (by bike number) have been used the most (by duration)?
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
     
@@ -101,12 +121,13 @@ if __name__ == '__main__':
     # - - -  group rides that start in the morning (4am-9am)
     start_after4am = df[df['Start time'] > dt.time(4,0,0)] # mask applied to df with start times after 4am
     morning_rides = start_after4am[df['Start time'] < dt.time(9,0,0)] # mask applied to 4am starts for rides that end by 10am
+    
     # - - - group rides that start in the afternoon (9am-3pm)
     start_after10am = df[df['Start time'] > dt.time(9,0,0)] # mask applied to df with start times after 10am
     afternoon_rides = start_after4am[df['Start time'] < dt.time(15,0,0)] # mask applied to 4am starts for rides that end by 3pm
+    
     # - - - group rides that start in the evening (3pm>)
     evening_rides = df[df['Start time'] > dt.time(15,0,0)] # mask applied to df with start times after 3pm
-
 
     # - - - Gather data by top ten most popular stations during various times of day 
     popular_morning_stations = morning_rides['Start station'].value_counts()[0:10]
@@ -171,9 +192,7 @@ if __name__ == '__main__':
         station_time_hist[station] = series_freq_dict(station_by_hour, 'Start time')
 
     # - - - Plot the ride frequency by hour for each bike station
-
-
-    fig = plt.figure(figsize=(15,20))
+    fig = plt.figure(figsize=(10,15))
     plt.style.use('ggplot')
     for i in range(len(popular_morning_stations)):
         ax = fig.add_subplot(5,2,i+1)
@@ -183,11 +202,74 @@ if __name__ == '__main__':
         d = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
         x = [i[0] for i in list(d.items())]   
         y = [i[1] for i in list(d.items())]  
-        ax.bar(x, y, color = 'b', width=0.8)
+        # as these are the most popular stations in the am, lets look only at the am data (4pm-10am) *** including 9:59am ***
+        ax.bar(x[4:10], y[4:10], color = 'b', width=0.8)
         ax.set_title(f'{st_name}')
         if i==0:
             ylim = max(d.values())
         ax.set_ylim(0,ylim)
-    fig.suptitle('Top Ten Capitol Bikeshare Stations \n Bike Rentals Per Hour',fontsize=18)
+    fig.suptitle('Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the Morning',fontsize=18)
     plt.subplots_adjust(hspace=0.5)
 
+  
+    #sns.set(context='paper', style='whitegrid', palette='pastel', color_codes=True)
+    #sns.mpl.rc('figure', figsize=(10,6))
+
+    # ------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------
+
+
+
+    # - - - ADDITIONAL DATA COLLECTION AND PROCESSING
+    # - - - reset the index of the popular stations dataframes
+    popular_morning_stations = popular_morning_stations.copy().reset_index()                                                                                                                                                    
+    popular_afternoon_stations = popular_afternoon_stations.copy().reset_index()                                                                                                                                                    
+    popular_evening_stations = popular_evening_stations.copy().reset_index()                                                                                                                                                    
+
+    # - - - rename the columns
+    popular_morning_stations.rename(columns={'Start station':'TERMINAL_NUMBER','index':'Start station'}, inplace =True)
+    popular_afternoon_stations.rename(columns={'Start station':'TERMINAL_NUMBER','index':'Start station'}, inplace=True)
+    popular_evening_stations.rename(columns={'Start station':'TERMINAL_NUMBER','index':'Start station'}, inplace=True)
+
+    # - - - merge the station location coordinates into the popular stations dataframes
+    station_morning_coord_df = pd.merge(left=popular_morning_stations, right=station_locations, how='right', left_on='TERMINAL_NUMBER', right_on='TERMINAL_NUMBER')
+    station_afternoon_coord_df = pd.merge(left=popular_afternoon_stations, right=station_locations, how='right', left_on='TERMINAL_NUMBER', right_on='TERMINAL_NUMBER')
+    station_evening_coord_df = pd.merge(left=popular_evening_stations, right=station_locations, how='right', left_on='TERMINAL_NUMBER', right_on='TERMINAL_NUMBER')
+
+
+    # - - - use the shape file to plot the boundary of washington dc
+    # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
+    wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
+    wash_shp_file = shp.Reader(wash_shp_path) 
+    df_wash_path = read_shapefile(wash_shp_file)
+    wash_path = [(x[0],x[1]) for x in df_wash_path.coords[0]]
+    # - - - build arrays for the x,y coords in lat/long for the dc boundary
+    wash_path_x = [x[0] for x in wash_path]    
+    wash_path_y = [x[1] for x in wash_path]
+    # - - - build arrays for the x,y coords in lat/long for the bike stations
+    station_x = [x for x in station_locations.LONGITUDE]
+    station_y = [x for x in station_locations.LATITUDE]   
+    # - - - it would be nice to see the streets as well. Geopandas to the rescue!
+    street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
+    gpd_street = gpd.read_file(street_shp_path)
+    
+    # - - - plot the stations and streets with washington dc boundary
+    plt.style.use('ggplot')
+
+    # STREET VECTORS
+    ax = gpd_street.geometry.plot(color='k', linewidth=.1)  
+    #fig = plt.figure(figsize=(15,15))    
+    # WASHINGTON DC BOUNDARY PLOT 
+    ax.plot(wash_path_x, wash_path_y, 'b', linewidth=.1)
+    # ALL BIKE STATIONS
+    ax.plot(station_x, station_y, 'o', color = 'b')
+    # TOP TEN BIKE STATIONS IN RED
+    ax.plot()
+    
+    # - - - make it sexy
+    ax.set_xlim(-77.13,-76.90)
+    ax.set_ylim(38.79,39)
+    plt.xlabel('Latitude (in degrees))')
+    plt.ylabel('Longitude (in degrees))')
+    ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)

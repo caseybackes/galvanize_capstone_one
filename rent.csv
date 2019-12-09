@@ -1,0 +1,4885 @@
+Neighborhood,City,State,med_2011,med_2014
+Northeast Dallas,Dallas,TX,825.0,985.0
+Paradise,Las Vegas,NV,900.0,1100.0
+Maryvale,Phoenix,AZ,795.0,850.0
+Upper West Side,New York,NY,2795.0,3300.0
+South Los Angeles,Los Angeles,CA,1150.0,1400.0
+Sherman Oaks,Los Angeles,CA,1399.0,1450.0
+Upper East Side,New York,NY,2250.0,2700.0
+Sunrise Manor,Las Vegas,NV,800.0,895.0
+East New York,New York,NY,1350.0,1500.0
+Southeast Los Angeles,Los Angeles,CA,1200.0,1300.0
+Spring Valley,Las Vegas,NV,1029.0,1150.0
+Deer Valley,Phoenix,AZ,899.0,1100.0
+Astoria,New York,NY,1550.0,2143.0
+Paradise Valley,Phoenix,AZ,1000.0,1150.0
+North Mountain,Phoenix,AZ,750.0,850.0
+Washington Heights,New York,NY,1395.0,1750.0
+Far North,Dallas,TX,762.0,1050.0
+Hollywood,Los Angeles,CA,1600.0,1750.0
+Williamsburg,New York,NY,2200.0,2900.0
+Bedford Stuyvesant,New York,NY,1500.0,2150.0
+Camelback East,Phoenix,AZ,886.0,985.0
+Flatbush,New York,NY,1275.0,1675.0
+East Side,El Paso,TX,700.0,975.0
+Southeast Dallas,Dallas,TX,950.0,950.0
+Crown Heights,New York,NY,1500.0,2100.0
+Alahambra,Phoenix,AZ,700.0,740.0
+Jamaica,New York,NY,1400.0,1545.0
+Roosevelt,Fresno,CA,715.0,695.0
+Williamsbridge,New York,NY,1200.0,1200.0
+North Scottsdale,Scottsdale,AZ,1800.0,1750.0
+East Harlem,New York,NY,1975.0,2500.0
+East San Jose,San Jose,CA,1545.0,2300.0
+East Flatbush,New York,NY,1250.0,1700.0
+Harlem,New York,NY,1600.0,1900.0
+Bushwick,New York,NY,1575.0,2300.0
+South Mountain,Phoenix,AZ,895.0,995.0
+Corona,New York,NY,1400.0,1500.0
+Enterprise,Las Vegas,NV,1200.0,1200.0
+Concourse,New York,NY,1150.0,1350.0
+East Memphis-Colonial-Yorkshire,Memphis,TN,795.0,725.0
+Sunset Park,New York,NY,1500.0,1600.0
+Alief,Houston,TX,649.0,899.0
+South Side,Corpus Christi,TX,800.0,1595.0
+North Hollywood,Los Angeles,CA,1610.0,1600.0
+Elmhurst,New York,NY,1375.0,1615.0
+Borough Park,New York,NY,1500.0,1600.0
+Central City,Corpus Christi,TX,700.0,999.0
+Bullard,Fresno,CA,850.0,1100.0
+Mid City,Los Angeles,CA,1675.0,1950.0
+Bensonhurst,New York,NY,1350.0,1400.0
+Southwest Dallas,Dallas,TX,909.0,1100.0
+West San Jose,San Jose,CA,1325.0,2395.0
+Northeast,El Paso,TX,780.0,925.0
+East,Arlington,TX,740.0,995.0
+Westlake,Los Angeles,CA,1644.0,1395.0
+Koreatown,Los Angeles,CA,1100.0,1150.0
+North Long Beach,Long Beach,CA,1294.0,1250.0
+White Haven-Coro Lake,Memphis,TN,740.0,750.0
+Soundview,New York,NY,1050.0,1375.0
+Sun Valley,Los Angeles,CA,1250.0,2000.0
+Lower East Side,New York,NY,2300.0,2895.0
+Logan Square,Chicago,IL,1100.0,1295.0
+South Bronx,New York,NY,1350.0,1500.0
+Northwest,El Paso,TX,785.0,1295.0
+Southeast,Arlington,TX,1100.0,1300.0
+South Scottsdale,Scottsdale,AZ,1200.0,1395.0
+Flushing,New York,NY,1450.0,1650.0
+Preston Hollow,Dallas,TX,1100.0,1350.0
+Canarsie,New York,NY,1400.0,1600.0
+Little Village,Chicago,IL,850.0,950.0
+Estrella,Phoenix,AZ,950.0,945.0
+Canoga Park,Los Angeles,CA,1750.0,1925.0
+Boyle Heights,Los Angeles,CA,,1475.0
+Sylmar,Los Angeles,CA,1300.0,1995.0
+Downtown,San Jose,CA,1550.0,2336.0
+Ahwatukee Foothills,Phoenix,AZ,999.0,1375.0
+West,Arlington,TX,820.0,1050.0
+Pacoima,Los Angeles,CA,1150.0,1800.0
+Gravesend,New York,NY,1450.0,1500.0
+Evergreen,San Jose,CA,2389.0,2499.0
+Sharpstown,Houston,TX,630.0,1200.0
+San Pedro,Los Angeles,CA,1350.0,1395.0
+North Valley,San Jose,CA,1700.0,2232.0
+Sheepshead Bay,New York,NY,1275.0,1527.0
+Murray Hill,New York,NY,1600.0,1700.0
+Willow Glen,San Jose,CA,1455.0,2022.0
+North Raleigh,Raleigh,NC,895.0,1050.0
+South Ozone Park,New York,NY,1550.0,1595.0
+Southwest,Chula Vista,CA,1400.0,1550.0
+Northridge,Los Angeles,CA,1690.0,1766.0
+West Anaheim,Anaheim,CA,1275.0,1405.0
+Forest Hills,New York,NY,1500.0,1925.0
+East Village,New York,NY,2650.0,3000.0
+Eldridge - West Oaks,Houston,TX,909.0,1452.0
+Cordova-Appling,Memphis,TN,899.0,1150.0
+Blossom Valley,San Jose,CA,1625.0,1898.0
+Jackson Heights,New York,NY,1400.0,1700.0
+Northwest Raleigh,Raleigh,NC,905.0,1250.0
+Far Rockaway,New York,NY,1395.0,1350.0
+Ridgewood,New York,NY,1400.0,1700.0
+West Rogers Park,Chicago,IL,950.0,1100.0
+Reseda,Los Angeles,CA,1950.0,2100.0
+Mira Mesa,San Diego,CA,1495.0,1705.0
+East Elmhurst,New York,NY,1495.0,1800.0
+Midtown,Memphis,TN,730.0,645.0
+Cambrian Park,San Jose,CA,1425.0,1850.0
+Hickory Ridge-South Riverdale,Memphis,TN,649.0,950.0
+Panorama City,Los Angeles,CA,1275.0,1495.0
+Princess Anne,Virginia Beach,VA,1575.0,1550.0
+Midwood,New York,NY,1300.0,1395.0
+Central Southwest,Houston,TX,1025.0,1080.0
+North Hills,Los Angeles,CA,1995.0,1575.0
+South Dorchester,Boston,MA,1575.0,1700.0
+Roxbury,Boston,MA,1600.0,1900.0
+South Belt - Ellington,Houston,TX,750.0,1267.0
+Southeast Colorado Springs,Colorado Springs,CO,825.0,975.0
+Clear Lake,Houston,TX,755.0,1300.0
+Northside-Northline,Houston,TX,,1175.0
+Park Slope,New York,NY,2095.0,2700.0
+Cedar Crest,Dallas,TX,750.0,775.0
+Oxford Circle,Philadelphia,PA,850.0,950.0
+East Colorado Springs,Colorado Springs,CO,900.0,1000.0
+Northeast Raleigh,Raleigh,NC,850.0,1050.0
+Green Run,Virginia Beach,VA,1150.0,1150.0
+Winnetka Heights,Dallas,TX,,789.0
+Wilmington,Los Angeles,CA,1500.0,1200.0
+Mission,San Francisco,CA,2350.0,3500.0
+Archer Heights,Chicago,IL,1050.0,1100.0
+Bath Beach,New York,NY,1350.0,1500.0
+Northeast Colorado Springs,Colorado Springs,CO,999.0,1150.0
+Central Colorado Springs,Colorado Springs,CO,765.0,795.0
+Raleigh,Memphis,TN,729.0,825.0
+Woodward Park,Fresno,CA,1000.0,1299.0
+Kingwood Area,Houston,TX,930.0,1000.0
+Greater Fondren Southwest,Houston,TX,675.0,825.0
+Central City,Phoenix,AZ,749.0,795.0
+Gramercy,New York,NY,2750.0,3200.0
+South Austin,Chicago,IL,850.0,823.0
+Brownsville,New York,NY,1276.0,1400.0
+Lower Valley,El Paso,TX,,895.0
+Encino,Los Angeles,CA,2100.0,2035.0
+Ozone Park,New York,NY,1400.0,1599.0
+The Heights,Jersey City,NJ,1350.0,1500.0
+Fresno High Roeding,Fresno,CA,695.0,650.0
+Tremont,New York,NY,975.0,1235.0
+Rogers Park,Chicago,IL,875.0,1000.0
+Albany Park,Chicago,IL,1050.0,1250.0
+Downtown,Memphis,TN,1000.0,850.0
+Kensington,New York,NY,1350.0,1900.0
+Kempsville,Virginia Beach,VA,1175.0,1225.0
+Flatlands,New York,NY,1350.0,1450.0
+University Heights,New York,NY,1025.0,1185.0
+Richmond Hill,New York,NY,1350.0,1500.0
+Encanto,Phoenix,AZ,845.0,850.0
+Little Havana,Miami,FL,1250.0,1425.0
+Northwest,Chula Vista,CA,1165.0,1295.0
+Central City,Los Angeles,CA,,1500.0
+Maspeth,New York,NY,1600.0,1700.0
+Westwood,Los Angeles,CA,3250.0,3200.0
+Queens Village,New York,NY,1400.0,1425.0
+Flagami,Miami,FL,1250.0,1395.0
+Lake Highlands,Dallas,TX,865.0,1029.0
+Bedford Park,New York,NY,1100.0,1250.0
+Hoover,Fresno,CA,755.0,735.0
+Bay Ridge,New York,NY,1400.0,1650.0
+Lake View,Chicago,IL,1500.0,1700.0
+Mott Haven,New York,NY,1329.0,1800.0
+Lone Mountain,Las Vegas,NV,1050.0,1150.0
+Casas Adobes,Tucson,AZ,860.0,1250.0
+Northeast Anaheim,Anaheim,CA,1545.0,1500.0
+Englewood,Chicago,IL,1000.0,1000.0
+Centennial Hills,Las Vegas,NV,1135.0,1100.0
+Fairgrounds,San Jose,CA,1470.0,2161.0
+Granada Hills,Los Angeles,CA,2075.0,2300.0
+Gresham,Chicago,IL,775.0,775.0
+Valencia,Santa Clarita,CA,1675.0,2000.0
+Golfcrest - Bellfort - Reveille,Houston,TX,599.0,
+Michael Way,Las Vegas,NV,771.0,900.0
+Woodside,New York,NY,1450.0,1750.0
+Mclane,Fresno,CA,685.0,750.0
+Santa Teresa,San Jose,CA,1945.0,2240.0
+Greater Uptown,Houston,TX,1399.0,1650.0
+Highland Park,Los Angeles,CA,1190.0,1399.0
+Bayside,New York,NY,1700.0,1900.0
+Brighton Park,Chicago,IL,,800.0
+Southwest,Arlington,TX,821.0,1250.0
+Coney Island,New York,NY,1450.0,1600.0
+Woodlake - Briarmeadow,Houston,TX,835.0,1335.0
+Southwest Anaheim,Anaheim,CA,1290.0,1600.0
+Central,El Paso,TX,,800.0
+University City,San Diego,CA,1700.0,1845.0
+Oak Lawn,Dallas,TX,1571.0,1502.0
+Summerlin North,Las Vegas,NV,1250.0,1400.0
+Hamilton Heights,New York,NY,1650.0,2200.0
+Rancho Penasquitos,San Diego,CA,1575.0,2100.0
+Fordham,New York,NY,975.0,1245.0
+Winnetka,Los Angeles,CA,1795.0,1850.0
+Sunnyside,New York,NY,1495.0,1785.0
+Chelsea,New York,NY,2750.0,3474.0
+Mid City West,Los Angeles,CA,2395.0,2500.0
+Brighton,Boston,MA,1800.0,1995.0
+Greenville,Jersey City,NJ,1175.0,1200.0
+Alameda - West Flagler,Miami,FL,1350.0,1600.0
+Memorial,Houston,TX,1195.0,2081.0
+Woodland Hills,Los Angeles,CA,2495.0,2150.0
+El Sereno,Los Angeles,CA,1600.0,1350.0
+Greenwich Village,New York,NY,2750.0,3350.0
+South Shore,Chicago,IL,792.0,750.0
+Palms,Los Angeles,CA,1550.0,1795.0
+Almaden Valley,San Jose,CA,,2495.0
+Desert View,Phoenix,AZ,1500.0,1695.0
+Gulfton,Houston,TX,830.0,985.0
+Portage Park,Chicago,IL,800.0,1150.0
+Briargate,Colorado Springs,CO,1150.0,1250.0
+Richmond,Philadelphia,PA,700.0,825.0
+Salem,Virginia Beach,VA,1250.0,1395.0
+Rego Park,New York,NY,1425.0,1775.0
+Carmel Valley,San Diego,CA,2010.0,2150.0
+West Adams,Los Angeles,CA,,1275.0
+Jefferson Park,Chicago,IL,1200.0,1100.0
+Allapattah,Miami,FL,1400.0,1200.0
+Kew Gardens Hills,New York,NY,1600.0,1625.0
+Valley High-North Laguna,Sacramento,CA,1175.0,1250.0
+Rancho Bernardo,San Diego,CA,1600.0,1695.0
+Canyon Country,Santa Clarita,CA,1432.0,1655.0
+Newhall,Santa Clarita,CA,1350.0,1550.0
+Morris Heights,New York,NY,1175.0,1309.0
+Anaheim Hills,Anaheim,CA,2005.0,2245.0
+Humboldt Park,Chicago,IL,1000.0,1300.0
+Bay Area,Corpus Christi,TX,754.0,1200.0
+Morningside Heights,New York,NY,2300.0,2750.0
+Ocean Parkway,New York,NY,1300.0,1495.0
+Ocean Hill,New York,NY,1550.0,1800.0
+Southeast Anaheim,Anaheim,CA,1295.0,1495.0
+Montbello,Denver,CO,1050.0,1352.0
+Greater Heights,Houston,TX,1500.0,1408.0
+Parkchester,New York,NY,1050.0,1199.0
+River Oaks-Kirby-Balmoral,Memphis,TN,850.0,1050.0
+Oak Forest - Garden Oaks,Houston,TX,1300.0,1475.0
+North Dallas,Dallas,TX,1042.0,1995.0
+Frankford,Philadelphia,PA,685.0,725.0
+East Boston,Boston,MA,1500.0,1800.0
+Harbor Gateway,Los Angeles,CA,1095.0,1395.0
+Parkway Village-Oakhaven,Memphis,TN,,850.0
+Longwood,New York,NY,,1375.0
+Mar Vista,Los Angeles,CA,1545.0,1875.0
+Coral Way,Miami,FL,1575.0,2000.0
+Back of the Yards,Chicago,IL,1075.0,1050.0
+Watts,Los Angeles,CA,,1500.0
+South End,Tacoma,WA,875.0,1100.0
+Mid Wilshire,Los Angeles,CA,1950.0,1932.0
+Bayside,Virginia Beach,VA,1150.0,1250.0
+Briarforest Area,Houston,TX,794.0,1029.0
+Lawncrest,Philadelphia,PA,815.0,725.0
+North,Arlington,TX,599.0,900.0
+High Bridge,New York,NY,1300.0,1200.0
+Gage Park,Chicago,IL,810.0,
+Studio City,Los Angeles,CA,2478.0,2000.0
+North Ironbound,Newark,NJ,,1400.0
+Greater Greenspoint,Houston,TX,499.0,750.0
+Crenshaw,Los Angeles,CA,1375.0,925.0
+Cragin,Chicago,IL,1100.0,975.0
+North Cheyenne,Las Vegas,NV,1000.0,1095.0
+Arleta,Los Angeles,CA,,
+Bridgeport,Chicago,IL,900.0,950.0
+Lake View East,Chicago,IL,1095.0,1250.0
+Laveen,Phoenix,AZ,1049.0,1050.0
+Norwood,New York,NY,1075.0,1275.0
+Melrose,New York,NY,1325.0,1475.0
+North Park,San Diego,CA,1125.0,1295.0
+East Reno,Reno,NV,680.0,800.0
+Edenvale - Seven Trees,San Jose,CA,1700.0,2295.0
+Silver Lake,Los Angeles,CA,2400.0,1895.0
+Morris Park,New York,NY,1200.0,1250.0
+Green Valley North,Henderson,NV,948.0,1295.0
+Inwood,New York,NY,1295.0,1450.0
+Woodhaven,New York,NY,1250.0,1400.0
+Charleston Heights,Las Vegas,NV,800.0,875.0
+Venice,Los Angeles,CA,3900.0,3750.0
+Kalihi-Palama,Honolulu,HI,,1595.0
+Chatsworth,Los Angeles,CA,2100.0,2250.0
+Berryessa,San Jose,CA,,2595.0
+Wakefield,New York,NY,1450.0,1294.0
+Westchester,Los Angeles,CA,1884.0,1900.0
+Downtown,Los Angeles,CA,1695.0,2404.0
+Dyker Heights,New York,NY,1500.0,1750.0
+Hyde Park,Los Angeles,CA,,1275.0
+South Loop,Chicago,IL,1800.0,1936.0
+Addicks Park Ten,Houston,TX,900.0,1105.0
+Shelby Forest-Frayser,Memphis,TN,525.0,650.0
+East Tremont,New York,NY,1250.0,1500.0
+Powers,Colorado Springs,CO,1150.0,1275.0
+Hollis,New York,NY,1500.0,1511.0
+Southwest,Reno,NV,850.0,850.0
+Rancho Charleston,Las Vegas,NV,925.0,969.0
+Co-op City,New York,NY,,
+Brentwood,Los Angeles,CA,2300.0,3400.0
+Mattapan,Boston,MA,1400.0,1675.0
+West Lawn,Chicago,IL,,800.0
+Wolf Creek,Dallas,TX,,1095.0
+La Sierra,Riverside,CA,1361.0,1200.0
+St. Albans,New York,NY,1436.0,1400.0
+West,Fresno,CA,950.0,1025.0
+Olney,Philadelphia,PA,,750.0
+Berclair-Highland Heights,Memphis,TN,650.0,625.0
+Southwest Colorado Springs,Colorado Springs,CO,860.0,1100.0
+South Boston,Boston,MA,2295.0,2750.0
+Riverview West,Santa Ana,CA,,1375.0
+Lincoln Heights,Los Angeles,CA,,1250.0
+Whitney,Las Vegas,NV,895.0,1000.0
+Cobbs Creek,Philadelphia,PA,,850.0
+Corona Valley,Corona,CA,2350.0,2350.0
+Throggs Neck,New York,NY,1400.0,1700.0
+Greater Inwood,Houston,TX,799.0,745.0
+Holmesburg-Torresdale,Philadelphia,PA,1100.0,950.0
+Mayfair,Philadelphia,PA,,900.0
+East Las Vegas,Las Vegas,NV,700.0,725.0
+Edgewater Beach,Chicago,IL,795.0,1050.0
+Oak Cliff,Dallas,TX,1500.0,1008.0
+West Hills,Los Angeles,CA,2500.0,2850.0
+North Central,Pasadena,CA,1890.0,1750.0
+Fort Greene,New York,NY,2400.0,2750.0
+Fort Bend - Houston,Houston,TX,,1100.0
+14621,Rochester,NY,,650.0
+Del Rey,Los Angeles,CA,2740.0,3050.0
+Bustleton,Philadelphia,PA,790.0,995.0
+Northwest Anaheim,Anaheim,CA,1220.0,1600.0
+Whitestone,New York,NY,1700.0,1875.0
+Little Woods,New Orleans,LA,750.0,1200.0
+Mears Corner,Virginia Beach,VA,1295.0,1400.0
+Glendale,New York,NY,1400.0,1500.0
+Hyde Park,Boston,MA,1400.0,1600.0
+Old Brooklyn,Cleveland,OH,595.0,695.0
+Middle Village,New York,NY,1500.0,1650.0
+M Streets,Dallas,TX,1309.0,1325.0
+Homecrest,New York,NY,1250.0,1450.0
+West Raleigh,Raleigh,NC,750.0,1000.0
+Kingsessing,Philadelphia,PA,800.0,795.0
+Prospect Lefferts Gardens,New York,NY,1250.0,1600.0
+South Corona,Corona,CA,,2200.0
+Makiki-Lower Punchbowl-Tantalus,Honolulu,HI,1275.0,1150.0
+Kingsbridge,New York,NY,1250.0,1300.0
+Marquette Park,Chicago,IL,850.0,790.0
+The Colony,Anaheim,CA,1339.0,1760.0
+Hollywood Hills,Los Angeles,CA,3850.0,3799.0
+Brighton Beach,New York,NY,1550.0,1725.0
+Juniata Park-Feltonville,Philadelphia,PA,,749.0
+Bronzeville,Chicago,IL,1065.0,1250.0
+Greenpoint,New York,NY,2100.0,2700.0
+West Oak Lane,Philadelphia,PA,,720.0
+Torresdale,Philadelphia,PA,899.0,850.0
+Otay Mesa West,San Diego,CA,,1400.0
+Downtown,Jersey City,NJ,2050.0,2200.0
+Gold  Coast,Chicago,IL,1575.0,1832.0
+Rochdale,New York,NY,1600.0,1650.0
+Belmont Central,Chicago,IL,,1200.0
+Bay Terraces,San Diego,CA,1600.0,1700.0
+Columbia Heights,Washington,DC,2275.0,2395.0
+Somerton,Philadelphia,PA,825.0,795.0
+Wynnefield,Philadelphia,PA,1200.0,1195.0
+Hawaii Kai,Honolulu,HI,2600.0,2800.0
+La Jolla,San Diego,CA,3950.0,5000.0
+Sugar House,Salt Lake City,UT,899.0,900.0
+Roslindale,Boston,MA,1350.0,1800.0
+Poly High District,Long Beach,CA,925.0,1150.0
+West Roxbury,Boston,MA,1650.0,1795.0
+Sawtelle,Los Angeles,CA,1850.0,2195.0
+Center City West,Philadelphia,PA,1750.0,1950.0
+Saugus,Santa Clarita,CA,1525.0,1900.0
+Summerlin South,Las Vegas,NV,1450.0,1638.0
+Payne Phallen,Saint Paul,MN,825.0,1050.0
+The Lakes,Las Vegas,NV,1195.0,1395.0
+Clinton,New York,NY,2850.0,3100.0
+Jefferson Park,Los Angeles,CA,1250.0,1300.0
+Eastex - Jensen Area,Houston,TX,,1200.0
+Pacific Beach,San Diego,CA,1550.0,2000.0
+Tarzana,Los Angeles,CA,2400.0,1990.0
+Capitol Hill,Seattle,WA,1525.0,1640.0
+Spring Branch West,Houston,TX,999.0,1533.0
+Valley Glen,Los Angeles,CA,1250.0,1595.0
+South Chicago,Chicago,IL,950.0,900.0
+West Pullman,Chicago,IL,1325.0,1150.0
+Overbrook,Philadelphia,PA,825.0,800.0
+Prospect Hill,San Antonio,TX,,
+Roxborough,Philadelphia,PA,1155.0,1374.0
+Westchase,Houston,TX,800.0,1233.0
+Bellerose,New York,NY,1500.0,1550.0
+Gateway - Green Valley Ranch,Denver,CO,965.0,1459.0
+Westwood,Cincinnati,OH,535.0,699.0
+Eastside-ENACT,Tacoma,WA,1195.0,1000.0
+Financial District,New York,NY,3000.0,3345.0
+Neartown - Montrose,Houston,TX,1352.0,1804.0
+Alum Rock-East Foothills,San Jose,CA,,1980.0
+South End,Boston,MA,2400.0,2900.0
+Little Haiti,Miami,FL,1400.0,1495.0
+West End,Tacoma,WA,875.0,925.0
+Glassell Park,Los Angeles,CA,1200.0,1185.0
+West Side,Long Beach,CA,,
+Allston,Boston,MA,2200.0,2400.0
+North Valleys,Reno,NV,950.0,1100.0
+Flatiron District,New York,NY,2895.0,3600.0
+Alexandria Wrest,Alexandria,VA,1503.0,1650.0
+Southeast Boise,Boise,ID,795.0,975.0
+Tierrasanta,San Diego,CA,1450.0,1845.0
+Briarwood,New York,NY,1450.0,1475.0
+Elmwood,Philadelphia,PA,700.0,785.0
+Pico-Union,Los Angeles,CA,,850.0
+Haddington-Carroll Park,Philadelphia,PA,800.0,825.0
+Jamaica Plain,Boston,MA,1800.0,2400.0
+Pennsport-Whitman-Queen,Philadelphia,PA,1150.0,1295.0
+Rhawnhurst,Philadelphia,PA,825.0,875.0
+Northeast,Anchorage,AK,,1575.0
+Fairhill,Philadelphia,PA,,700.0
+Northshore,Houston,TX,619.0,
+Reynolds Corners,Toledo,OH,650.0,
+Capitol Hill,Washington,DC,1800.0,2100.0
+South Dallas,Dallas,TX,1250.0,1095.0
+Fort Hamilton,New York,NY,1375.0,1695.0
+Auburndale,New York,NY,1500.0,2000.0
+Wharton-Hawthorne-Bella Vista,Philadelphia,PA,1350.0,1495.0
+Brickell,Miami,FL,1900.0,2400.0
+McCully-Moiliili,Honolulu,HI,1350.0,1200.0
+Center City East,Philadelphia,PA,1395.0,1650.0
+Wrigley,Long Beach,CA,995.0,1200.0
+Garfield Ridge,Chicago,IL,,1600.0
+Greater Eastside,Saint Paul,MN,795.0,775.0
+North Dorchester,Boston,MA,1725.0,1995.0
+Spring Branch Central,Houston,TX,899.0,
+Journal Square,Jersey City,NJ,1300.0,1450.0
+Eagle Rock,Los Angeles,CA,,1495.0
+Los Feliz,Los Angeles,CA,1724.0,2150.0
+Indian River,Chesapeake,VA,1220.0,1200.0
+Ravenswood,Chicago,IL,975.0,1400.0
+Eagle Ford,Dallas,TX,,
+Nevada-Lidgerwood,Spokane,WA,660.0,625.0
+North Linden,Columbus,OH,595.0,650.0
+Howard Beach,New York,NY,1650.0,2000.0
+North Austin,Austin,TX,725.0,895.0
+Pocket,Sacramento,CA,999.0,1295.0
+Harvard Heights,Los Angeles,CA,,1325.0
+Washington Avenue Coalition - Memorial Park,Houston,TX,1634.0,2015.0
+West Englewood,Chicago,IL,1200.0,1200.0
+Meadowview,Sacramento,CA,1100.0,1100.0
+Northwest Colorado Springs,Colorado Springs,CO,955.0,1100.0
+Forest Park,Springfield,MA,990.0,950.0
+Northside Village,Houston,TX,,
+Academy Gardens,Philadelphia,PA,950.0,875.0
+Bernal Heights,San Francisco,CA,3200.0,2489.0
+Aliamanu-Salt Lake-Foster Village,Honolulu,HI,1390.0,1400.0
+University District,Seattle,WA,1199.0,1415.0
+College Point,New York,NY,1600.0,1700.0
+Paradise Hills,Albuquerque,NM,,1150.0
+Spring Branch East,Houston,TX,1250.0,1450.0
+Clairemont Mesa East,San Diego,CA,1234.0,1475.0
+West Valley,Boise,ID,795.0,945.0
+Laurelton,New York,NY,1500.0,1600.0
+Westgate Hts,Albuquerque,NM,,995.0
+Ramona,Riverside,CA,985.0,1050.0
+North End,Saint Paul,MN,750.0,1050.0
+Highland Hills,San Antonio,TX,,730.0
+Acres Home,Houston,TX,815.0,745.0
+South Boulevard-Park Row Historic,Dallas,TX,,1250.0
+South Natomas,Sacramento,CA,803.0,1195.0
+Landmark-Van Dom,Alexandria,VA,1499.0,1660.0
+San Ysidro,San Diego,CA,,
+Waikiki,Honolulu,HI,1397.0,1850.0
+University City,Philadelphia,PA,1438.0,895.0
+Abbott Loop,Anchorage,AK,,1350.0
+Rosedale,New York,NY,1650.0,1700.0
+Winchester,Las Vegas,NV,825.0,950.0
+South Tacoma,Tacoma,WA,760.0,1000.0
+Urbandale-Parkdale,Dallas,TX,,950.0
+Pelham Bay,New York,NY,1300.0,1600.0
+Creston,Grand Rapids,MI,750.0,795.0
+Ogontz,Philadelphia,PA,,850.0
+Northwest,Reno,NV,1275.0,1425.0
+Woodbridge,Irvine,CA,1950.0,2500.0
+Great Bridge,Chesapeake,VA,1375.0,1450.0
+Douglaston-Little Neck,New York,NY,1800.0,2050.0
+Greenwood,New York,NY,1750.0,2150.0
+Highland,Saint Paul,MN,1175.0,1125.0
+Echo Park,Los Angeles,CA,,1580.0
+North End,Tacoma,WA,995.0,995.0
+Marine Park,New York,NY,,1400.0
+Northeast,Reno,NV,695.0,625.0
+Great Neck,Virginia Beach,VA,1179.0,1195.0
+South Central,Reno,NV,685.0,600.0
+Central,Arlington,TX,811.0,720.0
+Capitol,Town of Madison,WI,1250.0,1250.0
+Excelsior,San Francisco,CA,,
+North Central,Philadelphia,PA,1350.0,1600.0
+Powellhurst Gilbert,Portland,OR,770.0,929.0
+Meadowbrook - Allendale,Houston,TX,,
+East Toledo,Toledo,OH,,485.0
+Columbus Circle,New York,NY,2850.0,3250.0
+Point Breeze,Philadelphia,PA,975.0,950.0
+Harbor City,Los Angeles,CA,1790.0,1350.0
+Las Tierras,El Paso,TX,,1100.0
+Pelham Gardens,New York,NY,1350.0,1400.0
+West Village,New York,NY,2850.0,3745.0
+South Norfolk,Chesapeake,VA,975.0,1150.0
+Oakland Gardens,New York,NY,1500.0,1850.0
+West Town,Chicago,IL,1500.0,2110.0
+Fresh Meadows,New York,NY,1700.0,1750.0
+North Austin,Chicago,IL,900.0,825.0
+South Philadelphia,Philadelphia,PA,875.0,1000.0
+Kew Gardens,New York,NY,1420.0,1650.0
+Liliha-Kapalama,Honolulu,HI,,1000.0
+Central Richmond,San Francisco,CA,1795.0,2650.0
+Save the Valley 21,El Paso,TX,,
+"Springlake, University Terrace",Shreveport,LA,815.0,1050.0
+Otay Ranch,Chula Vista,CA,2195.0,2095.0
+Eltingville,New York,NY,,1900.0
+Clinton Hill,New York,NY,1800.0,2650.0
+Great Kills,New York,NY,,1350.0
+Edison,Fresno,CA,,650.0
+Potomac West,Alexandria,VA,1910.0,2155.0
+Fenway,Boston,MA,2050.0,2500.0
+Linda Vista,San Diego,CA,1526.0,1750.0
+Greater Hobby Area,Houston,TX,439.0,
+Pacific Palisades,Los Angeles,CA,5000.0,5000.0
+Disston Heights,Saint Petersburg,FL,950.0,1100.0
+Forest Hill,Newark,NJ,,1200.0
+Hunting Park,Philadelphia,PA,,725.0
+Sand Lake,Anchorage,AK,,1650.0
+Liberty City,Miami,FL,1100.0,995.0
+Manoa,Honolulu,HI,2200.0,1300.0
+Hazelwood,Portland,OR,825.0,825.0
+Uptown,Chicago,IL,1150.0,1255.0
+Fox Chase,Philadelphia,PA,,775.0
+Sixteen Acres,Springfield,MA,,
+Germantown,Philadelphia,PA,775.0,850.0
+Arlanza,Riverside,CA,,1325.0
+Greenbrier East,Chesapeake,VA,1295.0,1395.0
+Northwest,Spokane,WA,,750.0
+Valley Village,Los Angeles,CA,1900.0,1685.0
+Centennial,Portland,OR,850.0,1000.0
+Active Bethel,Eugene,OR,825.0,850.0
+Sunland,Los Angeles,CA,1095.0,2199.0
+South,Pasadena,CA,1809.0,1937.0
+Fairmount-Spring Garden,Philadelphia,PA,1488.0,1375.0
+West Park,Irvine,CA,2100.0,2085.0
+Pico-Robertson,Los Angeles,CA,1995.0,2095.0
+West Side,Jersey City,NJ,1550.0,1300.0
+Northampton,Hampton,VA,925.0,1100.0
+Serra Mesa,San Diego,CA,2000.0,1795.0
+Logan-Fern Rock,Philadelphia,PA,,800.0
+East Germantown,Philadelphia,PA,850.0,715.0
+East Central,Salt Lake City,UT,,800.0
+Anthem,Henderson,NV,1350.0,1450.0
+Sutton Place,New York,NY,2700.0,3400.0
+Tujunga,Los Angeles,CA,1285.0,1500.0
+Near North,Chicago,IL,1575.0,1984.0
+Girard Estates,Philadelphia,PA,900.0,950.0
+South Park,Houston,TX,,900.0
+Bayview,San Francisco,CA,,2200.0
+Westbury,Houston,TX,1200.0,800.0
+Brooklyn Heights,New York,NY,2175.0,2750.0
+West Central,Pasadena,CA,1900.0,1695.0
+South Side,Toledo,OH,450.0,695.0
+Weequahic,Newark,NJ,,1175.0
+Green Valley South,Henderson,NV,1300.0,1225.0
+Flour Bluff,Corpus Christi,TX,,1150.0
+Seminary Hill,Alexandria,VA,1550.0,1595.0
+Downtown,San Francisco,CA,1395.0,3300.0
+Lower Peters Canyon,Irvine,CA,2495.0,1905.0
+19th Ward,Rochester,NY,,695.0
+Castle Hill,New York,NY,1200.0,1600.0
+West Las Vegas,Las Vegas,NV,895.0,850.0
+East Garfield Park,Chicago,IL,1200.0,1100.0
+Back Bay,Boston,MA,2500.0,2850.0
+Porter Ranch,Los Angeles,CA,2645.0,2795.0
+Mission Hills,Los Angeles,CA,,1895.0
+Roseland,Chicago,IL,700.0,850.0
+Northwest Torrance,Torrance,CA,1275.0,1525.0
+Braeswood Place,Houston,TX,1227.0,1579.0
+East Central,Pasadena,CA,1095.0,1900.0
+East Side,Chicago,IL,,720.0
+Cilo Vista,El Paso,TX,859.0,975.0
+Sunnyside,Houston,TX,,874.0
+Central,Tacoma,WA,1000.0,1095.0
+South of Market,San Francisco,CA,3000.0,3405.0
+Northwood,Irvine,CA,1995.0,2240.0
+Hermosa,Chicago,IL,975.0,900.0
+Central Sunset,San Francisco,CA,2300.0,2990.0
+Five Points,Toledo,OH,,725.0
+Belmont,New York,NY,1380.0,1250.0
+Five Oaks - Triple Creek,Beaverton,OR,925.0,930.0
+Old Northwest - West University,Reno,NV,995.0,1050.0
+Hellman,Long Beach,CA,1000.0,1050.0
+Orangecrest,Riverside,CA,,1950.0
+Meyerland Area,Houston,TX,1055.0,1693.0
+Central City East,Los Angeles,CA,2150.0,2070.0
+University,Riverside,CA,945.0,1100.0
+South Reno,Reno,NV,1150.0,1450.0
+Greater Fifth Ward,Houston,TX,,850.0
+Poplar-Ludlow-Yorktowne,Philadelphia,PA,1295.0,1500.0
+Westwood,Houston,TX,,
+Deep Creek North,Chesapeake,VA,1225.0,1200.0
+Bergen-Lafayette,Jersey City,NJ,1250.0,1200.0
+Battle Creek,Saint Paul,MN,795.0,1150.0
+Alleghany West,Philadelphia,PA,1120.0,1000.0
+North San Jose,San Jose,CA,1925.0,2416.0
+Scripps Ranch,San Diego,CA,1800.0,1900.0
+Edgebrook Area,Houston,TX,569.0,725.0
+Strawberry Mansion,Philadelphia,PA,1400.0,800.0
+Diamond Head-Kapahulu-St. Louis,Honolulu,HI,3200.0,3200.0
+Tenderloin,San Francisco,CA,1195.0,1825.0
+Visitacion Valley,San Francisco,CA,,
+Lents,Portland,OR,865.0,975.0
+People Active in Community Effort,San Antonio,TX,,875.0
+Ottawa,Toledo,OH,,550.0
+Sheep Mountain,Las Vegas,NV,1295.0,1300.0
+Greenway - Upper Kirby Area,Houston,TX,1399.0,1760.0
+Spring Branch North,Houston,TX,680.0,1375.0
+Hampden,Denver,CO,796.0,838.0
+Ost - South Union,Houston,TX,,1195.0
+West Brighton,New York,NY,,1500.0
+Cal Young,Eugene,OR,980.0,956.0
+Cedarbrook,Philadelphia,PA,675.0,850.0
+Wynwood - Edgewater,Miami,FL,1675.0,2150.0
+Taylor Ranch,Albuquerque,NM,745.0,1050.0
+Elkhorn,Omaha,NE,,1170.0
+Heartland Village,New York,NY,,1500.0
+Wingate,New York,NY,1200.0,1750.0
+Clearview,New York,NY,1900.0,2175.0
+Macalester-Groveland,Saint Paul,MN,895.0,850.0
+West Price HIll,Cincinnati,OH,490.0,650.0
+Okolona,Louisville,KY,,
+East Little York - Homestead,Houston,TX,,900.0
+Westgate,Henderson,NV,1250.0,1495.0
+Greenbrier West,Chesapeake,VA,1195.0,1300.0
+Goodyear Heights,Akron,OH,,
+Kings Grant,Virginia Beach,VA,1725.0,1350.0
+Unionport,New York,NY,1125.0,1300.0
+The Plaza,Long Beach,CA,,1975.0
+East Tampa,Tampa,FL,587.0,875.0
+Chatham,Chicago,IL,1000.0,690.0
+Midtown,New York,NY,2700.0,3395.0
+McGinley Square,Jersey City,NJ,1395.0,1650.0
+Braeburn,Houston,TX,567.0,
+Warrendale,Detroit,MI,,700.0
+Turtle Bay,New York,NY,2795.0,3050.0
+Tule Springs,Las Vegas,NV,1295.0,1250.0
+Southwest Raleigh,Raleigh,NC,875.0,1090.0
+Weston Ranch,Stockton,CA,1295.0,1295.0
+Parkside,San Francisco,CA,,2195.0
+Harder-Tennyson,Hayward,CA,1200.0,1375.0
+Sunrise,Las Vegas,NV,720.0,800.0
+North Aurora,Aurora,CO,,725.0
+Western Branch North,Chesapeake,VA,1100.0,1295.0
+Merrlam Park,Saint Paul,MN,1250.0,1300.0
+Petworth,Washington,DC,2200.0,1800.0
+Pacific Heights,San Francisco,CA,2500.0,3900.0
+Kaimuki,Honolulu,HI,,
+Hyde Park,Chicago,IL,935.0,1160.0
+Port Richmond,New York,NY,,2300.0
+South Acres - Crestmont Park,Houston,TX,,1000.0
+East Mount Airy,Philadelphia,PA,850.0,855.0
+Summerfields,Fort Worth,TX,,1150.0
+Heart of Chicago,Chicago,IL,1050.0,975.0
+Nob Hill,San Francisco,CA,1995.0,3200.0
+Tioga-Nicetown,Philadelphia,PA,800.0,685.0
+West Elsdon,Chicago,IL,,
+Greater Pinellas Point,Saint Petersburg,FL,785.0,1200.0
+Prosperity Church Road,Charlotte,NC,885.0,1105.0
+Chicago Lawn,Chicago,IL,650.0,710.0
+Jefferson,Cleveland,OH,,775.0
+Beach Haven,Jacksonville,FL,975.0,1200.0
+Kamm's Corner,Cleveland,OH,,
+Bucktown,Chicago,IL,1800.0,2200.0
+Point Loma Heights,San Diego,CA,1650.0,1445.0
+Sandalwood,Jacksonville,FL,1000.0,1275.0
+Golden Glades - The Woods,Jacksonville,FL,1044.0,1300.0
+Astrodome Area,Houston,TX,1110.0,1243.0
+"Broadmoor, Anderson Island, Shreve Isle.",Shreveport,LA,745.0,1000.0
+Frankford,Baltimore,MD,,1200.0
+East Houston,Houston,TX,,1250.0
+Downtown,Stamford,CT,1925.0,1975.0
+Magnolia,Seattle,WA,1095.0,1500.0
+Maplewood,Rochester,NY,,695.0
+Nuuanu-Punchbowl,Honolulu,HI,,2000.0
+Parkway,Sacramento,CA,1025.0,1095.0
+Mount Washington,Los Angeles,CA,,2000.0
+Byberry,Philadelphia,PA,,
+East Sacramento,Sacramento,CA,,1150.0
+Metro West,Orlando,FL,900.0,975.0
+Alderwood Manor,Lynnwood,WA,1150.0,
+Forest Park East,Columbus,OH,589.0,
+DeVeaux,Toledo,OH,,750.0
+Gowanus,New York,NY,2000.0,3000.0
+Avondale,Chicago,IL,1275.0,1650.0
+Ala Moana-Kakaako,Honolulu,HI,3000.0,3000.0
+East Arlington,Jacksonville,FL,1200.0,1395.0
+Kenmore,Boston,MA,2100.0,2100.0
+Trinity - Houston Gardens,Houston,TX,,
+Citrus Grove,Glendale,CA,1500.0,1325.0
+Inner Richmond,San Francisco,CA,2000.0,3000.0
+Buffalo,Las Vegas,NV,1000.0,800.0
+Prospect Heights,New York,NY,1600.0,2550.0
+DRNAG,San Bernardino,CA,850.0,1150.0
+Dayton's Bluff,Saint Paul,MN,1099.0,995.0
+Old Colorado City,Colorado Springs,CO,795.0,1000.0
+South Weymouth,Weymouth,MA,,1409.0
+Manhattanville,New York,NY,1595.0,1900.0
+Lake Murray,San Diego,CA,,1645.0
+Southeast Raleigh,Raleigh,NC,1050.0,1100.0
+West Farms,New York,NY,,1500.0
+Mission Hill,Boston,MA,3050.0,3500.0
+Noe Valley,San Francisco,CA,3000.0,3900.0
+Pecan Park,Houston,TX,,
+New Utrecht,New York,NY,1375.0,1400.0
+Kuliouou-Kalani Iki,Honolulu,HI,5000.0,4000.0
+Vance Jackson,San Antonio,TX,784.0,895.0
+Morgan Park,Chicago,IL,,1150.0
+Mount Greenwood,Chicago,IL,,
+Mt Pleasant,Cleveland,OH,,550.0
+Northeast Tacoma,Tacoma,WA,948.0,1375.0
+Old Aurora,New Orleans,LA,690.0,1200.0
+Outer Sunset,San Francisco,CA,,1995.0
+Portola,San Francisco,CA,,1600.0
+Downtown,Houston,TX,1372.0,2085.0
+Midtown,Atlanta,GA,1299.0,1519.0
+Great Bridge East,Chesapeake,VA,,1900.0
+North Collinwood,Cleveland,OH,,550.0
+Ellet,Akron,OH,,
+Charlestown,Boston,MA,2750.0,2600.0
+Eastside,Riverside,CA,1250.0,885.0
+Upper Roseville,Newark,NJ,,1300.0
+Paradise Hills,San Diego,CA,,1850.0
+Logan Circle,Washington,DC,2575.0,2790.0
+Grays Ferry,Philadelphia,PA,750.0,790.0
+West Grand,Grand Rapids,MI,,750.0
+Greater Avenues,Salt Lake City,UT,990.0,1000.0
+Fairbanks - Northwest Crossing,Houston,TX,670.0,845.0
+Cedar Park,Philadelphia,PA,850.0,900.0
+Adams Morgan,Washington,DC,1699.0,2500.0
+Outer Richmond,San Francisco,CA,,2700.0
+West Akron,Akron,OH,,
+Bay View,Milwaukee,WI,,765.0
+Inner Sunset,San Francisco,CA,,3000.0
+Tampa Palms,Tampa,FL,967.0,1295.0
+"Hyde Park Brookwood, Southern Hills",Shreveport,LA,,
+Puritas-Longmead,Cleveland,OH,,675.0
+Tribeca,New York,NY,2500.0,4650.0
+Upper Clinton Hill,Newark,NJ,,1200.0
+Seatack,Virginia Beach,VA,1129.0,1250.0
+Kenmore,Akron,OH,,650.0
+Whitmer - Trilby,Toledo,OH,,610.0
+Huntridge,Las Vegas,NV,899.0,950.0
+Montclare,Chicago,IL,,1350.0
+University Village - Little Italy,Chicago,IL,1600.0,1800.0
+Washington Highlands,Washington,DC,995.0,
+Fishtown,Philadelphia,PA,1650.0,1695.0
+Summit-University,Saint Paul,MN,900.0,1195.0
+South Broadway,Cleveland,OH,,600.0
+Franklin Park,Austin,TX,740.0,
+Martha Lake,Lynnwood,WA,,
+Greenwood,Seattle,WA,1450.0,1345.0
+Midvale Park,Tucson,AZ,,925.0
+Encanto,San Diego,CA,,1900.0
+Blueberry Hill-Brigadoon-Stoneybrook-Baralto,Lexington,KY,645.0,799.0
+Glenville,Cleveland,OH,,
+Audubon,New Orleans,LA,,2200.0
+Harrowgate,Philadelphia,PA,,675.0
+The Waterfront,Jersey City,NJ,2685.0,3000.0
+Playa Del Rey,Los Angeles,CA,2228.0,2350.0
+West End,Providence,RI,895.0,1250.0
+Liberty Heights,Springfield,MA,,925.0
+Montavilla,Portland,OR,,850.0
+Baychester,New York,NY,,1700.0
+Wallingford,Seattle,WA,,1795.0
+Bay Park,San Diego,CA,1265.0,1860.0
+Buckroe,Hampton,VA,900.0,930.0
+Clearing (W),Chicago,IL,,1175.0
+Belaire-Edison,Baltimore,MD,1100.0,1200.0
+CUF,Cincinnati,OH,595.0,1000.0
+West Boulevard,Cleveland,OH,,800.0
+Macgregor,Houston,TX,1450.0,1654.0
+Central West End,Saint Louis,MO,830.0,995.0
+Franklin Park,Toledo,OH,,
+Tudor City,New York,NY,2695.0,2900.0
+University Place,Houston,TX,1470.0,2033.0
+Canyon Crest,Riverside,CA,1450.0,1560.0
+Mantua,Philadelphia,PA,1100.0,1100.0
+Ardenwood,Fremont,CA,,2500.0
+Westwood,Denver,CO,,
+Upper Vailsburg,Newark,NJ,1950.0,1150.0
+Mariposa,Glendale,CA,,
+Desert Shores,Las Vegas,NV,800.0,1250.0
+Cultural Corridor,Las Vegas,NV,850.0,550.0
+Park Manor,Chicago,IL,1000.0,850.0
+Anaheim Resort,Anaheim,CA,1395.0,1550.0
+Mountain View,San Diego,CA,,1100.0
+Dutchtown,Saint Louis,MO,550.0,550.0
+O'Hare,Chicago,IL,1500.0,1065.0
+Arlington Heights,Los Angeles,CA,,1795.0
+Wedgwood,Fort Worth,TX,,995.0
+West University,Austin,TX,1295.0,1550.0
+West Garfield Park,Chicago,IL,1295.0,853.0
+Carnegie Hill,New York,NY,2650.0,3199.0
+Green Valley Ranch,Henderson,NV,1295.0,1575.0
+Central,Fresno,CA,950.0,495.0
+Barry Square,Hartford,CT,725.0,875.0
+Stuyvesant Town,New York,NY,,3275.0
+Iah - Airport Area,Houston,TX,,
+West Side,Newark,NJ,,1200.0
+Centerville,Fremont,CA,1250.0,1520.0
+El Camino Real,Irvine,CA,2350.0,2350.0
+Morningside,Detroit,MI,800.0,750.0
+Sun Lakes,Chandler,AZ,1300.0,1500.0
+Squirrel Hill South,Pittsburgh,PA,1570.0,1395.0
+Lower Vailsburg,Newark,NJ,,
+Oleander Sunset,Bakersfield,CA,,750.0
+Spuyten Duyvil,New York,NY,1870.0,2050.0
+Rita Ranch,Tucson,AZ,1050.0,1050.0
+West Side,Saint Paul,MN,,1200.0
+Gandy-Sun Bay South,Tampa,FL,874.0,1150.0
+Northwest,Corpus Christi,TX,,1200.0
+Garfield Park,Grand Rapids,MI,,750.0
+East Side,Long Beach,CA,1075.0,1150.0
+Southwest Detroit,Detroit,MI,,
+West Colorado Springs,Colorado Springs,CO,950.0,950.0
+Nestor,San Diego,CA,,1600.0
+Thomas Dale,Saint Paul,MN,1050.0,895.0
+Galewood,Chicago,IL,,1300.0
+Alamitos Beach,Long Beach,CA,1395.0,1300.0
+Eastwick,Philadelphia,PA,,900.0
+Traffic Circle,Long Beach,CA,1535.0,1620.0
+Chambersburg,Trenton,NJ,900.0,1062.0
+Windsor Park,Austin,TX,749.0,1075.0
+Logan Heights,San Diego,CA,,1195.0
+East Weymouth,Weymouth,MA,1124.0,1415.0
+Capitol Hill,Denver,CO,975.0,1020.0
+Mid-City,New Orleans,LA,1175.0,975.0
+Downtown,Fremont,CA,1717.0,2051.0
+East Oak Lane,Philadelphia,PA,,775.0
+Flamingo Lummus,Miami Beach,FL,,1900.0
+New Tacoma,Tacoma,WA,895.0,1000.0
+Delmar Parkway,Aurora,CO,,800.0
+Pioneer Park,Las Vegas,NV,825.0,995.0
+Bluffview,Dallas,TX,1250.0,1340.0
+Dupont Circle,Washington,DC,2250.0,2520.0
+Poplar Grove,Salt Lake City,UT,,895.0
+Southside,Columbus,OH,,945.0
+North Stamford,Stamford,CT,3900.0,4000.0
+North Park,Buffalo,NY,,775.0
+Cambria Heights,New York,NY,1550.0,2500.0
+Lake Houston,Houston,TX,819.0,2000.0
+Sixteenth Street Heights,Washington,DC,1895.0,2100.0
+Outer Parkside,San Francisco,CA,,
+Central Beaverton,Beaverton,OR,825.0,1100.0
+Westchester Heights,New York,NY,1244.0,1300.0
+Detroit Shoreway,Cleveland,OH,,635.0
+Lincoln Park,Chicago,IL,1550.0,1735.0
+Oak Park,San Diego,CA,,1378.0
+Citizens Southwest,Jackson,MS,675.0,750.0
+Hampden South,Denver,CO,1060.0,1042.0
+Weber Ranch,Stockton,CA,1250.0,1305.0
+Hill,New Haven,CT,1000.0,1200.0
+Wissinoming,Philadelphia,PA,,750.0
+Fair Haven,New Haven,CT,1180.0,1100.0
+Hartranft,Philadelphia,PA,1350.0,2000.0
+Villages of Palm Beach Lakes,West Palm Beach,FL,1000.0,1200.0
+Greater Third Ward,Houston,TX,,1450.0
+Woodlawn,Chicago,IL,1200.0,1125.0
+Zaferia,Long Beach,CA,1250.0,1095.0
+North Gateway,Phoenix,AZ,1345.0,1400.0
+Finn Hill,Kirkland,WA,1675.0,1725.0
+Russian Hill,San Francisco,CA,3095.0,4600.0
+Firestone Park,Akron,OH,,725.0
+Van Nest,New York,NY,1125.0,1400.0
+Kensington,Philadelphia,PA,1000.0,1200.0
+Creekside - Wagner,Stockton,CA,895.0,800.0
+La Grange,Toledo,OH,,625.0
+The Groves,Mesa,AZ,635.0,699.0
+St.Johns,Portland,OR,,945.0
+Lincoln Heights,Spokane,WA,,650.0
+Mariner's Harbor,New York,NY,,1930.0
+Hillcrest,San Diego,CA,1250.0,1600.0
+"Ceder Grove, Lynbrook",Shreveport,LA,,
+Washington Square,Syracuse,NY,,700.0
+North Clairemont,San Diego,CA,,
+Central Weymouth,Weymouth,MA,,1406.0
+West Humboldt Park,Chicago,IL,850.0,975.0
+Near West Side,Chicago,IL,1600.0,1999.0
+Irving Park,Chicago,IL,1100.0,1250.0
+North Center,Chicago,IL,1300.0,1750.0
+Chimney Lakes,Jacksonville,FL,1050.0,1195.0
+Eastwood,Syracuse,NY,,575.0
+Upper Eastside,Miami,FL,1300.0,1800.0
+Shadyside,Pittsburgh,PA,1200.0,1295.0
+Hillcrest,New York,NY,1750.0,2200.0
+Alamo Farmsteads-Babcock Road,San Antonio,TX,964.0,1030.0
+Georgetown,Washington,DC,5000.0,3250.0
+Beverly Glen,Los Angeles,CA,9500.0,8950.0
+Western Branch South,Chesapeake,VA,1400.0,1395.0
+Downtown,Miami,FL,2050.0,2450.0
+Album Park,El Paso,TX,,925.0
+East Broad,Columbus,OH,760.0,1125.0
+Second Ward,Houston,TX,,1566.0
+Diamond Hill - Jarvis,Fort Worth,TX,,
+Lee Miles,Cleveland,OH,,
+Afton Oaks - River Oaks Area,Houston,TX,1260.0,1660.0
+Magnolia Center,Riverside,CA,1095.0,1250.0
+Downtown,Hampton,VA,845.0,995.0
+Arden Heights,New York,NY,,1600.0
+Greater Wythe,Hampton,VA,900.0,1050.0
+Aberdeen,Hampton,VA,1055.0,995.0
+Valley View,Henderson,NV,950.0,950.0
+Miramar Ranch North,San Diego,CA,,2150.0
+Somerset,Bellevue,WA,2290.0,2550.0
+The Fan,Richmond,VA,795.0,1150.0
+Northern Woods,Columbus,OH,609.0,
+Cherryland,Hayward,CA,,
+North Hill,Akron,OH,,
+Ashburn,Chicago,IL,,
+Rock Creek,Little Rock,AR,730.0,
+Provincetowne,Charlotte,NC,1150.0,1400.0
+Bixby Area,Long Beach,CA,,1245.0
+Eastside,Santa Ana,CA,,
+Sunnyside,Tucson,AZ,,625.0
+Whittier,Minneapolis,MN,740.0,900.0
+Riverdale,New York,NY,1695.0,1995.0
+Palolo,Honolulu,HI,,
+North King St,Hampton,VA,925.0,995.0
+Willow Meadows - Willowbend Area,Houston,TX,695.0,1500.0
+Bayshore-Klatt,Anchorage,AK,,1375.0
+North Beach,Jacksonville,FL,795.0,850.0
+Northwest,Portland,OR,985.0,1050.0
+Lea Hill,Auburn,WA,1045.0,1375.0
+McKinley Park,Chicago,IL,,950.0
+City Center,Glendale,CA,1650.0,2332.0
+MacDonald Ranch,Henderson,NV,1100.0,1395.0
+College Hill,Cincinnati,OH,795.0,600.0
+Cove - East Side,Stamford,CT,1600.0,1600.0
+John Barrow,Little Rock,AR,,650.0
+South Land Park,Sacramento,CA,,1000.0
+Hayes Valley,San Francisco,CA,,3335.0
+Downtown,Atlanta,GA,1100.0,1300.0
+Belmont Gardens,Chicago,IL,1200.0,950.0
+Independence Heights,Houston,TX,,
+Lazy Brook - Timbergrove,Houston,TX,975.0,1205.0
+Tacony,Philadelphia,PA,,650.0
+Rockaway Park,New York,NY,1350.0,1300.0
+Beverly,Chicago,IL,,1100.0
+The Ohio State University,Columbus,OH,,800.0
+McCullough Hills,Henderson,NV,1141.0,1375.0
+Front Park,Buffalo,NY,,1000.0
+Emerson Hill,New York,NY,,1700.0
+"Caddo Heights, South Highlands",Shreveport,LA,,660.0
+Downtown,Honolulu,HI,1850.0,1575.0
+Cheviot Hills,Los Angeles,CA,2900.0,3152.0
+Cully,Portland,OR,745.0,1150.0
+West Oak Hill,Austin,TX,1200.0,1300.0
+Dobson Ranch,Mesa,AZ,799.0,1150.0
+Downtown,Long Beach,CA,2000.0,1750.0
+Windy Hill,Jacksonville,FL,1015.0,1020.0
+Brookline,Pittsburgh,PA,,795.0
+Belair,Augusta,GA,826.0,900.0
+Jamaica Estates,New York,NY,1295.0,1549.0
+East Oak Hill,Austin,TX,979.0,1305.0
+Brainerd,Chicago,IL,,850.0
+Rose Garden,San Jose,CA,,
+Lakeview Terrace,Los Angeles,CA,,
+Southwest,Wichita,KS,,725.0
+Marina,San Francisco,CA,2500.0,3950.0
+Northeast Torrance,Torrance,CA,,
+Foggy Bottom,Washington,DC,1850.0,1900.0
+Highland Creek,Charlotte,NC,1250.0,1325.0
+Dellview Area,San Antonio,TX,,900.0
+Brentwood-Darlington,Portland,OR,,1025.0
+Pinnacle Peak,Scottsdale,AZ,3000.0,3000.0
+North Riverdale,New York,NY,1895.0,1700.0
+Washington Virginia Vale,Denver,CO,763.0,900.0
+Springfield-Belmont,Newark,NJ,,
+Hough,Cleveland,OH,,
+City College Area,Long Beach,CA,,
+Glen Eden,Hayward,CA,,
+Springwells,Detroit,MI,,
+Glendale,Salt Lake City,UT,,
+Lawndale - Wayside,Houston,TX,,
+Mid-Cambridge,Cambridge,MA,1850.0,2395.0
+West Side,Stamford,CT,1425.0,1600.0
+Glenbrook,Stamford,CT,1650.0,1700.0
+South Lakes Dr - Soapstone Dr,Reston,VA,1450.0,1695.0
+Angel Park Lindell,Las Vegas,NV,890.0,995.0
+Bevo Mill,Saint Louis,MO,,650.0
+Jacksonville Heights,Jacksonville,FL,750.0,875.0
+Tower Grove South,Saint Louis,MO,595.0,625.0
+Pine Hills,Albany,NY,,952.0
+Calallen,Corpus Christi,TX,,
+Jamaica Hills,New York,NY,1450.0,1400.0
+River Mountain,Little Rock,AR,825.0,995.0
+Belmont Heights,Chicago,IL,,1850.0
+Lake Hills,Bellevue,WA,1750.0,1530.0
+San Carlos,San Diego,CA,1400.0,1700.0
+Beacon Hill,Seattle,WA,,
+Virginia Village,Denver,CO,610.0,899.0
+Hyde Park,Cincinnati,OH,725.0,1095.0
+Van Ness - Civic Center,San Francisco,CA,2100.0,3700.0
+Riverside Park,Buffalo,NY,,
+Harlow,Eugene,OR,,855.0
+Floral park,New York,NY,1600.0,1600.0
+Pilsen,Chicago,IL,1355.0,1495.0
+Yorkshire,Charlotte,NC,905.0,1100.0
+Terrace Park,Tampa,FL,605.0,925.0
+Five Points,Denver,CO,1420.0,1700.0
+Gibson Springs,Henderson,NV,995.0,1275.0
+Glen Oaks,New York,NY,1300.0,1700.0
+Silver Spring,Milwaukee,WI,,
+Riverside,Cambridge,MA,2250.0,2400.0
+Pleasant Valley,Austin,TX,699.0,860.0
+Oakwood,New York,NY,,1150.0
+Mar Lee,Denver,CO,,795.0
+Taku-Campbell,Anchorage,AK,,1650.0
+Hillsborough,Raleigh,NC,1050.0,1300.0
+Silverlake,Providence,RI,,
+New Springville,New York,NY,,1300.0
+Buckeye Shaker,Cleveland,OH,695.0,625.0
+Tall Timbers-Brechtel,New Orleans,LA,757.0,700.0
+Ocean Beach,San Diego,CA,1300.0,1500.0
+South End,Hartford,CT,,825.0
+West Los Angeles,Los Angeles,CA,2650.0,2495.0
+Downtown,Las Vegas,NV,575.0,825.0
+South Southwest,San Antonio,TX,,
+West Mount Airy,Philadelphia,PA,1295.0,1025.0
+Downtown,Bellevue,WA,1595.0,1875.0
+Westside Connection,Grand Rapids,MI,,
+East Price Hill,Cincinnati,OH,700.0,695.0
+Belmont Heights,Long Beach,CA,1295.0,1650.0
+Harambee,Milwaukee,WI,,650.0
+Arverne,New York,NY,1650.0,1650.0
+Chisholm Creek,Wichita,KS,550.0,925.0
+Chevy Chase,Washington,DC,2060.0,1550.0
+Carroll Gardens,New York,NY,2150.0,2950.0
+Willmore City,Long Beach,CA,1050.0,950.0
+Cambridgeport,Cambridge,MA,2465.0,2850.0
+Windsor,Denver,CO,995.0,950.0
+"Highland, Stoner Hill",Shreveport,LA,,700.0
+Sun City Summerlin,Las Vegas,NV,1195.0,1295.0
+Stockton Metropolitan Airport,Stockton,CA,,1100.0
+Heritage,San Antonio,TX,,995.0
+Atwater Village,Los Angeles,CA,1500.0,1650.0
+Park West,Chicago,IL,1150.0,1425.0
+Spenard,Anchorage,AK,,925.0
+Bay Ho,San Diego,CA,,2200.0
+Downtown,Portland,OR,1375.0,1400.0
+North Cambridge,Cambridge,MA,2077.0,2482.0
+Lowry Park Central,Tampa,FL,700.0,980.0
+Fairmuont,Newark,NJ,,1200.0
+Palm Heights,San Antonio,TX,,
+Turn of River,Stamford,CT,2200.0,2500.0
+Hidden Valley,Charlotte,NC,695.0,810.0
+Thalia,Virginia Beach,VA,1259.0,1250.0
+Tennyson-Alquire,Hayward,CA,,
+North Hill,Spokane,WA,,695.0
+East Akron,Akron,OH,,650.0
+University Heights,San Diego,CA,945.0,1250.0
+Fremont,Seattle,WA,1800.0,1495.0
+Calumet Heights,Chicago,IL,,820.0
+Brookside,Tulsa,OK,,995.0
+South Broad Street,Newark,NJ,,1325.0
+Glenmoor,Fremont,CA,1395.0,
+Hunts Point,New York,NY,,1309.0
+Wanskuck,Providence,RI,725.0,800.0
+Schuylkill Southwest,Philadelphia,PA,1450.0,1500.0
+Northgate,Fremont,CA,,1570.0
+Point Place,Toledo,OH,,
+Magruder Area,Hampton,VA,1095.0,1175.0
+Como,Saint Paul,MN,960.0,925.0
+Southwyck,Toledo,OH,564.0,450.0
+Great Northwest,San Antonio,TX,895.0,1075.0
+Seventh Avenue,Newark,NJ,,
+Midway,Saint Paul,MN,1300.0,1250.0
+Overlake,Bellevue,WA,1125.0,1444.0
+South Beach,San Francisco,CA,3295.0,4100.0
+Millenia,Orlando,FL,900.0,1025.0
+Riverwest,Milwaukee,WI,1150.0,850.0
+Windsor Park,Charlotte,NC,695.0,850.0
+Ballston-Virginia Square,Arlington,VA,2275.0,2400.0
+Harvey Park,Denver,CO,,775.0
+Amber Hills,San Bernardino,CA,,750.0
+Russian Jack Park,Anchorage,AK,,1300.0
+Grandview,Glendale,CA,1300.0,1495.0
+Historic Mitchell Street,Milwaukee,WI,,
+University,Stockton,CA,750.0,725.0
+North-East Coconut Grove,Miami,FL,2200.0,2450.0
+Del Rio,Jacksonville,FL,1050.0,1200.0
+Ravenna,Seattle,WA,,1675.0
+Northwest Akron,Akron,OH,,
+Shenandoah,Miami,FL,1575.0,1850.0
+Mercury Central,Hampton,VA,980.0,880.0
+Old Irving Park,Chicago,IL,900.0,1100.0
+Manayunk,Philadelphia,PA,1500.0,1595.0
+Kyle Canyon,Las Vegas,NV,1050.0,1175.0
+Edgewater,Chicago,IL,1050.0,935.0
+Norwood Park East,Chicago,IL,,1200.0
+Riverside,Austin,TX,780.0,1120.0
+Boerum Hill,New York,NY,2350.0,2800.0
+Park Glen,Fort Worth,TX,,1395.0
+East Central,Spokane,WA,,795.0
+Bagley,Detroit,MI,,800.0
+East Forest,Charlotte,NC,695.0,
+Reed Park,Mesa,AZ,,750.0
+Phoebus,Hampton,VA,895.0,960.0
+La Sierra South,Riverside,CA,,1649.0
+Lower East Side,Milwaukee,WI,1400.0,1350.0
+Logan,Spokane,WA,,575.0
+Corlett,Cleveland,OH,,650.0
+North Beacon Hill,Seattle,WA,,1099.0
+Shawnee,Louisville,KY,,750.0
+Greater Eastwood,Houston,TX,,
+Richmond,Portland,OR,,1445.0
+Southeast,Eugene,OR,,925.0
+Mandarin Station - Losco,Jacksonville,FL,895.0,1295.0
+Riviera,Redondo Beach,CA,,3380.0
+Allied Gardens,San Diego,CA,,1600.0
+Grand Crossing,Chicago,IL,750.0,950.0
+First Hill,Seattle,WA,1299.0,1550.0
+Corona Hills,Corona,CA,,1775.0
+Norteast Citizens Action,Grand Rapids,MI,,
+Lower Pacific Heights,San Francisco,CA,2300.0,2895.0
+Marston,Denver,CO,875.0,1150.0
+Sundale,Fremont,CA,1270.0,
+Pleasant Valley,Portland,OR,,1230.0
+McKinley Park,Stockton,CA,,
+Sulphur Springs,Tampa,FL,,895.0
+Buena Park,Chicago,IL,1050.0,1150.0
+Airport,Honolulu,HI,,
+Squirrel Hill North,Pittsburgh,PA,,1520.0
+Mount Pleasant,Washington,DC,,
+Turnagain,Anchorage,AK,,1650.0
+South Raleigh,Raleigh,NC,750.0,995.0
+The Loop,Chicago,IL,1590.0,2000.0
+Brewerytown,Philadelphia,PA,995.0,1200.0
+Central City,New Orleans,LA,1100.0,1400.0
+Bulls Head,New York,NY,,2150.0
+SoHo,New York,NY,2495.0,3299.0
+North Ridge-Rosemont,Alexandria,VA,1650.0,1850.0
+Meiers Corners,New York,NY,,
+Mt. Washington,Cincinnati,OH,535.0,
+Cabrillo,Fremont,CA,,
+East Raleigh,Raleigh,NC,695.0,850.0
+Aurora Highlands,Aurora,CO,725.0,1400.0
+Eureka Valley - Dolores Heights - Castro,San Francisco,CA,3300.0,3995.0
+Aurora Highlands,Arlington,VA,1939.0,2153.0
+Graniteville,New York,NY,,1600.0
+Rosebank,New York,NY,,1450.0
+North Hyde Park,Tampa,FL,1050.0,1400.0
+Drake,Des Moines,IA,,600.0
+Admiral,Seattle,WA,,1195.0
+Carmel Mountain,San Diego,CA,1670.0,1800.0
+Jamestown,Augusta,GA,,895.0
+River Mountain,Henderson,NV,1150.0,1100.0
+Battery Park,New York,NY,3095.0,3665.0
+Grandmont-Rosedale,Detroit,MI,,800.0
+Waialae-Kahala,Honolulu,HI,5900.0,6000.0
+Midway District,San Diego,CA,,
+Portland,Louisville,KY,,575.0
+Colina del Sol,San Diego,CA,725.0,950.0
+Villages of Woodland Springs,Fort Worth,TX,,1550.0
+Peabody,Cambridge,MA,1850.0,2200.0
+Clark Fulton,Cleveland,OH,,
+Chinatown,New York,NY,2900.0,2700.0
+Edison Park,Chicago,IL,1500.0,1350.0
+Near East,Dallas,TX,1822.0,1498.0
+St. George,New York,NY,1815.0,1800.0
+Wicker Park,Chicago,IL,1875.0,2100.0
+"Sunset Arcre, Garden Valley, Morningside",Shreveport,LA,,
+Scott Park,Toledo,OH,,699.0
+Radnor-Ft Myer Heights,Arlington,VA,2600.0,2409.0
+Whitney Ranch,Henderson,NV,,1250.0
+Roosevelt Island,New York,NY,3095.0,2825.0
+Myers Park,Charlotte,NC,1500.0,1331.0
+College Park,Orlando,FL,1050.0,995.0
+Western Addition,San Francisco,CA,2285.0,3750.0
+Crescenta Highlands,Glendale,CA,,
+Speer,Denver,CO,850.0,1130.0
+Washington Park,Chicago,IL,900.0,1100.0
+Valencia Park,San Diego,CA,,1750.0
+North Broadway,Newark,NJ,,1150.0
+Twin Lakes,Las Vegas,NV,650.0,675.0
+East Village,Long Beach,CA,950.0,1100.0
+Rose Park,Salt Lake City,UT,,1250.0
+Stapleton,New York,NY,,2200.0
+Maple Leaf,Seattle,WA,1275.0,1400.0
+Georgetown,New York,NY,1600.0,1745.0
+Schiller Park,Buffalo,NY,,
+Flowing Wells,Tucson,AZ,,675.0
+Montopolis,Austin,TX,,
+Five Points,El Paso,TX,,595.0
+Downtown,Riverside,CA,900.0,1095.0
+Power Ranch,Gilbert,AZ,,1295.0
+Canton,Baltimore,MD,1780.0,1987.0
+Stonestown,San Francisco,CA,2250.0,2649.0
+Highland Square,Akron,OH,,650.0
+Sellwood-Moreland,Portland,OR,,1500.0
+Elmhurst,Providence,RI,950.0,1500.0
+Sheffield Neighbors,Chicago,IL,1650.0,1995.0
+Eastmoor,Columbus,OH,,675.0
+Brookville,New York,NY,1600.0,1400.0
+Pine Point,Springfield,MA,,1100.0
+North Deering,Portland,ME,,
+Love Field Area,Dallas,TX,899.0,1035.0
+Olde Torrance,Torrance,CA,,1695.0
+Potrero Hill,San Francisco,CA,,3950.0
+Forestville,Cincinnati,OH,815.0,
+East Hyde Park,Chicago,IL,1150.0,1245.0
+Mill Creek,Philadelphia,PA,1500.0,1500.0
+Elmwood,Providence,RI,,1025.0
+Brightmoor,Detroit,MI,,700.0
+Old Town,Chicago,IL,1760.0,1900.0
+Upper Baseline,Little Rock,AR,,
+Leimert Park,Los Angeles,CA,1550.0,1900.0
+Murray Hill,New York,NY,2600.0,3150.0
+Northwest Crossing,San Antonio,TX,,1000.0
+North East,Hartford,CT,650.0,900.0
+Normal Heights,San Diego,CA,900.0,1195.0
+Glendale - Heather Downs,Toledo,OH,724.0,
+South Collinwood,Cleveland,OH,,
+Crestview,Los Angeles,CA,,1550.0
+Franklin Park,Detroit,MI,,675.0
+West 7th,Saint Paul,MN,970.0,1099.0
+Forest Hills,Cleveland,OH,,
+Kashmere Gardens,Houston,TX,,775.0
+La Sierra Acres,Riverside,CA,,1475.0
+Highland Park,San Antonio,TX,,650.0
+Rosemont,Fort Worth,TX,,
+Garrison Park,Austin,TX,950.0,1045.0
+North Oakland,Pittsburgh,PA,1175.0,
+Heron Walk,Nashville,TN,660.0,
+Pittman,Henderson,NV,815.0,875.0
+Ocean Crest,San Diego,CA,,2500.0
+Rossville,New York,NY,,2650.0
+North Panhandle,San Francisco,CA,2495.0,3500.0
+Haight-Ashbury,San Francisco,CA,1700.0,2800.0
+Six Forks,Raleigh,NC,895.0,1100.0
+East Forest Park,Springfield,MA,,
+Fairview,Hayward,CA,,
+Eagle River Valley,Anchorage,AK,,1995.0
+Mission Terrace,San Francisco,CA,,
+Lackland Terrace,San Antonio,TX,,
+Arlington,Riverside,CA,,1215.0
+Terrace,San Bernardino,CA,,1295.0
+Mount Pleasant,Providence,RI,,900.0
+Brookside,Stockton,CA,1245.0,1500.0
+East Colfax,Denver,CO,845.0,1020.0
+Chestnut Hill,Philadelphia,PA,1119.0,1195.0
+Union Miles Park,Cleveland,OH,,
+Hunters Point,New York,NY,2650.0,2800.0
+University Heights,Newark,NJ,,
+Seventh Ward,New Orleans,LA,,850.0
+Asylum Hill,Hartford,CT,729.0,800.0
+Hegewisch,Chicago,IL,,1050.0
+College East,San Diego,CA,1275.0,3200.0
+Bridle Trails,Bellevue,WA,1365.0,1650.0
+Baymeadows,Jacksonville,FL,804.0,979.0
+Sabre Springs,San Diego,CA,2000.0,1975.0
+Mount Tabor,Portland,OR,,
+Forest,Buffalo,NY,,
+Foxhill,Hampton,VA,1250.0,1295.0
+Red Hook,New York,NY,1650.0,3000.0
+Congress Park,Denver,CO,,1000.0
+Lower Roseville,Newark,NJ,,1100.0
+Rio Bravo,Bakersfield,CA,,864.0
+Indian Hills-Stonewall Estates-Monticello,Lexington,KY,,
+Southeast Torrance,Torrance,CA,,
+Fox Creek,Stockton,CA,,950.0
+Paradise Hills,Henderson,NV,,1425.0
+Brooklyn,Baltimore,MD,675.0,900.0
+Turtle Rock,Irvine,CA,2900.0,2825.0
+University Area,Anchorage,AK,,
+Huguenot,New York,NY,,1200.0
+Carrick,Pittsburgh,PA,,695.0
+"Jenkins, Pinecroft Subdivision",Shreveport,LA,,
+Old Fourth Ward,Atlanta,GA,1035.0,1313.0
+Mission Valley East,San Diego,CA,1670.0,1900.0
+Vineyard,Glendale,CA,,
+Kensington,Buffalo,NY,,
+Mission Bay Park,San Diego,CA,1500.0,1999.0
+Midtown,Palo Alto,CA,,3295.0
+Marcy Holmes,Minneapolis,MN,1000.0,2250.0
+Fernwood,Chicago,IL,,1500.0
+Kingman Park,Washington,DC,1450.0,1995.0
+Midland Beach,New York,NY,,1600.0
+Stone Oak,San Antonio,TX,1095.0,1405.0
+Roscoe Village,Chicago,IL,1395.0,1750.0
+Jomacha-Lomita,San Diego,CA,,
+Rancho West,San Bernardino,CA,,
+Historic Midtown,Wichita,KS,,
+Kingsgate,Kirkland,WA,999.0,2195.0
+Great Neck Village,Great Neck,NY,,2950.0
+Westside,Santa Barbara,CA,,
+Ballantyne West,Charlotte,NC,1000.0,1425.0
+Rose Park,Long Beach,CA,975.0,1200.0
+North End,Boston,MA,2000.0,2450.0
+Fairlington-Shirlington,Arlington,VA,1900.0,2150.0
+North Queen Anne,Seattle,WA,1320.0,1550.0
+Montclaire South,Charlotte,NC,600.0,900.0
+Oak Creek,Irvine,CA,1950.0,2265.0
+Park Hill,New York,NY,,
+Burnside,Chicago,IL,,925.0
+Jackson Triangle,Hayward,CA,1099.0,
+Merle Hay,Des Moines,IA,,650.0
+Mandarin,Jacksonville,FL,,1500.0
+Clairemont Mesa West,San Diego,CA,,
+West Meadows,Tampa,FL,1050.0,1300.0
+East Falls,Philadelphia,PA,1250.0,1295.0
+Pomonok,New York,NY,1700.0,1880.0
+Old Louisville,Louisville,KY,519.0,550.0
+Budlong Woods,Chicago,IL,935.0,1250.0
+Reservorir,Lexington,KY,670.0,695.0
+Airport,Riverside,CA,,1295.0
+Tam O'Shanter,Stockton,CA,,1075.0
+Oakley,Cincinnati,OH,1100.0,1350.0
+Los Angeles Heights - Keystone,San Antonio,TX,,799.0
+Portsmouth,Portland,OR,,1025.0
+Highlands,Jacksonville,FL,630.0,890.0
+Highland Hills,Henderson,NV,1100.0,1250.0
+Richmond Town,New York,NY,,1995.0
+South Arroyo,Pasadena,CA,2249.0,3200.0
+Southwest Ada County Alliance,Boise,ID,,
+Ruby Hill,Denver,CO,,
+College Hill,Providence,RI,1300.0,1300.0
+Eagle River,Anchorage,AK,,1800.0
+East Rock,New Haven,CT,1100.0,1300.0
+Eastlake Greens,Chula Vista,CA,,2150.0
+Frog Hollow,Hartford,CT,950.0,900.0
+Warm Springs,Fremont,CA,,
+Sunset Hills,Reston,VA,2100.0,2100.0
+Churchill Area,Eugene,OR,,950.0
+Prince's Bay,New York,NY,,1000.0
+Beverly,Toledo,OH,,
+Los Altos,Long Beach,CA,,
+Tottenville,New York,NY,,1700.0
+Ingleside,San Francisco,CA,,
+Verdugo Viejo,Glendale,CA,1750.0,1925.0
+West Colfax,Denver,CO,700.0,
+Cudell,Cleveland,OH,,
+Wiehle Ave - Reston Pky,Reston,VA,1511.0,1750.0
+West Kensington,Philadelphia,PA,1400.0,1650.0
+Near Northeast,Syracuse,NY,,
+Belmont,Dayton,OH,525.0,
+Falcon,Colorado Springs,CO,1250.0,1350.0
+Parker Lane,Austin,TX,745.0,950.0
+College West,San Diego,CA,1125.0,1950.0
+Sunnyside,Denver,CO,,1200.0
+Florida Center North,Orlando,FL,750.0,850.0
+Overtown,Miami,FL,1250.0,1250.0
+East Cambridge,Cambridge,MA,2688.0,3000.0
+Waterloo,Stockton,CA,,750.0
+Cedar-Riverside,Minneapolis,MN,890.0,
+American University Park,Washington,DC,2350.0,1850.0
+Lake Mohawk,Sparta,NJ,2200.0,2200.0
+Neighbors Southwest,Beaverton,OR,850.0,1167.0
+Boulevard Heights,Saint Louis,MO,,
+Petosky-Otsego,Detroit,MI,,525.0
+Wrightwood Neighbors,Chicago,IL,2050.0,2395.0
+Yorkmount,Charlotte,NC,670.0,825.0
+Moanalua,Honolulu,HI,,
+Concordia,Portland,OR,,1795.0
+West Bench,Boise,ID,,925.0
+Central City,Salt Lake City,UT,1040.0,1125.0
+Ohio City - West Side,Cleveland,OH,,
+University,Denver,CO,,1450.0
+Shearer Hills - Ridgeview,San Antonio,TX,,1195.0
+Lyell-Otis,Rochester,NY,,750.0
+Deep Creek South,Chesapeake,VA,,1950.0
+Lindenwood Park,Saint Louis,MO,,700.0
+Southwood Riviera,Torrance,CA,,
+North Hills,El Paso,TX,,1300.0
+Cherry Avenue,Tucson,AZ,,800.0
+Murray Hill,Jacksonville,FL,750.0,750.0
+Castle,San Diego,CA,,1100.0
+Sans Pareil,Jacksonville,FL,900.0,
+Victoria,Riverside,CA,,1675.0
+Avenues West,Milwaukee,WI,853.0,
+Mustang-Padre Island,Corpus Christi,TX,1250.0,1600.0
+Rose City Park,Portland,OR,,1895.0
+Woodhaven,Fort Worth,TX,,591.0
+Behind the Rocks,Hartford,CT,750.0,
+Barton-McFarland,Detroit,MI,,750.0
+Near South,Lincoln,NE,,
+North Juanita,Kirkland,WA,1200.0,1320.0
+Vista,Boise,ID,650.0,795.0
+East Bench,Salt Lake City,UT,,
+Wade,Raleigh,NC,995.0,1050.0
+Martin Luther King Dr. Area,Shreveport,LA,,489.0
+Torrey Pines,San Diego,CA,,
+Shaw,Washington,DC,1950.0,2422.0
+Irvington,Fremont,CA,1440.0,1950.0
+Belltown,Seattle,WA,1600.0,1700.0
+Beacon Hill,Boston,MA,1850.0,2550.0
+Queensborough,Shreveport,LA,,
+Charles Village,Baltimore,MD,850.0,890.0
+Oak Park - Northwood,San Antonio,TX,,1400.0
+South East,Pasadena,CA,1700.0,1500.0
+Mill Park,Portland,OR,,
+Park Place,Houston,TX,,
+Handley,Fort Worth,TX,,999.0
+Midtown West,Stockton,CA,800.0,525.0
+North River,Toledo,OH,,
+North Park Hill,Denver,CO,,1300.0
+Superstition Springs,Mesa,AZ,845.0,924.0
+West Meadowbrook,Fort Worth,TX,,
+Chinatown,Boston,MA,2495.0,3000.0
+Scenic Foothills,Anchorage,AK,,1800.0
+North End,Boise,ID,595.0,600.0
+Washington School,Long Beach,CA,,1038.0
+Southwest Waterfront,Washington,DC,1750.0,2100.0
+Beverlywood,Los Angeles,CA,3650.0,1680.0
+Oakland,Pittsburgh,PA,1350.0,1000.0
+St. Johns,Austin,TX,779.0,840.0
+Athmar Park,Denver,CO,,
+Glenwood,Glendale,CA,,
+Steele Creek,Charlotte,NC,1150.0,1200.0
+Evanston,Cincinnati,OH,,825.0
+Toluca Lake,Los Angeles,CA,2850.0,2025.0
+Van Buskirk,Stockton,CA,,1050.0
+Fair Oaks,Stockton,CA,,
+Water Catchment Area,West Palm Beach,FL,1100.0,1450.0
+Downtown,Cleveland,OH,1080.0,1900.0
+Holly,Everett,WA,945.0,1150.0
+Douglas Park,Arlington,VA,1925.0,2200.0
+Woodstock,Portland,OR,,1195.0
+Talmadge,San Diego,CA,995.0,1095.0
+Spanos Park East,Stockton,CA,,1475.0
+Northside,Riverside,CA,,1500.0
+University of Texas,Austin,TX,900.0,
+"Airport, Pines Road",Shreveport,LA,620.0,
+Indian Orchard,Springfield,MA,,900.0
+Phinney Ridge,Seattle,WA,1500.0,1250.0
+Eastchester,New York,NY,,1370.0
+Cleveland Park,Washington,DC,1900.0,1575.0
+Greenridge,New York,NY,,
+Villa Park,Denver,CO,,900.0
+Hyde Park,Jacksonville,FL,895.0,895.0
+Lincoln Park,San Diego,CA,,
+Mission Grove,Riverside,CA,1265.0,1550.0
+Greenland,Jacksonville,FL,1350.0,1550.0
+South Knoxville,Knoxville,TN,620.0,645.0
+Edison,Kalamazoo,MI,,695.0
+South Central Improvemen,Wichita,KS,,550.0
+Isle of Normandy,Miami Beach,FL,,1800.0
+Heritage,Fort Worth,TX,,2100.0
+Greenhaven,Sacramento,CA,885.0,1040.0
+Wilkes,Portland,OR,,
+Anderson,Stockton,CA,800.0,750.0
+Bear Valley,Denver,CO,,
+Lincoln Village West,Stockton,CA,950.0,
+Southside Estates,Jacksonville,FL,795.0,925.0
+Russell,Louisville,KY,,650.0
+West Highland,Denver,CO,,1500.0
+Redwood Heights,Oakland,CA,1250.0,
+Powderhorn Park,Minneapolis,MN,895.0,
+Emerson-Garfield,Spokane,WA,,650.0
+Little Italy,New York,NY,3000.0,3450.0
+Southland-Deerfield-Open Gates,Lexington,KY,,950.0
+Clifton,Cincinnati,OH,,
+Temple Crest,Tampa,FL,705.0,950.0
+Madisonville,Cincinnati,OH,850.0,895.0
+Beechwood,Rochester,NY,,
+North Arroyo,Pasadena,CA,,
+Oak Forest,Little Rock,AR,,650.0
+Windsor Spring,Augusta,GA,,750.0
+Golden Hill,San Diego,CA,1095.0,1550.0
+Mount Washington,Pittsburgh,PA,900.0,1100.0
+Harford-Echodale - Perring Parkway,Baltimore,MD,,850.0
+Midtown,Houston,TX,1410.0,1769.0
+Trumbull Village,Albuquerque,NM,,450.0
+Westwood,Kalamazoo,MI,641.0,860.0
+Shipley Terrace,Washington,DC,,
+Mesa Hills,El Paso,TX,,
+Georgian Acres,Austin,TX,715.0,810.0
+West Meade,Nashville,TN,950.0,1150.0
+Central Davis,Davis,CA,,2195.0
+Mt. Airy,Cincinnati,OH,,
+Village East,Aurora,CO,769.0,
+Benton Park,Bakersfield,CA,,
+South Linden,Columbus,OH,575.0,650.0
+Highland,Denver,CO,1375.0,1730.0
+Woodland Hills,Cleveland,OH,,
+Coulwood West,Charlotte,NC,995.0,1050.0
+Falls of Neuse,Raleigh,NC,1195.0,1095.0
+West Cambridge,Cambridge,MA,2300.0,2500.0
+Willowbrook,Houston,TX,695.0,1175.0
+Sierra del Oro,Corona,CA,,2199.0
+Rossmoyne,Glendale,CA,,
+Rosemoor,Chicago,IL,,900.0
+South Park Hill,Denver,CO,,1069.0
+Green Lake,Seattle,WA,,1775.0
+Downtown East,Las Vegas,NV,,550.0
+Willard Hay,Minneapolis,MN,995.0,
+Mountain View,Anchorage,AK,,
+South Hills,Fort Worth,TX,,
+Brightwood,Washington,DC,,1439.0
+Pine Hills,Atlanta,GA,1250.0,1400.0
+Riverside,Jacksonville,FL,950.0,750.0
+Liberty Wells,Salt Lake City,UT,,825.0
+South Beaverton,Beaverton,OR,,
+Egger Highlands,San Diego,CA,,
+Belmont Shore,Long Beach,CA,1700.0,1795.0
+Skyline,San Diego,CA,,1800.0
+Highland Park,Des Moines,IA,,
+Yerdemont,San Bernardino,CA,1095.0,1475.0
+Northeast Macfarlane,Tampa,FL,,900.0
+Buckman,Portland,OR,1095.0,1295.0
+Englewood,Jacksonville,FL,895.0,950.0
+Haller Lake,Seattle,WA,,1500.0
+Northwest Los Angeles Heights,San Antonio,TX,,
+Woodbury,Irvine,CA,1885.0,2050.0
+Fort Logan,Denver,CO,,
+Riverbend,Columbus,OH,,
+Bloomfield,Pittsburgh,PA,1095.0,1200.0
+Central Hilltop,Columbus,OH,635.0,600.0
+Powelton,Philadelphia,PA,790.0,1249.0
+Harvey Park South,Denver,CO,,
+Richmond Hill,Augusta,GA,,575.0
+Langwood,Houston,TX,580.0,
+Delthome,Torrance,CA,,1325.0
+Broadview,Seattle,WA,,1750.0
+Providence Plantation,Charlotte,NC,,
+Campbell Park,Anchorage,AK,,
+Plaza Terrace,Tampa,FL,670.0,839.0
+Independence Village,Columbus,OH,1000.0,1050.0
+Brooklyn Centre,Cleveland,OH,,
+Cow Hollow,San Francisco,CA,,3600.0
+University of Ohio Akron,Akron,OH,690.0,500.0
+Southwest,San Antonio,TX,,
+Park West,San Diego,CA,1695.0,1550.0
+Elvira,Tucson,AZ,,582.0
+Engelwood Park,Orlando,FL,,875.0
+Ballantyne East,Charlotte,NC,935.0,1249.0
+Manor Park,Washington,DC,,1395.0
+Laurelglen,Bakersfield,CA,,1125.0
+Central,Minneapolis,MN,,
+Mid Central,Pasadena,CA,1800.0,1925.0
+University Park,Irvine,CA,2600.0,2275.0
+Corridor,San Diego,CA,775.0,1025.0
+Bitter Lake,Seattle,WA,1200.0,1295.0
+Near Northeast,Washington,DC,1995.0,2300.0
+Oak Hill,Jacksonville,FL,875.0,925.0
+Grantville,San Diego,CA,1398.0,1920.0
+Cliff-Cannon,Spokane,WA,,550.0
+Noble Square,Chicago,IL,1795.0,1700.0
+Franklinton,Columbus,OH,,
+Hilltop,Denver,CO,,1975.0
+Midtown,Little Rock,AR,774.0,895.0
+Rainbow Hills,San Antonio,TX,682.0,
+Riverside,Columbus,OH,765.0,810.0
+Clintonville,Columbus,OH,,
+Westmont,Everett,WA,,995.0
+Westpointe,Salt Lake City,UT,,
+Charlotte,Rochester,NY,,
+Berkeley,Denver,CO,,1500.0
+Sandtown-Winchester,Baltimore,MD,,950.0
+Pacific Edison,Glendale,CA,,2536.0
+Marshbrooke,Charlotte,NC,750.0,975.0
+Otay Ranch Village 1,Chula Vista,CA,1685.0,2189.0
+Bel Air,Los Angeles,CA,6350.0,3535.0
+Lowry Field,Denver,CO,1000.0,1335.0
+Rockaway Beach,New York,NY,,1550.0
+South Middle River,Fort Lauderdale,FL,1350.0,1235.0
+North Buckhead,Atlanta,GA,1710.0,1705.0
+Castleton Corners,New York,NY,,1350.0
+Southwest Richardson,Richardson,TX,,
+Barton Hills,Austin,TX,1070.0,1460.0
+Morningside - Lenox Park,Atlanta,GA,2000.0,
+Old Seward-Oceanview,Anchorage,AK,,
+Mineral Springs-Rumble Road,Charlotte,NC,797.0,995.0
+Toddville Road,Charlotte,NC,750.0,925.0
+Glen,Baltimore,MD,,
+Thoroughgood,Virginia Beach,VA,,1500.0
+Vose,Beaverton,OR,,
+Hickory Ridge,Charlotte,NC,775.0,895.0
+Beechmont,Louisville,KY,,
+Piper Glen Estates,Charlotte,NC,1250.0,1100.0
+Roosevelt,Bellingham,WA,750.0,710.0
+Downtown,Saint Paul,MN,975.0,1211.0
+Airport North,Orlando,FL,825.0,999.0
+Creston-Kenilworth,Portland,OR,,945.0
+South-West Coconut Grove,Miami,FL,2400.0,3000.0
+Quintana Community,San Antonio,TX,,
+Edgerton,Rochester,NY,,550.0
+East Village,San Diego,CA,2045.0,2350.0
+Windsor Terrace,New York,NY,1595.0,2200.0
+Natomas Park,Sacramento,CA,,1645.0
+Capitol Hill,Salt Lake City,UT,,850.0
+West Woodlawn,Chicago,IL,950.0,1100.0
+Southwest,Columbus,OH,,
+Jewell Heights - Hoffman Heights,Aurora,CO,895.0,1295.0
+DMV,San Bernardino,CA,,750.0
+Springfield Gardens,New York,NY,1650.0,1500.0
+Redwood Village,San Diego,CA,,1400.0
+University District,Cleveland,OH,,
+Newport Hills,Bellevue,WA,,
+Central Oak Park,Saint Petersburg,FL,811.0,800.0
+Brentwood,Austin,TX,1195.0,1339.0
+Eastland,Columbus,OH,,
+Marble Hill,New York,NY,1550.0,1250.0
+Craven,Jacksonville,FL,700.0,1197.0
+Olympic Hills,Seattle,WA,,1395.0
+Carriage Place,Aurora,CO,,
+Port Gardner,Everett,WA,995.0,
+South Juanita,Kirkland,WA,1299.0,1395.0
+Northgate,Columbus,OH,607.0,
+West End,Hartford,CT,800.0,795.0
+Cheesman Park,Denver,CO,1300.0,945.0
+Grymes Hill,New York,NY,,3100.0
+Avondale,Cincinnati,OH,,630.0
+Behrman,New Orleans,LA,,
+Arrochar,New York,NY,,1325.0
+North Hampton,Saint Louis,MO,550.0,550.0
+Oak Park,Santa Barbara,CA,,1225.0
+Greater Harmony Hills,San Antonio,TX,659.0,875.0
+Clarendon-Courthouse,Arlington,VA,2315.0,2635.0
+Northeast Park Hill,Denver,CO,,
+Allandale,Austin,TX,1300.0,1430.0
+Chicot West I-30 So.,Little Rock,AR,,
+Heninger Park,Santa Ana,CA,,
+Bond Hill,Cincinnati,OH,,
+Loring Park,Minneapolis,MN,995.0,970.0
+Sweetwater,Columbus,OH,,1150.0
+Washington Park,Providence,RI,,1575.0
+Southside,Augusta,GA,,
+Harris-Houston,Charlotte,NC,765.0,600.0
+River North,Chicago,IL,2095.0,2198.0
+Wedgwood,Seattle,WA,1140.0,
+"Country Club Hills, Lakeshore Shopping",Shreveport,LA,,
+Loyal Heights,Seattle,WA,,1795.0
+Clason Point,New York,NY,,1600.0
+Five Points,Raleigh,NC,1195.0,1150.0
+Eastside,Santa Barbara,CA,,
+Glen Park,San Francisco,CA,,3975.0
+Walnut Heights,Columbus,OH,,900.0
+Midtown,Detroit,MI,1000.0,
+Walnut Village,Irvine,CA,,2680.0
+Otay Ranch Village 5,Chula Vista,CA,,2200.0
+Adams Point,Oakland,CA,1195.0,1550.0
+Palmer Square,Chicago,IL,1395.0,1600.0
+Madison South,Portland,OR,799.0,
+Santa Clara,Hayward,CA,,1801.0
+Downtown,New York,NY,2500.0,2971.0
+Everett Mall South,Everett,WA,899.0,
+East Springfield,Springfield,MA,,1100.0
+Hattontown,Reston,VA,,1800.0
+Kenton,Portland,OR,,1300.0
+South Beach,New York,NY,,1250.0
+Minor,Seattle,WA,1447.0,1490.0
+Expo Park,Aurora,CO,,900.0
+South Lamar,Austin,TX,932.0,1310.0
+Linden Hills,Minneapolis,MN,950.0,1685.0
+Bemiss,Spokane,WA,,
+Lakewood Village,Long Beach,CA,,
+MLK 183,Austin,TX,950.0,
+Niles,Fremont,CA,,
+Riggs Park,Washington,DC,,1801.0
+Westville,New Haven,CT,1070.0,1200.0
+Glover Park,Washington,DC,1918.0,1861.0
+Telegraph Hill,San Francisco,CA,3000.0,3975.0
+Mission-Garin,Hayward,CA,1150.0,
+Gleason Park,Stockton,CA,,675.0
+Old Town Triangle,Chicago,IL,1450.0,2050.0
+Pleasant Ridge,Cincinnati,OH,650.0,550.0
+Cherry Creek,Columbus,OH,,
+Arrowhead,San Bernardino,CA,,1200.0
+Edgewater,Cleveland,OH,595.0,650.0
+Quail Lakes - Venetian Bridges,Stockton,CA,975.0,900.0
+Moran Prairie,Spokane,WA,,
+Forest Hills,Tampa,FL,914.0,1050.0
+Upper Hill,Springfield,MA,,950.0
+Glenwood,Raleigh,NC,,
+Jackson Park,Milwaukee,WI,,
+Deerwood,Jacksonville,FL,1050.0,1285.0
+Jordan,Minneapolis,MN,945.0,1000.0
+Walnut Valley,Little Rock,AR,745.0,850.0
+St. Louis Hills,Saint Louis,MO,,650.0
+Chinatown,Los Angeles,CA,,2145.0
+Family Acres,Lincoln,NE,,
+Northside,Cincinnati,OH,,595.0
+Rosemont,Orlando,FL,675.0,795.0
+Twin Rivers,East Windsor,NJ,,
+South Central,Raleigh,NC,,700.0
+Riverside,Wichita,KS,550.0,
+West Central,Spokane,WA,,575.0
+Carondelet,Saint Louis,MO,525.0,575.0
+Woodland Acres,Jacksonville,FL,,790.0
+Sunbow II,Chula Vista,CA,,
+Arlington Hills,Jacksonville,FL,900.0,995.0
+Clinton,Oakland,CA,,
+Multnomah,Portland,OR,999.0,950.0
+Lauderdale Manors,Fort Lauderdale,FL,1500.0,1300.0
+Verdugo Woodlands,Glendale,CA,,
+Lovejoy,Buffalo,NY,,
+Parkwoods,Stockton,CA,,850.0
+Somerset,Columbus,OH,,
+West Augusta,Augusta,GA,649.0,
+University Park,Denver,CO,,905.0
+Land Park,Sacramento,CA,,1100.0
+University District,Missoula,MT,,895.0
+Reservoir,Little Rock,AR,585.0,725.0
+Mayfair,Chicago,IL,,950.0
+West Sugar Creek-W T Harris Bl,Charlotte,NC,850.0,1000.0
+Longwood Manor,Chicago,IL,,
+East Ballard,Seattle,WA,,2200.0
+Ballard,Seattle,WA,,1790.0
+Spice Tract,Bakersfield,CA,,
+Loretto,Jacksonville,FL,850.0,1175.0
+North Mayfair,Chicago,IL,,
+La Mesa,Albuquerque,NM,,500.0
+Kingfield,Minneapolis,MN,,1150.0
+Mission-Foothill,Hayward,CA,1200.0,1511.0
+Cedar Hills,Jacksonville,FL,850.0,895.0
+Coldstream Homestead Montebello,Baltimore,MD,1000.0,1000.0
+Milwood,Kalamazoo,MI,,
+Morena,San Diego,CA,1799.0,2150.0
+Mount Scott,Portland,OR,,
+South San Pedro,Albuquerque,NM,,650.0
+Prospect Park,Minneapolis,MN,1180.0,1500.0
+Crystal Springs,Jacksonville,FL,,1200.0
+Lyndale,Minneapolis,MN,,
+Cherry Hill,Baltimore,MD,,899.0
+Stockyards,Cleveland,OH,,
+Collister,Boise,ID,,675.0
+Mount Pleasant,Newark,NJ,,
+Princeton Heights,Saint Louis,MO,,725.0
+Old Town,New York,NY,,1600.0
+Foster-Powell,Portland,OR,,
+Thunderbird Hills,San Antonio,TX,620.0,1275.0
+Wilburton,Bellevue,WA,,2100.0
+Columbia City,Seattle,WA,,1288.0
+Cheswolde,Baltimore,MD,860.0,949.0
+Glencliff,Nashville,TN,790.0,
+Brookvale,Fremont,CA,1475.0,
+Starmount Forest,Charlotte,NC,645.0,700.0
+Catholic University,Washington,DC,,
+Wellswood,Tampa,FL,609.0,
+The Islands,Gilbert,AZ,1350.0,1300.0
+Hartford,Providence,RI,,
+Broadway-Fillmore,Buffalo,NY,,
+East,Columbus,OH,,
+St. Anthony,Saint Paul,MN,1132.0,1025.0
+Downtown,Austin,TX,1408.0,2195.0
+Schorsch Village,Chicago,IL,,
+Franklin to the Fort,Missoula,MT,,615.0
+Cleveland Heights,Oakland,CA,,1800.0
+Virginia Highland,Atlanta,GA,1210.0,1100.0
+Silver Lake,Everett,WA,925.0,1155.0
+Country Club,New York,NY,,1700.0
+Greenfield,Pittsburgh,PA,,
+Federal Hill,Providence,RI,999.0,1395.0
+Sloan Lake,Denver,CO,,
+Brick Church Bellshire,Nashville,TN,,
+Lake,San Francisco,CA,,4300.0
+West Hill,Albany,NY,,840.0
+Woodlawn,New York,NY,,1400.0
+Robla,Sacramento,CA,,1195.0
+Brookland,Washington,DC,,1650.0
+Fair Haven Heights,New Haven,CT,,1400.0
+Thompson Community,San Antonio,TX,,
+Old Town,Alexandria,VA,1295.0,2100.0
+East Ukrainian Village,Chicago,IL,1450.0,2275.0
+South Hampton,Saint Louis,MO,,750.0
+Sexton Mountain,Beaverton,OR,,
+Dayton Triangle,Aurora,CO,,1100.0
+Upper Albany,Hartford,CT,,
+Lone Mountain,San Francisco,CA,,
+Fairview,Anchorage,AK,,
+Delaware Avenue,Albany,NY,,945.0
+Alki,Seattle,WA,,1395.0
+Grant City,New York,NY,,1300.0
+Hillyard,Spokane,WA,,785.0
+South City Community,Wichita,KS,,650.0
+Brighton Heights,Pittsburgh,PA,,
+Brighton,Seattle,WA,,
+Springdale,Stamford,CT,1500.0,1700.0
+Cobble Hill,New York,NY,2400.0,2400.0
+Blacow,Fremont,CA,,
+SBHS,San Bernardino,CA,,725.0
+Tri-Village,Columbus,OH,689.0,780.0
+St. Claire-Superior,Cleveland,OH,,
+"Allendale, Lakeside",Shreveport,LA,,
+Historic Old Northeast,Saint Petersburg,FL,750.0,795.0
+Sunnyside,Portland,OR,1049.0,1295.0
+Shannon Park,Charlotte,NC,690.0,850.0
+Acredale,Virginia Beach,VA,,1350.0
+Southgate,Bakersfield,CA,,
+Holiday Hill,Jacksonville,FL,900.0,995.0
+Grasmere - Concord,New York,NY,,1350.0
+Central,San Mateo,CA,,
+Downtown,Seattle,WA,1599.0,2100.0
+Somerset,Glendale,CA,,
+Friendly Area,Eugene,OR,,875.0
+Van Steuban,Detroit,MI,,650.0
+Western Hills and Yarborough Subdivision,Shreveport,LA,,
+Campus Park,Bakersfield,CA,,
+Grandale,Detroit,MI,,650.0
+Hillcrest,Jacksonville,FL,650.0,845.0
+Mid-Westside,Jacksonville,FL,,650.0
+Grant Park,Atlanta,GA,1163.0,1350.0
+College-Glen,Sacramento,CA,,1450.0
+Corbett-Terwilliger-Lair Hill,Portland,OR,1450.0,1525.0
+Delta,Everett,WA,,
+Old Seminole Heights,Tampa,FL,,990.0
+Olneyville,Providence,RI,800.0,800.0
+Las Sendas,Mesa,AZ,1745.0,1900.0
+South Manchaca,Austin,TX,950.0,1010.0
+Margate Park,Chicago,IL,995.0,1100.0
+East Bakersfield,Bakersfield,CA,,595.0
+Julington Creek,Jacksonville,FL,,1450.0
+Hunters Green,Tampa,FL,999.0,1700.0
+Hillsdale,Portland,OR,750.0,1195.0
+Windsor Hills,Austin,TX,930.0,
+Black Mountain,Henderson,NV,950.0,995.0
+Dwight,New Haven,CT,,1195.0
+Mission San Jose,Fremont,CA,,
+Sauganash,Chicago,IL,,1700.0
+Borah,Boise,ID,,
+Kenwood,Chicago,IL,930.0,1250.0
+Blackstone,Providence,RI,1000.0,1200.0
+Metro Center,Springfield,MA,,
+Five Mile Creek,Dallas,TX,,
+North Tampa,Tampa,FL,,800.0
+Mill Basin,New York,NY,,1700.0
+Plaza-Eastway,Charlotte,NC,,850.0
+New Tampa,Tampa,FL,1295.0,1350.0
+Seward,Minneapolis,MN,,
+Canyon Creek,Richardson,TX,,1750.0
+Kilbourn Park,Chicago,IL,720.0,850.0
+Mission Viejo,Aurora,CO,,
+Crescent Hill,Louisville,KY,,
+Fitzgerald,Detroit,MI,,650.0
+East Queen Anne,Seattle,WA,1650.0,1600.0
+Dunning,Chicago,IL,,1500.0
+Taylor Berry,Louisville,KY,,625.0
+Northeast Bakersfield,Bakersfield,CA,,750.0
+Washington Park,Denver,CO,,2000.0
+Pelican Bay,Naples,FL,3000.0,5500.0
+Buena Vista,Washington,DC,,
+Newhallville,New Haven,CT,995.0,1000.0
+Annadale,New York,NY,,1200.0
+Boynton,Detroit,MI,,
+Sunbeam,Jacksonville,FL,899.0,1120.0
+Piedmont,Portland,OR,,
+North College Park,Seattle,WA,915.0,1495.0
+Havenscourt,Oakland,CA,,1100.0
+Wheeless Road,Augusta,GA,,
+Old North Columbus,Columbus,OH,,899.0
+Tampa Heights,Tampa,FL,,900.0
+North Sharon Amity,Charlotte,NC,695.0,795.0
+Comstock,Spokane,WA,,
+High Point,Seattle,WA,,
+Bay Terrace,New York,NY,,
+North Avondale,Cincinnati,OH,,825.0
+North Indian Trail,Spokane,WA,,
+Hallmark-Camelot,Fort Worth,TX,,
+Meadow Wood,Aurora,CO,,
+Hosford-Abernethy,Portland,OR,,1200.0
+Hale,Denver,CO,,900.0
+Elliot Park,Minneapolis,MN,900.0,1450.0
+South Ironbound,Newark,NJ,,
+Summit Hill,Saint Paul,MN,,995.0
+Duncan Park,Lexington,KY,,
+Coronado,El Paso,TX,,
+Dietz,Tucson,AZ,,1050.0
+North Burnett,Austin,TX,877.0,
+Stonewood,Stockton,CA,,950.0
+Back Creek Church Road,Charlotte,NC,1200.0,1200.0
+Bayshore Beautiful,Tampa,FL,1325.0,1200.0
+Leonidas,New Orleans,LA,,900.0
+Kentfield,Stockton,CA,,950.0
+Aurora Knolls - Hutchinson Heights,Aurora,CO,,
+Columbia Heights West,Arlington,VA,2010.0,1275.0
+Far West-Side,Syracuse,NY,,
+St. Claude,New Orleans,LA,,
+Black Mountain Ranch,San Diego,CA,,4300.0
+Pinehurst,Everett,WA,,950.0
+Sable Altura Chambers,Aurora,CO,,
+Southgate,Hayward,CA,,
+Rainier Beach,Seattle,WA,,1550.0
+Tremont,Cleveland,OH,,
+West End,Saint Louis,MO,,675.0
+Teralta East,San Diego,CA,,875.0
+Ponce de Leon,Stockton,CA,950.0,750.0
+Howe,Minneapolis,MN,,950.0
+Annex,New Haven,CT,,850.0
+Del Cerro,San Diego,CA,,
+Amphi,Tucson,AZ,,675.0
+Victoria Park,Fort Lauderdale,FL,1895.0,1650.0
+Mount Vernon Square,Washington,DC,2300.0,2600.0
+Shaw,Saint Louis,MO,750.0,775.0
+Center Pointe,Aurora,CO,,
+Airport Heights,Anchorage,AK,,
+Over-The-Rhine,Cincinnati,OH,,750.0
+Park Avenue,Rochester,NY,,900.0
+Dilworth,Charlotte,NC,1099.0,1309.0
+Necko,Columbus,OH,,545.0
+University Square,Tampa,FL,,975.0
+California Heights,Long Beach,CA,,1350.0
+Park Stockdale,Bakersfield,CA,,1100.0
+Highland,Beaverton,OR,,
+Longwood-Winton Grove,Hayward,CA,,
+Washington Heights,Milwaukee,WI,,
+Riverpark,South Bend,IN,,650.0
+Norwood Park West,Chicago,IL,,
+East Avenue,Rochester,NY,885.0,900.0
+St. Roch,New Orleans,LA,,
+South Dennis,Dennis,MA,,
+Bushrod,Oakland,CA,,
+Eastland-Wilora Lake,Charlotte,NC,700.0,
+South Trenton,Trenton,NJ,,
+Idlewild South,Charlotte,NC,750.0,950.0
+West End,Cincinnati,OH,,700.0
+North City,San Diego,CA,,4800.0
+Baldwin Park,Orlando,FL,1575.0,1999.0
+Spanos Park West,Stockton,CA,,
+Ortega Hills,Jacksonville,FL,775.0,950.0
+Southside Flats,Pittsburgh,PA,1500.0,1300.0
+Downtown,New Haven,CT,1330.0,1475.0
+Carmel,Charlotte,NC,,
+Secret Cove,Jacksonville,FL,1050.0,1150.0
+Oak Forest,Charlotte,NC,550.0,550.0
+Aurora Hills,Aurora,CO,,
+Glenbrook,Columbus,OH,,
+Wood Streets,Riverside,CA,,850.0
+Piedmont Avenue,Oakland,CA,,
+Highland Park,Seattle,WA,,
+Onyx,Toledo,OH,,
+Melrose Park,Fort Lauderdale,FL,1600.0,1649.0
+Jefferson Chalmers,Detroit,MI,,
+Glade Dr - Reston Pky,Reston,VA,1725.0,1850.0
+Girvin,Jacksonville,FL,1050.0,1275.0
+Sheridan Park,Chicago,IL,850.0,1100.0
+Bryant,Buffalo,NY,625.0,825.0
+South River City,Austin,TX,1200.0,1500.0
+Midtown - Winn Park Capital Avenue,Sacramento,CA,,895.0
+Walnut Hills,Cincinnati,OH,,750.0
+Sharon Heights,Columbus,OH,,
+Denny Whitford - Raleigh West,Beaverton,OR,,
+Bellmont Hillsboro,Nashville,TN,,2000.0
+Chesapeake Beach,Virginia Beach,VA,1350.0,1350.0
+Rancho Del Rey I,Chula Vista,CA,,
+Coomer Creek,Garland,TX,,
+Vista East,Orlando,FL,885.0,1295.0
+Northside,Fort Wayne,IN,,500.0
+Parkmont,Fremont,CA,,
+Winstead Park,Boise,ID,605.0,
+Jefferson Westside,Eugene,OR,695.0,655.0
+Inglewood (Riverwood),Nashville,TN,,1100.0
+Charles,Providence,RI,750.0,795.0
+View Ridge-Madison,Everett,WA,,
+Ventura Village,Minneapolis,MN,,
+Midtown,Tucson,AZ,650.0,635.0
+Standish,Minneapolis,MN,,1000.0
+North Lamar,Austin,TX,655.0,
+Normandy Estate,Jacksonville,FL,,
+Randle Highlands,Washington,DC,,
+South Side,West Palm Beach,FL,1800.0,1750.0
+Sunset Hill,Seattle,WA,850.0,2400.0
+Howard Park,Baltimore,MD,,
+Kirkwood,Atlanta,GA,1350.0,1250.0
+Hackensack Riverfront,Jersey City,NJ,,
+Richmond Factory,Augusta,GA,,
+West Beaverton,Beaverton,OR,,
+Hidden Cove - Indian Creek-Southwest,San Antonio,TX,,
+McMurray - Huntingdon,Nashville,TN,,960.0
+Home Park,Atlanta,GA,1110.0,
+Seven Hills,Aurora,CO,,
+Rolando,San Diego,CA,1115.0,1150.0
+West Mesa,Albuquerque,NM,,
+Townsite,Henderson,NV,925.0,800.0
+Gardenside-Colony,Lexington,KY,,675.0
+Clay-Arsenal,Hartford,CT,,800.0
+Del Norte,Albuquerque,NM,730.0,685.0
+South Sundale,Fremont,CA,,1712.0
+Arbor Lodge,Portland,OR,,1595.0
+Matthews Beach,Seattle,WA,,
+Fairmount Village,San Diego,CA,,
+University Park,San Antonio,TX,,
+Seminole Heights,Tampa,FL,,1200.0
+Lakeview,New Orleans,LA,,
+Lower Garden District,New Orleans,LA,1350.0,2900.0
+University Hill,Boulder,CO,2475.0,2490.0
+Hollywood Park,Chicago,IL,,
+Sunrise Neighborhood Coalition,San Antonio,TX,,895.0
+South Area,Wichita,KS,,
+Montrose Verdugo City,Glendale,CA,,
+Farm Pond,Charlotte,NC,,850.0
+Bluemont,Arlington,VA,1756.0,1825.0
+Highland Park,Pittsburgh,PA,,1100.0
+Gatewood,Seattle,WA,,
+Goose Hollow,Portland,OR,1325.0,1595.0
+Wellington-Harrington,Cambridge,MA,2100.0,2400.0
+Elyria Swansea,Denver,CO,,
+Dixwell,New Haven,CT,,
+Upper Dimond,Oakland,CA,,1200.0
+Washington Park West,Denver,CO,,1495.0
+Brentwood,Jacksonville,FL,695.0,725.0
+Laredo Highline,Aurora,CO,,
+Saint Joseph,Milwaukee,WI,,
+College Downs,Charlotte,NC,709.0,800.0
+St. Elizabeth,Oakland,CA,,
+Uptown,Milwaukee,WI,,
+North Park,Chicago,IL,875.0,1000.0
+Downtown,Columbus,OH,1000.0,845.0
+Westchester-Green Countrie,Columbus,OH,659.0,1200.0
+East Chatham,Chicago,IL,675.0,700.0
+North Beach,San Francisco,CA,,4750.0
+Chief Garry Park,Spokane,WA,,595.0
+Adams Hill,Glendale,CA,,
+Overlook,Portland,OR,,
+Veterans Park,Boise,ID,650.0,675.0
+North Lake,Charlotte,NC,1000.0,1085.0
+Roseway,Portland,OR,,1195.0
+Southwood,Torrance,CA,,2695.0
+Roselawn,Cincinnati,OH,,600.0
+Turtle Creek,Jacksonville,FL,799.0,1100.0
+Alanton,Virginia Beach,VA,1099.0,1150.0
+The Museum District,Richmond,VA,805.0,900.0
+Linwood,Columbus,OH,,
+South Tabor,Portland,OR,,
+Argay,Portland,OR,,
+King,Portland,OR,,895.0
+North Rose Hill,Kirkland,WA,,1325.0
+Springfield,Jacksonville,FL,750.0,775.0
+Imperial Point,Fort Lauderdale,FL,1695.0,1295.0
+Fircrest,Vancouver,WA,,
+Central Park Heights,Baltimore,MD,,995.0
+Val Vista Lakes,Gilbert,AZ,1200.0,1700.0
+Quinnipiac,New Haven,CT,,
+Lowry Hill East,Minneapolis,MN,1230.0,1500.0
+Glenham-Belford,Baltimore,MD,,1050.0
+Merriman Valley,Akron,OH,629.0,
+The Port - Area 4,Cambridge,MA,2100.0,2500.0
+Corbett,Tucson,AZ,,750.0
+Ocotillo,Chandler,AZ,1695.0,1900.0
+JeffVanderLou,Saint Louis,MO,850.0,
+Waltherson,Baltimore,MD,,
+Del Mar Heights,San Diego,CA,3200.0,3200.0
+Saddle Rock Golf Club,Aurora,CO,1099.0,
+New Brighton,New York,NY,,1650.0
+Cardinal Hill-Pine Meadow,Lexington,KY,,
+Linkhorn Park,Virginia Beach,VA,1065.0,1295.0
+Jungle Terrace,Saint Petersburg,FL,,
+Lincoln Park,Denver,CO,,
+Alta Mesa,Mesa,AZ,750.0,1100.0
+Ingleside Heights,San Francisco,CA,,
+Irvington,Portland,OR,895.0,1495.0
+Great Neck Plaza,Great Neck,NY,1732.0,2362.0
+Weberstown,Stockton,CA,,
+Forest Hills,Washington,DC,2195.0,1870.0
+Barnum,Denver,CO,,
+Reservoir Hill,Baltimore,MD,950.0,1095.0
+University Park,Portland,OR,,
+West University,Eugene,OR,,850.0
+Kendall - Whittier,Tulsa,OK,,
+Depot Bench,Boise,ID,750.0,
+Dunlap,Seattle,WA,,
+Bon Air,Louisville,KY,,
+Congress Heights,Washington,DC,1025.0,1225.0
+Kensington,San Diego,CA,,1095.0
+University Town Center,Irvine,CA,,2100.0
+Central Downtown,Lexington,KY,,775.0
+South Shoreview,San Mateo,CA,,
+San Jose,Jacksonville,FL,667.0,559.0
+Chickasaw,Louisville,KY,,700.0
+Hampden,Baltimore,MD,,
+Sunflower,Wichita,KS,,675.0
+Mount Hope,Providence,RI,1000.0,1150.0
+Fairpark,Salt Lake City,UT,,
+Wessex Square,Charlotte,NC,855.0,
+West Henderson,Henderson,NV,,1500.0
+Penn Wynne,Wynnewood,PA,,
+East Lake I,Chula Vista,CA,,1800.0
+Silver Creek,Bakersfield,CA,,1450.0
+Elmwood Park,Detroit,MI,815.0,800.0
+Tompkinsville,New York,NY,,1800.0
+Core-Columbia,San Diego,CA,2045.0,2150.0
+La Jolla Village,San Diego,CA,2000.0,1925.0
+Greenway,Beaverton,OR,,
+Hillcrest,Little Rock,AR,800.0,775.0
+Ukrainian Village,Chicago,IL,1350.0,1550.0
+Fishers Landing East,Vancouver,WA,,
+Meadowlawn,Saint Petersburg,FL,,985.0
+Tower Grove East,Saint Louis,MO,650.0,750.0
+South Patrick Shores,Satellite Beach,FL,975.0,1050.0
+Columbia Heghts,Arlington,VA,1480.0,1600.0
+New Aurora-English Turn,New Orleans,LA,,
+Highland,Rochester,NY,,
+Naples Park,Naples,FL,1850.0,
+Parkrose,Portland,OR,,
+Cherry-Guardino,Fremont,CA,1675.0,2235.0
+Uptown,New Orleans,LA,,1775.0
+Indianola Hills,Des Moines,IA,,
+Taylor Run,Alexandria,VA,1411.0,1600.0
+Beverly Woods,Charlotte,NC,1100.0,
+Gateway West,Sacramento,CA,,1295.0
+Academy Acres North,Albuquerque,NM,,
+Junction,Seattle,WA,1200.0,1435.0
+Glynlea - Grove Park,Jacksonville,FL,670.0,
+Lynnhaven Shores,Virginia Beach,VA,1550.0,1400.0
+West Queen Anne,Seattle,WA,2195.0,1750.0
+Hayward Highland,Hayward,CA,,
+Middlebury,Akron,OH,475.0,495.0
+Mt. Lookout,Cincinnati,OH,,
+Regent,Town of Madison,WI,,995.0
+Roosevelt Park,Grand Rapids,MI,,
+Montclair,Augusta,GA,,
+Heritage Hills,Austin,TX,599.0,805.0
+Ballast Point,Tampa,FL,1500.0,1095.0
+Penrose,Saint Louis,MO,,595.0
+North Broadway,Cleveland,OH,,
+Deanwood,Washington,DC,,
+Near N Valley,Albuquerque,NM,,650.0
+Duclay,Jacksonville,FL,869.0,813.0
+Childs Park,Saint Petersburg,FL,,995.0
+Waterside,Stamford,CT,2275.0,2275.0
+Old West Tampa,Tampa,FL,,995.0
+East Liberty,Pittsburgh,PA,,
+Foothills,Henderson,NV,,1200.0
+Fulton,Minneapolis,MN,,
+Knollwood,Kalamazoo,MI,510.0,2300.0
+Maple High-Six Corners,Springfield,MA,,1000.0
+Old West End,Toledo,OH,,
+Sun Groves,Chandler,AZ,,1395.0
+Johnston Rd.-McAlpine,Charlotte,NC,921.0,902.0
+Chinatown,San Francisco,CA,,2950.0
+Mt. Hope,San Diego,CA,,
+Manhattan Beach,New York,NY,,1900.0
+Merion Village,Columbus,OH,,795.0
+Ridgeview-Webster,San Diego,CA,,1500.0
+Avondale,Jacksonville,FL,850.0,995.0
+North Image,Vancouver,WA,,965.0
+Penn-Fallsway,Baltimore,MD,,
+Southeast Como,Minneapolis,MN,1180.0,1875.0
+Jacksonville Farms-Terrace,Jacksonville,FL,1150.0,1125.0
+Near North,Minneapolis,MN,1100.0,
+North Central,Raleigh,NC,750.0,600.0
+Ashton Heights,Arlington,VA,,2395.0
+Marlyville-Fontainebleau,New Orleans,LA,,
+Millbrook,Grand Rapids,MI,,
+North Capitol Hill,Denver,CO,1360.0,1630.0
+The Greater Ville,Saint Louis,MO,,
+Marshall Heights,Washington,DC,,
+Longfellow,Oakland,CA,1295.0,
+Goldsmith,Denver,CO,595.0,
+Barton Chapel,Augusta,GA,,
+Highlands,Lincoln,NE,,700.0
+Delaware-West Ferry,Buffalo,NY,,
+Bayshore,Miami Beach,FL,,2800.0
+Lower South Providence,Providence,RI,,
+East End,Boise,ID,,750.0
+Pearl District,Portland,OR,1695.0,1695.0
+Springs,East Hampton,NY,27000.0,29000.0
+Branford Center,Branford,CT,1100.0,975.0
+Normandy Manor,Jacksonville,FL,850.0,925.0
+Chollas Creek,San Diego,CA,,1095.0
+Crossroads,Bellevue,WA,,
+Parkrose Heights,Portland,OR,,1200.0
+Newell,Charlotte,NC,870.0,1000.0
+Homaker Park,Bakersfield,CA,,625.0
+Augusta Ranch,Mesa,AZ,1000.0,1025.0
+South Delridge,Seattle,WA,1070.0,1200.0
+Side Creek,Aurora,CO,900.0,
+Alamo Square,San Francisco,CA,,3990.0
+La Sierra Hills,Riverside,CA,,
+Torrey Highlands,San Diego,CA,,2600.0
+Mt Eden,Hayward,CA,,
+Smith Hill,Providence,RI,,950.0
+Fremont,Oakland,CA,,1300.0
+Arlingwood,Jacksonville,FL,,875.0
+Marconi Plaza-Packer Park,Philadelphia,PA,,
+Curtis Park,Sacramento,CA,,825.0
+Collier Heights,Atlanta,GA,,799.0
+Atlanta University Center,Atlanta,GA,,
+Menlo Park,Tucson,AZ,,
+Riverton,Portland,ME,,
+Algonquin,Louisville,KY,,600.0
+Parkville,Hartford,CT,800.0,
+Rocky Ridge,Aurora,CO,,995.0
+John T White,Fort Worth,TX,,
+Windom Park,Minneapolis,MN,,1095.0
+Southwest Hills,Portland,OR,2400.0,
+Mt. Auburn,Cincinnati,OH,650.0,795.0
+National Hills,Augusta,GA,585.0,955.0
+Grand,Riverside,CA,,1500.0
+Calhoun,Minneapolis,MN,775.0,1095.0
+Palm City,San Diego,CA,,
+Arlington Ridge,Arlington,VA,1675.0,2095.0
+Meydenbauer,Bellevue,WA,960.0,1700.0
+San Mateo Heights,San Mateo,CA,,1695.0
+Downtown West,Minneapolis,MN,950.0,1395.0
+Meadow Hills,Aurora,CO,995.0,1295.0
+University Hills,Denver,CO,,
+Pulaski,Detroit,MI,,700.0
+Meadow Brook,Oakland,CA,,
+Campus Farm,Tucson,AZ,875.0,850.0
+South Westnedge,Kalamazoo,MI,,
+People's Freeway,Salt Lake City,UT,,
+La Morada,Stockton,CA,1500.0,1400.0
+Webster,Oakland,CA,,
+Century City,Los Angeles,CA,2850.0,3200.0
+West Wood,Dayton,OH,,
+Foxcroft,Charlotte,NC,995.0,1180.0
+Linden Heights,Dayton,OH,,
+West End,Portland,ME,1150.0,1295.0
+Watrous South,Des Moines,IA,,
+Highline Villages,Aurora,CO,775.0,985.0
+West End,Boston,MA,2781.0,2930.0
+Delano,Wichita,KS,,750.0
+South Harrison,Tucson,AZ,,1095.0
+San Tan Ranch,Gilbert,AZ,,1195.0
+South Semoran,Orlando,FL,695.0,798.0
+Islandview,Detroit,MI,,
+Oakland Ave-Harrison St,Oakland,CA,1200.0,1549.0
+Davis Island,Tampa,FL,,895.0
+Oceanway,Jacksonville,FL,1100.0,1250.0
+Marlwood,Charlotte,NC,,895.0
+Cherry Creek,Denver,CO,1600.0,2825.0
+Eastlake,Seattle,WA,,1127.0
+Bellevue,Washington,DC,950.0,
+Eastgate - Cougar Mountain,Bellevue,WA,,1515.0
+Cherokee Point,San Diego,CA,,995.0
+Seminary,Oakland,CA,,
+Euclid Green,Cleveland,OH,,
+Adams North,San Diego,CA,,1250.0
+Trinidad,Washington,DC,1100.0,1150.0
+Central Meadowbrook,Fort Worth,TX,,
+Amberwood North,Chandler,AZ,,920.0
+Baywood Knolls,San Mateo,CA,,2600.0
+Rancho San Antonio,Oakland,CA,,
+Whitehouse,Jacksonville,FL,,900.0
+Lakeside Park,Tucson,AZ,,950.0
+Fairway-Liberty Heights,Lexington,KY,,
+Venable,Charlottesville,VA,,995.0
+Roberts,El Paso,TX,,
+West Loop Gate,Chicago,IL,1575.0,2000.0
+El Cerrito,San Diego,CA,,1495.0
+Totem Lake,Kirkland,WA,1114.0,1350.0
+Lower Beaver,Des Moines,IA,,680.0
+Hiawatha,Minneapolis,MN,1100.0,
+Pembroke,Virginia Beach,VA,1330.0,
+New Dorp,New York,NY,,
+Windsor Road,Austin,TX,1475.0,2800.0
+Wexford-Thornapple,Columbus,OH,,999.0
+Lake Frendrica,Orlando,FL,686.0,875.0
+Coral Ridge,Fort Lauderdale,FL,2500.0,2338.0
+Southcrest,San Diego,CA,,
+Laddie Place and North Wilson,San Antonio,TX,,
+Beaver Hills,New Haven,CT,,1300.0
+Southwestern Hills,Des Moines,IA,645.0,
+Ednor Gardens-Lakeside,Baltimore,MD,,
+Deep Creek West-Dismal Swamp,Chesapeake,VA,,
+Arcadia Terrace,Chicago,IL,1200.0,1295.0
+Lynn Lane,Tulsa,OK,,1850.0
+Bouldin,Austin,TX,1280.0,1500.0
+Beacon Hill,San Antonio,TX,,575.0
+Maxwell Park,Oakland,CA,,
+Pecan Valley,San Antonio,TX,,
+Lacy,Santa Ana,CA,,
+Montclair,Denver,CO,,1000.0
+Platt Park,Denver,CO,,1050.0
+Rose Village,Vancouver,WA,,
+Stonehaven,Charlotte,NC,995.0,
+Andersonville,Chicago,IL,1250.0,1550.0
+Settlers Landing,Jacksonville,FL,995.0,1000.0
+Point Breeze,Pittsburgh,PA,,
+Heights,Little Rock,AR,,865.0
+Zilker,Austin,TX,1799.0,1800.0
+Chambers Heights,Aurora,CO,,
+South Deering,Chicago,IL,,1100.0
+City Center North,Aurora,CO,900.0,
+Ridgmar,Fort Worth,TX,,
+Glenview,Oakland,CA,,
+Providence Estates East,Charlotte,NC,,1550.0
+MIT,Cambridge,MA,2355.0,2705.0
+North East,Pasadena,CA,1965.0,
+South India Mound,Kansas City,MO,,
+Sterling Hills,Aurora,CO,,1150.0
+North India Mound,Kansas City,MO,,600.0
+Gravois Park,Saint Louis,MO,,600.0
+Cedar Park,Seattle,WA,1195.0,1135.0
+Downer Woods,Milwaukee,WI,,
+Broadway Pantano East,Tucson,AZ,,
+Edmondson Village,Baltimore,MD,,1300.0
+Central Bench,Boise,ID,,
+Sorrento Valley,San Diego,CA,,2100.0
+Paseo Ranchoero,Chula Vista,CA,,
+Downtown,Saint Petersburg,FL,1599.0,750.0
+Buckingham,Arlington,VA,,1795.0
+Crest Drive,Eugene,OR,,
+Valley,Providence,RI,,800.0
+Thomasboro-Hoskins,Charlotte,NC,600.0,695.0
+Fauntleroy,Seattle,WA,,
+Marshall - Shadeland,Pittsburgh,PA,,
+South Hilltop,Columbus,OH,,
+Braddock Road Metro,Alexandria,VA,1955.0,2150.0
+City Center,Aurora,CO,769.0,894.0
+Hayhurst,Portland,OR,,
+Folwell,Minneapolis,MN,1095.0,
+Country Club,Lincoln,NE,,
+Riverside,Baltimore,MD,1850.0,2000.0
+Sweet Briar,Austin,TX,970.0,1150.0
+Pinehurst,Seattle,WA,,1195.0
+Downtown,Sacramento,CA,,1700.0
+Washington Heights,Chicago,IL,,
+Starin Central,Buffalo,NY,,
+St. Edwards,Austin,TX,850.0,1476.0
+Roland Park,Baltimore,MD,,
+Broadmoor,New Orleans,LA,,1000.0
+Central Oak Park,Sacramento,CA,,995.0
+Countryside Woods,Vancouver,WA,,1350.0
+South Main,Houston,TX,905.0,1115.0
+Edgewood,Washington,DC,,1550.0
+Tropico,Glendale,CA,,
+South Park,San Diego,CA,,1300.0
+Sheraden,Pittsburgh,PA,,
+Irvington,Baltimore,MD,,1100.0
+Kenawood-Rockwood-Hi-Acres-Deep Spring,Lexington,KY,,495.0
+Lower Queen Anne,Seattle,WA,1400.0,1350.0
+Harvard Place - Eastlawn,San Antonio,TX,,700.0
+Wooten,Austin,TX,800.0,1150.0
+Parkland,Louisville,KY,,650.0
+South Side CAN,Columbus,OH,550.0,700.0
+Blue Hills,Kansas City,MO,,650.0
+Perris Hills,San Bernardino,CA,,
+East Ridge - Ptarmigan Park,Aurora,CO,790.0,
+Woodley Park,Washington,DC,2190.0,2175.0
+NoHo,New York,NY,3550.0,3695.0
+Bagley Downs,Vancouver,WA,,
+Myers,Tucson,AZ,,
+Waite Park,Minneapolis,MN,,
+Palo Verde,Tucson,AZ,,550.0
+Community Workers Council,San Antonio,TX,,
+Florida Center,Orlando,FL,,1850.0
+Patterson Park,Baltimore,MD,1200.0,1300.0
+North Loop,Austin,TX,1300.0,1400.0
+Hyde Park,Austin,TX,1400.0,1275.0
+Central Business District,Newark,NJ,1550.0,1700.0
+Near East Side,Chicago,IL,1882.0,2225.0
+Marble Cliff Crossing,Columbus,OH,890.0,
+Mission Hills,San Diego,CA,,1750.0
+Central Clintonville,Columbus,OH,,
+Fruitridge Manor,Sacramento,CA,,
+Midtown,Saint Louis,MO,,
+Longfellow,Minneapolis,MN,,
+Horseshoe Park,Aurora,CO,,1200.0
+Beaumont-Wilshire,Portland,OR,,
+Old Savannah,Augusta,GA,,700.0
+Presidential Park,Riverside,CA,,
+Victory Heights,Seattle,WA,,1195.0
+Columbia Forest,Arlington,VA,,1550.0
+Eastown,Grand Rapids,MI,,1300.0
+Woodrow,New York,NY,,1300.0
+Alameda,Portland,OR,,
+Milan,New Orleans,LA,,
+Julia Keen,Tucson,AZ,,
+North Hilltop,Columbus,OH,,
+Hickory Grove,Charlotte,NC,895.0,795.0
+Belle Vista,Youngstown,OH,,
+Vine,Kalamazoo,MI,,900.0
+Lynwood Hills,Chula Vista,CA,,
+Hagginwood,Sacramento,CA,,900.0
+Loma Portal,San Diego,CA,,
+Shandin Hills,San Bernardino,CA,900.0,995.0
+Pepperidge,Augusta,GA,,
+Central,Raleigh,NC,1085.0,700.0
+Astoria Heights,New York,NY,,2200.0
+Arlington-East Falls,Arlington,VA,,2796.0
+Olde Providence South,Charlotte,NC,1250.0,
+Westside,Missoula,MT,750.0,900.0
+Seville,Gilbert,AZ,,1500.0
+Leawood,Columbus,OH,,675.0
+Rosedale,Austin,TX,1350.0,1635.0
+Groves Lincoln Park,Tucson,AZ,,850.0
+Keeling,Tucson,AZ,,575.0
+Klondike,Louisville,KY,,
+Westerleigh,New York,NY,,
+Chevy Chase-Ashland Park,Lexington,KY,,
+Holliswood,New York,NY,1200.0,1400.0
+Galt Mile,Fort Lauderdale,FL,2400.0,1800.0
+Georgia Tech,Atlanta,GA,1039.0,
+Upton,Baltimore,MD,900.0,
+Business District,Irvine,CA,1812.0,2250.0
+Idlewild Farms,Charlotte,NC,,
+University Hills,Los Angeles,CA,,950.0
+Bayside,Everett,WA,,1000.0
+Arroyo Viejo,Oakland,CA,,
+Puget,Bellingham,WA,,
+Belknap Lookout,Grand Rapids,MI,,795.0
+Riverdale,Detroit,MI,750.0,750.0
+Fairgrounds,New Orleans,LA,,
+North Tabor,Portland,OR,,825.0
+Sans Souci,Jacksonville,FL,683.0,
+Mallard Creek - Withrow Downs,Charlotte,NC,,1275.0
+Kings Point,Great Neck,NY,,
+Summer Place Village,Mesa,AZ,,900.0
+Bolton Hill,Baltimore,MD,,
+Country Club,Stockton,CA,,995.0
+Los Cerritos Area,Long Beach,CA,,
+Regent Park,Detroit,MI,,700.0
+Highland Park,Augusta,GA,,
+Leschi,Seattle,WA,,1550.0
+Laurelhurst,Seattle,WA,,895.0
+Mount Vernon,Baltimore,MD,1165.0,1009.0
+Memorial Square,Springfield,MA,,
+Arcadia,Kalamazoo,MI,600.0,1396.0
+Harmony,Fort Worth,TX,,
+Lyon Park,Arlington,VA,1900.0,1910.0
+Midtown,Anchorage,AK,,
+Highland Terrace,Richardson,TX,,
+Coral Ridge Country Club,Fort Lauderdale,FL,1700.0,1400.0
+O'Fallon,Saint Louis,MO,,575.0
+Spring Valley,Washington,DC,,
+Webber-Camden,Minneapolis,MN,,950.0
+Mesa Grande,Mesa,AZ,795.0,795.0
+Fox Point,Providence,RI,950.0,1250.0
+The Provinces,Chandler,AZ,1150.0,1225.0
+Northwest Everett,Everett,WA,,
+Stone Meadows,Bakersfield,CA,,1500.0
+Sherwood Forest,Jacksonville,FL,,895.0
+Roxhill,Seattle,WA,,
+Oak Tree,Oakland,CA,,
+North Heights,Youngstown,OH,,500.0
+Burbank,Hayward,CA,,
+McGirts Creek,Jacksonville,FL,,1050.0
+The North End,Virginia Beach,VA,1400.0,1975.0
+Windom,Minneapolis,MN,675.0,
+West Gate,Toledo,OH,,
+Central Business District,Cincinnati,OH,975.0,1450.0
+Bloomingdale,Washington,DC,,2500.0
+Becton Park,Charlotte,NC,698.0,
+Bluff Heights,Long Beach,CA,,1250.0
+Kerns,Portland,OR,,1195.0
+Timmerman West,Milwaukee,WI,,
+Belltown,Stamford,CT,,1850.0
+Northside,Kalamazoo,MI,,
+North Central,San Mateo,CA,,
+Juneau Town,Milwaukee,WI,1300.0,1200.0
+Baden,Saint Louis,MO,,
+Jacobs,Louisville,KY,,550.0
+Sarritt Point,Kansas City,MO,465.0,575.0
+Hot Wells,San Antonio,TX,,
+Marina,San Diego,CA,1795.0,2095.0
+Chugiak,Anchorage,AK,,1695.0
+Upper B Street,Hayward,CA,,
+Audubon Park,Minneapolis,MN,,
+Derita-Statesville,Charlotte,NC,,975.0
+Gorgas,Mobile,AL,,
+Northpoint,Milwaukee,WI,,
+Bashford Manor,Louisville,KY,,639.0
+Woodlawn,Portland,OR,,
+Lansdowne,Charlotte,NC,863.0,825.0
+Colonial Heights,Stockton,CA,,
+Walnut Hills,Dayton,OH,,
+Aggasiz - Harvard North,Cambridge,MA,1595.0,2085.0
+Hamey Heights,Vancouver,WA,,800.0
+Washington Park,Milwaukee,WI,,
+Barney Circle,Washington,DC,,
+Dorsey-Riverbend,Fort Lauderdale,FL,1350.0,1195.0
+East Shore,New Haven,CT,,1195.0
+Boyle Park,Little Rock,AR,,800.0
+Lakeshore,San Francisco,CA,2375.0,
+South Central Hilltop,Columbus,OH,,675.0
+Marquette,Town of Madison,WI,,1150.0
+Whitman-Mocine,Hayward,CA,,
+Eastway-Sheffield Park,Charlotte,NC,675.0,680.0
+Parnassus - Ashbury,San Francisco,CA,,2895.0
+Virginia Park,Tampa,FL,,
+Fairmount Park,Seattle,WA,,1235.0
+San Mateo Village,San Mateo,CA,,
+SWAN,Grand Rapids,MI,,975.0
+Shore Acres,Saint Petersburg,FL,,1100.0
+Feldheym,San Bernardino,CA,,650.0
+La Plaza,San Bernardino,CA,,900.0
+Evergreen,Everett,WA,,
+Whittier,Boulder,CO,1595.0,1900.0
+Allendale,Oakland,CA,,
+Terra Del Sol,Tucson,AZ,,875.0
+Riverbend,Tampa,FL,,
+Campbellton Road,Atlanta,GA,,500.0
+Birchwood,Bellingham,WA,,615.0
+Fairlane,Kansas City,MO,,875.0
+Lansingville,Youngstown,OH,,
+University,Syracuse,NY,,
+Shippan,Stamford,CT,,3000.0
+Whittier Heights,Seattle,WA,,
+Bolton,Mobile,AL,675.0,
+City Park West,Denver,CO,,1170.0
+Ashcreek,Portland,OR,,
+Tower Homes,Kansas City,MO,,
+Phillips West,Minneapolis,MN,,
+Whittier,Denver,CO,,
+Fort Sanders,Knoxville,TN,675.0,595.0
+Yerba Buena,San Francisco,CA,2600.0,3564.0
+Van Mall,Vancouver,WA,,871.0
+Park View,Washington,DC,,1250.0
+Roseville - Fleet Ridge,San Diego,CA,,
+Arlington,Jacksonville,FL,,830.0
+College Hill,Wichita,KS,,
+Big Oaks,Chicago,IL,,
+Jefferson-Woodlawn Lake,San Antonio,TX,,
+Arlington Heights,Fort Worth,TX,,925.0
+Millsmont,Oakland,CA,,1300.0
+Baker,Denver,CO,1900.0,1765.0
+Kennedy Heights,Cincinnati,OH,,
+The Seasons,Bakersfield,CA,,
+Riverside,Everett,WA,,
+Canaryville,Chicago,IL,,1000.0
+Wesconnett,Jacksonville,FL,,750.0
+Midtown Phillips,Minneapolis,MN,,1175.0
+New Northwood,Baltimore,MD,,
+Rose Park,Missoula,MT,,795.0
+North University,Austin,TX,1100.0,1435.0
+Stella Mann,Tucson,AZ,,839.0
+West Chatham,Chicago,IL,,1250.0
+University District,Minneapolis,MN,,
+Brooklyn,Portland,OR,,925.0
+Manito-Cannon Hill,Spokane,WA,,
+West Riverside,New Orleans,LA,,1350.0
+Binz,Houston,TX,2055.0,1700.0
+Wakefield,Tucson,AZ,,595.0
+Upper Boggy Creek,Austin,TX,1050.0,1150.0
+Atlantic Boulevard Estates,Jacksonville,FL,800.0,
+Barclay Downs,Charlotte,NC,1150.0,1400.0
+Clifton Heights,Louisville,KY,635.0,
+Grove Park,Atlanta,GA,,800.0
+Humboldt,Portland,OR,,
+Summer Valley,Aurora,CO,,
+North East Park,Saint Petersburg,FL,,775.0
+Ellsworth Springs,Vancouver,WA,,
+Seccombe Lane,San Bernardino,CA,,695.0
+Downtown,Lincoln,NE,,
+Park Shore,Naples,FL,3000.0,6000.0
+Chollas View,San Diego,CA,,
+Randall Manor,New York,NY,,
+Nauck,Arlington,VA,2179.0,1951.0
+Iroquois,Louisville,KY,,
+Eastern Hills,Dayton,OH,,
+Laurelhurst,Portland,OR,,
+South Addition,Anchorage,AK,,1800.0
+South Oak Park,Sacramento,CA,,
+Downtown Neighborhood,Little Rock,AR,,
+Pecan Springs Springdale,Austin,TX,,
+Morrell Park,Baltimore,MD,,
+Cascade View,Everett,WA,,
+Irving Woods,Chicago,IL,,
+Broadway East,Baltimore,MD,950.0,1000.0
+Pettit-Rudisill,Fort Wayne,IN,,500.0
+Sonterra-Stone Oak,San Antonio,TX,,
+McKnight,Springfield,MA,,1000.0
+Village 11,Sacramento,CA,,1475.0
+Cross Country,Baltimore,MD,,
+Country Club Heights,Charlotte,NC,,
+Garment District,New York,NY,2750.0,3300.0
+Madrona,Torrance,CA,,
+Arlington South,Riverside,CA,,
+Grand Lake,Oakland,CA,1195.0,
+Duck Creek,Richardson,TX,1035.0,
+Walteria,Torrance,CA,,
+University Hills,Austin,TX,930.0,
+Prescott,Oakland,CA,,
+Buckingham Lake - Crestwood,Albany,NY,,
+Lake Lucina,Jacksonville,FL,680.0,759.0
+Wenonah,Minneapolis,MN,,
+Cole,Denver,CO,,
+Bixby Knolls,Long Beach,CA,,975.0
+Victory,Minneapolis,MN,,1100.0
+Downtown,Detroit,MI,1460.0,
+Cobblestone,Jacksonville,FL,899.0,
+Marina Area,Long Beach,CA,,2495.0
+Lakeshore,Oakland,CA,,1495.0
+Parkhill,Mobile,AL,,900.0
+Lind-Bohanon,Minneapolis,MN,899.0,1150.0
+Downtown Jacksonville,Jacksonville,FL,1250.0,1150.0
+Northeast Hillsdale,San Mateo,CA,,
+Overton South,Fort Worth,TX,,
+South Hill,Bellingham,WA,,
+The Oaks,Bakersfield,CA,,1200.0
+Mission Bay,San Francisco,CA,,3846.0
+Bryant,Seattle,WA,,
+Donaldson Terrace,San Antonio,TX,,650.0
+Bomber Heights,Fort Worth,TX,,
+Belmont,Lincoln,NE,,
+Cory Lake Isles,Tampa,FL,,2000.0
+California,Louisville,KY,,725.0
+Olde Town East,Columbus,OH,,550.0
+Oxford Hunt,Charlotte,NC,766.0,
+North Central Thousand Oaks,San Antonio,TX,,1150.0
+East Atlanta,Atlanta,GA,1250.0,1295.0
+Bayside West,Tampa,FL,924.0,1000.0
+Mt. Baker,Bellingham,WA,879.0,
+Roosevelt,Seattle,WA,,
+Mount Pleasant,Saint Louis,MO,,500.0
+Westlake,Seattle,WA,1245.0,1670.0
+Greater Belhaven,Jackson,MS,,
+Alta Mesa,Santa Barbara,CA,,
+Lykins,Kansas City,MO,,500.0
+San Gorgonio,San Bernardino,CA,,
+Wildwood Park,San Bernardino,CA,,1350.0
+Loch Raven,Baltimore,MD,900.0,
+Old North Sacramento,Sacramento,CA,,750.0
+South Hagginwood,Sacramento,CA,,895.0
+North Loop,Minneapolis,MN,1495.0,1695.0
+Lakewood,Jacksonville,FL,900.0,1025.0
+Bird Land,San Diego,CA,,
+Kelvin Park,Chicago,IL,,
+Alban Hills,Albuquerque,NM,,
+Landover Sharmel,Vancouver,WA,,1005.0
+East End,Portland,ME,1195.0,1650.0
+Lakeland,Baltimore,MD,950.0,1100.0
+Southside Slopes,Pittsburgh,PA,,1575.0
+Pioneer Park,Des Moines,IA,585.0,
+North Wyoming,Albuquerque,NM,,
+Northwest Heights,Portland,OR,1295.0,2500.0
+Palma Ceia,Tampa,FL,1150.0,1350.0
+Highland,Austin,TX,990.0,900.0
+Lincoln Square,Chicago,IL,1100.0,1345.0
+Spring Park,Jacksonville,FL,,750.0
+South Park,Des Moines,IA,,
+Teralta West,San Diego,CA,,
+Minnetex,Houston,TX,,
+Downtown,Providence,RI,1525.0,2095.0
+South Amherst,Amherst,MA,,
+Merritt,Oakland,CA,,
+Anacostia,Washington,DC,,
+Moose Can Gully,Missoula,MT,,
+Biscayne Point,Miami Beach,FL,,1600.0
+Seaview,Seattle,WA,,
+Central Lawrenceville,Pittsburgh,PA,765.0,1350.0
+Holland,Minneapolis,MN,,1000.0
+Brightwood,Springfield,MA,,925.0
+Swan Canyon,San Diego,CA,,1050.0
+Downtown West,Saint Louis,MO,980.0,1365.0
+Victorian Village,Columbus,OH,,1300.0
+South East End,Grand Rapids,MI,,
+Twenty-Fifth Ave,San Mateo,CA,,
+SableRidge,Aurora,CO,,
+Miraloma Park,San Francisco,CA,,
+Regency,Jacksonville,FL,900.0,895.0
+Wakefield,Little Rock,AR,,675.0
+Harlem Park,Baltimore,MD,,825.0
+South Fairmount,Cincinnati,OH,,725.0
+Crystal Lake,Lakeland,FL,,
+Malibar Heights,Mobile,AL,,
+Prospect Hill,New Haven,CT,,900.0
+Harwood Lane,Charlotte,NC,975.0,1095.0
+Ogden,Vancouver,WA,,853.0
+Homan Square,Chicago,IL,,900.0
+Weibel,Fremont,CA,,
+Goodrich-Kirkland Park,Cleveland,OH,,
+Rolling Hills,Jacksonville,FL,,
+Mission Beach,San Diego,CA,1800.0,3300.0
+Mount Vernon-Hollywood-Montclair,Lexington,KY,,
+Belmont,Charlottesville,VA,875.0,850.0
+Argyle Forest,Jacksonville,FL,960.0,1000.0
+Willowcreek,Sacramento,CA,,1495.0
+Mckinley Mitchell,Tulsa,OK,,
+Cotswold,Charlotte,NC,725.0,850.0
+Summerville,Augusta,GA,,750.0
+Interbay,Seattle,WA,,1601.0
+Old West Austin,Austin,TX,1700.0,1975.0
+Alessandro,San Bernardino,CA,,
+Wesley Heights,Washington,DC,2200.0,2200.0
+Lafayette Park,Detroit,MI,726.0,
+Meadow Creek,Fort Worth,TX,,1195.0
+Skinker-DeBaliviere,Saint Louis,MO,,1050.0
+Edgebrook,Chicago,IL,,
+Adams Hill,San Antonio,TX,,
+Port Tampa City,Tampa,FL,2029.0,1199.0
+Martin Park,Detroit,MI,,750.0
+Nob Hill,Albuquerque,NM,,725.0
+Overton,Mobile,AL,,
+Ridgeway,Stamford,CT,,2450.0
+Lindridge - Martin Manor,Atlanta,GA,1075.0,1501.0
+Harbour Island,Tampa,FL,1700.0,1850.0
+McClure Park,Tulsa,OK,,
+Sylvan Hills,Atlanta,GA,,750.0
+Como,Fort Worth,TX,,
+Edgewood,New Haven,CT,,875.0
+Rockwood,Spokane,WA,,
+Central Business District,Rochester,NY,895.0,
+Amity,New Haven,CT,,900.0
+Riviera - Westchester,Bakersfield,CA,,795.0
+Ginter Park,Richmond,VA,,600.0
+Woodstock,Jacksonville,FL,650.0,715.0
+Midtown,San Diego,CA,,2295.0
+Uptown,Seattle,WA,1500.0,1621.0
+West End,Atlanta,GA,900.0,800.0
+Monte Vista,San Antonio,TX,,850.0
+Ybor City,Tampa,FL,,950.0
+Central East Austin,Austin,TX,1325.0,1593.0
+Terrace Hills,Mobile,AL,765.0,
+MLK,Austin,TX,1200.0,
+Downtown,Saint Louis,MO,1025.0,1500.0
+The Gables,Columbus,OH,,
+South End,Springfield,MA,885.0,941.0
+Davis Lake - Eastfield,Charlotte,NC,1100.0,1000.0
+Village 9,Sacramento,CA,,1495.0
+Rosewood,Austin,TX,1260.0,
+Kennedy,Denver,CO,765.0,
+Briarcreek-Woodland,Charlotte,NC,675.0,995.0
+Holly Grove,New Orleans,LA,,
+Garden Acres,Fort Worth,TX,,1150.0
+Charlotte Park,Nashville,TN,,
+Far Southwest,Fort Worth,TX,,1150.0
+Manton,Providence,RI,,
+Hawthorne,Minneapolis,MN,950.0,1150.0
+Dauphin Acres,Mobile,AL,,575.0
+North Riverside,Wichita,KS,,
+West Chesterfield,Chicago,IL,,
+Mission San Jose,San Antonio,TX,669.0,
+Timber Ridge,San Antonio,TX,,
+Oxford,Fort Wayne,IN,,
+Fieldston,New York,NY,1690.0,1595.0
+Platinum Triangle,Anaheim,CA,1770.0,1950.0
+Clayton,Denver,CO,,
+East English Village,Detroit,MI,,800.0
+Hoover-Foster,Oakland,CA,,
+Yorkwood,Mobile,AL,,
+Tenney-Lapham,Town of Madison,WI,,1150.0
+West,Helena,MT,,650.0
+North Kenwood,Chicago,IL,,1375.0
+Madison Park,Charlotte,NC,1250.0,1400.0
+Little Turtle,Columbus,OH,,770.0
+Santa Clara,Eugene,OR,,
+Fells Point,Baltimore,MD,1964.0,2210.0
+Shandon,Columbia,SC,,895.0
+Bridlemile,Portland,OR,,
+Sunset Heights,Milwaukee,WI,,
+Madison Park,Seattle,WA,,
+Rockwell Park-Hemphill Heights,Charlotte,NC,900.0,995.0
+Jefferson Park,Charlottesville,VA,,1100.0
+Stockton,San Diego,CA,,
+Ellwanger-Barry,Rochester,NY,,900.0
+Northwood Point,Irvine,CA,2995.0,2775.0
+Fallstaff,Baltimore,MD,,
+Emerald Hills,San Diego,CA,,
+University Gardens,Great Neck,NY,,3295.0
+North Riverdale,Dayton,OH,,550.0
+View Ridge,Seattle,WA,,1350.0
+Banksville,Pittsburgh,PA,,
+East Westwood,Cincinnati,OH,,
+East Carollton,New Orleans,LA,,1100.0
+Old Hill,Springfield,MA,,
+Fairoaks,Tampa,FL,1050.0,925.0
+Berkleigh,Mobile,AL,,
+Streeterville,Chicago,IL,1600.0,2055.0
+Wallhaven,Akron,OH,,
+Union Station,Denver,CO,1635.0,2500.0
+Apollo Arapaho & Camelot,Garland,TX,,
+East Merrimack,Merrimack,NH,,
+Lytle Creek,San Bernardino,CA,,
+Sardis Woods,Charlotte,NC,,
+Tower Triangle,Aurora,CO,,
+Dongan Hills,New York,NY,,
+Oakland,Chicago,IL,,1250.0
+Zach White,El Paso,TX,,
+Lakeshore,Jacksonville,FL,,
+Reed,Portland,OR,,
+Del Paso Heights,Sacramento,CA,,
+Tallyn's Reach,Aurora,CO,,1285.0
+College Park,Mobile,AL,,
+East Phillips,Minneapolis,MN,,
+Hancock,Austin,TX,1195.0,1500.0
+Temescal,Oakland,CA,,
+White Ash,Columbus,OH,,1250.0
+Far West,Eugene,OR,,630.0
+Western Hills North,Fort Worth,TX,,765.0
+Presidio Heights,San Francisco,CA,,3850.0
+Maryvale,Mobile,AL,,750.0
+Roosevelt,Toledo,OH,,
+Kendall,San Bernardino,CA,,
+Route 66 West,Albuquerque,NM,,
+Rancho San Joaquin,Irvine,CA,1900.0,
+Sam Hughes,Tucson,AZ,,935.0
+Shelltown,San Diego,CA,,
+Downtown,Tulsa,OK,,
+Belcaro,Denver,CO,1558.0,1994.0
+North City Farms,Sacramento,CA,,
+Kilbourn Town,Milwaukee,WI,1733.0,
+Hartwell,Cincinnati,OH,,
+West Eugene,Eugene,OR,,
+Elizabeth,Charlotte,NC,895.0,995.0
+Treme' Lafitte,New Orleans,LA,,900.0
+Dexter Falls,Columbus,OH,1048.0,
+City Center,Miami Beach,FL,,3500.0
+West Rock,New Haven,CT,,
+Eastside,Tucson,AZ,,1100.0
+Phoenix Hill,Louisville,KY,,800.0
+City Island,New York,NY,,1700.0
+Belknap,Louisville,KY,,
+Peachtree Heights West,Atlanta,GA,1280.0,1195.0
+Tevis Ranch,Bakersfield,CA,,
+Barelas,Albuquerque,NM,,
+Sabin,Portland,OR,,
+Driving Park,Columbus,OH,,550.0
+Sequoyah,Tulsa,OK,,
+Nob Este,Albuquerque,NM,,
+International,San Bernardino,CA,,
+Chosewood Park,Atlanta,GA,,750.0
+Highland Terrace,Oakland,CA,,
+Central Business District,Louisville,KY,620.0,1395.0
+Kranz Woods,Detroit,MI,,
+Martin Acres,Boulder,CO,2500.0,2460.0
+University City South,Charlotte,NC,,
+Table Mesa South,Boulder,CO,,
+Longview Lake,Tulsa,OK,,
+Benton Park West,Saint Louis,MO,,650.0
+Fulton,Richmond,VA,599.0,882.0
+Norkirk,Kirkland,WA,,
+Tobin Hill,San Antonio,TX,,1200.0
+Cahuenga Pass,Los Angeles,CA,4300.0,4000.0
+Arrowhead,Jacksonville,FL,825.0,
+Park of the Canals,Mesa,AZ,,975.0
+Downtown,Oakland,CA,,
+Hillcrest,Boise,ID,555.0,750.0
+Mission Hills,Henderson,NV,1050.0,1050.0
+Isle of Palms,Jacksonville,FL,879.0,
+Closeburn-Glenkirk,Charlotte,NC,1040.0,1195.0
+Glenrose Heights,Atlanta,GA,731.0,773.0
+Southwest Garden,Saint Louis,MO,,795.0
+Downtown,Washington,DC,2542.0,2800.0
+Indianola Terrace,Columbus,OH,,875.0
+Arlington Manor,Jacksonville,FL,,
+Lindbergh,Atlanta,GA,1025.0,1350.0
+Deering Center,Portland,ME,,
+Mid-Town Belvedere,Baltimore,MD,1467.0,1250.0
+West Side,Augusta,GA,,790.0
+East Hampton North,East Hampton,NY,37000.0,38000.0
+Perry South,Pittsburgh,PA,,
+North Shoal Creek,Austin,TX,899.0,995.0
+Summit Lake,Akron,OH,,675.0
+Casablanca,Riverside,CA,,
+VCU,Richmond,VA,,
+Terra Nova,Chula Vista,CA,,
+Financial District,San Francisco,CA,2235.0,3500.0
+Bowmanville,Chicago,IL,1195.0,1315.0
+Wayne State,Detroit,MI,,
+Nevin Community,Charlotte,NC,,
+Goodby's Creek,Jacksonville,FL,895.0,
+Melrose Manors,Fort Lauderdale,FL,1700.0,1500.0
+Garden Springs,Lexington,KY,,
+Murray Hill,Milwaukee,WI,995.0,999.0
+Westbranch,Houston,TX,1024.0,
+Spectrum,Gilbert,AZ,,1295.0
+Mark Twain,Saint Louis,MO,,
+Ryanwood,Fort Worth,TX,,
+Beach Park,Tampa,FL,1249.0,1650.0
+Interlake,Bellevue,WA,,
+The Cape,Jacksonville,FL,1325.0,1395.0
+McElderry Park,Baltimore,MD,1000.0,1100.0
+Riverview,Jacksonville,FL,,795.0
+Tollgate Overlook,Aurora,CO,,
+Hartley,Lincoln,NE,,
+Sequoyah,Oakland,CA,,
+Wyandotte,Louisville,KY,,
+Bergen Beach,New York,NY,,1350.0
+Woodward Park,Columbus,OH,,
+North Hayward,Hayward,CA,,
+Horner Park,Chicago,IL,1015.0,
+Central Beach Alliance,Fort Lauderdale,FL,1950.0,1900.0
+Dineen Park,Milwaukee,WI,,
+South Seminole Heights,Tampa,FL,,950.0
+Downtown,Stockton,CA,,
+Alger Heights,Grand Rapids,MI,,
+Holden Heights,Orlando,FL,,
+Berg-Lasher,Detroit,MI,,725.0
+Downtown,Fort Lauderdale,FL,1950.0,2550.0
+Meredith,Des Moines,IA,,
+Ventura,Orlando,FL,,795.0
+Ruskin Heights,Kansas City,MO,,725.0
+Birmingham,Toledo,OH,,
+Escalante,Tempe,AZ,825.0,995.0
+Woodbury,Glendale,CA,,
+Covell Park,Davis,CA,,
+Greenwood & Hamilton,Trenton,NJ,,
+Dam East-West,Aurora,CO,,
+West River,New Haven,CT,,
+Upper Land Park,Sacramento,CA,,
+Sharon Woods,Charlotte,NC,795.0,975.0
+East Del Paso Heights,Sacramento,CA,,
+East Community Team South,Kansas City,MO,,
+North Oak Park,Sacramento,CA,,795.0
+Coronado Ranch,Gilbert,AZ,,
+Macons Corner,Virginia Beach,VA,,
+Fourth Ward,Houston,TX,1020.0,2400.0
+River Road,Eugene,OR,,
+Oakford Park,Tampa,FL,,600.0
+Cory - Merrill,Denver,CO,,
+Galveston,Chandler,AZ,,
+Sunland Village,Mesa,AZ,,
+Crestview,Austin,TX,1000.0,1501.0
+Pecan Park,Jacksonville,FL,,1400.0
+Fairmount,Fort Worth,TX,,1095.0
+Mayfair,Washington,DC,,
+Oliver,Baltimore,MD,,1150.0
+Parkview Hills,Fort Worth,TX,,1200.0
+Lauraville,Baltimore,MD,,
+Charter Point,Jacksonville,FL,669.0,
+South Broadway,Albuquerque,NM,,
+South Louisville,Louisville,KY,,
+Ladera West,Albuquerque,NM,,
+East Beverly,Chicago,IL,,
+Goose Island,Chicago,IL,1750.0,2200.0
+North Stonehurst,Oakland,CA,,1250.0
+Park Duvalle,Louisville,KY,,
+River Trails,Fort Worth,TX,,
+Tallulah - North Shore,Jacksonville,FL,,800.0
+Schenk-Atwood,Town of Madison,WI,,
+South East Community,Grand Rapids,MI,,700.0
+Penrose,Arlington,VA,1825.0,1655.0
+Sehome,Bellingham,WA,,
+Downtown,Trenton,NJ,,
+Fairmount,Eugene,OR,,
+Eckington,Washington,DC,2397.0,
+Harrington,Oakland,CA,,
+Wright View,Dayton,OH,,
+Old Norwood Park,Chicago,IL,,
+Tower Heights,Tulsa,OK,,
+Northeast,South Bend,IN,,
+Forest Hills Gardens,New York,NY,2500.0,2795.0
+Central,Seattle,WA,,
+Burkhardt,Dayton,OH,,
+Corcoran,Minneapolis,MN,,
+Coquina Key,Saint Petersburg,FL,900.0,1100.0
+Kleinman Park,Mesa,AZ,,
+South Westside,Olympia,WA,,
+West Minnehaha,Vancouver,WA,,
+Wescott,Syracuse,NY,,
+Port Ivory,New York,NY,,
+Pawtuckett,Charlotte,NC,,
+Magnolia Gardens,Jacksonville,FL,,775.0
+Fourth Ward,Charlotte,NC,1099.0,1409.0
+Woodstone,San Antonio,TX,,1000.0
+Mount Washington,Baltimore,MD,,
+Madison Valley,Seattle,WA,1850.0,
+Milkhouse,Mobile,AL,,
+Midtown,Grand Rapids,MI,,900.0
+Southmoor Park,Denver,CO,1030.0,1265.0
+Carrollton Ridge,Baltimore,MD,,895.0
+Lathrop Homes,Chicago,IL,1950.0,1800.0
+Nashboro Village,Nashville,TN,712.0,
+Long Branch Creek,Arlington,VA,1880.0,2000.0
+Ormewood Park,Atlanta,GA,1350.0,1395.0
+Greensbriar,Detroit,MI,,700.0
+Reichlieu,Mobile,AL,,795.0
+Sandpointe,Santa Ana,CA,,
+West Plaza,Kansas City,MO,895.0,950.0
+Northgate,Sacramento,CA,,
+Oakland-Winchell,Kalamazoo,MI,,
+45th and Moncrief,Jacksonville,FL,,775.0
+Westside Development,Tucson,AZ,,
+Greenbriar,Atlanta,GA,,
+Lowry Hill,Minneapolis,MN,1749.0,1275.0
+East Columbus,Columbus,OH,,
+Rum Village,South Bend,IN,,650.0
+Southmoreland,Kansas City,MO,695.0,750.0
+Cajon,San Bernardino,CA,,1350.0
+West Portland Park,Portland,OR,,
+Greenwood Hills,Richardson,TX,,
+Downtown,Albuquerque,NM,,695.0
+Azalea-Hollywood Park,San Diego,CA,,
+Mountain View,Vancouver,WA,,
+Stevens Square,Minneapolis,MN,675.0,720.0
+Bryn Mawr,Orlando,FL,,995.0
+Cooper Commons,Chandler,AZ,1200.0,1195.0
+Whiteaker,Eugene,OR,,595.0
+Candleridge,Fort Worth,TX,,
+Stapleton,Denver,CO,1352.0,1795.0
+Centretech,Aurora,CO,,1051.0
+Near Northwest,South Bend,IN,,645.0
+Downtown,Baltimore,MD,1300.0,1625.0
+Cherokee Triangle,Louisville,KY,,1250.0
+French Quarter,New Orleans,LA,1575.0,2250.0
+Allendale,Baltimore,MD,,1150.0
+Edgewood,Atlanta,GA,,1200.0
+Lyon Village,Arlington,VA,2600.0,2050.0
+Rickarby,Mobile,AL,,650.0
+Southwest Airport,Columbus,OH,705.0,
+Madrona,Seattle,WA,,
+Core City,Detroit,MI,,
+Riverside Rancho,Glendale,CA,,
+Salem Village,Columbus,OH,,
+Mondawin,Baltimore,MD,,
+Greenway,Washington,DC,,
+Inman Park,Atlanta,GA,1465.0,1748.0
+Carlen,Mobile,AL,,650.0
+WoodRidge,Bellevue,WA,,
+Douglas Park,Chicago,IL,,
+Beechfield,Baltimore,MD,,
+Oak Park,Stockton,CA,,
+Grand Park,Jacksonville,FL,,
+Ridglea North,Fort Worth,TX,,1209.0
+Corona Heights,San Francisco,CA,,2899.0
+Ocean Avenue,Portland,ME,1050.0,
+Magnolia Glen,Chicago,IL,780.0,1000.0
+Middle River Terrace,Fort Lauderdale,FL,1349.0,1175.0
+Riverside,Spokane,WA,,
+Miramonte,Tucson,AZ,799.0,535.0
+Playa Vista,Los Angeles,CA,2800.0,2900.0
+Northgate,Colorado Springs,CO,1049.0,
+Heather Ridge,Aurora,CO,,
+West Downtown,Santa Barbara,CA,,1600.0
+S.R. Marmon,Albuquerque,NM,,
+Glenwood Meadows,Sacramento,CA,,
+Village 7,Sacramento,CA,,
+Eastland Park-Dixie Plantation,Lexington,KY,,
+Underwood Hills,Atlanta,GA,950.0,
+Hickman Mills,Kansas City,MO,,825.0
+Venetian Hills,Atlanta,GA,,900.0
+Griers Fork,Charlotte,NC,,
+South Park,Tucson,AZ,,
+Volker,Kansas City,MO,599.0,650.0
+Berea,Baltimore,MD,,1000.0
+Park,Detroit,MI,,800.0
+Turner Park,Tulsa,OK,,900.0
+Glacier View,Everett,WA,,
+Eagle Lake,Charlotte,NC,,
+Shady Oaks,San Antonio,TX,,
+Tulane-Gravier,New Orleans,LA,,
+U Street Corridor,Washington,DC,2445.0,2575.0
+Globeville,Denver,CO,,
+Oakland City,Atlanta,GA,,800.0
+Garden Hills,Atlanta,GA,1675.0,1740.0
+Saint Mary's,Long Beach,CA,,
+Iveywood,Oakland,CA,,
+North Delridge,Seattle,WA,,
+Ranch Triangle,Chicago,IL,1950.0,2160.0
+East Hills,Grand Rapids,MI,,1350.0
+Glenfair,Portland,OR,,
+Park Hill,Louisville,KY,,575.0
+Creekside,Sacramento,CA,,1500.0
+Central Business District,Denver,CO,1695.0,2800.0
+East Harriet,Minneapolis,MN,,
+Fulton River District,Chicago,IL,1718.0,2035.0
+Eisenhower East,Alexandria,VA,2100.0,2250.0
+LaSalle College Park,Detroit,MI,,700.0
+East Deering,Portland,ME,,
+Whitman,Spokane,WA,,
+Lincoln,Vancouver,WA,,
+Central Business District,Orlando,FL,1160.0,1450.0
+Eastwood Hill East,Kansas City,MO,,800.0
+Barcroft,Arlington,VA,,
+Camelot,Garland,TX,,
+West Central,Fort Wayne,IN,,425.0
+Kingsway East,Saint Louis,MO,,
+Bayou St. John,New Orleans,LA,,
+Meadowbrook,Seattle,WA,,
+Confederate Point,Jacksonville,FL,,
+John Ball Park,Grand Rapids,MI,,1700.0
+Ellwood Park-Monument,Baltimore,MD,,1100.0
+Benton Park,Saint Louis,MO,,875.0
+Moss Bay,Kirkland,WA,1590.0,1933.0
+Oak Center,Oakland,CA,,
+Holly,Austin,TX,1250.0,
+Northrich,Richardson,TX,,1500.0
+East Congress,Austin,TX,992.0,1345.0
+UMC,Las Vegas,NV,,895.0
+Westside,South Bend,IN,,565.0
+Hope,Santa Barbara,CA,,
+Riverland,Fort Lauderdale,FL,,1300.0
+Town Center,Reston,VA,,
+New Village,Phoenix,AZ,,
+Columbia Street Waterfront District,New York,NY,2100.0,2600.0
+Central Business District,Pittsburgh,PA,1565.0,1495.0
+Mission Hills,El Paso,TX,,1200.0
+Morris Heights,Aurora,CO,,
+Harborview-Seahurst-Glenhaven,Everett,WA,,
+Riverside Park,Fort Lauderdale,FL,950.0,995.0
+Sierra Springs,San Antonio,TX,,1250.0
+Forest Trails,Jacksonville,FL,1195.0,1195.0
+Trilogy,Corona,CA,,1995.0
+Harrison East-South,Tucson,AZ,,
+Rock Island,Fort Lauderdale,FL,,1600.0
+Weinland Park,Columbus,OH,,799.0
+Wrigleyville,Chicago,IL,1673.0,1600.0
+Duval,Jacksonville,FL,,1050.0
+University South,Palo Alto,CA,,
+Upper Fells Point,Baltimore,MD,1350.0,1699.0
+Cedar Hills Estate,Jacksonville,FL,795.0,950.0
+Sunset,Fort Lauderdale,FL,,1500.0
+Victory Hills,Albuquerque,NM,,600.0
+Newfield,Stamford,CT,,
+Biscayne,Jacksonville,FL,975.0,
+Coronado Hills,Austin,TX,655.0,
+Richmond Valley,New York,NY,,
+Cathedral Heights,Washington,DC,2246.0,1985.0
+Beatties Ford-Trinity,Charlotte,NC,890.0,
+South Pointe,San Bernardino,CA,,1595.0
+Fairwood and Robandee,Kansas City,MO,,850.0
+Duclay Forest,Jacksonville,FL,975.0,999.0
+Arrowhead Farms,San Bernardino,CA,,
+Jacksonville Heights South,Jacksonville,FL,,1195.0
+Government Hill Alliance,San Antonio,TX,,
+Sherwood Forest,Charlotte,NC,795.0,
+Limberlost,Tucson,AZ,,750.0
+Pipers Meadow,San Antonio,TX,,
+Riverview,Seattle,WA,,1395.0
+Kirkman South,Orlando,FL,800.0,1000.0
+Central Business District - Downtown,Kansas City,MO,995.0,1100.0
+Village 12,Sacramento,CA,,1550.0
+West University,Tucson,AZ,1000.0,700.0
+Virginia Ave,Lexington,KY,,900.0
+Lewelling,Milwaukie,OR,,
+Southern Orchards,Columbus,OH,,550.0
+Upper East Side,Milwaukee,WI,,
+Quail Hollow,Charlotte,NC,,950.0
+Emerald Estates,Bakersfield,CA,,1550.0
+Curtis Bay,Baltimore,MD,800.0,1000.0
+University,San Bernardino,CA,,
+Eastmont Hills,Oakland,CA,,2200.0
+Arlington Park,Sarasota,FL,,
+Downtown,Salt Lake City,UT,915.0,1075.0
+Ida B. Wells - Darrow Homes,Chicago,IL,,
+Hogan's Creek,Jacksonville,FL,850.0,
+Oakdale South,Charlotte,NC,,1000.0
+South Wedge,Rochester,NY,,
+Edgemoor,Saint Petersburg,FL,,
+South Kilbourne,Columbia,SC,795.0,575.0
+Hilliard Green,Columbus,OH,,
+NE - Sterling,San Bernardino,CA,,1300.0
+Mahncke Park,San Antonio,TX,,650.0
+Willow Creek,Kansas City,MO,665.0,699.0
+Ivy Hill,Oakland,CA,,
+Moorings,Naples,FL,2500.0,5000.0
+Great Neck Estates,Great Neck,NY,,4500.0
+Westchester,Charlotte,NC,795.0,825.0
+West Gate,Austin,TX,,1100.0
+Hedrick Acres,Tucson,AZ,595.0,695.0
+North Star,Anchorage,AK,,1150.0
+Pendleton Heights,Kansas City,MO,,
+Hudson,San Bernardino,CA,,
+Centennial Park,Santa Ana,CA,,
+Colonial Village,Sacramento,CA,,
+Park Circle,Baltimore,MD,,
+Oakdale,Portland,ME,,1100.0
+East Community Team North,Kansas City,MO,,
+Olde Whitehall,Charlotte,NC,,1100.0
+Thousand Oaks,San Antonio,TX,729.0,
+Broadleigh,Columbus,OH,,
+Sylvan Park,Nashville,TN,,
+Aviation Sub.,Detroit,MI,,800.0
+Old Town-Chinatown,Portland,OR,1200.0,
+Penrose-Fayette Street Outreach,Baltimore,MD,,1150.0
+Sullivan's Gulch,Portland,OR,,995.0
+Naples,Long Beach,CA,,2400.0
+Chinatown,Chicago,IL,,
+Lake Forest,Jacksonville,FL,,800.0
+Thornhill,Mobile,AL,870.0,
+Seven Eagles,Charlotte,NC,,
+Galindo,Austin,TX,940.0,1350.0
+Finley Farms,Gilbert,AZ,,
+Eliot,Portland,OR,,1195.0
+Cherrydale,Arlington,VA,,
+City Center,Toledo,OH,,
+Eastmont,Oakland,CA,,1200.0
+Island Estate Civic Association,Clearwater,FL,1500.0,2300.0
+Lake Hollingsworth,Lakeland,FL,,
+Parkside,Portland,ME,850.0,830.0
+South University,Eugene,OR,,
+Rain Tree,Charlotte,NC,770.0,
+Castlemont,Oakland,CA,,
+East Foothills,Boulder,CO,,1655.0
+Woodbine,Sacramento,CA,,
+Muscupiabe,San Bernardino,CA,,
+Lincoln Villas,Jacksonville,FL,,
+Southpoint,Jacksonville,FL,1090.0,795.0
+Irish Channel,New Orleans,LA,,1850.0
+Eugene Field,Tulsa,OK,,
+Washington Village,Baltimore,MD,1200.0,1150.0
+Herlong,Jacksonville,FL,,1150.0
+Montlake,Seattle,WA,,1295.0
+Sunny Slope,San Antonio,TX,,
+Takoma,Washington,DC,,1835.0
+Northgate,Seattle,WA,,
+Northwood Hills,West Palm Beach,FL,,1150.0
+Frasier Meadows,Boulder,CO,,
+Southgate Triangle,Missoula,MT,,775.0
+Snell Isle,Saint Petersburg,FL,1350.0,
+Indiana Forest,Columbus,OH,,625.0
+Highland Park,Grand Rapids,MI,,750.0
+Presidio,San Francisco,CA,3575.0,2916.0
+Morningside,Pittsburgh,PA,,
+Holden-Parramore,Orlando,FL,,
+Castle Manor,Milwaukee,WI,,
+Plaza-Shamrock,Charlotte,NC,575.0,750.0
+Willow Park,Aurora,CO,,
+Midlothian,Richmond,VA,,
+East Cesar Chavez,Austin,TX,1179.0,
+Judkins Park,Seattle,WA,,
+Wilson,San Bernardino,CA,,
+Downtown Business District,Bellingham,WA,,
+Rosedale Park,Detroit,MI,,
+High Country,San Antonio,TX,,
+Huguenot,Richmond,VA,,
+Courier City,Tampa,FL,1400.0,1295.0
+Laguna,Santa Barbara,CA,,1200.0
+Candler Park,Atlanta,GA,1200.0,
+Heritage Hill,Grand Rapids,MI,,925.0
+Alderman Park,Jacksonville,FL,,
+Cox,Oakland,CA,,
+Glen Oaks,Baltimore,MD,,
+Bywater,New Orleans,LA,,
+Parkwood Maintenance,San Antonio,TX,,
+Mount Vernon,San Bernardino,CA,,
+Pittsburgh,Atlanta,GA,,825.0
+Eastern 49-63,Kansas City,MO,,
+Concordia,Milwaukee,WI,,
+A Mountain,Tucson,AZ,,
+Arrowview,San Bernardino,CA,,
+Collingwood,Charlotte,NC,,550.0
+Northwest Harbor,East Hampton,NY,36000.0,38000.0
+Park Village,San Antonio,TX,,
+Clanton Park-Roseland,Charlotte,NC,,
+West End,Washington,DC,3265.0,2875.0
+Frick,Oakland,CA,,
+Plaza Midwood,Charlotte,NC,1300.0,960.0
+Tuscany-Canterbury,Baltimore,MD,1400.0,
+Sugaw Creek-Ritch Ave,Charlotte,NC,,
+Kirkman North,Orlando,FL,785.0,985.0
+Corryville,Cincinnati,OH,,
+Village 2,Sacramento,CA,,
+Governours Square,Columbus,OH,620.0,
+Bayou Oaks,Sarasota,FL,,950.0
+Swain Oaks,Stockton,CA,,650.0
+Allen,Buffalo,NY,,750.0
+Oceana,Virginia Beach,VA,750.0,785.0
+Burleith,Washington,DC,,3150.0
+Whites Bend,Nashville,TN,745.0,
+South Carthay,Los Angeles,CA,,1997.0
+Downtown,Eugene,OR,995.0,565.0
+Shepherd Park,Washington,DC,,
+Tahoe Park,Sacramento,CA,,
+Noralto,Sacramento,CA,,
+Prairie Hills,Town of Madison,WI,,
+Navy Yard,Washington,DC,2435.0,2495.0
+King-Lincoln-Bronzeville,Columbus,OH,,495.0
+Jefferson,San Antonio,TX,,
+Sobrante Park,Oakland,CA,,
+Yankee Hill,Milwaukee,WI,1650.0,1350.0
+Lake Country,Fort Worth,TX,,
+The Eye,Detroit,MI,,800.0
+Parkway,Albuquerque,NM,,
+Southwest,Atlanta,GA,,
+Terrace Village,Pittsburgh,PA,,
+Santa Fe,Oakland,CA,,
+New Dorp Beach,New York,NY,,
+Eastview,Richmond,VA,,
+Hayward Park,San Mateo,CA,,
+Forest Knolls,San Francisco,CA,,3070.0
+Avalon Park,Chicago,IL,,630.0
+South Campus,Town of Madison,WI,1745.0,1645.0
+Twin Peaks,San Francisco,CA,,2600.0
+Covenant Blu-Grand Center,Saint Louis,MO,950.0,
+West End,New Orleans,LA,,
+River Oaks,Fort Lauderdale,FL,1500.0,1300.0
+Marlborough Heights - Marlborough Pride,Kansas City,MO,,650.0
+North Highland,Arlington,VA,1560.0,1800.0
+Downtown,Boston,MA,2600.0,3400.0
+Lockeland Springs,Nashville,TN,,
+Meadows Village,Las Vegas,NV,,1350.0
+Graceland West,Chicago,IL,1400.0,1600.0
+Royal Lakes,Jacksonville,FL,800.0,
+Greenspring,Baltimore,MD,,
+Eads-Fisherville,Memphis,TN,,1175.0
+Canterbury,Mobile,AL,,
+Tri-Taylor,Chicago,IL,1300.0,1450.0
+McKinley,Albuquerque,NM,,
+Indian Creek,Denver,CO,,
+Conway,Orlando,FL,775.0,800.0
+Georgian Heights,Columbus,OH,,
+West Albany,Columbus,OH,,
+Sagepointe,Bakersfield,CA,,780.0
+Blenman-Elm,Tucson,AZ,,875.0
+Coral Ridge Isles,Fort Lauderdale,FL,1350.0,1250.0
+Downtown North,Palo Alto,CA,,
+South End,Stamford,CT,2980.0,
+Bluff Acres,Town of Madison,WI,,
+El Dorado - Oates Prairie,Houston,TX,,
+South Los Altos,Albuquerque,NM,,550.0
+Los Prados,San Mateo,CA,,
+Woodbine,Nashville,TN,,575.0
+Sunset Road,Charlotte,NC,,1050.0
+Fry Springs,Charlottesville,VA,,1195.0
+Irvine Health and Science Complex,Irvine,CA,,1960.0
+Bluff Park,Long Beach,CA,,2450.0
+Brentwood,Washington,DC,,
+Browncroft,Rochester,NY,,
+Camelot 1,San Antonio,TX,,
+Hidden Hills,Jacksonville,FL,,
+Boise,Portland,OR,1195.0,2025.0
+Friedrich Wilderness Park,San Antonio,TX,,1430.0
+Miracle Manor,Tucson,AZ,,695.0
+Turtle Ridge,Irvine,CA,2750.0,3500.0
+Colonialtown North,Orlando,FL,,1150.0
+North Park,San Bernardino,CA,,
+Pepperwood,Tempe,AZ,,
+Mechanicsville,Atlanta,GA,1000.0,995.0
+United Amigos,Mesa,AZ,,
+Amtrak,San Bernardino,CA,,
+Old Naples,Naples,FL,2200.0,4500.0
+Claremont,Mobile,AL,,
+Wilshire Village,San Antonio,TX,615.0,928.0
+Upper East,Santa Barbara,CA,,
+Dignowity Hill,San Antonio,TX,,925.0
+Brookfield Village,Oakland,CA,,
+Westfield,Baltimore,MD,,
+Eastgate,Bellevue,WA,,1700.0
+Uptown,Albuquerque,NM,,
+Wayland,Providence,RI,1600.0,1100.0
+Leisure World,Mesa,AZ,,2400.0
+English Avenue,Atlanta,GA,,950.0
+Eight Mile Wyoming,Detroit,MI,,700.0
+Downtown,San Antonio,TX,759.0,1800.0
+Holiday Park,Stockton,CA,,850.0
+East Isles,Minneapolis,MN,,
+Lakewood,Saint Petersburg,FL,815.0,995.0
+West View,Atlanta,GA,,775.0
+Mckinley,Minneapolis,MN,,
+Sunnyside,New York,NY,,
+Richmond Heights,Orlando,FL,,
+Historic Kenwood,Saint Petersburg,FL,900.0,850.0
+Ortega Farms,Jacksonville,FL,,825.0
+Sunset Heights,El Paso,TX,,
+Highlandtown,Baltimore,MD,,
+DeBaliviere Place,Saint Louis,MO,825.0,800.0
+Hillcrest,Dayton,OH,,
+Pineapple Park - Ibis,West Palm Beach,FL,4000.0,3000.0
+Potomac Yard-Potomac Greens,Alexandria,VA,2085.0,
+Mccormick,Wichita,KS,,
+Skyland,Denver,CO,,
+Heartside,Grand Rapids,MI,,
+Westhill,Mobile,AL,,
+Terra Vista,Bakersfield,CA,,
+Lakemont,Augusta,GA,,800.0
+Center Hill,Atlanta,GA,,875.0
+Keewaydin,Minneapolis,MN,,
+Parker Ridge,West Palm Beach,FL,,
+Longs Creek,San Antonio,TX,,
+Lyon's Gate,Gilbert,AZ,,1275.0
+The Traditions,Chandler,AZ,,
+Pen Lucy,Baltimore,MD,,
+Lackawanna,Jacksonville,FL,,
+Alegre Community,Tempe,AZ,650.0,895.0
+Sheldon-Charter Oak,Hartford,CT,,850.0
+Lynn Knoll,Aurora,CO,,829.0
+Singing Arrow,Albuquerque,NM,,599.0
+Bennington,Vancouver,WA,,
+Randolph,Richmond,VA,867.0,1400.0
+Coliseum,Oakland,CA,,
+Harrison,Minneapolis,MN,,
+Tarpon River,Fort Lauderdale,FL,2225.0,1695.0
+Jefferson Heights,San Antonio,TX,,
+North of Grand,Des Moines,IA,,
+Ravenswood Manor,Chicago,IL,,
+City Park,Denver,CO,1347.0,
+Lakewide,Oakland,CA,995.0,
+Parkwood Ranch,Mesa,AZ,,1100.0
+Soulard,Saint Louis,MO,,900.0
+Orchard Ridge Community,Town of Madison,WI,,
+Sendera Ranch,Fort Worth,TX,,1295.0
+Panama Park,Jacksonville,FL,,650.0
+International District,Seattle,WA,,1350.0
+Mount Vernon,Columbus,OH,,
+La Playa,San Diego,CA,2500.0,2750.0
+Sailboat Bend,Fort Lauderdale,FL,1850.0,1800.0
+Touro,New Orleans,LA,,
+Cleveland,Minneapolis,MN,,
+Park Estates,Long Beach,CA,,
+Jacksonville Heights West,Jacksonville,FL,800.0,1036.0
+Baltimore,Mobile,AL,,
+Lake Meadows,Chicago,IL,806.0,
+Highland Park,Aurora,CO,,
+Esther Short,Vancouver,WA,720.0,
+Foxboro,Columbus,OH,,835.0
+Five Oaks,Dayton,OH,,
+Ribault,Jacksonville,FL,,
+Central Avenue,Albany,NY,,
+Sherman Heights,San Diego,CA,,
+Fishkorn,Detroit,MI,,790.0
+Live Oaks Square,Tampa,FL,,
+Duboce Triangle,San Francisco,CA,,4900.0
+Cottage Grove,Youngstown,OH,,
+Capital View-Stiff,Little Rock,AR,,650.0
+Lower Clinton Hill,Newark,NJ,,
+East Baltimore Midway,Baltimore,MD,,1050.0
+Bloomfield,New York,NY,,
+Enderly Park,Charlotte,NC,495.0,675.0
+The Hills of Park North,San Antonio,TX,,
+Medical Center Area,Houston,TX,1468.0,1650.0
+Marigny,New Orleans,LA,,1400.0
+Colonial Manor,Sacramento,CA,,
+Pleasant Plains,New York,NY,,1200.0
+Navco,Mobile,AL,,700.0
+Winston Park,Saint Petersburg,FL,,
+Adamsville,Atlanta,GA,,
+Wakefield,Washington,DC,1646.0,1560.0
+RP Sports Complex,Sacramento,CA,,
+Spring Creek Neighborhood Alliance,San Antonio,TX,,
+Wendover-Sedgewood,Charlotte,NC,1020.0,1250.0
+San Marco,Jacksonville,FL,750.0,675.0
+Factoria,Bellevue,WA,1475.0,2000.0
+Central Park,New York,NY,2850.0,3695.0
+Fairlawn,Washington,DC,,
+Lake Forest Hills,Jacksonville,FL,,1000.0
+North Town Fork Creek,Kansas City,MO,,
+The Palisades,Washington,DC,,2195.0
+New Scotland,Albany,NY,,
+Stockdale West,Bakersfield,CA,,
+Park East,Sarasota,FL,825.0,950.0
+Durrs Homeowners,Fort Lauderdale,FL,,995.0
+Harriet Creek Ranch,Fort Worth,TX,,1300.0
+SBIC,Baltimore,MD,,1900.0
+Clearwater Beach Association,Clearwater,FL,2000.0,3000.0
+Southwest Quadrant,Alexandria,VA,2155.0,2166.0
+Truxton Circle,Washington,DC,,2500.0
+Terrell Heights,San Antonio,TX,949.0,1045.0
+Downtown,Sarasota,FL,2200.0,3200.0
+Wilshire,San Antonio,TX,,
+Waverly Hills,Arlington,VA,,
+Natomas Crossing,Sacramento,CA,,1350.0
+North Campus,Columbus,OH,,590.0
+Lakewood Heights,Atlanta,GA,800.0,
+Lewis and Clark,Missoula,MT,,650.0
+Forest Park West,Columbus,OH,,
+Cedar-Isles-Dean,Minneapolis,MN,1970.0,2279.0
+Sunset,Tempe,AZ,625.0,795.0
+Breezy Point,New York,NY,,3005.0
+Carver,Mobile,AL,,
+Dayton-Weequahic Park,Newark,NJ,,
+Downtown,Olympia,WA,,
+Mckinney,Austin,TX,900.0,
+Twin Towers,Dayton,OH,,
+Northridge Estates,Dayton,OH,,
+Madison Area,Grand Rapids,MI,,795.0
+South Rose Hill,Kirkland,WA,,
+Northside,Missoula,MT,,
+Lockhill Estates,San Antonio,TX,,
+Riverview,Tulsa,OK,,
+Moncrief Park,Jacksonville,FL,,
+Bridle Trails,Kirkland,WA,,
+Amaryllis Park,Sarasota,FL,,
+Cathedral Park,Portland,OR,,
+University City North,Charlotte,NC,819.0,
+Downtown,Portland,ME,1600.0,1525.0
+Central Northside,Pittsburgh,PA,,
+St. Catherine's Gardens,Kansas City,MO,,
+Galloway Ridge,Columbus,OH,,
+Reynoldstown,Atlanta,GA,1200.0,900.0
+Sedgefield,Charlotte,NC,895.0,995.0
+The Bush,Chicago,IL,,
+Better Waverly,Baltimore,MD,,
+South Green,Hartford,CT,,795.0
+Shelby Park,Louisville,KY,,650.0
+Central City-Liberty Wells,Salt Lake City,UT,,
+Woodlawn,Mobile,AL,,750.0
+Canterbury Green,Fort Wayne,IN,649.0,584.0
+Sunset Cliffs,San Diego,CA,,
+Greenwich Hills,Mobile,AL,,
+West Congress,Austin,TX,1250.0,1025.0
+Golf Course Terrace,Sacramento,CA,,1150.0
+Boulevard Bluffs,Everett,WA,,1320.0
+West Portal,San Francisco,CA,,
+Ashbrook-Clawson Village,Charlotte,NC,995.0,1000.0
+Garfield Heights,Washington,DC,,1150.0
+Tiger Hole-Secret Woods,Jacksonville,FL,,
+Carthage,Cincinnati,OH,,
+Guide Meridian,Bellingham,WA,,
+Richland Park,Richardson,TX,,
+Dobson Woods,Mesa,AZ,,
+First Ward,Charlotte,NC,1000.0,1280.0
+Douglas,Washington,DC,,
+Pearl-Meigs-Monroe,Rochester,NY,595.0,
+Sheridan,Minneapolis,MN,,
+The Gate District,Saint Louis,MO,,850.0
+Meyer Park,Tempe,AZ,776.0,1195.0
+Boulevard Park,Sacramento,CA,,725.0
+Hamilton,Fort Wayne,IN,,
+Fairway Bend,Fort Worth,TX,,919.0
+Dennis Port,Dennis,MA,,1100.0
+Slater Rd-Hamilton Circle,Charlotte,NC,,
+Lafayette Square,Saint Louis,MO,,
+McClymonds,Oakland,CA,,
+Hope,Providence,RI,,1050.0
+Olde Towne,Toledo,OH,,
+The Strip,Las Vegas,NV,1600.0,2000.0
+Oakbrook,Vancouver,WA,,
+Palm Beach Lakes,West Palm Beach,FL,,1500.0
+Perkerson,Atlanta,GA,,
+Dodge Flower,Tucson,AZ,,580.0
+Mission Valley West,San Diego,CA,1700.0,1650.0
+Marrion,Vancouver,WA,,
+Gardenland,Sacramento,CA,,
+Barrio Hollywood,Tucson,AZ,,
+Riverside Heights,Tampa,FL,,
+Walnut Hills,Columbus,OH,,
+North Rosslyn,Arlington,VA,2800.0,2495.0
+Fairways Forest,Jacksonville,FL,,
+University Park Estates,Long Beach,CA,,
+Greektown,Baltimore,MD,,
+North Highland Park,Richmond,VA,,850.0
+Strawberry Manor,Sacramento,CA,,
+West De Paul,Chicago,IL,1725.0,2700.0
+East Lake,Atlanta,GA,,
+Crown Hill,Seattle,WA,,
+Mohican Regent,Detroit,MI,,
+Center Square,Albany,NY,,800.0
+Tampa International Airport Area,Tampa,FL,1100.0,1235.0
+Holiday Park,Albuquerque,NM,,
+Lake Ridge,Fort Lauderdale,FL,1850.0,1600.0
+Alta Vista,San Antonio,TX,,
+Lauriedale,San Mateo,CA,1740.0,
+Latah Valley,Spokane,WA,,1400.0
+West Bayside,Portland,ME,,
+Rio Vista,Fort Lauderdale,FL,1950.0,2400.0
+Monterey,Orlando,FL,,
+Orlando International Airport,Orlando,FL,,
+Saint Joseph,Louisville,KY,,
+Southwood,Jacksonville,FL,,
+River Bend,Des Moines,IA,,
+Ruskin Hills,Kansas City,MO,,850.0
+Denny Triangle,Seattle,WA,1575.0,2450.0
+Kearny Mesa,San Diego,CA,,1967.0
+Palmetto Beach,Tampa,FL,,
+Interbay,Tampa,FL,,1400.0
+Mark Twain,Richardson,TX,,
+Summerhill,Atlanta,GA,,
+Cody,Mobile,AL,,725.0
+Buena Vista Park,San Francisco,CA,,3600.0
+Locust Point Industrial Area,Baltimore,MD,,1900.0
+North Charlotte,Charlotte,NC,890.0,1200.0
+Burr Oaks,Town of Madison,WI,,725.0
+Coppin Heights - Ash-Co-East,Baltimore,MD,,1060.0
+Hermitage Hills,Nashville,TN,,585.0
+Shockoe Bottom,Richmond,VA,1025.0,1082.0
+Clifton,Louisville,KY,,
+Slate Hill,Columbus,OH,,895.0
+Thomasville Heights,Atlanta,GA,,695.0
+Orchard Hills,Irvine,CA,,2100.0
+Euclid Heights,Saint Petersburg,FL,,
+Sterling,Charlotte,NC,725.0,
+St. Louis Place,Saint Louis,MO,,
+Downtown Des Moines,Des Moines,IA,725.0,1185.0
+Smoketown Jackson,Louisville,KY,,
+Downtown Charlotte,Charlotte,NC,1175.0,1400.0
+Falcon Ridge,Fort Worth,TX,,1250.0
+Brookside Woods,Columbus,OH,,900.0
+Fossil Park,Fort Worth,TX,,
+Gateway,Saint Petersburg,FL,,
+DUMBO,New York,NY,3600.0,3850.0
+Llanfair,Mobile,AL,,
+Sunset,Boise,ID,,
+Louis Park,Stockton,CA,,
+Newton Booth,Sacramento,CA,,750.0
+Patch,Saint Louis,MO,,680.0
+Middle East,Baltimore,MD,1300.0,1300.0
+Poinsettia Heights,Fort Lauderdale,FL,1850.0,1595.0
+Five Points,Detroit,MI,,
+Riss Lake,Kansas City,MO,,
+Brightwood Park,Washington,DC,,1375.0
+Dinsmore,Jacksonville,FL,,
+Twinbrooks,Saint Petersburg,FL,,875.0
+Carino Estates,Chandler,AZ,,
+Brookhaven,Atlanta,GA,,
+East Central,Fort Wayne,IN,725.0,
+Grier Heights,Charlotte,NC,450.0,650.0
+Peachtree Hills,Atlanta,GA,825.0,
+Central Business District,San Mateo,CA,,3401.0
+Biscayne Terrace,Jacksonville,FL,,1100.0
+East Riverside,New Orleans,LA,,
+Poncey-Highland,Atlanta,GA,,
+Twelve Oaks,Chandler,AZ,,1295.0
+Southeast Quality,South Bend,IN,,575.0
+Mordecai,Raleigh,NC,,1250.0
+Madison Park,Baltimore,MD,1166.0,1050.0
+Russell Woods,Detroit,MI,,650.0
+Poppleton,Baltimore,MD,,
+Hyatt Park,Columbia,SC,,
+Forest Park Southeast,Saint Louis,MO,,925.0
+West Markham,Little Rock,AR,,
+Clifton Heights,Saint Louis,MO,,750.0
+Oak Grove Estates,San Antonio,TX,,
+Lake Watkins,Lakeland,FL,,
+Carver,Washington,DC,,
+Red Ridge South,Kansas City,MO,689.0,
+Franklin Park,Columbus,OH,,550.0
+Federal Hill,Baltimore,MD,2100.0,1700.0
+Fox Park,Saint Louis,MO,,700.0
+Oak Park Northwest,Kansas City,MO,,650.0
+Prospect Park South,New York,NY,1600.0,1350.0
+Emma Dickinson Orchard Homes,Missoula,MT,,
+Monroe Ward,Richmond,VA,765.0,
+NTNA - College,Tempe,AZ,801.0,748.0
+Marine Villa,Saint Louis,MO,,
+Langdon,Washington,DC,,
+Lake Somerset,Lakeland,FL,,
+Starmount,Charlotte,NC,,1450.0
+Fairmount Park,San Diego,CA,,
+Upper Lawrenceville,Pittsburgh,PA,,
+S Y Jackson,Albuquerque,NM,,
+Franklin Square,Baltimore,MD,,
+Ortega,Jacksonville,FL,,
+Guilford Center,Guilford,CT,,
+Rolling Hills Ranch,Chula Vista,CA,,
+Midway,Henderson,NV,,1250.0
+Northern Hills,San Antonio,TX,,
+Westover,Stamford,CT,,
+La Gorce,Miami Beach,FL,,6900.0
+Pheasant Hill,Dayton,OH,,
+Colonial Village,Arlington,VA,2049.0,1990.0
+Paces,Atlanta,GA,,1420.0
+Downtown CBD,Little Rock,AR,,1090.0
+Encanto,Mesa,AZ,,
+Houghton,Tucson,AZ,,
+Ventura,Palo Alto,CA,,
+Washington Square,Mobile,AL,,
+Knight Park - Howell Station,Atlanta,GA,,
+Holly Hills,Saint Louis,MO,,675.0
+Riverfront,Missoula,MT,,
+North Waterfront,San Francisco,CA,,3475.0
+Inner Harbor,Baltimore,MD,1898.0,
+Waverly,Baltimore,MD,,1200.0
+North Kenwood,Saint Petersburg,FL,,
+Old Fort Lowell,Tucson,AZ,,
+Peoplestown,Atlanta,GA,,900.0
+Summit Park,Albuquerque,NM,,
+West Oakland,Pittsburgh,PA,1297.0,
+Second Creek,Mobile,AL,835.0,
+Piney Knolls,Richmond,VA,,
+Magnolia,Stockton,CA,,550.0
+Rosedale,Denver,CO,,
+Belmont,Charlotte,NC,,595.0
+White Bridge,Nashville,TN,,
+West Mesa,Santa Barbara,CA,,1995.0
+Maplewood,Portland,OR,,
+Las Palmas,Oakland,CA,,
+Cedmont,Baltimore,MD,,960.0
+Euclid-St Pauls,Saint Petersburg,FL,,
+Thomaston,Great Neck,NY,2150.0,2285.0
+Bellemeade,Richmond,VA,750.0,
+South River Gardens,Atlanta,GA,,913.0
+Buckhorn,Mesa,AZ,,895.0
+Feldman's,Tucson,AZ,,775.0
+South Plaza,Kansas City,MO,1065.0,
+Skies West,Albuquerque,NM,,1075.0
+Council Oak,South Bend,IN,,
+Lake Road,Milwaukie,OR,,
+Shingle Creek,Minneapolis,MN,,
+Rosemont,Baltimore,MD,,1000.0
+Dawson,Austin,TX,1511.0,1343.0
+Tempe Royal Estates,Tempe,AZ,,
+Fondren Gardens,Houston,TX,,
+Livingston - McNaughten,Columbus,OH,,
+Algeirs Point,New Orleans,LA,,
+Jefferson Park,Denver,CO,,
+Palm Club Village,West Palm Beach,FL,850.0,1150.0
+Grandmont No.1,Detroit,MI,,950.0
+Flagler Heights,Fort Lauderdale,FL,1850.0,1800.0
+Cascade Avenue-Road,Atlanta,GA,,825.0
+Preserve South,Columbus,OH,,
+Monterey,Jacksonville,FL,725.0,750.0
+Carver,Richmond,VA,1020.0,1200.0
+Airport,Sacramento,CA,,
+Croissant Park,Fort Lauderdale,FL,2200.0,1750.0
+Highland,Albuquerque,NM,,595.0
+Vista del Norte,Albuquerque,NM,,
+Wilder Park,Louisville,KY,,
+Normandy Village,Jacksonville,FL,,995.0
+Westover,Richmond,VA,600.0,
+Greenbush,Town of Madison,WI,,1275.0
+Kellogg School,Wichita,KS,,599.0
+Trouville,Columbus,OH,,
+Mapleton Hill,Boulder,CO,,1900.0
+Ridgemoor,Grand Rapids,MI,,
+Brookwood,Mobile,AL,,
+Sand Key Civic Association,Clearwater,FL,2200.0,2500.0
+Natomas Creek,Sacramento,CA,,
+Oak Creek,San Antonio,TX,,1150.0
+RMMA,Austin,TX,1555.0,
+Northern Barton Heights,Richmond,VA,,875.0
+Lake Maggiore,Saint Petersburg,FL,,
+Woodmere,Baltimore,MD,,
+Sweet Auburn,Atlanta,GA,972.0,1221.0
+Ashley Park,Charlotte,NC,600.0,725.0
+Edgewood,Fort Lauderdale,FL,1340.0,1650.0
+Oak Flower,Tucson,AZ,,
+Hidden Valley,Bellevue,WA,1540.0,1795.0
+Elliott,Pittsburgh,PA,,
+Vasa,Bellevue,WA,,
+Hillside,Portland,OR,,1450.0
+Eastwood,Nashville,TN,,
+Dixieland,Lakeland,FL,,
+Bartlett Park,Saint Petersburg,FL,,800.0
+East Calhoun,Minneapolis,MN,,
+Harbordale,Fort Lauderdale,FL,1600.0,1565.0
+Hanover Place,Kansas City,MO,550.0,750.0
+Moorpark,Glendale,CA,,
+South Forest Park,Everett,WA,,
+Corn Hill,Rochester,NY,,
+Greenwich Village,Dayton,OH,,
+Rincon Heights,Tucson,AZ,,850.0
+Skyland,Washington,DC,,
+South Lake Union,Seattle,WA,,1930.0
+Duquesne Heights,Pittsburgh,PA,,
+Fifth City,Chicago,IL,,975.0
+Kalorama,Washington,DC,,2500.0
+Bay Creek,Town of Madison,WI,,
+Bolton,Atlanta,GA,,
+Claremont,Arlington,VA,,
+Bridgeview - Greenlawn,Baltimore,MD,,
+Browns Mill Park,Atlanta,GA,,
+Fiesta Park Village,Mesa,AZ,,
+Buckhead Forest,Atlanta,GA,1365.0,1455.0
+Hanlon-Longwood,Baltimore,MD,,
+Tuxedo,Oakland,CA,,
+East Bayside-India Street,Portland,ME,,
+Belmont,Detroit,MI,,750.0
+Briarwood,Little Rock,AR,,
+Jefferson Park,Tucson,AZ,,1025.0
+Washington Hill,Baltimore,MD,,1350.0
+Freedom Park,Charlotte,NC,,
+Benning,Washington,DC,985.0,
+Cylburn,Baltimore,MD,,
+Oakhurst,Charlotte,NC,,
+McPherson Ranch,Fort Worth,TX,,1450.0
+Mountain Arroyos,El Paso,TX,,875.0
+Southwest,West Palm Beach,FL,,
+Arroyo Chico,Tucson,AZ,550.0,
+Essex Village,Essex,CT,1200.0,1100.0
+Ralph Bunche,Oakland,CA,,
+Walbrook,Baltimore,MD,,
+San Pablo Gateway,Oakland,CA,,2206.0
+Prairie Shores,Chicago,IL,,1035.0
+Hazelwood,Louisville,KY,,
+Madison - Eastend,Baltimore,MD,,
+Baxter,Grand Rapids,MI,,750.0
+Citizens on Alert,San Antonio,TX,,
+Royal Ridge,San Antonio,TX,,
+Harrisburg,Augusta,GA,,
+Three Chopt,Richmond,VA,,
+Whiteoak,Charlotte,NC,930.0,
+Vine City,Atlanta,GA,,
+Campus Commons,Sacramento,CA,945.0,
+Swope Parkway - Elmwood,Kansas City,MO,,600.0
+Church Hill,Richmond,VA,850.0,1050.0
+Navarre,New Orleans,LA,,
+Produce & Waterfront,Oakland,CA,1683.0,2317.0
+Riviera Bay,Saint Petersburg,FL,,1400.0
+Lettered Streets,Bellingham,WA,,
+Tuttle West,Columbus,OH,995.0,
+East Augusta,Augusta,GA,,
+Arlington,Baltimore,MD,,
+The Gap,Chicago,IL,,
+Regina,Minneapolis,MN,,
+Riverdale,Little Rock,AR,950.0,
+Shroyer Park,Dayton,OH,525.0,
+South Lake Morton,Lakeland,FL,,
+Northwood,West Palm Beach,FL,,1100.0
+Trilogy,Gilbert,AZ,,
+Mariners Village,Orlando,FL,,
+Central Business District,New Orleans,LA,1740.0,2300.0
+Curtis,San Bernardino,CA,,
+Hammond Park,Atlanta,GA,,
+Indian Beach-Sapphire Shores,Sarasota,FL,,
+Edgewater Glen,Chicago,IL,780.0,1400.0
+Troy Hill,Pittsburgh,PA,1385.0,
+Fairgrounds,Tucson,AZ,,
+West Hills,Spokane,WA,,
+Las Vistas,Tucson,AZ,,
+Cherry Street,Tulsa,OK,,
+Lake Como,Orlando,FL,,
+Lasalle Area,South Bend,IN,,600.0
+Springvale,San Antonio,TX,,
+Ridgewood,Town of Madison,WI,865.0,
+Isla Del Sol,Saint Petersburg,FL,2250.0,2200.0
+Mariners Island,San Mateo,CA,,
+Brookwood Hills,Atlanta,GA,,
+Progresso Village,Fort Lauderdale,FL,,1200.0
+Property Owners of Northhampton,San Antonio,TX,,1200.0
+Carver City,Tampa,FL,1072.0,1149.0
+Historic Uptown,Saint Petersburg,FL,,675.0
+Cold Sprint Park,Milwaukee,WI,,
+Mt. Paran - Northside,Atlanta,GA,1850.0,
+Lincoln Heights,Charlotte,NC,,
+University Hts,Albuquerque,NM,,
+Northview Hills,Tampa,FL,,
+Wentworth Holland,Oakland,CA,,
+Northwest Dallas,Dallas,TX,,
+Diamond Heights,San Francisco,CA,,
+Hunter Hills,Atlanta,GA,,900.0
+Church Hill North,Richmond,VA,,875.0
+Southside,Jacksonville,FL,1195.0,1195.0
+St. Cyrils,Tucson,AZ,,
+Hidden Meadow,San Antonio,TX,,
+Touchstone Village-Elm Lane,Charlotte,NC,745.0,
+Eucalyptus Hill,Santa Barbara,CA,,
+Bella Vista,Vancouver,WA,,
+Riviera,Mobile,AL,,
+Osuna Park,Albuquerque,NM,,
+Heart of Missoula,Missoula,MT,,675.0
+North Dodge,Tucson,AZ,,650.0
+Downtown,Boise,ID,1200.0,
+Hwy 51-Park Road,Charlotte,NC,,
+Princeton Lakes,Atlanta,GA,,1500.0
+Flying Horse,Colorado Springs,CO,,
+Yale-Heights,Baltimore,MD,,
+Cedarhurst,Richmond,VA,,
+Providence Park,Charlotte,NC,,
+Harborview,Jacksonville,FL,,
+Earlewood,Columbia,SC,,1100.0
+Highland,Oakland,CA,,
+West Slope,Beaverton,OR,,
+Midtown-Edmondson,Baltimore,MD,,
+Dearborn Park,Chicago,IL,1600.0,1750.0
+Highlands,Boise,ID,,
+Saint Josephs,Baltimore,MD,,
+West Douglas,Kalamazoo,MI,,
+Mountainbrook,Charlotte,NC,,
+East Aurora,Boulder,CO,,1500.0
+Clearbrook Park,Monroe Township,NJ,,
+North University,Tucson,AZ,,
+South Riverside,Jacksonville,FL,,
+Nws Cooperative Alliance,South Bend,IN,,550.0
+Paradise Park,Oakland,CA,,
+Swansboro West,Richmond,VA,,
+Maysville,Mobile,AL,,
+Parkland Estates,Tampa,FL,,
+Edgewood Manor,Jacksonville,FL,,
+Sweetwater,Jacksonville,FL,,950.0
+York,Bellingham,WA,,
+Jeff Davis,Richmond,VA,590.0,
+Hi-Pointe,Saint Louis,MO,,775.0
+Fairfax,Oakland,CA,,
+Overland,Denver,CO,1075.0,1215.0
+North Cleveland Park,Washington,DC,,2340.0
+Drexel Park,Tucson,AZ,,
+Empire Point,Jacksonville,FL,990.0,700.0
+Ridge St,Charlottesville,VA,,
+South East Ravenswood,Chicago,IL,1150.0,1080.0
+Sunnyland,Bellingham,WA,,
+Spring Glen,Jacksonville,FL,,
+CSU Bakersfield,Bakersfield,CA,,1175.0
+Meadow Homes,Vancouver,WA,,800.0
+Brewery District (including Whittier Peninsula),Columbus,OH,,1245.0
+College Park,Jacksonville,FL,,
+Melrose,Nashville,TN,,
+Toler Heights,Oakland,CA,,
+Lake Eola Heights,Orlando,FL,,1000.0
+Hubbard-Richard,Detroit,MI,,
+Shipley Hill,Baltimore,MD,,
+Oakdale,Grand Rapids,MI,,
+Penn North,Baltimore,MD,,
+Cambridge Heights,Milwaukee,WI,,
+Homestead,Portland,OR,,
+University Park,Tempe,AZ,,
+Westshore,San Mateo,CA,,2726.0
+Third Ward,Charlotte,NC,1085.0,1250.0
+Fuller Park,Chicago,IL,,
+Downtown,Hartford,CT,1350.0,1350.0
+New Town,Jacksonville,FL,,
+Venetia,Jacksonville,FL,895.0,850.0
+Rancho Buena,Tucson,AZ,,
+Holly Oaks,Jacksonville,FL,,
+South Crichton,Mobile,AL,,
+Point Breeze North,Pittsburgh,PA,,
+Oak Hills,San Antonio,TX,,
+Towne Meadows,Gilbert,AZ,,1350.0
+Lake View,Kirkland,WA,,1890.0
+South Garden,Richmond,VA,,
+Franz Park,Saint Louis,MO,,
+NoMa,Washington,DC,,2896.0
+Santa Fe Hills,Kansas City,MO,,
+Piedmont Heights,Atlanta,GA,1345.0,1335.0
+Judiciary Square,Washington,DC,2470.0,2410.0
+Beacon Hills and Harbour,Jacksonville,FL,,
+Meadows of Candleridge,Fort Worth,TX,,
+Clayton-Tamm,Saint Louis,MO,,
+Burton Evergreen,Vancouver,WA,,
+El G.H.E.K.O.,Tucson,AZ,,
+Rattlesnake,Tampa,FL,,
+Gateway Center,Sacramento,CA,,1165.0
+Maple Grove - Franklin,Boise,ID,,
+Bay Meadows,San Mateo,CA,,
+Promontory Pointe-Heights,San Antonio,TX,,
+Northbrook,Fort Worth,TX,,
+Castleberry Hill,Atlanta,GA,,1400.0
+Wadeview Park,Orlando,FL,,
+Lea Manor,Kansas City,MO,,
+Central Park,Vancouver,WA,,
+Bon Air,Tampa,FL,1200.0,939.0
+Lawsona-Fern Creek,Orlando,FL,1000.0,
+Kevanna Park,Vancouver,WA,,
+The Dominion,San Antonio,TX,,
+Downtown,Santa Ana,CA,,
+Remington,Baltimore,MD,,
+Prince Tucson,Tucson,AZ,,
+Parklane,Baltimore,MD,,
+Carrol-South Hilton,Baltimore,MD,,
+Firestone-Garden Park,Charlotte,NC,,900.0
+Santa Fe,Kansas City,MO,,
+South Eola,Orlando,FL,1980.0,1700.0
+Civano,Tucson,AZ,,1100.0
+Historic Ybor,Tampa,FL,,1095.0
+Hannon Park,Mobile,AL,,525.0
+O'Hare International Airport,Chicago,IL,,
+Lower Rattlesnake,Missoula,MT,,
+Red Mountain Ranch,Mesa,AZ,,1600.0
+Ledroit Park,Washington,DC,,
+Franklintown Road,Baltimore,MD,,
+Michigan Oaks,Grand Rapids,MI,,
+North Meadows,Milwaukee,WI,,
+Bonne Hills,Kansas City,MO,,
+Evergreen Park,Palo Alto,CA,,
+Capitol View,Atlanta,GA,,
+Lake Walker,Baltimore,MD,,
+Cortez Hill,San Diego,CA,1695.0,2150.0
+Mission Hills,Fremont,CA,,
+Hollow Hills,Fort Worth,TX,,
+St Anthony East,Minneapolis,MN,,
+Near Westside Neighborhood,South Bend,IN,,
+Baltimore Highlands,Baltimore,MD,,1100.0
+Lloyd,Portland,OR,,1107.0
+Tahoe Park South,Sacramento,CA,,899.0
+Timberleaf,Orlando,FL,,
+Reisterstown Station,Baltimore,MD,,
+Libbytown,Portland,ME,,
+Chaparral Estates,Gilbert,AZ,,
+Fox Canyon,San Diego,CA,,
+Nuestro,Mesa,AZ,,
+Colonial Heights,Sacramento,CA,,
+German Village Commission,Columbus,OH,995.0,
+Mountain Island,Charlotte,NC,,1200.0
+Five Mile-Prairie,Spokane,WA,,
+Southeast,Nashville,TN,,
+Fondern-Cherokee Heights,Jackson,MS,,
+Swanston Estates,Sacramento,CA,,
+Audubon Park,Orlando,FL,,
+Sherman Hill,Des Moines,IA,1015.0,
+West Downtown,Boise,ID,,
+Dolfield,Baltimore,MD,,
+Cross Creek,Atlanta,GA,1000.0,1200.0
+Castle Rouge,Detroit,MI,,790.0
+C.A.N.D.O.,Mesa,AZ,,
+San Antonio Creekside,San Antonio,TX,,
+Fox Crossing,Chandler,AZ,,
+Webster Park North,Lakeland,FL,,
+Azalea Homes,Saint Petersburg,FL,,775.0
+Riverland Village,Fort Lauderdale,FL,,1650.0
+East Terrell Hills,San Antonio,TX,,
+Fuller Avenue,Grand Rapids,MI,,
+Channel District,Tampa,FL,1595.0,1830.0
+Northeast,Tampa,FL,,995.0
+West Main Hill,Kalamazoo,MI,,1750.0
+Lake Las Vegas,Henderson,NV,1800.0,1675.0
+Oxbow,San Antonio,TX,,875.0
+Farviews & Pattee Canyon,Missoula,MT,,
+Gilbert Ranch,Gilbert,AZ,,
+Highland Farms,San Antonio,TX,,
+Fairburn Mays,Atlanta,GA,,
+Fifeville,Charlottesville,VA,,775.0
+Linden Hills and Indian Heights,Kansas City,MO,,
+Printers Row,Chicago,IL,1486.0,1695.0
+Downtown,West Palm Beach,FL,1250.0,2200.0
+New Southwest - Mount Clare,Baltimore,MD,,950.0
+West Bluff,Albuquerque,NM,,
+Westwood Park,San Francisco,CA,,
+Bankhead,Atlanta,GA,,
+Alcova Heights,Arlington,VA,,
+Peter Howell,Tucson,AZ,,
+Western Skies,Gilbert,AZ,,1125.0
+Butcher's Hill,Baltimore,MD,,1400.0
+Colonial Town Center,Orlando,FL,,
+Hillcrest,San Antonio,TX,535.0,
+Oak Park Southwest,Kansas City,MO,,
+Lavaca,San Antonio,TX,,
+Silver Hill,Albuquerque,NM,,700.0
+North State,Santa Barbara,CA,,
+Barclay,Baltimore,MD,,1100.0
+Strawberry Hill,Cambridge,MA,,2275.0
+South Hyde Park,Kansas City,MO,,
+Melrose,Albany,NY,,
+Brewer's Hill,Milwaukee,WI,1496.0,
+Chinquapin Park-Belvedere,Baltimore,MD,,
+Sunbird,Chandler,AZ,,
+Riverfront,Philadelphia,PA,1500.0,1925.0
+St. Nicholas,Jacksonville,FL,,
+Mark Twain,Albuquerque,NM,,
+Port Morris,New York,NY,,1800.0
+Mingo Valley,Tulsa,OK,,
+Stanford Estates,Kansas City,MO,,800.0
+Signal Hill,Orlando,FL,,825.0
+Harland Terrace,Atlanta,GA,,
+Lake Underhill,Orlando,FL,,
+Swansboro,Richmond,VA,,
+Lakewood - Balmoral,Chicago,IL,790.0,
+Jackson Park Highlands,Chicago,IL,,735.0
+Mountain Ranch,Mesa,AZ,,
+Carytown,Richmond,VA,,925.0
+Longfellow,Kansas City,MO,660.0,
+Central Cocoanut,Sarasota,FL,2400.0,
+Knoll Ridge,Fort Lauderdale,FL,1150.0,1095.0
+Weatherby,Detroit,MI,,
+CBD,Kalamazoo,MI,,
+Silver Lake,New York,NY,,
+Friends of Karl Wyler,El Paso,TX,,
+Cabrini,Tucson,AZ,,595.0
+McFerrin Park,Nashville,TN,,
+Ridgedale Park,Atlanta,GA,,
+New Era Park,Sacramento,CA,,750.0
+Westcliff,Fort Worth,TX,,2400.0
+Clam Bayou,Saint Petersburg,FL,,
+North Fairmount,Cincinnati,OH,,
+Lake Aire Palm View,Fort Lauderdale,FL,,
+Cascade,Seattle,WA,1300.0,1785.0
+Oaks,Garland,TX,,
+Avalon,Bakersfield,CA,,
+Rosemont East,Baltimore,MD,,
+Adams Park,Atlanta,GA,,
+College Place,Columbia,SC,,
+Westside North,Kansas City,MO,,
+Pulaski Industrial Area,Baltimore,MD,,
+Brookhollow,Columbus,OH,,
+North Bellevue,Bellevue,WA,,1700.0
+North East,Charlottesville,VA,,
+Granville Station,Milwaukee,WI,,
+Dunn's Marsh,Town of Madison,WI,,
+Loma Vista,Kansas City,MO,,
+Highland Oaks,Saint Petersburg,FL,,
+Central College,Columbus,OH,935.0,
+Central Business District,Buffalo,NY,,
+Little Italy,San Diego,CA,1800.0,2500.0
+Hollins Market,Baltimore,MD,,1100.0
+Melrose Mercy - Pine Acres,Saint Petersburg,FL,,
+Callaway-Garrison,Baltimore,MD,,
+Vista Meadows,Fort Worth,TX,,
+Fairfax,Jacksonville,FL,,
+The Ville,Saint Louis,MO,,
+Wendell Phillips,Kansas City,MO,,
+Morris Hill,Boise,ID,,
+El Chaparral Fertile Valley,San Antonio,TX,,
+Landings,Fort Lauderdale,FL,,1900.0
+Mill Hill,Baltimore,MD,,
+Biltmore,Jacksonville,FL,,
+Friendship,Pittsburgh,PA,,
+Warrenton-Harmitage Hills-Pinehurst,Lexington,KY,,
+Gay Street,Baltimore,MD,,
+Johnson Village,Charlottesville,VA,,
+Pinewood,West Palm Beach,FL,1000.0,1295.0
+Atlantic Station,Atlanta,GA,1701.0,2450.0
+Oak Meadow,San Antonio,TX,,
+Neshota,Mobile,AL,,
+San Mateo,Jacksonville,FL,,
+Washington Heights,Charlotte,NC,,
+Norble and Gregory Ridge,Kansas City,MO,,
+Spectrum,Irvine,CA,,1790.0
+Lenox,Atlanta,GA,1806.0,
+Hickman Mills South,Kansas City,MO,,875.0
+Old Saybrook Center,Old Saybrook,CT,,
+Holdeman,Tempe,AZ,795.0,
+Chestnut,Austin,TX,1200.0,
+Columbia-Tusculum,Cincinnati,OH,810.0,
+Belle Isle,Miami Beach,FL,,3100.0
+Allendale,Jacksonville,FL,,
+Redevelopment Area,Naples,FL,,
+Elmhurst Park,Oakland,CA,,
+Jamestown,Lexington,KY,,
+Green Acres,Palo Alto,CA,,3255.0
+Windmills West,Chandler,AZ,,
+Malba,New York,NY,,
+Woodland Heights,Richmond,VA,895.0,
+Fitchburg,Oakland,CA,,
+Hegenberger,Oakland,CA,,
+Jacksonville University,Jacksonville,FL,,
+Lakeview,Dayton,OH,,
+Greenfield Lakes,Gilbert,AZ,,1250.0
+Brownes Addition,Spokane,WA,,
+Alexandra Meadows,Fort Worth,TX,,1300.0
+Gililland,Tempe,AZ,,
+Downtown,Dayton,OH,572.0,
+Broad Channel,New York,NY,,2000.0
+LaSalle Gardens,Detroit,MI,,
+Central Waterfront - Dogpatch,San Francisco,CA,,3795.0
+Marshall School,Sacramento,CA,,1050.0
+Larsen,Jacksonville,FL,,
+Lockwood Tevis,Oakland,CA,,
+Mosher,Baltimore,MD,,
+Ansley Park,Atlanta,GA,,
+Doolen-Fruitvale,Tucson,AZ,,650.0
+Harbor Beach,Fort Lauderdale,FL,,4200.0
+Park Plaza East,Tulsa,OK,,
+Blair Park,San Bernardino,CA,,850.0
+Harwood,Baltimore,MD,,
+Dixie Hills,Atlanta,GA,,
+Elmhurst,Sacramento,CA,,
+Colonial Park,Columbia,SC,,
+Freret,New Orleans,LA,,
+Middle Hill,Pittsburgh,PA,,
+Roosevelt Estates,West Palm Beach,FL,,
+Highland Park Southern Tip,Richmond,VA,,695.0
+Monticello,Fort Worth,TX,,1000.0
+North Hyde Park,Kansas City,MO,725.0,775.0
+Lindsay Ranch,Gilbert,AZ,,
+Howard Park-East Bank,South Bend,IN,,
+Rotary Park,Mesa,AZ,,
+Grove Park,Baltimore,MD,,
+Riverside,Tempe,AZ,659.0,695.0
+Riveridge,Vancouver,WA,,
+West Riverfront,Tampa,FL,,
+Westerly Hills,Charlotte,NC,,800.0
+Country Lane Estates,Kansas City,MO,,
+Cabrini Green,Chicago,IL,,
+Lakewood Terrace,Saint Petersburg,FL,,875.0
+Swann Estates,Tampa,FL,,
+Bottineau,Minneapolis,MN,,
+West Calhoun,Minneapolis,MN,1050.0,1695.0
+Royal Terrace,Jacksonville,FL,,
+Woodland,Oakland,CA,,
+Hills Park,Atlanta,GA,,
+Harlan Heights,Tucson,AZ,,
+Tampa-Bayshore Gardens,Tampa,FL,1300.0,1275.0
+Upper Shockoe Valley,Richmond,VA,,
+River West,Chicago,IL,1850.0,2000.0
+Woodridge,San Antonio,TX,,
+Lawrence Park,Sacramento,CA,,
+East Village,San Antonio,TX,,
+Brookland Park,Richmond,VA,,
+Goss Grove,Boulder,CO,2025.0,1650.0
+Jefferson-Monticello Park,San Antonio,TX,,
+Pine Ridge,Naples,FL,,2800.0
+NTNA - Indian Bend,Tempe,AZ,,
+Z'berg Park,Sacramento,CA,,
+Biddle Street,Baltimore,MD,,
+Mozley Park,Atlanta,GA,,
+Southside Park,Sacramento,CA,,1095.0
+Woodland Terrace,Tampa,FL,,
+Cascade Heights,Atlanta,GA,,
+Carol Rae Ranch,Gilbert,AZ,,
+Park Village,Gilbert,AZ,,
+Downtown,Santa Barbara,CA,,750.0
+Peninsula,Long Beach,CA,,
+Buckhead Village,Atlanta,GA,950.0,
+College HIlls,Glendale,CA,,
+Rosemont West,Tucson,AZ,,
+Woodland Park,Columbus,OH,,435.0
+East Side Commercial Area,Tampa,FL,,
+South Old Irving Park,Chicago,IL,,
+Madera Parc,Gilbert,AZ,,
+Dixie Belle,Orlando,FL,,950.0
+North Tamarind,West Palm Beach,FL,,1200.0
+Don Scott,Columbus,OH,,
+Santa Clara,Dayton,OH,,
+Old Town North,Alexandria,VA,,2100.0
+Crestline Area,Fort Worth,TX,,
+River Gardens,Sacramento,CA,,
+Fisher,Mobile,AL,,
+Oakwood Gardens,Saint Petersburg,FL,,
+Wood Park,Tempe,AZ,,
+Eastlake Vistas,Chula Vista,CA,,2100.0
+Willow Creek,Fort Worth,TX,,
+Amazon,Eugene,OR,,
+Poinciana Park,Fort Lauderdale,FL,1485.0,985.0
+Hunterwood,Houston,TX,,
+Gladstone Park,Chicago,IL,,
+Dennison Place,Columbus,OH,,850.0
+Belvedere,Columbia,SC,,
+South Atlanta,Atlanta,GA,,
+Central Hyde Park,Kansas City,MO,,825.0
+Lago Estancia,Gilbert,AZ,,
+Northwest Community Action,Baltimore,MD,,
+McLean Gardens,Washington,DC,2150.0,2220.0
+Key Coalition,Kansas City,MO,,
+Four by Four,Baltimore,MD,,
+Berkeley Place,Fort Worth,TX,,
+Progressive North West,West Palm Beach,FL,,950.0
+Kiwanis Park,Tempe,AZ,,
+Bermuda Riviera,Fort Lauderdale,FL,,2700.0
+Royal Harbor,Naples,FL,2100.0,3000.0
+San Marcos Country Club,Chandler,AZ,,1079.0
+Alta Monte,Albuquerque,NM,,
+Monkbridge Gardens,Albuquerque,NM,,
+Civic Center,Denver,CO,1745.0,2699.0
+Oak Park Southeast,Kansas City,MO,,
+South Commons,Chicago,IL,1050.0,1250.0
+Villages of Eastridge,Mesa,AZ,,1150.0
+Harborview,San Diego,CA,,2675.0
+Springfield Lakes,Chandler,AZ,,
+Villa Heights,Charlotte,NC,,1000.0
+Chimborazo,Richmond,VA,,1050.0
+Stablewood-Valley Hi North,San Antonio,TX,,
+Piccadilly Square,Nashville,TN,,
+Marietta Street Artery,Atlanta,GA,,1240.0
+Wilmore,Charlotte,NC,,860.0
+Clifton,Jacksonville,FL,,
+East Ybor,Tampa,FL,,
+Wooster Square,New Haven,CT,,1250.0
+Almond Park,Atlanta,GA,,
+Main-Starr Hill,Charlottesville,VA,,1150.0
+Eastwood Hills West,Kansas City,MO,,
+Westport,Baltimore,MD,,
+Hitchcock,Santa Barbara,CA,,
+Kings Forest,Atlanta,GA,,
+Hillen,Baltimore,MD,,
+Optimist Park NE,Tempe,AZ,,
+Castner Heights,El Paso,TX,,
+Wind Drift,Gilbert,AZ,,
+Parker Street,Lakeland,FL,,
+Maximo,Saint Petersburg,FL,,1100.0
+Saint Thomas Square,Tulsa,OK,,
+Triangle State,Austin,TX,1344.0,1595.0
+Mansion Flats,Sacramento,CA,,695.0
+Ben Hill,Atlanta,GA,,
+Greenfield Manor,Jacksonville,FL,,
+Sunnyside,Wichita,KS,,
+Winchester,Baltimore,MD,,
+Self Help Neighborhood Council,Kansas City,MO,,
+Dorchester,Baltimore,MD,,
+Fodor,Columbus,OH,1249.0,
+East Pilsen,Chicago,IL,,
+Stonegate,Davis,CA,,
+Kirkside,Kansas City,MO,,850.0
+Loring Heights,Atlanta,GA,980.0,
+Knoell East,Chandler,AZ,,
+Charles North,Baltimore,MD,,
+Cain Road,Olympia,WA,,
+Bayway Isles,Saint Petersburg,FL,1950.0,
+Governor's Square,Charlotte,NC,,
+Eagle Ranch,Fort Worth,TX,,
+Central Business District,Mobile,AL,800.0,1050.0
+Valentine,Kansas City,MO,,
+Marlborough Mesa,Mesa,AZ,,
+Seton Hill,Baltimore,MD,,
+Hickory Hill,Richmond,VA,,
+Lake Davis-Greenwood,Orlando,FL,,
+Providence Park,Richmond,VA,,
+South Orange,Orlando,FL,,
+Five Points,San Antonio,TX,,
+Guilbeau Park,San Antonio,TX,,
+Stardust Skies Park,Albuquerque,NM,,
+Wheatley Heights,San Antonio,TX,,
+Westlake,Sacramento,CA,,1545.0
+Horsethief Canyon Ranch,Corona,CA,,1795.0
+Thirteenth St Heights,Saint Petersburg,FL,,850.0
+North Roland Park - Poplar Hill,Baltimore,MD,,
+Nineteenth Avenue,San Mateo,CA,,
+Polish Hill,Pittsburgh,PA,,
+Park East,Boulder,CO,,1950.0
+Tiburon,Chandler,AZ,,
+Lasalle Park,South Bend,IN,,
+Melrose Heights,Columbia,SC,,
+Downtown,Tampa,FL,1500.0,
+Eastern Hills,Fort Worth,TX,,
+Waycroft-Woodlawn,Arlington,VA,,
+Tryon Hills,Charlotte,NC,,
+Southeast Citizens Committee-Highland Park,San Antonio,TX,,
+Baywood,San Mateo,CA,,
+Avondale,Tucson,AZ,,600.0
+Peterson Park,Chicago,IL,,1800.0
+Ravenswood Gardens,Chicago,IL,,1295.0
+Fairfax Village,Washington,DC,,
+Camp Washington,Cincinnati,OH,,
+Mountain View,Tucson,AZ,,
+Country Glenn,Tucson,AZ,,895.0
+Compton Heights,Saint Louis,MO,,
+Hayden Island,Portland,OR,,
+Ridgeview,Mesa,AZ,,
+Worthington Village North,Columbus,OH,,
+Castle Hills Forest,San Antonio,TX,,
+Montecito Park,Glendale,CA,,
+North Shearer Hills,San Antonio,TX,,
+Richmond Grove,Sacramento,CA,,795.0
+Milbrook,Columbus,OH,,575.0
+Balboa Heights,Tucson,AZ,,
+Atlantic Highlands,Jacksonville,FL,,
+Huntington Place,San Antonio,TX,,
+Farmers Market District,Dallas,TX,,1370.0
+Mountain First Avenue,Tucson,AZ,,
+Magnolia Heights,Saint Petersburg,FL,,
+Pie Allen,Tucson,AZ,,
+West Dennis,Dennis,MA,,
+Old Southeast,Saint Petersburg,FL,,
+Downtown,Bakersfield,CA,,
+Hollywood,Portland,OR,,
+Robandee South,Kansas City,MO,,
+Rosedale,Mobile,AL,,
+Royal Oaks,Kansas City,MO,,
+Pinehurst,Columbia,SC,,
+Ponderosa-Wingate,Charlotte,NC,,
+University Heights,Tempe,AZ,,
+Rivertown,Detroit,MI,1200.0,
+Cottrell Farms,Richmond,VA,,
+Santa Rita Ranch,Mesa,AZ,,1275.0
+Shamrock Estates,Gilbert,AZ,,
+Burton Hill Trinity Trails,Fort Worth,TX,,
+Jackson Ward,Richmond,VA,950.0,1050.0
+Rural-Geneva,Tempe,AZ,,
+Indian Village,Detroit,MI,,
+East Central Park,Orlando,FL,,
+Brice,Columbus,OH,674.0,
+Island Station,Milwaukie,OR,,870.0
+Manheim Park,Kansas City,MO,,
+Majestic Heights,Boulder,CO,,1495.0
+Ocotillo Lakes,Chandler,AZ,,
+Stronghold,Washington,DC,,2295.0
+Paschal,Fort Worth,TX,,1100.0
+Smallwood,Charlotte,NC,,750.0
+Broadmor,Tempe,AZ,,
+Winston-Govans,Baltimore,MD,,
+Irish Hill,Louisville,KY,,
+Mary Munford,Richmond,VA,,
+Harbordale,Saint Petersburg,FL,,
+Cambridge Highlands,Cambridge,MA,,2610.0
+Druid Heights,Baltimore,MD,,
+Swan Way Park,Tucson,AZ,,
+Ford City,Chicago,IL,,
+Lesueur Estates,Mesa,AZ,,
+South City Farms,Sacramento,CA,,
+Leisure Lanes,Tulsa,OK,,
+Flushing Meadows Corona Park,New York,NY,,
+Minock Park,Detroit,MI,,
+Adair Park,Atlanta,GA,,
+Keller Park,South Bend,IN,,
+Highland Park,Oakland,CA,,
+Springs,Chandler,AZ,,1250.0
+Easterwood,Baltimore,MD,,
+Skyland,Columbia,SC,,
+Canton Industrial Area,Baltimore,MD,,
+Rillito,Tucson,AZ,,
+Kilarney Shores,Jacksonville,FL,615.0,
+Casa de Sol,Mesa,AZ,,
+Parkview - Woodbrook,Baltimore,MD,,1150.0
+Dos Lagos,Corona,CA,,1850.0
+Woodland-Normanstone Terrace,Washington,DC,,
+Flatirons,Boulder,CO,,1925.0
+Hughes Acres,Tempe,AZ,,
+Downtown East,Minneapolis,MN,,
+East Chastain Park,Atlanta,GA,1000.0,1120.0
+Bronx Park,New York,NY,,1010.0
+Elm Creek,San Antonio,TX,,
+Kendale,Columbus,OH,,
+Seaboard Industrial,Orlando,FL,,
+Swamp,Jacksonville,FL,,
+Campbell Park,Saint Petersburg,FL,,
+Waverly,Oakland,CA,,2800.0
+Wakefield,Baltimore,MD,,
+Franklintown,Baltimore,MD,,
+Limerick,Louisville,KY,,
+Brandon Forest,Charlotte,NC,,
+Signal Butte Ranch,Mesa,AZ,,
+Cibola Addition,Albuquerque,NM,,900.0
+Raynolds,Albuquerque,NM,,
+Northpointe,Mesa,AZ,,
+Oak Grove,Richmond,VA,,
+Southland Park,West Palm Beach,FL,,
+Village North One,San Antonio,TX,619.0,
+Tiffany,Saint Louis,MO,,
+Grant Park,Tampa,FL,,850.0
+Wildwood,Atlanta,GA,,
+Lauderdale Isles,Fort Lauderdale,FL,,2495.0
+Samos,Tucson,AZ,,900.0
+Beachwood,Jacksonville,FL,,
+Tuttle,Columbus,OH,895.0,
+Sherwood,Mesa,AZ,,
+Park Ridge,Jacksonville,FL,,
+Milton - Montford,Baltimore,MD,,1000.0
+Berkeley Park,Atlanta,GA,,
+Blackwell,Richmond,VA,,
+Bram's Addition,Town of Madison,WI,,
+Penn Quarter,Washington,DC,2450.0,2650.0
+Neely Commons,Gilbert,AZ,,
+Highland Groves At Morrison Ranch,Gilbert,AZ,,
+Old Town Manchester,Richmond,VA,,
+Carelton Tract,Sacramento,CA,,700.0
+Catalpa Park,Boulder,CO,,
+La Madera,Tucson,AZ,,
+Coventry Hills,Fort Worth,TX,,
+Wilson Park,Baltimore,MD,,
+Cluster - McDonough - Guice,Atlanta,GA,,
+Chisholm Ridge,Fort Worth,TX,,1300.0
+Otterbein,Baltimore,MD,1550.0,
+Deerwood Center,Jacksonville,FL,,
+Irving,Tulsa,OK,,
+North Downtown,Charlottesville,VA,,
+Fairmount,Richmond,VA,,
+DIA,Denver,CO,,
+Old Westport,Kansas City,MO,899.0,
+Highland Pines,Tampa,FL,,850.0
+Armory Park,Tucson,AZ,,
+Lake Horney,Lakeland,FL,,
+Brookwood,Atlanta,GA,1077.0,1245.0
+Calumet Farms,Milwaukee,WI,,
+Valley View,San Bernardino,CA,,
+Wesley Heights,Charlotte,NC,,1050.0
+Park Central,Orlando,FL,800.0,875.0
+Reedy Creek,Richmond,VA,,
+Palmetto Park,Saint Petersburg,FL,,850.0
+King William,San Antonio,TX,,1450.0
+Tempe Gardens,Tempe,AZ,,
+Rosemary District,Sarasota,FL,,2700.0
+Coquina Sands,Naples,FL,,4000.0
+Thorpe-Westwood,Spokane,WA,,
+West Village,Detroit,MI,,
+Faircrest,Town of Madison,WI,,
+Darley Park,Baltimore,MD,,
+Coulwood East,Charlotte,NC,,
+Oregon Hill,Richmond,VA,,1350.0
+Jefferies,Detroit,MI,,
+Brentwood-Oak Hills,Fort Worth,TX,,
+Union Square,Baltimore,MD,,1200.0
+Arbor at Sonoma Ranch,San Antonio,TX,,
+Brookhill,Charlotte,NC,,
+Lewis Mountain,Charlottesville,VA,,
+Eastlake Trails,Chula Vista,CA,,2799.0
+Bay Village,Boston,MA,2450.0,2300.0
+Park Club,Columbus,OH,,
+Fairmount,Wichita,KS,,
+Ashview Heights,Atlanta,GA,,850.0
+Oak Haven,Jacksonville,FL,,
+Ashland Ridge,Kansas City,MO,,
+Hamlet,Fort Worth,TX,,
+Broadway Central,Albuquerque,NM,,900.0
+Patterson Place,Baltimore,MD,,1399.0
+Pinewood Park,West Palm Beach,FL,,
+Flamingo Park,West Palm Beach,FL,,
+Calico Ridge,Henderson,NV,,1695.0
+Gateway Ranch,Gilbert,AZ,,
+Neely Farms,Gilbert,AZ,,
+Washington Park,Atlanta,GA,,
+Cookes Meadow,Fort Worth,TX,,
+Peachtree Park,Atlanta,GA,1220.0,
+Colonialtown South,Orlando,FL,,
+Campbell-Grant,Tucson,AZ,,
+Northwest,Tucson,AZ,,
+Oakmont,Glendale,CA,,
+Sunrise Intracoastal,Fort Lauderdale,FL,,2300.0
+Rolling Hills,Jackson,MS,,
+Lake Euclid,Saint Petersburg,FL,,
+Lakewood,Atlanta,GA,,
+Mitman,Tucson,AZ,,
+Westminster Heights,Saint Petersburg,FL,,850.0
+Oakenshawe,Baltimore,MD,,
+Union Hill,Richmond,VA,644.0,825.0
+Girdwood,Anchorage,AK,,
+Greektown,Chicago,IL,,2000.0
+McKinley Heights,Saint Louis,MO,,
+The Villages at East Lake,Atlanta,GA,,
+Columbus Square,Saint Louis,MO,,
+Rose Hill,Charlottesville,VA,,
+Port Royal,Naples,FL,,
+Optimist Park,Charlotte,NC,,1144.0
+Iuka Ravine,Columbus,OH,,800.0
+San Miguel Ranch,Chula Vista,CA,,
+Mount Holly,Baltimore,MD,,
+Pleasant Valley,Mobile,AL,,
+Saybrook Manor,Old Saybrook,CT,,
+Rosemont Homeowners-Tenants,Baltimore,MD,,1200.0
+West Shore Palms,Tampa,FL,,
+City Center District,Dallas,TX,,1560.0
+Gould Park,Columbus,OH,,
+The Vineyards at Heritage,Fort Worth,TX,,1325.0
+Riverside,Atlanta,GA,1350.0,750.0
+Royal Palms,Mesa,AZ,,
+Butchertown,Louisville,KY,,1100.0
+Spencer Lakes,West Palm Beach,FL,,
+Carpenter-Ridgeway,Town of Madison,WI,,
+Northeast,Alexandria,VA,1965.0,
+Croatan Beach,Virginia Beach,VA,,
+Southgate,Fort Worth,TX,,1145.0
+Carroll Heights,Atlanta,GA,,
+Poynter Crossing,Fort Worth,TX,,1195.0
+Edgewood,Lakeland,FL,,
+Pineloch,Orlando,FL,,900.0
+Dillard Park,Fort Lauderdale,FL,1575.0,
+Gaslamp Quarter,San Diego,CA,1995.0,2550.0
+Northcrest,Fort Wayne,IN,,
+Cameron Village,Baltimore,MD,,
+Palestine West and Oak Park Northeast,Kansas City,MO,,
+Lido Key,Sarasota,FL,3800.0,3800.0
+FNW,South Bend,IN,,
+Concerned Citizens of Forest Park,Baltimore,MD,,
+Chippenham Forest,Richmond,VA,,
+Plaza Westport,Kansas City,MO,1300.0,1195.0
+Crosswinds Colony,Saint Petersburg,FL,753.0,737.0
+Garden City,Jacksonville,FL,,
+Maple-Ash,Tempe,AZ,,
+Good Hope,Washington,DC,,
+Carillon,Saint Petersburg,FL,1390.0,1580.0
+Fox Run,Fort Worth,TX,,
+Woodlawn Oaks,Saint Petersburg,FL,,
+Cherokee Park,Nashville,TN,,
+Metro Center,Sacramento,CA,,
+Maywood,Arlington,VA,,
+Country Club Plaza,Kansas City,MO,,1850.0
+Marlborough East,Kansas City,MO,,
+Alkali Flat,Sacramento,CA,,950.0
+Shady Banks,Fort Lauderdale,FL,,1850.0
+Stonecreek,Gilbert,AZ,,
+Netherwood Park,Albuquerque,NM,,
+Shady Canyon,Irvine,CA,,
+Candle Ridge West,Fort Worth,TX,,1250.0
+Silverwood,Charlotte,NC,,
+River Run,Fort Lauderdale,FL,,
+Pioneer Square,Seattle,WA,,
+Lake Point Condominiums,Garland,TX,505.0,
+Arsenal Hill,Columbia,SC,,
+Capitol Neighbors,Jackson,MS,,
+Stuart,Kalamazoo,MI,,
+Hudson Manor,Tempe,AZ,725.0,
+Pumpkin Hill,Jacksonville,FL,,1352.0
+Mockingbird Hill,San Antonio,TX,,
+Marine Creek,Fort Worth,TX,,1325.0
+Las Olas Isles,Fort Lauderdale,FL,1950.0,5500.0
+North Orange,Orlando,FL,,1485.0
+Reston Heights,Town of Madison,WI,,
+Lauderdale West,Fort Lauderdale,FL,1600.0,
+Greenmount West,Baltimore,MD,,
+Revolution Park,Charlotte,NC,,
+Forest Crest,San Antonio,TX,,2350.0
+Rancho Encantado,San Diego,CA,,
+Abell,Baltimore,MD,,
+Easton,Columbus,OH,,
+South Poinsettia,Sarasota,FL,,
+Gold Coast,Detroit,MI,,
+Eastridge Estates,Bakersfield,CA,,975.0
+UNITE,South Bend,IN,,
+Gateway,Austin,TX,978.0,
+Oldham Farms,Kansas City,MO,,
+South Lake Worth,Fort Worth,TX,,
+Near East Side,Fort Worth,TX,,
+MacArthur Park,San Antonio,TX,,
+Ridgestone,San Antonio,TX,,
+Blandtown,Atlanta,GA,,1241.0
+Perkins,Saint Petersburg,FL,,
+Clayton Heights-Lomas del Cielo,Albuquerque,NM,1099.0,
+Woodbourne-McCabe,Baltimore,MD,,
+Southern Manor I and II,Mesa,AZ,,
+The Woodlands,Nashville,TN,,
+Ivanhoe Northeast,Kansas City,MO,,
+Fitzsimons,Aurora,CO,1350.0,
+Thunderbird Heights-Wilmot Desert Estates,Tucson,AZ,,
+Baseline-Hardy,Tempe,AZ,758.0,
+Woodlake,Sacramento,CA,,
+Northwood Shores,West Palm Beach,FL,,2000.0
+The Vineyard,San Antonio,TX,,
+Southern Barton Heights,Richmond,VA,,875.0
+Chinatown,Washington,DC,,2390.0
+Wildwood,Charlotte,NC,,
+Cabbagetown,Atlanta,GA,,
+Historic Third Ward,Milwaukee,WI,1545.0,1500.0
+Pleasant Hill,Washington,DC,,
+Visitation Park,Saint Louis,MO,,790.0
+Table Mesa North,Boulder,CO,,1359.0
+Sunrise,Davis,CA,,
+Bay Colony,Fort Lauderdale,FL,,
+Kelly Town-Rugby Heights,Charlottesville,VA,,
+Mesquite Ranch,Tucson,AZ,,
+Bluebonnet Hills,Fort Worth,TX,,1250.0
+Boulder Creek,Mesa,AZ,,
+Antelope Run,Albuquerque,NM,,
+McClintock,Tempe,AZ,,
+Broadway Gillham,Kansas City,MO,460.0,689.0
+North Shore,West Palm Beach,FL,,
+Chula Vista,Fort Lauderdale,FL,,
+Enatai,Bellevue,WA,,
+Broad Rock,Richmond,VA,,
+San Joaquin Marsh,Irvine,CA,,
+Sunset Hill,Kansas City,MO,625.0,
+Grandview Heights,West Palm Beach,FL,,
+Clarendon Heights,San Francisco,CA,,
+Cherry,Charlotte,NC,,
+Glencliff Estates,Nashville,TN,,795.0
+Old Northwood,West Palm Beach,FL,,1550.0
+Grant Creek,Missoula,MT,,850.0
+Crown Pointe,Lincoln,NE,,
+East Bank-Nicollet Island,Minneapolis,MN,,
+Colee Hammock,Fort Lauderdale,FL,2300.0,1550.0
+Chestnut Hill Plantation,Columbia,SC,,1400.0
+Bluebonnet Place,Fort Worth,TX,,850.0
+Pleasant City,West Palm Beach,FL,,
+Stone Oak Communities of Mutual Amenities-Stone Oak,San Antonio,TX,,
+Creek Hollow Estates,Richardson,TX,,
+Downtown,Charlottesville,VA,,
+Quail Hill,Irvine,CA,2800.0,2850.0
+Five Points,Saint Petersburg,FL,,
+El Cid,West Palm Beach,FL,,
+South Hill,Grand Rapids,MI,,
+McGuire,Richmond,VA,,
+Twinlakes,Fort Lauderdale,FL,,
+River Walk,West Palm Beach,FL,,1900.0
+Shalimar,Tempe,AZ,,
+Portola Springs,Irvine,CA,,2365.0
+Park Place,San Antonio,TX,,
+Wilson Heights,Baltimore,MD,,
+Meridian Hills,Mesa,AZ,,
+Frisco Heights,Fort Worth,TX,,1595.0
+Union Hill,Kansas City,MO,1320.0,
+Orchard Knob,Atlanta,GA,,
+Government District,Dallas,TX,1096.0,
+Hogan,Jacksonville,FL,,
+East Industrial,Fremont,CA,,
+West Byers,Fort Worth,TX,,
+Lauderdale Beach,Fort Lauderdale,FL,3000.0,4950.0
+Polaris North,Columbus,OH,,929.0
+Haymarket,Boston,MA,,3100.0
+Lake Nona South,Orlando,FL,,
+Wydown-Skinker,Saint Louis,MO,1070.0,
+Auraria,Denver,CO,,
+BRSC,Charlottesville,VA,,
+Manchester,Richmond,VA,,995.0
+Lithuanian Plaza,Chicago,IL,,
+Arizona Skyline,Mesa,AZ,,
+Cromwell Heights,Saint Petersburg,FL,,
+Sunburst,Aurora,CO,,
+Cheltenham,Saint Louis,MO,,
+Niskey Lake,Atlanta,GA,,
+Clark Park,Tempe,AZ,,
+Junction Ridge,Town of Madison,WI,,
+Capitol Gateway,Atlanta,GA,1000.0,
+Palm Aire Village (WEST),Fort Lauderdale,FL,,
+Kempton Crossing,Chandler,AZ,,1450.0
+Rockdale,Atlanta,GA,,
+The Gardens,Gilbert,AZ,,1150.0
+Main Street District,Dallas,TX,,1350.0
+Central Office,Richmond,VA,,1400.0
+Santa Rita Park,Tucson,AZ,,650.0
+Brakridge,Jacksonville,FL,,
+Tyrone Landing,Saint Petersburg,FL,,
+Coliseum-Willow Park,San Antonio,TX,,
+Cooley Station North,Gilbert,AZ,,
+Higley Park,Gilbert,AZ,,
+Marilyn Ann,Tempe,AZ,,
+Home Beautiful Park,Fort Lauderdale,FL,,
+Pasadena Vista,Saint Petersburg,FL,,
+Downtown Core,Davis,CA,,
+Alhambra Triangle,Sacramento,CA,,
+Lauderdale Harbours,Fort Lauderdale,FL,1600.0,
+Beverly Heights,Fort Lauderdale,FL,2000.0,1750.0
+Richnor Springs,Baltimore,MD,,
+Starr Pass,Tucson,AZ,,
+English Village,Detroit,MI,,
+Community at Bordeaux,Nashville,TN,,
+Dolphin Isles,Fort Lauderdale,FL,2500.0,
+Heart of Italy,Chicago,IL,,
+Liberty Park,Jersey City,NJ,,
+West End Park,Nashville,TN,,1525.0
+The Crossing of Fossil Creek,Fort Worth,TX,,
+Crown Center,Kansas City,MO,1400.0,
+Glebewood,Arlington,VA,,2745.0
+Mays,Atlanta,GA,,
+Rudee Heights,Virginia Beach,VA,,1350.0
+West End Historic District,Dallas,TX,,1063.0
+Harbour Inlet,Fort Lauderdale,FL,1957.0,1300.0
+Seven Isles,Fort Lauderdale,FL,6300.0,17500.0
+Central Park,West Palm Beach,FL,,1600.0
+NTNA - West Rio,Tempe,AZ,,950.0
+Lake Richmond,Orlando,FL,,
+Thornton Park,Orlando,FL,,
+Joyland,Atlanta,GA,640.0,
+Laurel Hill Valley,Eugene,OR,,
+Mitchell Park East,Tempe,AZ,,
+Strip District,Pittsburgh,PA,1200.0,
+St. Armands,Sarasota,FL,,6500.0
+Mission Hills Condominium Association,Clearwater,FL,,
+Vincenz,Gilbert,AZ,,
+Ridglea,Fort Worth,TX,,
+Carillon,Richmond,VA,,
+Northpointe,Jackson,MS,765.0,
+Brentwood-Cavalier,Tempe,AZ,,
+Crimson Creek,Mesa,AZ,,1150.0
+Aqualane Shore,Naples,FL,,
+Midland Terrace,Columbia,SC,,
+Concord Village,Mesa,AZ,,
+Silk Stocking,Chandler,AZ,,
+Gateway Village,Gilbert,AZ,,
+Remington Point,Fort Worth,TX,,1200.0
+The Meadows,Charlottesville,VA,,
+The Ranches,Fort Worth,TX,,1400.0
+Richland Heights West,Tucson,AZ,,
+Swallow Circle - Baywood,Atlanta,GA,,
+Oeste Manor,Davis,CA,,
+Elmwood Park,Columbia,SC,,
+Meridian Pointe,Mesa,AZ,,
+Commonwealth,Charlotte,NC,,
+Ray Ranch,Gilbert,AZ,,
+5 Points,Sarasota,FL,4000.0,
+Channing Valley,Atlanta,GA,,
+Booth-Boyd,Baltimore,MD,,
+Scott's Addition,Richmond,VA,,
+Downtown Crossing,Boston,MA,,2300.0
+Locust Point,Baltimore,MD,,1900.0
+Deerwood,Atlanta,GA,,
+Jacksonville North Estate,Jacksonville,FL,,
+Westland,Fort Worth,TX,,
+Village 5,Sacramento,CA,,1089.0
+Crownridge of Texas Owners Association,San Antonio,TX,,
+McClintock Manor,Tempe,AZ,,865.0
+Windhover,Orlando,FL,,875.0
+The Wells,Mesa,AZ,,
+Blossom Park,San Antonio,TX,,
+Signal Butte Manor,Mesa,AZ,,
+Florida Heights,Atlanta,GA,,
+The Parks of Deer Creek,Fort Worth,TX,,1300.0
+City Center,Richmond,VA,,1125.0
+Lake Estates,Fort Lauderdale,FL,,
+Murphy Creek,Aurora,CO,,
+Whittier Mill Village,Atlanta,GA,,
+Marine Creek Hills,Fort Worth,TX,,1150.0
+Northwoods,Columbus,OH,,
+Boulevard Heights,Atlanta,GA,,
+Big Bayou,Saint Petersburg,FL,,
+Germantown,Nashville,TN,,1520.0
+Ridgely Delight,Baltimore,MD,,
+North Golf Estates,Fort Lauderdale,FL,900.0,1000.0
+McGuire Veterans Hospital,Richmond,VA,720.0,
+Heather Place,Chandler,AZ,,
+Idlewyld,Fort Lauderdale,FL,2155.0,2500.0
+Encino Ranch,San Antonio,TX,,
+Vinegar Hill,New York,NY,,3738.0
+Bal Harbour,Fort Lauderdale,FL,,
+Joseph Lee,Baltimore,MD,,
+Hendricks and Venice Isles,Fort Lauderdale,FL,2500.0,2150.0
+Sandbridge,Virginia Beach,VA,,1300.0
+Harbour Isles,Fort Lauderdale,FL,2450.0,3000.0
+Northboro Park,West Palm Beach,FL,,
+Hibiscus Island,Miami Beach,FL,,12000.0
+Lake Caroline,Dallas,TX,,
+Willows,Gilbert,AZ,,1199.0
+Blair Villa - Poole Creek,Atlanta,GA,,
+Lake Nona Central,Orlando,FL,,1650.0
+River Market,Kansas City,MO,1100.0,1250.0
+El Toro Marine Air Station,Irvine,CA,1895.0,2155.0
+Herman Gardens,Detroit,MI,,
+North Shore,Pittsburgh,PA,,
+Arts District,Dallas,TX,,
+Biscayne Island,Miami,FL,,
+Bridgepointe,San Mateo,CA,,2791.0
+Sunshine Valley,Chandler,AZ,,
+East Pyron - Symphony Lane-Mission San Jose,San Antonio,TX,,
+Val Vista Classic,Gilbert,AZ,,1195.0
+Eagle Glen,Corona,CA,,
+Elmco Estates,Atlanta,GA,,
+Woodland Hills,Atlanta,GA,,
+Palm-Aire Village (EAST),Fort Lauderdale,FL,,1100.0
+Palm Island,Miami Beach,FL,,37500.0
+Sycamore Creek,Corona,CA,,2250.0
+Bay Colony Club,Fort Lauderdale,FL,,1350.0
+Monterey Vista,Chandler,AZ,,
+Pineapple Park,West Palm Beach,FL,,
+Riviera Isles,Fort Lauderdale,FL,,
+Oak Highlands,Nashville,TN,,
+Capitol Hill Area,Nashville,TN,705.0,
+Randall Mill,Atlanta,GA,,
+La Salle,Saint Louis,MO,,
+Iron Horse,Tucson,AZ,,
+Merit-Carson,Torrance,CA,,
+Rebel Valley Forest,Atlanta,GA,,
+Willow Creek,Tulsa,OK,,
+Coral Shores,Fort Lauderdale,FL,,1200.0
+Golden Gate Point,Sarasota,FL,,
+Fair Isle,Miami,FL,,
+Rock Island - Samuels,Fort Worth,TX,,
+Thousand Oaks Condominiums-Thousand Oaks,San Antonio,TX,,
+Vista Dorada,Gilbert,AZ,,
+Keewaydin,Boulder,CO,,
+Laudergate Isles,Fort Lauderdale,FL,,
+San Marco Island,Miami,FL,,
+West End,Pittsburgh,PA,,
+Tantra Park,Boulder,CO,,
+Cooley Station,Gilbert,AZ,,
+Lost Creek,Fort Worth,TX,,925.0
+John Cox,Lakeland,FL,,
+University Estates,Tempe,AZ,,
+Raintree,Lakeland,FL,,
+Pershing,Orlando,FL,,
+Di Lido Island,Miami Beach,FL,,10000.0
+Fincher Farms,Gilbert,AZ,,
+Van Cortlandt Park,New York,NY,,1250.0
+Birch Park Finger Sts.,Fort Lauderdale,FL,,
+Woodlawn West,Nashville,TN,,
+The Willows,Orlando,FL,,
+Provincia Villas,San Antonio,TX,,
+Colonial Homes,Atlanta,GA,,
+Maverick Creek,San Antonio,TX,,
+Downtown,Columbia,SC,,925.0
+Oakwood,Richmond,VA,,
+Oakland,Atlanta,GA,,
+Lennox Village,Nashville,TN,,
+Eden Isle,Saint Petersburg,FL,,
+Charleston Commons,Garland,TX,,
+Buena Vista,Boulder,CO,1469.0,
+Rosemont East,Tucson,AZ,,
+Upper West Side,Fort Worth,TX,,
+Woodland Point,Nashville,TN,,760.0
+Leather District,Boston,MA,,3000.0
+Seville Condo No.11,Clearwater,FL,850.0,1185.0
+Westhampton Dunes,Westhampton Beach,NY,65000.0,53900.0
+Stratland Shadows,Gilbert,AZ,,
+San Antonio Cambridge Village-East Terrell Hills,San Antonio,TX,,
+City View Townhome,Fort Lauderdale,FL,,
+Windmill Ranch,Gilbert,AZ,,
+Northlake Park at Lake Nona,Orlando,FL,,1500.0
+Devonshire Condominiums,San Antonio,TX,,
+La Aldea,Gilbert,AZ,,
+Fleetwood,Nashville,TN,695.0,
+Wyngate Townhomes,Saint Petersburg,FL,,
+Breakwater Surf,Fort Lauderdale,FL,3500.0,
+Grandview Estates,Mesa,AZ,,
+Pecos Manor,Gilbert,AZ,,
+Solana Ridge Homeowners - People Active in Community Effort,San Antonio,TX,,
+East Park,Orlando,FL,,1500.0
+Third Cherry Creek,Aurora,CO,,
+Summit at Bulverde Creek,San Antonio,TX,,
+LaVina,Orlando,FL,,1395.0
+Green Meadows,Davis,CA,,
+Alta Loma,Nashville,TN,,615.0
+Navy Yard,New York,NY,,
+Woodmont,San Antonio,TX,,
+Singletree,Aurora,CO,,
+La Buena Vida,Davis,CA,,
+Oakdell Council of Co-Owners,San Antonio,TX,,
+Prospect Park,New York,NY,,
+Hillcrest,Hollywood,FL,,1000.0
+North Weymouth,Weymouth,MA,,1200.0
+Kennydale,Renton,WA,,1695.0
+Mountain View,Bend,OR,,
+Washington Park,Hollywood,FL,,1350.0
+Ponderosa,Sunnyvale,CA,,2250.0
+North Beach,Hollywood,FL,,3500.0
+Nicholtown,Greenville,SC,,
+Sunset,Renton,WA,,1250.0
+Princess Anne Plaza,Virginia Beach,VA,,995.0
+Washington,Sunnyvale,CA,,2700.0
+Beverly Park,Hollywood,FL,,1350.0
+Boulevard Heights,Hollywood,FL,,1500.0
+Driftwood,Hollywood,FL,,1600.0
+Emerald Hills,Hollywood,FL,,1800.0
+Hollywood Hills,Hollywood,FL,,1750.0
+Hollywood Lakes,Hollywood,FL,,2300.0
+Lawnacres,Hollywood,FL,,1200.0
+Liberia,Hollywood,FL,,1350.0
+Mapleridge,Hollywood,FL,,2400.0
+Oakridge,Hollywood,FL,,2600.0
+Park East,Hollywood,FL,,1595.0
+Park Side,Hollywood,FL,,1250.0
+Royal Poinciana,Hollywood,FL,,1050.0
+East Village,San Marino,CA,,
+Lakewood,Sunnyvale,CA,,2750.0
+Cascade,Renton,WA,1215.0,
+Governors Island,New York,NY,,2930.0
+North Shore,Miami Beach,FL,,2400.0
+Riverside,Greenwich,CT,,7500.0
+Oakrest Condos,Nashville,TN,,
+River Reach,Naples,FL,,
+Boyd Acres,Bend,OR,,
+South Renton,Renton,WA,,
+Leisure Estates,Renton,WA,,
+President Park,Renton,WA,,1350.0
+Old Farm District,Bend,OR,,1200.0
+Larksput,Bend,OR,,
+Awbrey Butte,Bend,OR,,
+River West,Bend,OR,,925.0
+Summit West,Bend,OR,,
+Century West,Bend,OR,,
+Southwest Bend,Bend,OR,,
+Southern Crossing,Bend,OR,,
+Old City,Philadelphia,PA,,1700.0
+Carriage,Hollywood,FL,,
+Playland,Hollywood,FL,,1500.0
+441 Corridor,Hollywood,FL,,1200.0
+Lake of Emerald Hills,Hollywood,FL,,1975.0
+North Central,Hollywood,FL,,1175.0
+Highland Garden,Hollywood,FL,,1400.0
+South Central Beach,Hollywood,FL,,2300.0
+Oceanfront,Miami Beach,FL,,2600.0
+Nautilus,Miami Beach,FL,,2600.0
+South Pointe,Miami Beach,FL,,4500.0
+Serra,Sunnyvale,CA,,2494.0
+Ortega,Sunnyvale,CA,,2257.0
+De Anza,Sunnyvale,CA,,
+East Murphy,Sunnyvale,CA,,2389.0
+West Murphy,Sunnyvale,CA,,2250.0
+Sharon Heights,Menlo Park,CA,,4200.0
+Downtown Menlo Park,Menlo Park,CA,,

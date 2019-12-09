@@ -34,7 +34,9 @@ Each quarter, the company publishes updated datasets to [their website](https://
 |4  |   582    |2018-05-01 00:04:52   |2018-05-01 00:14:34 |31129                |15th St & Pennsylvania Ave NW/Pershing Park|31118              |3rd & Elm St NW                        |W21846       |Member            |
 
 ### Lets ask some interesting and relavent business questions
-Keeping the business assets and infrastructure at top of mind, we may want to ask how all of our stations are doing in terms of ride rate (defined as rides initiated at a particular start station). Those with the lowest ride rates may warrent further investigation. Perhaps, we could recommend a few stations for the company to restock or return bikes to in order to reduce idle time of the bikes and improve ride rates at various stations. Additionally, we may want to identify the bikes that have the longest cumulative "Duration", and expect them to need servicing soon. 
+Keeping the business assets and infrastructure at top of mind, we may want to ask how all of our stations are doing in terms of ride rate (defined as rides initiated at a particular start station). Those with the lowest ride rates may warrent further investigation, but knowing the most popular bike stations is useful as well. 
+
+Perhaps, we could recommend a few stations for the company to restock or return bikes to in order to reduce idle time of the bikes and improve ride rates at various stations. Additionally, we may want to identify the bikes that have the longest cumulative "Duration", and expect them to need servicing soon. 
 This allows us to frame three questions to pursure in this EDA: 
 1. What stations/locations have the top and bottom X% of ride rates? How long are bikes idle at each station? 
 2. Question here
