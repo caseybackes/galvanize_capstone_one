@@ -25,7 +25,7 @@ def pd_csv_group(data_folder):
         f = pd.read_csv(data_folder+file)
         df_list.append(f)
 
-    return pd.concat(df_list, axis=0, ignore_index=True)
+    return pd.concat(df_list, axis=0, ignore_index=True, sort=True)
 
 def lifetime(duration):
     '''Returns dict{days:days, hours:hours, minutes:minutes, seconds:seconds}'''
@@ -97,7 +97,7 @@ if __name__ == '__main__':
     station_locations_df = pd.read_csv('misc/Capital_Bike_Share_Locations.csv')   
 
     # taking only the location information from the locations dataset...
-    station_locations = station_locations_df[['TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE', 'X', 'Y']].copy()
+    station_locations = station_locations_df[['ADDRESS','TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE', 'X', 'Y']].copy()
 
     # we can now merge the new dataset (subset) into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
@@ -130,19 +130,37 @@ if __name__ == '__main__':
     evening_rides = df[df['Start time'] > dt.time(15,0,0)] # mask applied to df with start times after 3pm
 
     # - - - Gather data by top ten most popular stations during various times of day 
-    popular_morning_stations = morning_rides['Start station'].value_counts()[0:10]
-    popular_afternoon_stations = afternoon_rides['Start station'].value_counts()[0:10]
-    popular_evening_stations = evening_rides['Start station'].value_counts()[0:10]
+    popular_morning_stations = morning_rides.groupby('TERMINAL_NUMBER')\
+        .size()\
+        .reset_index()\
+        .rename(columns={0:'RIDE_COUNT'})\
+        .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
+        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
+    popular_afternoon_stations = afternoon_rides.groupby('TERMINAL_NUMBER')\
+        .size()\
+        .reset_index()\
+        .rename(columns={0:'RIDE_COUNT'})\
+        .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
+        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
+    popular_evening_stations = evening_rides.groupby('TERMINAL_NUMBER')\
+        .size()\
+        .reset_index()\
+        .rename(columns={0:'RIDE_COUNT'})\
+        .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
+        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
 
     # - - - select a style
     plt.style.use('fivethirtyeight')
     fig,ax = plt.subplots(figsize=(20,10))
     
     # - - - define the data to plot
-    layer1 = np.array(popular_morning_stations.values)
-    layer2 = np.array(popular_afternoon_stations.values)
-    layer3 = np.array(popular_evening_stations.values)
-    labels = [item.replace("/","\n", 1) for item in popular_morning_stations.index]
+    layer1 = np.array(popular_morning_stations.RIDE_COUNT.values)
+    layer2 = np.array(popular_afternoon_stations.RIDE_COUNT.values)
+    layer3 = np.array(popular_evening_stations.RIDE_COUNT.values)
+
+    labels_mor = [popular_morning_stations.ADDRESS.values]
+    labels_aft = [popular_afternoon_stations.ADDRESS.values]
+    labels_eve = [popular_evening_stations.ADDRESS.values]
 
     # - - - build the bar plot
     width = 0.8
@@ -153,7 +171,7 @@ if __name__ == '__main__':
 
     # - - - make it sexy
     ax.set_xticks(ticks=xlocations)
-    ax.set_xticklabels(labels, rotation=0)
+    ax.set_xticklabels(labels_mor[0], rotation=0)
     for tick in ax.xaxis.get_major_ticks()[1::2]:
         tick.set_pad(35)
     ax.set_xlabel("Station Name/Location")
@@ -184,7 +202,7 @@ if __name__ == '__main__':
     time_steps = [f'{x%13}{("am" if x<12  else "pm")}' for x in range(0,25)]
     time_steps.remove('0pm')
     # - - - build the super dict
-    for station in popular_morning_stations.index: #top three of top ten popular morning stations for starting a ride 
+    for station in popular_morning_stations.ADDRESS: 
         # - - - get the 'nth' station group from the 'station_groups' group object
         station_by_hour = station_groups.get_group(station)
         
@@ -221,23 +239,6 @@ if __name__ == '__main__':
 
 
 
-    # - - - ADDITIONAL DATA COLLECTION AND PROCESSING
-    # - - - reset the index of the popular stations dataframes
-    popular_morning_stations = popular_morning_stations.copy().reset_index()                                                                                                                                                    
-    popular_afternoon_stations = popular_afternoon_stations.copy().reset_index()                                                                                                                                                    
-    popular_evening_stations = popular_evening_stations.copy().reset_index()                                                                                                                                                    
-
-    # - - - rename the columns
-    popular_morning_stations.rename(columns={'Start station':'TERMINAL_NUMBER','index':'Start station'}, inplace =True)
-    popular_afternoon_stations.rename(columns={'Start station':'TERMINAL_NUMBER','index':'Start station'}, inplace=True)
-    popular_evening_stations.rename(columns={'Start station':'TERMINAL_NUMBER','index':'Start station'}, inplace=True)
-
-    # - - - merge the station location coordinates into the popular stations dataframes
-    station_morning_coord_df = pd.merge(left=popular_morning_stations, right=station_locations, how='right', left_on='TERMINAL_NUMBER', right_on='TERMINAL_NUMBER')
-    station_afternoon_coord_df = pd.merge(left=popular_afternoon_stations, right=station_locations, how='right', left_on='TERMINAL_NUMBER', right_on='TERMINAL_NUMBER')
-    station_evening_coord_df = pd.merge(left=popular_evening_stations, right=station_locations, how='right', left_on='TERMINAL_NUMBER', right_on='TERMINAL_NUMBER')
-
-
     # - - - use the shape file to plot the boundary of washington dc
     # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
     wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
@@ -265,7 +266,10 @@ if __name__ == '__main__':
     # ALL BIKE STATIONS
     ax.plot(station_x, station_y, 'o', color = 'b')
     # TOP TEN BIKE STATIONS IN RED
-    ax.plot()
+    #ax.plot([x for x in popular_morning_stations.LATITUDE.values],[y for y in popular_morning_stations.LONGITUDE.values],'o',color='r' )
+    ax.plot([ popular_morning_stations.LATITUDE.values],[ popular_morning_stations.LONGITUDE.values],'o',color='r', label = 'Popular Morning Stations')
+    ax.plot([ popular_afternoon_stations.LATITUDE.values],[ popular_afternoon_stations.LONGITUDE.values],'o',color='r', label = 'Popular Afternoon Stations')
+    ax.plot([ popular_evening_stations.LATITUDE.values],[ popular_evening_stations.LONGITUDE.values],'o',color='r', label = 'Popular Evening Stations')
     
     # - - - make it sexy
     ax.set_xlim(-77.13,-76.90)
