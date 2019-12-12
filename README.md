@@ -44,3 +44,7 @@ This allows us to frame three questions to pursure in this EDA:
 ![Top Ten Stations by Time of Day][fig1]
 
 [fig1]: plots/top_ten_stations_by_time_of_day.png "Top Ten Stations by Time of Day"
+
+# Sexy plot to put into report...
+![Station Locations Across DC][fig2]
+[fig2]:plots/Figure_5.png
