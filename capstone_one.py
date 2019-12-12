@@ -274,6 +274,6 @@ if __name__ == '__main__':
     # - - - make it sexy
     ax.set_xlim(-77.13,-76.90)
     ax.set_ylim(38.79,39)
-    plt.xlabel('Latitude (in degrees))')
-    plt.ylabel('Longitude (in degrees))')
+    plt.xlabel('Latitude ($^\circ$ West')
+    plt.ylabel('Longitude ($^\circ$ North)')
     ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
