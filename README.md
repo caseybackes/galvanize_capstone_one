@@ -47,4 +47,4 @@ This allows us to frame three questions to pursure in this EDA:
 
 # Sexy plot to put into report...
 ![Station Locations Across DC][fig2]
-[fig2]:plots/Figure_5.png
+[fig2]: plots/Figure_5.png "Stations across DC"
