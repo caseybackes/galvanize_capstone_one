@@ -13,11 +13,12 @@ import geopandas as gpd
 # https://s3.amazonaws.com/capitalbikeshare-data/index.html
 
 
-def pd_csv_group(data_folder):
+def pd_csv_group(data_folder,num=-1):
     '''Returns a DataFrame built from all csv/txt files in a directory'''
     #files = [f if os.path.isfile(f) f in listdir(data_folder) ]
     files = [f for f in os.listdir(data_folder) if os.path.isfile(f)]
-
+    if num:
+        files=files[0:num]
     df_list = []
     print("stacking dataframes....")
     print('(Please be patient for ~ 30 seconds)')
@@ -86,7 +87,7 @@ def read_shapefile(sf):
 if __name__ == '__main__':
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
-    df = pd_csv_group(data_folder)
+    df = pd_csv_group(data_folder, num = 3)
     
 
     # - - - FEATURE ENGINEERING OPPORTUNITY
@@ -202,9 +203,13 @@ if __name__ == '__main__':
     time_steps = [f'{x%13}{("am" if x<12  else "pm")}' for x in range(0,25)]
     time_steps.remove('0pm')
     # - - - build the super dict
-    for station in popular_morning_stations.ADDRESS: 
+    for station in popular_morning_stations.ADDRESS.values: 
         # - - - get the 'nth' station group from the 'station_groups' group object
-        station_by_hour = station_groups.get_group(station)
+        print('segmenting station: ', station)
+        try:
+            station_by_hour = station_groups.get_group(station)
+        except:
+            station_by_hour = station_groups.get_group(station+' ')
         
         # - - - assign a dictionary as a super dictionary's value for the key of this station 
         station_time_hist[station] = series_freq_dict(station_by_hour, 'Start time')
@@ -237,43 +242,45 @@ if __name__ == '__main__':
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
 
+    continue_ = False
 
+    if continue_:
 
-    # - - - use the shape file to plot the boundary of washington dc
-    # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
-    wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
-    wash_shp_file = shp.Reader(wash_shp_path) 
-    df_wash_path = read_shapefile(wash_shp_file)
-    wash_path = [(x[0],x[1]) for x in df_wash_path.coords[0]]
-    # - - - build arrays for the x,y coords in lat/long for the dc boundary
-    wash_path_x = [x[0] for x in wash_path]    
-    wash_path_y = [x[1] for x in wash_path]
-    # - - - build arrays for the x,y coords in lat/long for the bike stations
-    station_x = [x for x in station_locations.LONGITUDE]
-    station_y = [x for x in station_locations.LATITUDE]   
-    # - - - it would be nice to see the streets as well. Geopandas to the rescue!
-    street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
-    gpd_street = gpd.read_file(street_shp_path)
-    
-    # - - - plot the stations and streets with washington dc boundary
-    plt.style.use('ggplot')
+        # - - - use the shape file to plot the boundary of washington dc
+        # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
+        wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
+        wash_shp_file = shp.Reader(wash_shp_path) 
+        df_wash_path = read_shapefile(wash_shp_file)
+        wash_path = [(x[0],x[1]) for x in df_wash_path.coords[0]]
+        # - - - build arrays for the x,y coords in lat/long for the dc boundary
+        wash_path_x = [x[0] for x in wash_path]    
+        wash_path_y = [x[1] for x in wash_path]
+        # - - - build arrays for the x,y coords in lat/long for the bike stations
+        station_x = [x for x in station_locations.LONGITUDE]
+        station_y = [x for x in station_locations.LATITUDE]   
+        # - - - it would be nice to see the streets as well. Geopandas to the rescue!
+        street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
+        gpd_street = gpd.read_file(street_shp_path)
+        
+        # - - - plot the stations and streets with washington dc boundary
+        plt.style.use('ggplot')
 
-    # STREET VECTORS
-    ax = gpd_street.geometry.plot(color='k', linewidth=.1)  
-    #fig = plt.figure(figsize=(15,15))    
-    # WASHINGTON DC BOUNDARY PLOT 
-    ax.plot(wash_path_x, wash_path_y, 'b', linewidth=.1)
-    # ALL BIKE STATIONS
-    ax.plot(station_x, station_y, 'o', color = 'b')
-    # TOP TEN BIKE STATIONS IN RED
-    #ax.plot([x for x in popular_morning_stations.LATITUDE.values],[y for y in popular_morning_stations.LONGITUDE.values],'o',color='r' )
-    ax.plot([ popular_morning_stations.LATITUDE.values],[ popular_morning_stations.LONGITUDE.values],'o',color='r', label = 'Popular Morning Stations')
-    ax.plot([ popular_afternoon_stations.LATITUDE.values],[ popular_afternoon_stations.LONGITUDE.values],'o',color='r', label = 'Popular Afternoon Stations')
-    ax.plot([ popular_evening_stations.LATITUDE.values],[ popular_evening_stations.LONGITUDE.values],'o',color='r', label = 'Popular Evening Stations')
-    
-    # - - - make it sexy
-    ax.set_xlim(-77.13,-76.90)
-    ax.set_ylim(38.79,39)
-    plt.xlabel('Latitude ($^\circ$ West')
-    plt.ylabel('Longitude ($^\circ$ North)')
-    ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
+        # STREET VECTORS
+        ax = gpd_street.geometry.plot(color='k', linewidth=.1)  
+        #fig = plt.figure(figsize=(15,15))    
+        # WASHINGTON DC BOUNDARY PLOT 
+        ax.plot(wash_path_x, wash_path_y, 'b', linewidth=.1)
+        # ALL BIKE STATIONS
+        ax.plot(station_x, station_y, 'o', color = 'b')
+        # TOP TEN BIKE STATIONS IN RED
+        #ax.plot([x for x in popular_morning_stations.LATITUDE.values],[y for y in popular_morning_stations.LONGITUDE.values],'o',color='r' )
+        ax.plot([ popular_morning_stations.LATITUDE.values],[ popular_morning_stations.LONGITUDE.values],'o',color='r', label = 'Popular Morning Stations')
+        ax.plot([ popular_afternoon_stations.LATITUDE.values],[ popular_afternoon_stations.LONGITUDE.values],'o',color='r', label = 'Popular Afternoon Stations')
+        ax.plot([ popular_evening_stations.LATITUDE.values],[ popular_evening_stations.LONGITUDE.values],'o',color='r', label = 'Popular Evening Stations')
+        
+        # - - - make it sexy
+        ax.set_xlim(-77.13,-76.90)
+        ax.set_ylim(38.79,39)
+        plt.xlabel('Latitude ($^\circ$ West')
+        plt.ylabel('Longitude ($^\circ$ North)')
+        ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
