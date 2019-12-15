@@ -8,6 +8,7 @@ import shapefile as shp
 import seaborn as sns
 from collections import OrderedDict
 import geopandas as gpd 
+import argparse
 
 # DATA SOURCE
 # https://s3.amazonaws.com/capitalbikeshare-data/index.html
@@ -29,8 +30,9 @@ def pd_csv_group(data_folder,num=-1):
         df_list.append(f)
         # if there is a file number limit, stop here. 
         if file_num == file_count-1:
+            print(f'Primary data gathered from {num} files into single dataframe   :D')
             return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
-
+    print(f'Primary data gathered from {num} files into single dataframe   :D')
     return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
 
 def lifetime(duration):
@@ -139,9 +141,24 @@ def plot_popstations(popstations_df, name):
     plt.subplots_adjust(hspace=0.5)
 
 if __name__ == '__main__':
+    # Argparse
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('--barchart', help = 'activate barcharts', type=bool, default = 'store_true')
+    parser.add_argument('--geoplot', help='activate geographic data map', type = bool, default ='store_true')
+    parser.add_argument('--dflim', help = 'limit the number of files used to build main df', type=int, default = 0)
+    
+    args = parser.parse_args()
+
+
+    print('geoplot set to ',args.geoplot)
+    print('dflim set to ', args.dflim)
+    if args.dflim != 0:
+        dflim = args.dflim
+    
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
-    df = pd_csv_group(data_folder, num = 3)
+    df = pd_csv_group(data_folder, dflim)
     
 
     # - - - FEATURE ENGINEERING 
@@ -206,38 +223,41 @@ if __name__ == '__main__':
         .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
         .merge(station_locations, on='TERMINAL_NUMBER', how='left')
 
-    # - - - select a style
-    plt.style.use('fivethirtyeight')
-    fig,ax = plt.subplots(figsize=(20,10))
-    
-    # - - - define the data to plot
-    layer1 = np.array(popular_morning_stations.RIDE_COUNT.values)
-    layer2 = np.array(popular_afternoon_stations.RIDE_COUNT.values)
-    layer3 = np.array(popular_evening_stations.RIDE_COUNT.values)
 
-    labels_mor = [popular_morning_stations.ADDRESS.values]
-    labels_aft = [popular_afternoon_stations.ADDRESS.values]
-    labels_eve = [popular_evening_stations.ADDRESS.values]
+    bar_chart = False
+    if bar_chart:
+        # - - - select a style
+        plt.style.use('fivethirtyeight')
+        fig,ax = plt.subplots(figsize=(20,10))
+        
+        # - - - define the data to plot
+        layer1 = np.array(popular_morning_stations.RIDE_COUNT.values)
+        layer2 = np.array(popular_afternoon_stations.RIDE_COUNT.values)
+        layer3 = np.array(popular_evening_stations.RIDE_COUNT.values)
 
-    # - - - build the bar plot
-    width = 0.8
-    xlocations = np.array(range(len(layer1)))
-    # (adding subsequent layers to build a stacked bar chart)
-    ax.bar(xlocations, layer3+layer2+layer1, width, label = 'Evening Rides', color = 'y', align = 'center')
-    ax.bar(xlocations, layer2+layer1, width, label = 'Afternoon Rides', color = 'b', align = 'center')
-    ax.bar(xlocations, layer1, width, label = 'Morning Rides', color = 'r', align = 'center')
+        labels_mor = [popular_morning_stations.ADDRESS.values]
+        labels_aft = [popular_afternoon_stations.ADDRESS.values]
+        labels_eve = [popular_evening_stations.ADDRESS.values]
 
-    # - - - make it sexy
-    ax.set_xticks(ticks=xlocations)
-    ax.set_xticklabels(labels_mor[0], rotation=0)
-    for tick in ax.xaxis.get_major_ticks()[1::2]:
-        tick.set_pad(35)
-    ax.set_xlabel("Station Name/Location")
-    ax.set_ylabel("Two-Year Ride Count")
-    ax.yaxis.grid(True)
-    ax.legend(loc='best', prop={'size':'small'})
-    ax.set_title("Top 10 Popular Bike Stations by Time of Day")
-    fig.tight_layout(pad=1)
+        # - - - build the bar plot
+        width = 0.8
+        xlocations = np.array(range(len(layer1)))
+        # (adding subsequent layers to build a stacked bar chart)
+        ax.bar(xlocations, layer3+layer2+layer1, width, label = 'Evening Rides', color = 'y', align = 'center')
+        ax.bar(xlocations, layer2+layer1, width, label = 'Afternoon Rides', color = 'b', align = 'center')
+        ax.bar(xlocations, layer1, width, label = 'Morning Rides', color = 'r', align = 'center')
+
+        # - - - make it sexy
+        ax.set_xticks(ticks=xlocations)
+        ax.set_xticklabels(labels_mor[0], rotation=0)
+        for tick in ax.xaxis.get_major_ticks()[1::2]:
+            tick.set_pad(35)
+        ax.set_xlabel("Station Name/Location")
+        ax.set_ylabel("Two-Year Ride Count")
+        ax.yaxis.grid(True)
+        ax.legend(loc='best', prop={'size':'small'})
+        ax.set_title("Top 10 Popular Bike Stations by Time of Day")
+        fig.tight_layout(pad=1)
 
 
     # ------------------------------------------------------------------------------------------
@@ -263,9 +283,9 @@ if __name__ == '__main__':
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
 
-    continue_ = True
+    geomap = True
 
-    if continue_:
+    if geomap:
 
         # - - - use the shape file to plot the boundary of washington dc
         # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
@@ -288,10 +308,10 @@ if __name__ == '__main__':
 
         # STREET VECTORS
         fig,ax = plt.subplots(figsize=(10,10))
-        gpd_street.geometry.plot(ax = ax, color='k', linewidth=.2, )  
+        gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
 
         # WASHINGTON DC BOUNDARY PLOT 
-        ax.plot(wash_path_x, wash_path_y, 'b', linewidth=.1)
+        ax.plot(wash_path_x, wash_path_y, 'r', linewidth=.5, alpha = .4)
         # ALL BIKE STATIONS
         #ax.plot(station_x, station_y, 'o', color = 'b', label='Bikeshare Stations')
         ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
@@ -300,6 +320,14 @@ if __name__ == '__main__':
         ax.scatter(x =popular_afternoon_stations.LONGITUDE.values, y=popular_afternoon_stations.LATITUDE.values, color = 'b',  label = 'Popular in Afternoon')
         ax.scatter(x =popular_evening_stations.LONGITUDE.values, y=popular_evening_stations.LATITUDE.values, color = 'g' ,label = 'Popular in Evening' )
 
+        '''
+        for all rides that start from a popular morning station, 
+            plot a line from that start station to the end station
+        '''
+        
+        ax.plot(morning_rides.LONGITUDE.values, morning_rides.LATITUDE.values, color='g', linewidth=.1)     
+        
+        
         # - - - make it sexy
         ax.set_xlim(-77.13,-76.90)
         ax.set_ylim(38.79,39)
