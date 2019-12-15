@@ -14,19 +14,24 @@ import geopandas as gpd
 
 
 def pd_csv_group(data_folder,num=-1):
-    '''Returns a DataFrame built from all csv/txt files in a directory'''
-    #files = [f if os.path.isfile(f) f in listdir(data_folder) ]
-    files = [f for f in os.listdir(data_folder) if os.path.isfile(f)]
-    if num:
-        files=files[0:num]
+    '''Returns a DataFrame built from all csv/txt files in a directory, up to "num" of files. '''
+    if num == -1:
+        file_count = len(os.listdir(data_folder))
+    else:
+        file_count = num
     df_list = []
+    #print('files to be included: ', files)
     print("stacking dataframes....")
-    print('(Please be patient for ~ 30 seconds)')
-    for file in os.listdir(data_folder):
+    #print('(Please be patient for ~ 30 seconds)')
+    for file_num,file in enumerate(os.listdir(data_folder)):
         f = pd.read_csv(data_folder+file)
+        print(f'appending df #{file_num+1}...')
         df_list.append(f)
+        # if there is a file number limit, stop here. 
+        if file_num == file_count-1:
+            return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
 
-    return pd.concat(df_list, axis=0, ignore_index=True, sort=True)
+    return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
 
 def lifetime(duration):
     '''Returns dict{days:days, hours:hours, minutes:minutes, seconds:seconds}'''
@@ -47,7 +52,7 @@ def freq_dict(lst):
     return dct
 
 def series_freq_dict(df, column_name):
-    '''INPUT: DataFrame or Series or List
+    '''INPUT: DataFrame or Series where the values are of datetime data type (have a .hour attribute)
         RETURN: Dictionary of unique items and their frequency / count'''
     
     lst = [x.hour for x in df[column_name].values]
@@ -56,11 +61,11 @@ def series_freq_dict(df, column_name):
 class BikeReport(object):
     def __init__(self, df, bike_number):
         self.bike_number = bike_number
-        self.duration = df[df['Bike number'] ==bike_number].agg({'Duration':'sum'}).Duration   
+        self.duration = lifetime(df[df['Bike number'] ==bike_number].agg({'Duration':'sum'}).Duration )  
         self.trips = df[df['Bike number'] ==bike_number].count()[0]
 
     def __repr__(self):
-        return f'<BikeReport.obj>\nBikeNumber:{self.bike_number}\nLifetime:{self.duration}s\nTrips:{self.trips}'
+        return f'<BikeReport.obj>\n\tBikeNumber:{self.bike_number}\n\tServiceLifetime:{self.duration}\n\tTotalTrips:{self.trips}'
 
     def lifetime(self):
         dct = {}
@@ -68,7 +73,34 @@ class BikeReport(object):
         dct['hours']= self.duration%86400//3600
         dct['minutes'] = (self.duration%86400)%3600//60
         dct['seconds'] = (self.duration%86400)%3600%60
+        #self.duration = dct
         return dct
+
+def time_filter(df, colname, start_time, end_time):
+    ''' Returns a mask-modified dataframe with items between start_time and end_time as found in 'colname' column. '''
+    if type(start_time) != type(dt.time(0,0,0)):
+        print('Error: Given start time must be dt.time() obj.')
+        return None
+    mask_low = df[colname] > start_time
+    mask_hi = df[colname] < end_time
+    mask = mask_low & mask_hi
+    return df[mask]
+    
+def station_super_dict(df,popular_stations_df ):
+    station_time_hist=dict()
+    station_groups = df.groupby('Start station')
+    pass    
+    # - - - build the super dict
+    for station in popular_stations_df.ADDRESS.values: 
+        try:
+            station_by_hour = station_groups.get_group(station)
+        except:
+            # sometimes there is a space at the end of the station name as found in the address column's values for station names. 
+            station_by_hour = station_groups.get_group(station+' ')
+        
+        # - - - The super-dict's keys are the station names, and the super-dict's values for each key are the time this station 
+        station_time_hist[station] = series_freq_dict(station_by_hour, 'Start time')
+    return station_time_hist
 
 def read_shapefile(sf):
     """
@@ -83,6 +115,30 @@ def read_shapefile(sf):
     df = df.assign(coords=shps)
     return df
 
+def plot_popstations(popstations_df, name):
+    fig = plt.figure(figsize=(10,15))
+    plt.style.use('ggplot')
+
+    station_time_hist=station_super_dict(df, popstations_df)
+    for i in range(len(popstations_df)):
+        ax = fig.add_subplot(5,2,i+1)
+        st_name = popstations_df.ADDRESS[i]
+        # d = station_time_hist[st_name]
+        d = station_time_hist[st_name]
+        
+        # keys are likely out of order in regards to ride count - fix with OrderedDict()
+        d = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
+        print('ordered dictionary for plot: ',d)
+        x = [i[0] for i in list(d.items())]   
+        y = [i[1] for i in list(d.items())]  
+        # as these are the most popular stations in the am, lets look only at the am data (4pm-10am) *** including 9:59am ***
+        ax.bar(x[4:10], y[4:10], color = 'b', width=0.8)
+        ax.set_title(f'{st_name}')
+        if i==0:
+            ylim = 1.2* max(d.values())
+        ax.set_ylim(0,ylim)
+    fig.suptitle(f'Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the {name}',fontsize=18)
+    plt.subplots_adjust(hspace=0.5)
 
 if __name__ == '__main__':
     # - - -Define the folder containing only data files (csv or txt)
@@ -90,45 +146,45 @@ if __name__ == '__main__':
     df = pd_csv_group(data_folder, num = 3)
     
 
-    # - - - FEATURE ENGINEERING OPPORTUNITY
-    # the locations of the bikes are found in another dataset from Open Data DC:
+    # - - - FEATURE ENGINEERING 
+    # the locations of the bike stations in lat/long are found in another dataset from Open Data DC:
     # https://opendata.dc.gov/datasets/capital-bike-share-locations;
     # detailed description of data from this file can be found here:
     # https://www.arcgis.com/sharing/rest/content/items/a1f7acf65795451d89f0a38565a975b3/info/metadata/metadata.xml?format=default&output=html
     station_locations_df = pd.read_csv('misc/Capital_Bike_Share_Locations.csv')   
 
     # taking only the location information from the locations dataset...
-    station_locations = station_locations_df[['ADDRESS','TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE', 'X', 'Y']].copy()
+    station_locations = station_locations_df[['ADDRESS','TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE']].copy()
 
-    # we can now merge the new dataset (subset) into the primary dataframe
+    # we can now merge the new locations dataframe into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
 
+    # (make a 'start time' and 'end time' column)
+    # (after recasting the 'start date' to a datetime obj)  :/
+    df['Start time'] =[x.time() for x in pd.to_datetime((df['Start date']))]     
+    df['End time'] =[x.time() for x in pd.to_datetime((df['End date']))]     
+    
 
-    # - - - CLASS OBJECT INSTANTIATION
+    # - - - CLASS OBJECT INSTANTIATION: BIKEREPORT()
     # - - - Which bikes (by bike number) have been used the most (by duration)?
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
     
-    # - - - most used bike and it's info
-    br = BikeReport(df, most_used_bikes_10.iloc[0].name)
+    # - - - Generate reports for each of the top ten most used bikes.
+    for i in range(9):
+        br = BikeReport(df, most_used_bikes_10.iloc[i].name)
+        str(br)
 
-    # - - - unique bike stations by name and station number
-    stations = pd.concat((df['Start station'],df['End station']))
 
-    # what are the most popular bike stations for starting a ride in the morning (4am-9am)?
-    # (make a 'start time' column)
-    # (after recasting the 'start date' to a datetime obj)  :/
-    df['Start time'] =[x.time() for x in pd.to_datetime((df['Start date']))]     
-    
-    # - - -  group rides that start in the morning (4am-9am)
-    start_after4am = df[df['Start time'] > dt.time(4,0,0)] # mask applied to df with start times after 4am
-    morning_rides = start_after4am[df['Start time'] < dt.time(9,0,0)] # mask applied to 4am starts for rides that end by 10am
-    
+    # ADDRESS THE BUSINESS QUESTIONS
+    # - What are the most popular bike stations for starting a ride in the morning (4am-9am)?
+    # - - - group rides that start in the morning (4am-9am)
+    morning_rides = time_filter(df, 'Start time', dt.time(4,0,0), dt.time(9,0,0))
+
     # - - - group rides that start in the afternoon (9am-3pm)
-    start_after10am = df[df['Start time'] > dt.time(9,0,0)] # mask applied to df with start times after 10am
-    afternoon_rides = start_after4am[df['Start time'] < dt.time(15,0,0)] # mask applied to 4am starts for rides that end by 3pm
+    afternoon_rides = time_filter(df, 'Start time', dt.time(9,0,0), dt.time(15,0,0))
     
     # - - - group rides that start in the evening (3pm>)
-    evening_rides = df[df['Start time'] > dt.time(15,0,0)] # mask applied to df with start times after 3pm
+    evening_rides = time_filter(df, 'Start time', dt.time(15,0,0), dt.time(23,59,59))
 
     # - - - Gather data by top ten most popular stations during various times of day 
     popular_morning_stations = morning_rides.groupby('TERMINAL_NUMBER')\
@@ -137,12 +193,14 @@ if __name__ == '__main__':
         .rename(columns={0:'RIDE_COUNT'})\
         .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
         .merge(station_locations, on='TERMINAL_NUMBER', how='left')
+
     popular_afternoon_stations = afternoon_rides.groupby('TERMINAL_NUMBER')\
         .size()\
         .reset_index()\
         .rename(columns={0:'RIDE_COUNT'})\
         .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
         .merge(station_locations, on='TERMINAL_NUMBER', how='left')
+
     popular_evening_stations = evening_rides.groupby('TERMINAL_NUMBER')\
         .size()\
         .reset_index()\
@@ -166,6 +224,7 @@ if __name__ == '__main__':
     # - - - build the bar plot
     width = 0.8
     xlocations = np.array(range(len(layer1)))
+    # (adding subsequent layers to build a stacked bar chart)
     ax.bar(xlocations, layer3+layer2+layer1, width, label = 'Evening Rides', color = 'y', align = 'center')
     ax.bar(xlocations, layer2+layer1, width, label = 'Afternoon Rides', color = 'b', align = 'center')
     ax.bar(xlocations, layer1, width, label = 'Morning Rides', color = 'r', align = 'center')
@@ -192,57 +251,21 @@ if __name__ == '__main__':
     # and the values are the counts of rides for that hour for that station. 
     # Each station's dictionary will all be stored in a 'super dictionary'
 
-    # - - - initiate the super dictionary 
-    station_time_hist = dict()
-    
-    # - - - group the data by 'start station'
-    station_groups = df.groupby('Start station')
 
-    # - - - list of hours in a day, from 0 to 24
-    ### time_steps = [str(x) for x in range(25)]
-    time_steps = [f'{x%13}{("am" if x<12  else "pm")}' for x in range(0,25)]
-    time_steps.remove('0pm')
-    # - - - build the super dict
-    for station in popular_morning_stations.ADDRESS.values: 
-        # - - - get the 'nth' station group from the 'station_groups' group object
-        print('segmenting station: ', station)
-        try:
-            station_by_hour = station_groups.get_group(station)
-        except:
-            station_by_hour = station_groups.get_group(station+' ')
-        
-        # - - - assign a dictionary as a super dictionary's value for the key of this station 
-        station_time_hist[station] = series_freq_dict(station_by_hour, 'Start time')
+    station_time_hist2_pop_morn_stations = station_super_dict(df, popular_morning_stations)
+    station_time_hist2_pop_aft_stations = station_super_dict(df, popular_afternoon_stations)
+    station_time_hist2_pop_eve_stations = station_super_dict(df, popular_evening_stations)
 
-    # - - - Plot the ride frequency by hour for each bike station
-    fig = plt.figure(figsize=(10,15))
-    plt.style.use('ggplot')
-    for i in range(len(popular_morning_stations)):
-        ax = fig.add_subplot(5,2,i+1)
-        st_name = popular_morning_stations.index[i]
-        d = station_time_hist[st_name]
-        # keys are likely out of order - fix with OrderedDict()
-        d = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
-        x = [i[0] for i in list(d.items())]   
-        y = [i[1] for i in list(d.items())]  
-        # as these are the most popular stations in the am, lets look only at the am data (4pm-10am) *** including 9:59am ***
-        ax.bar(x[4:10], y[4:10], color = 'b', width=0.8)
-        ax.set_title(f'{st_name}')
-        if i==0:
-            ylim = max(d.values())
-        ax.set_ylim(0,ylim)
-    fig.suptitle('Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the Morning',fontsize=18)
-    plt.subplots_adjust(hspace=0.5)
 
-  
-    #sns.set(context='paper', style='whitegrid', palette='pastel', color_codes=True)
-    #sns.mpl.rc('figure', figsize=(10,6))
+
+    plot_popstations(popular_morning_stations, 'Morning')
+    plot_popstations(popular_afternoon_stations, 'Afternoon')
 
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
 
-    continue_ = False
+    continue_ = True
 
     if continue_:
 
@@ -266,21 +289,23 @@ if __name__ == '__main__':
         plt.style.use('ggplot')
 
         # STREET VECTORS
-        ax = gpd_street.geometry.plot(color='k', linewidth=.1)  
-        #fig = plt.figure(figsize=(15,15))    
+        fig,ax = plt.subplots(figsize=(10,10))
+        gpd_street.geometry.plot(ax = ax, color='k', linewidth=.2, )  
+
         # WASHINGTON DC BOUNDARY PLOT 
         ax.plot(wash_path_x, wash_path_y, 'b', linewidth=.1)
         # ALL BIKE STATIONS
-        ax.plot(station_x, station_y, 'o', color = 'b')
-        # TOP TEN BIKE STATIONS IN RED
-        #ax.plot([x for x in popular_morning_stations.LATITUDE.values],[y for y in popular_morning_stations.LONGITUDE.values],'o',color='r' )
-        ax.plot([ popular_morning_stations.LATITUDE.values],[ popular_morning_stations.LONGITUDE.values],'o',color='r', label = 'Popular Morning Stations')
-        ax.plot([ popular_afternoon_stations.LATITUDE.values],[ popular_afternoon_stations.LONGITUDE.values],'o',color='r', label = 'Popular Afternoon Stations')
-        ax.plot([ popular_evening_stations.LATITUDE.values],[ popular_evening_stations.LONGITUDE.values],'o',color='r', label = 'Popular Evening Stations')
-        
+        #ax.plot(station_x, station_y, 'o', color = 'b', label='Bikeshare Stations')
+        ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
+
+        ax.scatter(x =popular_morning_stations.LONGITUDE.values, y=popular_morning_stations.LATITUDE.values, color = 'r'  , label = 'Popular in Morning')
+        ax.scatter(x =popular_afternoon_stations.LONGITUDE.values, y=popular_afternoon_stations.LATITUDE.values, color = 'b',  label = 'Popular in Afternoon')
+        ax.scatter(x =popular_evening_stations.LONGITUDE.values, y=popular_evening_stations.LATITUDE.values, color = 'g' ,label = 'Popular in Evening' )
+
         # - - - make it sexy
         ax.set_xlim(-77.13,-76.90)
         ax.set_ylim(38.79,39)
-        plt.xlabel('Latitude ($^\circ$ West')
-        plt.ylabel('Longitude ($^\circ$ North)')
+        plt.xlabel('Latitude ($^\circ$West)')
+        plt.ylabel('Longitude ($^\circ$North)')
         ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
+        plt.legend()
