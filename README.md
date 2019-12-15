@@ -51,4 +51,4 @@ This allows us to frame three questions to pursure in this EDA:
 
 ![Station Locations Across DC][fig2]
 
-[fig2]: plots/Figure_5.png "Stations across DC"
+[fig2]: plots/Figure_4.png "Stations across DC"

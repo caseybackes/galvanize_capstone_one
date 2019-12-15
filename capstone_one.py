@@ -123,12 +123,10 @@ def plot_popstations(popstations_df, name):
     for i in range(len(popstations_df)):
         ax = fig.add_subplot(5,2,i+1)
         st_name = popstations_df.ADDRESS[i]
-        # d = station_time_hist[st_name]
         d = station_time_hist[st_name]
-        
+
         # keys are likely out of order in regards to ride count - fix with OrderedDict()
         d = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
-        print('ordered dictionary for plot: ',d)
         x = [i[0] for i in list(d.items())]   
         y = [i[1] for i in list(d.items())]  
         # as these are the most popular stations in the am, lets look only at the am data (4pm-10am) *** including 9:59am ***
