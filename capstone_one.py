@@ -8,6 +8,7 @@ import shapefile as shp
 import seaborn as sns
 from collections import OrderedDict
 import geopandas as gpd 
+import descartes
 import argparse
 
 # DATA SOURCE
@@ -32,7 +33,7 @@ def pd_csv_group(data_folder,num=-1):
         if file_num == file_count-1:
             print(f'Primary data gathered from {num} files into single dataframe   :D')
             return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
-    print(f'Primary data gathered from {num} files into single dataframe   :D')
+    print(f'Primary data gathered from {file_count} files into single dataframe   :D')
     return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
 
 def lifetime(duration):
@@ -140,27 +141,102 @@ def plot_popstations(popstations_df, name):
     fig.suptitle(f'Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the {name}',fontsize=18)
     plt.subplots_adjust(hspace=0.5)
 
+def plot_geomap(popstation, daytime_rides, daytime,hardstop=False ):
+    '''popstation: df of popular_morning_station or other similar.
+    daytime: string of "Morning", "Afternoon", or "Evening".
+    daytime_rides: df of morning_rides, afternoon_rides, or evening_rides.
+    hardstop: limit the number of rides to look at in the daytime_rides df. Mostly for testing on subsets.
+    '''
+
+    # - - - READ IN SHAPE FILE FOR BORDER OF DC
+    # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
+    wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
+    gpd_washborder = gpd.read_file(wash_shp_path)
+    
+    # - - - READ IN SHAPE FILE FOR STREET MAP OF DC
+    street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
+    gpd_street = gpd.read_file(street_shp_path)
+    
+    # - - - DEFINE X AND Y OF STATION LOCATIONS FOR SCATTER PLOTTING
+    station_x = [x for x in station_locations.LONGITUDE]
+    station_y = [x for x in station_locations.LATITUDE]   
+    
+    # - - - PLOT DC STREET LINES AND BORDER POLYGON 
+    plt.style.use('ggplot')
+    fig,ax = plt.subplots(figsize=(10,10))
+    gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
+    gpd_washborder.geometry.plot(ax = ax, color = 'grey', linewidth  =.5, alpha = .3)
+    
+    # - - - SCATTER PLOT OF ALL BIKE STATIONS AND POPULAR BIKE STATIONS
+    ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
+    ax.scatter(x =popstation.LONGITUDE.values, y=popstation.LATITUDE.values, color = 'r'  , zorder = 1, label = f'Popular in {daytime}')
+    
+    # - - - NETWORK PLOT OF WHERE THE CUSTOMERS OF MORNING RIDES GO WITHIN DC
+    for i,ride in daytime_rides.iterrows():
+        # looking at only the most popular stations and where the customers go. 
+        if ride.TERMINAL_NUMBER in popstation.TERMINAL_NUMBER.values:
+            mask = station_locations['TERMINAL_NUMBER'].values == ride['End station number']
+            x1 = ride.LONGITUDE
+            x2 = station_locations[mask].LONGITUDE
+            y1 = ride.LATITUDE
+            y2 = station_locations[mask].LATITUDE
+
+            # sometimes the starting station is not in the station_locations df (outdated station locations? new stations?)
+            # if this happens, the length of the returned x2 series will be zero
+            if len(list(x2.values)) > 0 and len(list(y2.values)) > 0:
+                X= [x1,x2 ]
+                X_float = [float(x) for x in X]
+                Y = [y1,y2 ]
+                Y_float = [float(y) for y in Y]
+
+                ax.plot(X_float,Y_float,'r',linewidth=.5, alpha=.1)
+                ax.scatter(X_float[1], Y_float[1], color = 'k', alpha=.1)
+            if hardstop:
+                if i > hardstop:
+                    break
+
+    # - - - make it sexy
+    ax.set_xlim(-77.13,-76.90)
+    ax.set_ylim(38.79,39)
+    plt.xlabel('Latitude ($^\circ$West)')
+    plt.ylabel('Longitude ($^\circ$North)')
+    ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
+    plt.legend()
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
 if __name__ == '__main__':
     # Argparse
     parser = argparse.ArgumentParser()
-
-    parser.add_argument('--barchart', help = 'activate barcharts', type=bool, default = 'store_true')
-    parser.add_argument('--geoplot', help='activate geographic data map', type = bool, default ='store_true')
+    parser.add_argument('--barchart', help = 'activate barcharts', type=bool, default = False)
+    parser.add_argument('--geoplot', help='activate geographic data map', type = bool, default = False)
+    parser.add_argument('--testgeo', help='activate geographic data map function', type = bool, default = False)
     parser.add_argument('--dflim', help = 'limit the number of files used to build main df', type=int, default = 0)
-    
     args = parser.parse_args()
 
-
+    testgeo = args.testgeo
+    show_geomap = args.geoplot
+    show_barchart = args.barchart
+    dflim = args.dflim
+    print('barchart set to ', args.barchart)
     print('geoplot set to ',args.geoplot)
-    print('dflim set to ', args.dflim)
     if args.dflim != 0:
         dflim = args.dflim
+        print('dflim set to :', dflim)
+    else:
+        dflim = -1
+        print('dflim set to "all files": ', dflim)
+    
     
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
     df = pd_csv_group(data_folder, dflim)
     
-
+    print('Doing data science...')
     # - - - FEATURE ENGINEERING 
     # the locations of the bike stations in lat/long are found in another dataset from Open Data DC:
     # https://opendata.dc.gov/datasets/capital-bike-share-locations;
@@ -170,6 +246,7 @@ if __name__ == '__main__':
 
     # taking only the location information from the locations dataset...
     station_locations = station_locations_df[['ADDRESS','TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE']].copy()
+    #station_locations = station_locations_df[['TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE']].copy()
 
     # we can now merge the new locations dataframe into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
@@ -185,9 +262,11 @@ if __name__ == '__main__':
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
     
     # - - - Generate reports for each of the top ten most used bikes.
-    for i in range(9):
-        br = BikeReport(df, most_used_bikes_10.iloc[i].name)
-        str(br)
+    show_bike_reports = False
+    if show_bike_reports:
+        for i in range(9):
+            br = BikeReport(df, most_used_bikes_10.iloc[i].name)
+            print(br)
 
 
     # ADDRESS THE BUSINESS QUESTIONS
@@ -224,8 +303,8 @@ if __name__ == '__main__':
         .merge(station_locations, on='TERMINAL_NUMBER', how='left')
 
 
-    bar_chart = False
-    if bar_chart:
+    #bar_chart = False
+    if show_barchart:
         # - - - select a style
         plt.style.use('fivethirtyeight')
         fig,ax = plt.subplots(figsize=(20,10))
@@ -269,69 +348,100 @@ if __name__ == '__main__':
     # and the values are the counts of rides for that hour for that station. 
     # Each station's dictionary will all be stored in a 'super dictionary'
 
+    if show_barchart:
 
-    station_time_hist2_pop_morn_stations = station_super_dict(df, popular_morning_stations)
-    station_time_hist2_pop_aft_stations = station_super_dict(df, popular_afternoon_stations)
-    station_time_hist2_pop_eve_stations = station_super_dict(df, popular_evening_stations)
+        station_time_hist2_pop_morn_stations = station_super_dict(df, popular_morning_stations)
+        station_time_hist2_pop_aft_stations = station_super_dict(df, popular_afternoon_stations)
+        station_time_hist2_pop_eve_stations = station_super_dict(df, popular_evening_stations)
 
 
 
-    plot_popstations(popular_morning_stations, 'Morning')
-    plot_popstations(popular_afternoon_stations, 'Afternoon')
+        plot_popstations(popular_morning_stations, 'Morning')
+        plot_popstations(popular_afternoon_stations, 'Afternoon')
+        plot_popstations(popular_evening_stations, 'Evening')
 
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
 
-    geomap = True
 
-    if geomap:
+    if show_geomap:
 
-        # - - - use the shape file to plot the boundary of washington dc
-        # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
-        wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
-        wash_shp_file = shp.Reader(wash_shp_path) 
-        df_wash_path = read_shapefile(wash_shp_file)
-        wash_path = [(x[0],x[1]) for x in df_wash_path.coords[0]]
-        # - - - build arrays for the x,y coords in lat/long for the dc boundary
-        wash_path_x = [x[0] for x in wash_path]    
-        wash_path_y = [x[1] for x in wash_path]
-        # - - - build arrays for the x,y coords in lat/long for the bike stations
-        station_x = [x for x in station_locations.LONGITUDE]
-        station_y = [x for x in station_locations.LATITUDE]   
-        # - - - it would be nice to see the streets as well. Geopandas to the rescue!
-        street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
-        gpd_street = gpd.read_file(street_shp_path)
+        # # - - - use the shape file to plot the boundary of washington dc
+        # # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
+        # wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
+        # wash_shp_file = shp.Reader(wash_shp_path) 
+        # df_wash_path = read_shapefile(wash_shp_file)
+        # wash_path = [(x[0],x[1]) for x in df_wash_path.coords[0]]
         
-        # - - - plot the stations and streets with washington dc boundary
-        plt.style.use('ggplot')
-
-        # STREET VECTORS
-        fig,ax = plt.subplots(figsize=(10,10))
-        gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
-
-        # WASHINGTON DC BOUNDARY PLOT 
-        ax.plot(wash_path_x, wash_path_y, 'r', linewidth=.5, alpha = .4)
-        # ALL BIKE STATIONS
-        #ax.plot(station_x, station_y, 'o', color = 'b', label='Bikeshare Stations')
-        ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
-
-        ax.scatter(x =popular_morning_stations.LONGITUDE.values, y=popular_morning_stations.LATITUDE.values, color = 'r'  , label = 'Popular in Morning')
-        ax.scatter(x =popular_afternoon_stations.LONGITUDE.values, y=popular_afternoon_stations.LATITUDE.values, color = 'b',  label = 'Popular in Afternoon')
-        ax.scatter(x =popular_evening_stations.LONGITUDE.values, y=popular_evening_stations.LATITUDE.values, color = 'g' ,label = 'Popular in Evening' )
-
-        '''
-        for all rides that start from a popular morning station, 
-            plot a line from that start station to the end station
-        '''
+        # # - - - build arrays for the x,y coords in lat/long for the dc boundary
+        # wash_path_x = [x[0] for x in wash_path]    
+        # wash_path_y = [x[1] for x in wash_path]
         
-        ax.plot(morning_rides.LONGITUDE.values, morning_rides.LATITUDE.values, color='g', linewidth=.1)     
+        # # - - - build arrays for the x,y coords in lat/long for the bike stations
+        # station_x = [x for x in station_locations.LONGITUDE]
+        # station_y = [x for x in station_locations.LATITUDE]   
         
+        # # - - - it would be nice to see the streets as well. Geopandas to the rescue!
+        # street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
+        # gpd_street = gpd.read_file(street_shp_path)
         
-        # - - - make it sexy
-        ax.set_xlim(-77.13,-76.90)
-        ax.set_ylim(38.79,39)
-        plt.xlabel('Latitude ($^\circ$West)')
-        plt.ylabel('Longitude ($^\circ$North)')
-        ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
-        plt.legend()
+        # # - - - plot the stations and streets with washington dc boundary
+        # plt.style.use('ggplot')
+
+        # # - - - STREET LINES PLOT
+        # fig,ax = plt.subplots(figsize=(10,10))
+        # gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
+
+        # # - - - WASHINGTON DC BOUNDARY PLOT 
+        # ax.plot(wash_path_x, wash_path_y, 'r', linewidth=.5, alpha = .6, label ='DC Boundary')
+        
+        # # - - - ALL BIKE STATIONS
+        # ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
+        
+        # # - - - POPULAR STATIONS SCATTER PLOT
+        # ax.scatter(x =popular_morning_stations.LONGITUDE.values, y=popular_morning_stations.LATITUDE.values, color = 'r'  , zorder = 1, label = 'Popular in Morning')
+        # #ax.scatter(x =popular_afternoon_stations.LONGITUDE.values, y=popular_afternoon_stations.LATITUDE.values, color = 'b',  label = 'Popular in Afternoon')
+        # #ax.scatter(x =popular_evening_stations.LONGITUDE.values, y=popular_evening_stations.LATITUDE.values, color = 'g' ,label = 'Popular in Evening' )
+        
+        # # - - - NETWORK PLOT OF WHERE THE CUSTOMERS OF MORNING RIDES GO WITHIN DC
+        # for i,ride in morning_rides.iterrows():
+        #     # looking at only the most popular morning stations and where the customers go. 
+        #     if ride.TERMINAL_NUMBER not in popular_morning_stations.TERMINAL_NUMBER.values:
+        #         continue
+        #     x1 = ride.LONGITUDE
+        #     x2 = station_locations[station_locations['TERMINAL_NUMBER'].values == ride['End station number']].LONGITUDE
+        #     y1 = ride.LATITUDE
+        #     y2 = station_locations[station_locations['TERMINAL_NUMBER'].values == ride['End station number']].LATITUDE
+        #     # sometimes the starting station is not in the station_locations df (outdated station locations? new stations?)
+        #     # if this happens, the length of the returned x2 series will be zero
+        #     if len(list(x2.values)) == 0:
+        #         continue
+        #     else:
+        #         X= [x1,x2 ]
+        #         X_float = [float(x) for x in X]
+        #     if len(list(y2.values)) == 0:
+        #         continue
+        #     else:
+        #         Y = [y1,y2 ]
+        #         Y_float = [float(y) for y in Y]
+
+        #     ax.plot(X_float,Y_float,'r',linewidth=.5, alpha=.2)
+        #     #ax.scatter(X_float[1], Y_float[1],color='k', alpha=.6 )
+        #     if i > 1000:
+        #         break
+        
+
+        # # - - - make it sexy
+        # ax.set_xlim(-77.13,-76.90)
+        # ax.set_ylim(38.79,39)
+        # plt.xlabel('Latitude ($^\circ$West)')
+        # plt.ylabel('Longitude ($^\circ$North)')
+        # ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
+        # plt.legend()
+        pass
+
+   
+
+    if testgeo:
+        plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=1000 )
