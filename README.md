@@ -1,8 +1,7 @@
 # Galvanize Capstone 1  
 ## EDA: Capitol BikeShare Open Data 
 
-Also another bike share data source, with LAT/LONG DATA!!!!!
-https://s3.amazonaws.com/tripdata/index.html
+
 
 The [Capitol Bikeshare](https://Capitolbikeshare.com) company rents bikes to its member customers and casual users in most metro areas of Washington DC. These bikes are equiped with basic tracking devices and accumulate a fair amount of data per ride. In this EDA excercise, we will perform some fairly basic statistical analyses focused on the assets (bikes) and the infrastructure (stations) central to the Capitol Bikeshare business model, and make some well-informed and data-driven recommendations to the company. 
 
@@ -46,9 +45,49 @@ This allows us to frame three questions to pursure in this EDA:
 [fig1]: plots/top_ten_stations_by_time_of_day.png "Top Ten Stations by Time of Day"
 
 # Capital Bikeshare Stations Across DC
+_And more plots that I dont know what to do with yet_
 
+### Initial Failure in Properly Loading Data (dont worry, it improves...)
+![Failed Proper Data Loading][fig9]
+
+[fig9]: plots/stocastic_plot.png "Failed Data Load"
 
 
 ![Station Locations Across DC][fig2]
 
 [fig2]: plots/Figure_4.png "Stations across DC"
+
+
+![Where do the Morining Bike Commuters Go?][fig3]
+
+[fig3]:plots/Figure_10.png
+
+![Same as above plot, but zoomed out][fig4]
+
+[fig4]:plots/Figure_15.png
+
+![Same as above plot, downsampled data set][fig5]
+
+[fig5]:plots/Figure_16.png
+
+![Same as above plot, super sample with green start/end lines][fig6]
+
+[fig6]:plots/Figure_22_ride_network.png
+
+
+![Bike station distribution across DC][fig7]
+
+[fig7]:plots/Figure_5.png
+
+### Below is actually just the most popular morning stations. 
+#### You'll notice that the most popular bike station to pick up a bike is the Columbus Circle / Union Station. When people come in from the train, it seems they often pick up a bikeshare. 
+![Popular Morning Stations for Starting a Ride][fig8]
+
+[fig8]:plots/Figure_6.png
+
+
+
+## Notes to self: 
+Also another bike share [data source](https://s3.amazonaws.com/tripdata/index.html) from NYC, with LAT/LONG DATA!
+
+_(Which means less feature engineering in the inital EDA phase)_
