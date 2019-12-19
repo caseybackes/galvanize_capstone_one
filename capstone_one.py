@@ -11,12 +11,31 @@ import geopandas as gpd
 import descartes
 import argparse
 
-# DATA SOURCE
+
+# PRIMARY DATA SOURCE
 # https://s3.amazonaws.com/capitalbikeshare-data/index.html
 
-
+# - - - - - - - - - - - - - - - - 
+# - - CHECK OUT MY DOCSTRINGS!!! 
+# - - NumPy/SciPy Docstring Format
+# - - - - - - - - - - - - - - - - 
+ 
 def pd_csv_group(data_folder,num=-1):
-    '''Returns a DataFrame built from all csv/txt files in a directory, up to "num" of files. '''
+    """Read many csv data files from a specified directory into a single data frame. 
+    
+    Parameters
+    ----------
+    data_folder : str 
+        path to directory containing ONLY csv data files.
+    num (int), optional 
+        number of csv files to read and integrate into the primary dataframe. 
+        
+    Returns
+    -------
+    DataFrame()
+        dataframe built from csv files in given directory. 
+    """
+
     if num == -1:
         file_count = len(os.listdir(data_folder))
     else:
@@ -37,7 +56,19 @@ def pd_csv_group(data_folder,num=-1):
     return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
 
 def lifetime(duration):
-    '''Returns dict{days:days, hours:hours, minutes:minutes, seconds:seconds}'''
+    """Returns a dictionary that converts a number of seconds into a dictionary object with keys of 'days', 'hours', 'minutes', and 'seconds'. 
+
+    Parameters
+    ----------
+    duration (int): 
+        The duration (in seconds) to be transformed into a dictionary. 
+    
+    Returns
+    -------
+    dict
+        a dictionary in the form of dict('days':int(), 'hours':int(), 'minutes':int(),'seconds':int())
+    """
+
     dct = {}
     dct['days'] = duration//86400
     dct['hours']= duration%86400//3600
@@ -46,6 +77,19 @@ def lifetime(duration):
     return dct
 
 def freq_dict(lst):
+    """Returns a dictionary with keys of unique values in the given list and values representing the count of occurances. 
+
+    Parameters
+    ----------
+    lst (list)
+        a list of items to determine number of occurances for. 
+
+    Returns
+    -------
+    dict
+        a dictionary of the format dict('unique_value_n': int(), 'unique_value_(n+1)': int(), ... )
+    """
+
     dct = dict()
     for item in lst:
         if item not in dct:
@@ -55,13 +99,43 @@ def freq_dict(lst):
     return dct
 
 def series_freq_dict(df, column_name):
-    '''INPUT: DataFrame or Series where the values are of datetime data type (have a .hour attribute)
-        RETURN: Dictionary of unique items and their frequency / count'''
+    """Performs the function "freq_dict()" for df["column_name"] 
+    after extracting the "datetime.hour" value from each element.  
+    
+    Parameters
+    ----------
+    df (DataFrame)
+        the dataframe object 
+    column_name (str)
+        name of column in dataframe. *** Must contain ONLY datetime() objects. 
+    
+    Returns
+    -------
+    dict()
+        a frequency dictionary from freq_dict()
+    """
     
     lst = [x.hour for x in df[column_name].values]
     return freq_dict(lst)
 
 class BikeReport(object):
+    """Creates an instance of the BikeReport object. 
+
+    Attributes
+    ----------
+    bike_number (str)
+        bike-specific identification number. Example, "W32432".
+    duration (dict) 
+        dictionary representation of the duration of bike service life as determined from the data given        
+    
+    Parameters
+    ----------
+    df (DataFrame)
+        dataframe that contains the bike of interest.
+    bike_number (str)
+        bike-specific identification number. Example, "W32432". 
+    """
+
     def __init__(self, df, bike_number):
         self.bike_number = bike_number
         self.duration = lifetime(df[df['Bike number'] ==bike_number].agg({'Duration':'sum'}).Duration )  
@@ -76,20 +150,54 @@ class BikeReport(object):
         dct['hours']= self.duration%86400//3600
         dct['minutes'] = (self.duration%86400)%3600//60
         dct['seconds'] = (self.duration%86400)%3600%60
-        #self.duration = dct
         return dct
 
 def time_filter(df, colname, start_time, end_time):
-    ''' Returns a mask-modified dataframe with items between start_time and end_time as found in 'colname' column. '''
+    """Returns a filtered dataframe at a specified column for time occurances between a start and end time. 
+
+    Parameters
+    ----------
+    df (dataframe)
+        dataframe object to apply filter to.
+    colname (str)
+        name of column in given dataframe to filter through. 
+    start_time (datetime)
+        datetime object representing the lower bound of the filter.
+    end_time (datetime)
+        datetime object representing the upper bound of the filter. 
+
+    Returns
+    -------
+    copy 
+        a filtered copy of the given dataframe    
+    
+    """
     if type(start_time) != type(dt.time(0,0,0)):
         print('Error: Given start time must be dt.time() obj.')
         return None
     mask_low = df[colname] > start_time
     mask_hi = df[colname] < end_time
     mask = mask_low & mask_hi
-    return df[mask]
+    return df[mask].copy()
     
-def station_super_dict(df,popular_stations_df ):
+def station_super_dict(df,popular_stations_df):
+    """Given a primary dataframe and a dataframe representing bike stations of interest, performs the 
+    series_freq_dict function for each value in popular_stations_df to get the 'by hour' frequency of each station. 
+
+    Parameters
+    ----------
+    df (dataframe)
+        primary dataframe of all bikeshare transactions. 
+    popular_stations_df (dataframe)
+        dataframe representing bike stations of interest. 
+
+    Returns
+    -------
+    dict()     
+        a dictionary with keys representing the values from the popular_stations_df, 
+        and values are dictionaries of the output for the series_freq_dict() function for each station. 
+    """
+
     station_time_hist=dict()
     station_groups = df.groupby('Start station')
     pass    
@@ -106,10 +214,17 @@ def station_super_dict(df,popular_stations_df ):
     return station_time_hist
 
 def read_shapefile(sf):
-    """
-    Read a shapefile into a Pandas dataframe with a 'coords' 
-    column holding the geometry information. This uses the pyshp
-    package
+    """Read a shape file into a padas dataframe object. 
+
+    Parameters
+    ----------
+    sf (shapefile object)
+        a shape file 
+
+    Returns
+    -------
+    dataframe
+        the loaded dataframe from the given shapefile. 
     """
     fields = [x[0] for x in sf.fields][1:]
     records = sf.records()
@@ -119,6 +234,21 @@ def read_shapefile(sf):
     return df
 
 def plot_popstations(popstations_df, name):
+    """Given a dataframe of bike stations of interest, plot the locations of those stations. 
+
+    Parameters
+    ----------
+    popstations_df (dataframe)
+        dataframe of bike stations of interest. 
+    name (str)
+        string representing "Morning", "Afternoon", or "Evening" time. Used in the title of the plot. 
+
+    Returns
+    -------
+    None
+        produces the plot. 
+    """
+
     fig = plt.figure(figsize=(10,15))
     plt.style.use('ggplot')
 
@@ -141,12 +271,25 @@ def plot_popstations(popstations_df, name):
     fig.suptitle(f'Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the {name}',fontsize=18)
     plt.subplots_adjust(hspace=0.5)
 
-def plot_geomap(popstation, daytime_rides, daytime,hardstop=False ):
-    '''popstation: df of popular_morning_station or other similar.
-    daytime: string of "Morning", "Afternoon", or "Evening".
-    daytime_rides: df of morning_rides, afternoon_rides, or evening_rides.
-    hardstop: limit the number of rides to look at in the daytime_rides df. Mostly for testing on subsets.
-    '''
+def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
+    """Plot the bike stations and lines from start to end for bike rides. 
+    
+    Parameters
+    ----------
+    popstation (dataframe)
+        dataframe of bike stations of interest.
+    daytime (str) 
+        string of `"Morning"`, `"Afternoon"`, or `"Evening"`. Used in title of plot. 
+    daytime_rides (dataframe)
+        dataframe of morning_rides, afternoon_rides, or evening_rides.
+    hardstop (int)
+        limit the number of rides to look at in daytime_rides. Mostly for testing on subsets. Defaults to `hardstop=False`.
+
+    Returns
+    -------
+    None
+        Produces a GeoDataFrame plot. 
+    """
 
     # - - - READ IN SHAPE FILE FOR BORDER OF DC
     # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
@@ -210,7 +353,7 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False ):
 
 
 if __name__ == '__main__':
-    # Argparse
+    # - - - Argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--barchart', help = 'activate barcharts', type=bool, default = False)
     parser.add_argument('--geoplot', help='activate geographic data map', type = bool, default = False)
@@ -218,10 +361,13 @@ if __name__ == '__main__':
     parser.add_argument('--dflim', help = 'limit the number of files used to build main df', type=int, default = 0)
     args = parser.parse_args()
 
+    # - - - Parse the arguments into variable names
     testgeo = args.testgeo
     show_geomap = args.geoplot
     show_barchart = args.barchart
     dflim = args.dflim
+
+    # - - - Output the args for visual verification. Especially useful during testing. 
     print('barchart set to ', args.barchart)
     print('geoplot set to ',args.geoplot)
     if args.dflim != 0:
@@ -231,12 +377,13 @@ if __name__ == '__main__':
         dflim = -1
         print('dflim set to "all files": ', dflim)
     
-    
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
     df = pd_csv_group(data_folder, dflim)
     
+    # - - - Program appears to hang while handling the remaining code base. Output a "I am thinking" status.
     print('Doing data science...')
+
     # - - - FEATURE ENGINEERING 
     # the locations of the bike stations in lat/long are found in another dataset from Open Data DC:
     # https://opendata.dc.gov/datasets/capital-bike-share-locations;
@@ -246,17 +393,14 @@ if __name__ == '__main__':
 
     # taking only the location information from the locations dataset...
     station_locations = station_locations_df[['ADDRESS','TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE']].copy()
-    #station_locations = station_locations_df[['TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE']].copy()
 
     # we can now merge the new locations dataframe into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
 
-    # (make a 'start time' and 'end time' column)
-    # (after recasting the 'start date' to a datetime obj)  :/
+    # - - - Create 'start time' and 'end time' columns after recasting to datetime objects.
     df['Start time'] =[x.time() for x in pd.to_datetime((df['Start date']))]     
     df['End time'] =[x.time() for x in pd.to_datetime((df['End date']))]     
     
-
     # - - - CLASS OBJECT INSTANTIATION: BIKEREPORT()
     # - - - Which bikes (by bike number) have been used the most (by duration)?
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
@@ -303,7 +447,6 @@ if __name__ == '__main__':
         .merge(station_locations, on='TERMINAL_NUMBER', how='left')
 
 
-    #bar_chart = False
     if show_barchart:
         # - - - select a style
         plt.style.use('fivethirtyeight')
@@ -349,13 +492,11 @@ if __name__ == '__main__':
     # Each station's dictionary will all be stored in a 'super dictionary'
 
     if show_barchart:
-
         station_time_hist2_pop_morn_stations = station_super_dict(df, popular_morning_stations)
         station_time_hist2_pop_aft_stations = station_super_dict(df, popular_afternoon_stations)
         station_time_hist2_pop_eve_stations = station_super_dict(df, popular_evening_stations)
-
-
-
+        
+        # These barcharts need some serious devine intervention...   :/
         plot_popstations(popular_morning_stations, 'Morning')
         plot_popstations(popular_afternoon_stations, 'Afternoon')
         plot_popstations(popular_evening_stations, 'Evening')
@@ -364,84 +505,6 @@ if __name__ == '__main__':
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
 
-
-    if show_geomap:
-
-        # # - - - use the shape file to plot the boundary of washington dc
-        # # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
-        # wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
-        # wash_shp_file = shp.Reader(wash_shp_path) 
-        # df_wash_path = read_shapefile(wash_shp_file)
-        # wash_path = [(x[0],x[1]) for x in df_wash_path.coords[0]]
-        
-        # # - - - build arrays for the x,y coords in lat/long for the dc boundary
-        # wash_path_x = [x[0] for x in wash_path]    
-        # wash_path_y = [x[1] for x in wash_path]
-        
-        # # - - - build arrays for the x,y coords in lat/long for the bike stations
-        # station_x = [x for x in station_locations.LONGITUDE]
-        # station_y = [x for x in station_locations.LATITUDE]   
-        
-        # # - - - it would be nice to see the streets as well. Geopandas to the rescue!
-        # street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
-        # gpd_street = gpd.read_file(street_shp_path)
-        
-        # # - - - plot the stations and streets with washington dc boundary
-        # plt.style.use('ggplot')
-
-        # # - - - STREET LINES PLOT
-        # fig,ax = plt.subplots(figsize=(10,10))
-        # gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
-
-        # # - - - WASHINGTON DC BOUNDARY PLOT 
-        # ax.plot(wash_path_x, wash_path_y, 'r', linewidth=.5, alpha = .6, label ='DC Boundary')
-        
-        # # - - - ALL BIKE STATIONS
-        # ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
-        
-        # # - - - POPULAR STATIONS SCATTER PLOT
-        # ax.scatter(x =popular_morning_stations.LONGITUDE.values, y=popular_morning_stations.LATITUDE.values, color = 'r'  , zorder = 1, label = 'Popular in Morning')
-        # #ax.scatter(x =popular_afternoon_stations.LONGITUDE.values, y=popular_afternoon_stations.LATITUDE.values, color = 'b',  label = 'Popular in Afternoon')
-        # #ax.scatter(x =popular_evening_stations.LONGITUDE.values, y=popular_evening_stations.LATITUDE.values, color = 'g' ,label = 'Popular in Evening' )
-        
-        # # - - - NETWORK PLOT OF WHERE THE CUSTOMERS OF MORNING RIDES GO WITHIN DC
-        # for i,ride in morning_rides.iterrows():
-        #     # looking at only the most popular morning stations and where the customers go. 
-        #     if ride.TERMINAL_NUMBER not in popular_morning_stations.TERMINAL_NUMBER.values:
-        #         continue
-        #     x1 = ride.LONGITUDE
-        #     x2 = station_locations[station_locations['TERMINAL_NUMBER'].values == ride['End station number']].LONGITUDE
-        #     y1 = ride.LATITUDE
-        #     y2 = station_locations[station_locations['TERMINAL_NUMBER'].values == ride['End station number']].LATITUDE
-        #     # sometimes the starting station is not in the station_locations df (outdated station locations? new stations?)
-        #     # if this happens, the length of the returned x2 series will be zero
-        #     if len(list(x2.values)) == 0:
-        #         continue
-        #     else:
-        #         X= [x1,x2 ]
-        #         X_float = [float(x) for x in X]
-        #     if len(list(y2.values)) == 0:
-        #         continue
-        #     else:
-        #         Y = [y1,y2 ]
-        #         Y_float = [float(y) for y in Y]
-
-        #     ax.plot(X_float,Y_float,'r',linewidth=.5, alpha=.2)
-        #     #ax.scatter(X_float[1], Y_float[1],color='k', alpha=.6 )
-        #     if i > 1000:
-        #         break
-        
-
-        # # - - - make it sexy
-        # ax.set_xlim(-77.13,-76.90)
-        # ax.set_ylim(38.79,39)
-        # plt.xlabel('Latitude ($^\circ$West)')
-        # plt.ylabel('Longitude ($^\circ$North)')
-        # ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
-        # plt.legend()
-        pass
-
-   
 
     if testgeo:
         plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=1000 )
