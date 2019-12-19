@@ -306,18 +306,41 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
     
     # - - - PLOT DC STREET LINES AND BORDER POLYGON 
     plt.style.use('ggplot')
-    fig,ax = plt.subplots(figsize=(10,10))
+    fig,ax = plt.subplots(figsize=(15,15))
+
+    # - - - street map is plotted in black with very thin lines. 
     gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
     gpd_washborder.geometry.plot(ax = ax, color = 'grey', linewidth  =.5, alpha = .3)
     
-    # - - - SCATTER PLOT OF ALL BIKE STATIONS AND POPULAR BIKE STATIONS
-    ax.scatter(x = station_x, y = station_y, color='b', label = "Bikeshare Stations", alpha = .2)
-    ax.scatter(x =popstation.LONGITUDE.values, y=popstation.LATITUDE.values, color = 'r'  , zorder = 1, label = f'Popular in {daytime}')
+    # if there are fewer rows than the declared 'hardstop', change hardstop to False
+    hardstop_cap = daytime_rides.size
+    if hardstop > hardstop_cap:
+        print(f'Given number of bikeshare transactions to plot (hardstop = {hardstop}) exceeds number available {hardstop_cap}!\nPlotting up to {hardstop_cap} transactions.')
+        hardstop = False
     
+    # - - - SCATTER PLOT OF ALL BIKE STATIONS AND POPULAR BIKE STATIONS
+    #ax.scatter(x = station_x, y = station_y, color='b', marker="o",label = "Bikeshare Stations", alpha = .2)
+    
+
+    # handle the plotting of the popstation based on it's datatype (if multiple stations were passed in or only one was passed in)
+    popstation_is_dataframe = 'DataFrame' in str(type(popstation))
+    if popstation_is_dataframe: 
+        # handle dataframe popstation
+        ax.scatter(x =popstation.LONGITUDE.values, y=popstation.LATITUDE.values, color = 'b', s=100, zorder = 5, alpha=1, marker="*",label = f'Popular in {daytime}')
+        # for the plotting of rides at that station we must handle the terminal number values being a single or multiple valued array/list. 
+        terminals = [x for x in popstation.TERMINAL_NUMBER.values]
+    else:
+        station_name= station_locations[station_locations['TERMINAL_NUMBER'] == popstation.TERMINAL_NUMBER].ADDRESS.values[0]                                                                           
+        ax.scatter(x =popstation.LONGITUDE, y=popstation.LATITUDE, color = 'b', s=100, zorder = 5, alpha=1, marker="*",label = f'{station_name}')
+        # for the plotting of rides at that station we must handle the terminal number values being a single or multiple valued array/list. 
+        terminals = [popstation.TERMINAL_NUMBER]
+    
+
+    # TODO: Refactor to optimize for runtime complexity. O(n) is probably not as good as it could be. Need help here. 
     # - - - NETWORK PLOT OF WHERE THE CUSTOMERS OF MORNING RIDES GO WITHIN DC
     for i,ride in daytime_rides.iterrows():
         # looking at only the most popular stations and where the customers go. 
-        if ride.TERMINAL_NUMBER in popstation.TERMINAL_NUMBER.values:
+        if ride.TERMINAL_NUMBER in terminals:
             mask = station_locations['TERMINAL_NUMBER'].values == ride['End station number']
             x1 = ride.LONGITUDE
             x2 = station_locations[mask].LONGITUDE
@@ -333,19 +356,47 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
                 Y_float = [float(y) for y in Y]
 
                 ax.plot(X_float,Y_float,'r',linewidth=.5, alpha=.1)
-                ax.scatter(X_float[1], Y_float[1], color = 'k', alpha=.1)
+                ax.scatter(X_float[1], Y_float[1], color = 'k', marker="X",alpha=.1)
+
             if hardstop:
                 if i > hardstop:
                     break
-
+    
     # - - - make it sexy
     ax.set_xlim(-77.13,-76.90)
     ax.set_ylim(38.79,39)
-    plt.xlabel('Latitude ($^\circ$West)')
-    plt.ylabel('Longitude ($^\circ$North)')
-    ax.set_title('Capital Bikeshare Across Washington DC', fontsize=30)
+    plt.xlabel('Longitude ($^\circ$West)')
+    plt.ylabel('Latitude ($^\circ$North)')
+    ax.set_title(f'Capital Bikeshare \n 10 Highest Performing Stations during the {daytime}', fontsize=20)
     plt.legend()
 
+
+
+def print_args(args):
+    """Print to console the values for all args. For visual verification. 
+    Parameters
+    ----------
+    args (argparse object)
+        contains all args and their values. 
+    Returns
+    -------
+    None
+        prints to console.
+    """
+    
+    # - - - Output the args for visual verification. Especially useful during testing. 
+    print('ARG STATUS \n')
+    
+    print(f'--barchart \t{args.barchart}')
+    print(f'--geoplot \t{args.geoplot}')
+    print(f'--testgeo \t{args.testgeo}')
+    if args.dflim != 0:
+        dflim = args.dflim
+        print(f'dflim \t{dflim}')
+    else:
+        dflim = -1
+        print(f'dflim \t{dflim}')
+    print('-'*72)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -362,20 +413,13 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # - - - Parse the arguments into variable names
-    testgeo = args.testgeo
-    show_geomap = args.geoplot
     show_barchart = args.barchart
+    show_geomap = args.geoplot
+    testgeo = args.testgeo
     dflim = args.dflim
 
-    # - - - Output the args for visual verification. Especially useful during testing. 
-    print('barchart set to ', args.barchart)
-    print('geoplot set to ',args.geoplot)
-    if args.dflim != 0:
-        dflim = args.dflim
-        print('dflim set to :', dflim)
-    else:
-        dflim = -1
-        print('dflim set to "all files": ', dflim)
+    # - - - Print to console the args for visual verification
+    print_args(args)
     
     # - - -Define the folder containing only data files (csv or txt)
     data_folder = "data/"
@@ -508,3 +552,10 @@ if __name__ == '__main__':
 
     if testgeo:
         plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=1000 )
+
+        #plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=500 )                                                                                                                           
+        plot_geomap(popular_morning_stations.iloc[0], morning_rides, "Morning")
+
+
+    # - - - End of program
+    print('...done \n')
