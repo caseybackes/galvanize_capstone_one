@@ -52,7 +52,7 @@ def pd_csv_group(data_folder,num=-1):
         if file_num == file_count-1:
             print(f'Primary data gathered from {num} files into single dataframe   :D')
             return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
-    print(f'Primary data gathered from {file_count} files into single dataframe   :D')
+    print(f'Primary data gathered from {file_num+1} files into single dataframe   :D')
     return pd.concat(df_list, axis=0, ignore_index=True, sort=False)
 
 def lifetime(duration):
@@ -173,7 +173,7 @@ def time_filter(df, colname, start_time, end_time):
     
     """
     if type(start_time) != type(dt.time(0,0,0)):
-        print('Error: Given start time must be dt.time() obj.')
+        print('Error: Given start time must be datetime.time() obj.')
         return None
     mask_low = df[colname] > start_time
     mask_hi = df[colname] < end_time
@@ -370,8 +370,6 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
     ax.set_title(f'Capital Bikeshare \n 10 Highest Performing Stations during the {daytime}', fontsize=20)
     plt.legend()
 
-
-
 def print_args(args):
     """Print to console the values for all args. For visual verification. 
     Parameters
@@ -397,6 +395,58 @@ def print_args(args):
         dflim = -1
         print(f'dflim \t{dflim}')
     print('-'*72)
+
+class StationStats(object):
+    def __init__(self, df, station_terminal_number):
+        self.station_id = station_terminal_number
+
+        def calc_station_rates(self, df, station_terminal_number): 
+            ''' Gets the ride rate of a given station by hour for each day Mon-Sun. Returned as a dictionary of dictionaries'''
+
+            # define keys for dictionaries
+            days = list(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+            hours = list(f'{x}hr_rates' for x in range(24))
+            
+            # super dict (dict of dicts) for each day and each hour of each day
+            dct = dict({k:dict({k:list() for k in hours}) for (k,v) in list(zip(days, hours))}) 
+            
+            # filter df by station number of interest
+            terminal_number_mask = df['TERMINAL_NUMBER'] == station_terminal_number
+            
+            # isolate the columns we care about
+            cols_we_care_about = ['Start date', 'Start station number','Start time', 'End time' ]
+            df_filtered_for_terminal = df[terminal_number_mask][cols_we_care_about].copy()
+
+            # extract and separate the date and the time from the timestamp
+            df_filtered_for_terminal['Timestamp_date'] = df_filtered_for_terminal['Start date'].map(lambda x: x.split(' ')[0])
+            df_filtered_for_terminal['Timestamp_hour'] = df_filtered_for_terminal['Start time'].map(lambda x: str(x.hour))
+            
+            # since all entries are now from the same station, drop the station number (its the same value all the way down).
+            # we also no longer need the 'End time' or 'Start time', as we only needed the hour of the start time. 
+            df_filtered_for_terminal.drop(columns=['Start date','Start time', 'End time','Start station number'], inplace = True)
+            
+            # lets look at each date separately for what the ride rates are by hour. 
+            # we do this by setting the rate as the number of rides in a particular hour. 
+            # this will be collected for each day of the week and analyzed. 
+            groupedby_date = df_filtered_for_terminal.groupby('Timestamp_date')
+
+            for datename, dategroup in groupedby_date:
+                dayname = pd.Timestamp(datename).day_name()
+                for hr, grp in dategroup.groupby('Timestamp_hour'):
+                    dct[dayname][f'{hr}hr_rates'].append(grp.size)
+            return dct
+        self.rates = calc_station_rates(self, df, station_terminal_number)
+        
+    def quickstat(self, daystring):
+        for k,v in self.rates[daystring].items(): 
+            print(f"{k}:\t median: {np.median(v)} \t mean: {np.mean(v):0.4f} \t variance: {np.var(v):0.4f}") 
+    
+    def stats(self, daystring):
+        df = pd.DataFrame()
+        
+        
+        pass
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -551,10 +601,13 @@ if __name__ == '__main__':
 
 
     if testgeo:
-        plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=1000 )
+        #plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=1000 )
 
         #plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=500 )                                                                                                                           
         plot_geomap(popular_morning_stations.iloc[0], morning_rides, "Morning")
+
+
+
 
 
     # - - - End of program
