@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20190923</pubdate>
+                <title>Metro Lines - DC Only (MetroLn)</title>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <publish>DC GIS</publish>
+                </pubinfo>
+                <onlink>http://dcatlas.dcgis.dc.gov/catalog/download.asp?downloadName=MetroLn&amp;downloadTYPE=KMZ</onlink>
+                <onlink>http://dcatlas.dcgis.dc.gov/catalog/download.asp?downloadName=MetroLn&amp;downloadTYPE=ESRI</onlink>
+                <lworkcit>
+                    <citeinfo>
+                        <origin/>
+                        <title>DC Geographic Information System</title>
+                        <geoform>vector digital data</geoform>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Metro Lines (regional). The dataset contains locations and attributes of Metro lines, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) by participating D.C. government agencies. Lines were taken from legacy data from WMATA and fit to orthophotography and extracted planimetric data. All DC GIS data is stored and exported in Maryland State Plane coordinates NAD 83 meters. METADATA CONTENT IS IN PROCESS OF VALIDATION AND SUBJECT TO CHANGE.</abstract>
+            <purpose>This data is used for the planning and management of Washington, D.C. by local government agencies.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20120713</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.085778</westbc>
+                <eastbc>-76.913162</eastbc>
+                <northbc>38.979833</northbc>
+                <southbc>38.838231</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Bus Stop</themekey>
+                <themekey>Bus Line</themekey>
+                <themekey>Public Transportation</themekey>
+                <themekey>Parapet</themekey>
+                <themekey>Mass Transit</themekey>
+                <themekey>Metro</themekey>
+                <themekey>Bus Route</themekey>
+                <themekey>Subway</themekey>
+                <themekey>Commuter</themekey>
+                <themekey>Transit</themekey>
+                <themekey>Conservation</themekey>
+                <themekey>Rail Transit</themekey>
+                <themekey>WMATA</themekey>
+                <themekey>transitMetro</themekey>
+                <themekey>location</themekey>
+                <themekey>Washington Metropolitan Area Transit Authority</themekey>
+                <themekey>Commute</themekey>
+                <themekey>Canopy</themekey>
+                <themekey>transportation</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>transportation</themekey>
+                <themekey>location</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>DCGIS</placekey>
+                <placekey>DC</placekey>
+                <placekey>District of Columbia</placekey>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+                <placekey>DC GIS</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>Acknowledgment of the DC Geographic Information Systems Program (DC GIS). The District of Columbia Government makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a particular use, nor are any such warranties to be implied or inferred with respect to the information or data furnished herein.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>441 4th St NW, Suite 930 South</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20001</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Washington Metropolitan Area Transit Authority (WMATA)</datacred>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate as of the time period cited. Subject to change. Digital version compared with original source data for accuracy and completeness. Not validated by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>Not validated by source and/or responsible agency.</logic>
+        <complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. Not validated by source and/or responsible agency.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>Not validated by source and/or responsible agency. However, these lines are more accurate than previous versions, especially underground since they came from the WMATA Surveyor's office.</horizpar>
+            </horizpa>
+            <vertacc>
+                <vertaccr>N/A</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin/>
+                        <title>Metro Lines</title>
+                        <othercit>Surveyor's Office</othercit>
+                        <onlink>http://www.wmata.com</onlink>
+                    </citeinfo>
+                </srccite>
+                <srcscale>0</srcscale>
+                <typesrc>None</typesrc>
+                <srccitea>Metro Lines</srccitea>
+                <srccontr>base geography for correction to planimetrics</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Staff modified the layer to reflect the yellow line extension.</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>441 4th St NW, Suite 930 South</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20001</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>202-727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30am - 5:30pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Using metro lines acquired from the surveyor's office at WMATA, staff created a ten foot buffer and traced both sided of the buffer with the Trace Tool. Staff then joined with the separating lines with the Sketch Tool and erased the sections of line that had been redrawn. Thus, the shared metro lines, such as the orange and blue, have an approximate 20 foot offset. Staff also digitized the blue line extension following the track construction outline contained in the 2005 orthophotos. A union of all the line segments was done to make one polyline for each metro line. Staff formatted the attribution to match existing layers for continuity and clipped the lines to the District Boundary.</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>441 4th St NW, Suite 930 South</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20001</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>202-727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30am - 5:30pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Added yellow and orange line rush plus information.</procdesc>
+                <procdate>20120713</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>OCTO</cntorg>
+                        </cntorgp>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff removed yellow rush-plus and exteneded it to greenbelt. Also removed orange rush plus line.</procdesc>
+                <procdate>20190920</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>unknown</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>String</sdtstype>
+                <ptvctcnt>0</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>MetroLn</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Metro Line name</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Coordinates defining the features.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>unique id</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>OCTO GIS sequential identifier</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Coordinates defining the features.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Coordinates defining the features.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>WEB_URL</attrlabl>
+                <attrdef>web link url</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                            
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>441 4th St NW, Suite 930 South</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20001</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+                <cntinst>dcgis@dc.gov</cntinst>
+            </cntinfo>
+        </distrib>
+        <distliab>Acknowledgment of the DC Geographic Information Systems Program (DC GIS). The District of Columbia Government makes no claims as to the completeness, accuracy or content of any data contained hereon, and makes no representation of any kind, including, but not limited to, the warranty of the accuracy or fitness for a particular use, nor are any such warranties to be implied or inferred with respect to the information or data furnished herein.</distliab>
+        <custom>Most DC GIS datasets can be downloaded from "http://dcgis.dc.gov" on the data center page. Orders can also be made by contacting OCTO GIS at "dcgis@dc.gov", especially for datasets not available for download.</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20190921</metd>
+        <metrd>01/07/04</metrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>441 4th St NW, Suite 930 South</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20001</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+                <cntinst>email</cntinst>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
