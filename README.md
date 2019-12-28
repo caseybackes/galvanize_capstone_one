@@ -40,9 +40,6 @@ This allows us to frame three questions to pursure in this EDA:
 1. What stations/locations have the top and bottom X% of ride rates? How long are bikes idle at each station? 
 2. Question here
 
-![Top Ten Stations by Time of Day][fig1]
-
-[fig1]: plots/top_ten_stations_by_time_of_day.png "Top Ten Stations by Time of Day"
 
 # Capital Bikeshare Stations Across DC
 _And more plots that I dont know what to do with yet_
