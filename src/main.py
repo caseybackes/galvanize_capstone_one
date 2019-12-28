@@ -8,7 +8,7 @@ import shapefile as shp
 import seaborn as sns
 from collections import OrderedDict
 import geopandas as gpd 
-#import descartes
+from geopy.distance import distance
 import argparse
 
 
@@ -273,7 +273,7 @@ def plot_popstations(popstations_df, name):
     fig.suptitle(f'Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the {name}',fontsize=18)
     plt.subplots_adjust(hspace=0.5)
 
-def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
+def plot_geomap(popstation, daytime_rides, daytime,hardstop=False, metrolines=False, metrostations=False):
     """Plot the bike stations and lines from start to end for bike rides. 
     
     Parameters
@@ -286,6 +286,10 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
         dataframe of morning_rides, afternoon_rides, or evening_rides.
     hardstop (int)
         limit the number of rides to look at in daytime_rides. Mostly for testing on subsets. Defaults to `hardstop=False`.
+    metrolines (bool)
+        load and plot the geometry for the metro rail routes
+    metrostations (bool)
+        load and plot the geometry for the metro rail stations
 
     Returns
     -------
@@ -295,35 +299,40 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False):
 
     # - - - READ IN SHAPE FILE FOR BORDER OF DC
     # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
-    wash_shp_path = 'misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
+    wash_shp_path = '../misc/Washington_DC_Boundary/Washington_DC_Boundary.shp'
     gpd_washborder = gpd.read_file(wash_shp_path)
     
     # - - - READ IN SHAPE FILE FOR STREET MAP OF DC
-    street_shp_path = 'misc/Street_Centerlines/Street_Centerlines.shp'
+    street_shp_path = '../misc/Street_Centerlines/Street_Centerlines.shp'
     gpd_street = gpd.read_file(street_shp_path)
-    
-    # - - - DEFINE X AND Y OF STATION LOCATIONS FOR SCATTER PLOTTING
-    station_x = [x for x in station_locations.LONGITUDE]
-    station_y = [x for x in station_locations.LATITUDE]   
-    
+
     # - - - PLOT DC STREET LINES AND BORDER POLYGON 
     plt.style.use('ggplot')
     fig,ax = plt.subplots(figsize=(15,15))
-
-    # - - - street map is plotted in black with very thin lines. 
-    gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25, )  
+    gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25 )  
     gpd_washborder.geometry.plot(ax = ax, color = 'grey', linewidth  =.5, alpha = .3)
+
+    # - - - if kwarg 'metro' is not set to False
+    if metrolines:
+        metro_lines = gpd.read_file('../misc/Metro_Lines/Metro_Lines.shp')
+        c = metro_lines.NAME.values
+        for num in range(len(metro_lines)-1):
+            c= metro_lines.NAME[num]
+            gpd.GeoSeries(metro_lines.iloc[num].geometry).plot(ax = ax, color = c, label=f'Metro Rail: {c.capitalize()} Line')
+        ax.legend()
     
+    if metrostations:
+        metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
+        metro_stations.geometry.plot(ax = ax, color = 'w', label = 'Metro Rail Stations',zorder=4)
+        ax.legend()
+
+
     # if there are fewer rows than the declared 'hardstop', change hardstop to False
     hardstop_cap = daytime_rides.size
     if hardstop > hardstop_cap:
         print(f'Given number of bikeshare transactions to plot (hardstop = {hardstop}) exceeds number available {hardstop_cap}!\nPlotting up to {hardstop_cap} transactions.')
         hardstop = False
     
-    # - - - SCATTER PLOT OF ALL BIKE STATIONS AND POPULAR BIKE STATIONS
-    #ax.scatter(x = station_x, y = station_y, color='b', marker="o",label = "Bikeshare Stations", alpha = .2)
-    
-
     # handle the plotting of the popstation based on it's datatype (if multiple stations were passed in or only one was passed in)
     popstation_is_dataframe = 'DataFrame' in str(type(popstation))
     if popstation_is_dataframe: 
@@ -477,7 +486,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--barchart', help = 'activate barcharts', type=bool, default = False)
     parser.add_argument('--geoplot', help='activate geographic data map', type = bool, default = False)
-    parser.add_argument('--testgeo', help='activate geographic data map function', type = bool, default = False)
+    parser.add_argument('--testgeo', help='activate geographic data map', type = bool, default = False)
     parser.add_argument('--dflim', help = 'limit the number of files used to build main df', type=int, default = 0)
     args = parser.parse_args()
 
@@ -629,9 +638,84 @@ if __name__ == '__main__':
     # Lets investigate the underutilized bike stations. But we must define "under utilized"
     # Organize all rides by starting station. 
 
-    sorted_by_station = df.groupby('Start Station').size()
+    #sorted_by_station = df.groupby('Start Station').size()
+    
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    # ###### Pull the geometry plots out to the side. 
+    def plot_geoms(lines=False, metrostations=False, bikestations=False):
+        # - - - READ IN SHAPE FILE FOR BORDER OF DC
+        # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
+        gpd_washborder = gpd.read_file('../misc/Washington_DC_Boundary/Washington_DC_Boundary.shp')
+        
+        # - - - READ IN SHAPE FILE FOR STREET MAP OF DC
+        gpd_street = gpd.read_file('../misc/Street_Centerlines/Street_Centerlines.shp')
 
+        # - - - PLOT DC STREET LINES AND BORDER POLYGON 
+        plt.style.use('ggplot')
+        fig,ax = plt.subplots(figsize=(10,10))
+        gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25 )  
+        gpd_washborder.geometry.plot(ax = ax, color = 'grey', linewidth  =.5, alpha = .3)
 
+        # - - - if kwarg 'metro' is not set to False
+        if lines:
+            metro_lines = gpd.read_file('../misc/Metro_Lines/Metro_Lines.shp')
+            c = metro_lines.NAME.values
+            for num in range(len(metro_lines)-1):
+                c= metro_lines.NAME[num]
+                gpd.GeoSeries(metro_lines.iloc[num].geometry).plot(ax = ax, color = c, label=f'Metro Rail: {c.capitalize()} Line')
+            ax.legend()
+        
+        if metrostations:
+            metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
+            metro_stations.geometry.plot(ax = ax, color = 'w', label = 'Metro Rail Stations',zorder=4)
+            ax.legend()
+        
+        if bikestations:
+            ax.scatter(station_locations.LONGITUDE.values,station_locations.LATITUDE.values, c='b',alpha=.4, marker='o',label='Captial Bikeshare Bikestations')
+            ax.set_xlim(-77.13,-76.90)
+            ax.set_ylim(38.79,39)
+            plt.xlabel('Longitude ($^\circ$West)')
+            plt.ylabel('Latitude ($^\circ$North)')
+            ax.legend()
+        
+        ax.set_title(f'Capital Bikeshare And Metro Rail Stations', fontsize=20)
+        return ax
 
+    plot_geoms(lines=True, metrostations=True,bikestations=True)
+
+    # we need a distance formula for WTG coords. Enter geopy.distance FTW!
+    # source: https://janakiev.com/blog/gps-points-distance-python/
+    # for a given rail station, find the bike stations that are less than 200m away. 
+    bikestation_coords = list(zip(station_locations['LONGITUDE'].values,station_locations['LATITUDE'].values, station_locations['TERMINAL_NUMBER'].values))
+    metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
+    rail_coords = list(zip(metro_stations.geometry.x,metro_stations.geometry.y, metro_stations.NAME))
+    
+    distances = dict()
+    # for each rail station we have data for...
+    for j in range(len(rail_coords)-1): 
+        # a distance list that will contain the bike station coords and terminal number and distance in meters
+        dist = list()
+        for i in range(len(bikestation_coords)-1):
+            #print((station_coords[i][2],rail_coords[0][2]),distance(rail_coords[0][:1], station_coords[i][:1]).m)
+            # distances in meters with distance(x,y).m where .m means meters.
+            bikestation_name = bikestation_coords[i][2]
+            bikestation_xy =   bikestation_coords[i][:2] # returns a tuple of (lat,long)
+            rail_xy = rail_coords[j][:2]
+            d = distance(bikestation_xy, rail_xy).m # returns distance in meters with '.m' attribute of Distance obj. 
+            d = int(d)
+            # if the bike station is close to this rail station...
+            if d < 200:
+                # append a sublist of station coords, station term
+                dist.append([bikestation_xy, bikestation_name, d])
+                #plot it on the map
+                plt.plot([rail_xy[0], bikestation_xy[0]],[rail_xy[1], bikestation_xy[1]],'b--')
+        
+        # sort in place by x[2]=distance
+        dist.sort(key=lambda x: x[2])
+        rail_station_name = rail_coords[j][2]
+        distances[rail_station_name] = list((x[1],x[2]) for x in dist )
+
+    station_xy_list = station_locations[station_locations.TERMINAL_NUMBER == distances[rail_coords[13][2]][0][0]][['LATITUDE','LONGITUDE']].values[0]
+    rail_xy 
     # - - - End of program
     print('...done \n')
