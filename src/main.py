@@ -473,13 +473,9 @@ class StationStats(object):
         g.ax_joint.set_xticklabels(['','Mon','Tue','Wen','Thu','Fri','Sut','Sun'])
         return g
 
-
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 
 if __name__ == '__main__':
     # - - - Argparse
@@ -537,13 +533,13 @@ if __name__ == '__main__':
 
     # ADDRESS THE BUSINESS QUESTIONS
     # - What are the most popular bike stations for starting a ride in the morning (4am-9am)?
-    # - - - group rides that start in the morning (4am-9am)
+    # - - - filter rides that start in the morning (4am-9am)
     morning_rides = time_filter(df, 'Start time', dt.time(4,0,0), dt.time(9,0,0))
 
-    # - - - group rides that start in the afternoon (9am-3pm)
+    # - - - filter rides that start in the afternoon (9am-3pm)
     afternoon_rides = time_filter(df, 'Start time', dt.time(9,0,0), dt.time(15,0,0))
     
-    # - - - group rides that start in the evening (3pm>)
+    # - - - filter rides that start in the evening (3pm>)
     evening_rides = time_filter(df, 'Start time', dt.time(15,0,0), dt.time(23,59,59))
 
     # - - - Gather data by top ten most popular stations during various times of day 
@@ -693,7 +689,7 @@ if __name__ == '__main__':
     distances = dict()
     # for each rail station we have data for...
     for j in range(len(rail_coords)-1): 
-        # a distance list that will contain the bike station coords and terminal number and distance in meters
+        # a distance list that will contain the bike station coords and terminal number and radial distance in meters
         dist = list()
         for i in range(len(bikestation_coords)-1):
             #print((station_coords[i][2],rail_coords[0][2]),distance(rail_coords[0][:1], station_coords[i][:1]).m)
