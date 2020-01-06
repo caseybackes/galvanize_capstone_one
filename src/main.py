@@ -473,6 +473,86 @@ class StationStats(object):
         g.ax_joint.set_xticklabels(['','Mon','Tue','Wen','Thu','Fri','Sut','Sun'])
         return g
 
+def plot_geoms(lines=False, metrostations=False, bikestations=False):
+    # - - - READ IN SHAPE FILE FOR BORDER OF DC
+    # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
+    gpd_washborder = gpd.read_file('../misc/Washington_DC_Boundary/Washington_DC_Boundary.shp')
+    
+    # - - - READ IN SHAPE FILE FOR STREET MAP OF DC
+    gpd_street = gpd.read_file('../misc/Street_Centerlines/Street_Centerlines.shp')
+
+    # - - - PLOT DC STREET LINES AND BORDER POLYGON 
+    plt.style.use('ggplot')
+    fig,ax = plt.subplots(figsize=(10,10))
+    gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25 )  
+    gpd_washborder.geometry.plot(ax = ax, color = 'grey', linewidth  =.5, alpha = .3)
+
+    # - - - if kwarg 'metro' is not set to False
+    if lines:
+        metro_lines = gpd.read_file('../misc/Metro_Lines/Metro_Lines.shp')
+        c = metro_lines.NAME.values
+        for num in range(len(metro_lines)-1):
+            c= metro_lines.NAME[num]
+            gpd.GeoSeries(metro_lines.iloc[num].geometry).plot(ax = ax, color = c, label=f'Metro Rail: {c.capitalize()} Line')
+        ax.legend()
+    
+    if metrostations:
+        metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
+        metro_stations.geometry.plot(ax = ax, color = 'w', label = 'Metro Rail Stations',zorder=4)
+        ax.legend()
+    
+    if bikestations:
+        ax.scatter(station_locations.LONGITUDE.values,station_locations.LATITUDE.values, c='b',alpha=.4, marker='o',label='Captial Bikeshare Bikestations')
+        ax.set_xlim(-77.13,-76.90)
+        ax.set_ylim(38.79,39)
+        plt.xlabel('Longitude ($^\circ$West)')
+        plt.ylabel('Latitude ($^\circ$North)')
+        ax.legend()
+    
+    ax.set_title(f'Capital Bikeshare And Metro Rail Stations', fontsize=20)
+    return ax
+
+def popular_stations(df,time_start,time_stop, top_n=10):
+    ''' given the data and time range, return the top ten most popular stations in that time range.
+    time_start is a string of military time expressed as such: "0500", or "1830", or "2215"
+    ''' 
+
+    """Returns the popular bike stations for bike checkout for a given time range.
+    Parameters
+    ----------
+    df (data frame)
+        data frame containing the bike checkin/checkout transactions
+    Returns
+    -------
+    data frame
+        Columns: TERMINAL_NUMBER, RIDE_COUNT, LATITUDE, LONGITUDE
+    """
+    # parse and recast times from strings to datetime.time() objects
+    hr_0 = time_start[0:2]
+    min_0 = time_start[2:4]
+    t_0 = dt.time(int(hr_0),int(min_0),0)
+    hr_f = time_stop[0:2]
+    min_f = time_stop[2:4]
+    t_f = dt.time(int(hr_f), int(min_f),59)
+
+    # filter the primary df by "Start time" column with values between (lower bound) t_0 and (upper bound) t_f
+    df_time_filtered = time_filter(df, 'Start time', t_0, t_f)
+
+    # group this filtered dataframe subset by terminal number from which bike is checked out from,
+    # get the frequency via ".size()", 
+    # reset the index, 
+    # rename and sort by the bogus column to RIDE_COUNT and take the top ten occurances,
+    # merge with the station locations dataframe to bring in lat/long of stations
+    # and return the result.
+    popular_daytime_stations = df_time_filtered.groupby('TERMINAL_NUMBER')\
+        .size()\
+        .reset_index()\
+        .rename(columns={0:'RIDE_COUNT'})\
+        .sort_values(by='RIDE_COUNT', ascending=False)[0:top_n]\
+        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
+    return popular_daytime_stations     
+
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
@@ -502,67 +582,51 @@ if __name__ == '__main__':
     # - - - Program appears to hang while handling the remaining code base. Output a "I am thinking" status.
     print('Doing data science...')
 
-    # - - - FEATURE ENGINEERING 
+    # - - - FEATURE AND DATA ENGINEERING 
     # the locations of the bike stations in lat/long are found in another dataset from Open Data DC:
     # https://opendata.dc.gov/datasets/capital-bike-share-locations;
     # detailed description of data from this file can be found here:
     # https://www.arcgis.com/sharing/rest/content/items/a1f7acf65795451d89f0a38565a975b3/info/metadata/metadata.xml?format=default&output=html
     station_locations_df = pd.read_csv('../misc/Capital_Bike_Share_Locations.csv')   
 
-    # taking only the location information from the locations dataset...
-    station_locations = station_locations_df[['ADDRESS','TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE']].copy()
+    # taking only relevant information from the data
+    station_locations = station_locations_df[['TERMINAL_NUMBER', 'LATITUDE', 'LONGITUDE','ADDRESS']].copy()
 
-    # we can now merge the new locations dataframe into the primary dataframe
+    # we can now merge the new bikestation locations dataframe into the primary dataframe
     df=df.merge(station_locations, left_on='Start station number', right_on='TERMINAL_NUMBER')
 
     # - - - Create 'start time' and 'end time' columns after recasting to datetime objects.
     df['Start time'] =[x.time() for x in pd.to_datetime((df['Start date']))]     
     df['End time'] =[x.time() for x in pd.to_datetime((df['End date']))]     
     
+    # - - - DATA CLEANING
+    # drop unnecessary columns 
+    df.drop(['End date', 'Start station', 'End station', 'Member type'], axis = 1, inplace=True)
+    # drop redundant time from 'start date' col
+    df['Start date'] = df['Start date'].apply(lambda x: x.split(' ')[0])
+    df.drop('Start station number', axis=1, inplace=True)
     # - - - CLASS OBJECT INSTANTIATION: BIKEREPORT()
     # - - - Which bikes (by bike number) have been used the most (by duration)?
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
     
+
     # - - - Generate reports for each of the top ten most used bikes.
-    show_bike_reports = False
+    show_bike_reports = True
     if show_bike_reports:
         for i in range(9):
             br = BikeReport(df, most_used_bikes_10.iloc[i].name)
             print(br)
 
-
     # ADDRESS THE BUSINESS QUESTIONS
-    # - What are the most popular bike stations for starting a ride in the morning (4am-9am)?
-    # - - - filter rides that start in the morning (4am-9am)
-    morning_rides = time_filter(df, 'Start time', dt.time(4,0,0), dt.time(9,0,0))
-
-    # - - - filter rides that start in the afternoon (9am-3pm)
-    afternoon_rides = time_filter(df, 'Start time', dt.time(9,0,0), dt.time(15,0,0))
+    # What are the most popular bike stations for starting a ride in :
+    #   1) the morning (4am-9am)?
+    #   2) the afternoon (9am-3pm)?
+    #   1) the morning (3pm-Midnight)?
+    # TODO [COMPLETE]: Define a function that returns the popular morning/afternoon/evening bike stations given a start string and stop string of military time.
     
-    # - - - filter rides that start in the evening (3pm>)
-    evening_rides = time_filter(df, 'Start time', dt.time(15,0,0), dt.time(23,59,59))
-
-    # - - - Gather data by top ten most popular stations during various times of day 
-    popular_morning_stations = morning_rides.groupby('TERMINAL_NUMBER')\
-        .size()\
-        .reset_index()\
-        .rename(columns={0:'RIDE_COUNT'})\
-        .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
-        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
-
-    popular_afternoon_stations = afternoon_rides.groupby('TERMINAL_NUMBER')\
-        .size()\
-        .reset_index()\
-        .rename(columns={0:'RIDE_COUNT'})\
-        .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
-        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
-
-    popular_evening_stations = evening_rides.groupby('TERMINAL_NUMBER')\
-        .size()\
-        .reset_index()\
-        .rename(columns={0:'RIDE_COUNT'})\
-        .sort_values(by='RIDE_COUNT', ascending=False)[0:10]\
-        .merge(station_locations, on='TERMINAL_NUMBER', how='left')
+    popular_morning_stations = popular_stations(df, "0400", "0900",top_n=10)
+    popular_afternoon_stations = popular_stations(df,"0900","1500",top_n=10)
+    popular_evening_stations = popular_stations(df,"1500","2359",top_n=10)
 
 
     if show_barchart:
@@ -630,53 +694,8 @@ if __name__ == '__main__':
         #plot_geomap(popular_morning_stations, morning_rides, "Morning",hardstop=500 )                                                                                                                           
         plot_geomap(popular_morning_stations.iloc[0], morning_rides, "Morning")
 
-
-    # Lets investigate the underutilized bike stations. But we must define "under utilized"
-    # Organize all rides by starting station. 
-
-    #sorted_by_station = df.groupby('Start Station').size()
-    
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-    # ###### Pull the geometry plots out to the side. 
-    def plot_geoms(lines=False, metrostations=False, bikestations=False):
-        # - - - READ IN SHAPE FILE FOR BORDER OF DC
-        # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
-        gpd_washborder = gpd.read_file('../misc/Washington_DC_Boundary/Washington_DC_Boundary.shp')
-        
-        # - - - READ IN SHAPE FILE FOR STREET MAP OF DC
-        gpd_street = gpd.read_file('../misc/Street_Centerlines/Street_Centerlines.shp')
-
-        # - - - PLOT DC STREET LINES AND BORDER POLYGON 
-        plt.style.use('ggplot')
-        fig,ax = plt.subplots(figsize=(10,10))
-        gpd_street.geometry.plot(ax = ax, color='k', linewidth=.25 )  
-        gpd_washborder.geometry.plot(ax = ax, color = 'grey', linewidth  =.5, alpha = .3)
-
-        # - - - if kwarg 'metro' is not set to False
-        if lines:
-            metro_lines = gpd.read_file('../misc/Metro_Lines/Metro_Lines.shp')
-            c = metro_lines.NAME.values
-            for num in range(len(metro_lines)-1):
-                c= metro_lines.NAME[num]
-                gpd.GeoSeries(metro_lines.iloc[num].geometry).plot(ax = ax, color = c, label=f'Metro Rail: {c.capitalize()} Line')
-            ax.legend()
-        
-        if metrostations:
-            metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
-            metro_stations.geometry.plot(ax = ax, color = 'w', label = 'Metro Rail Stations',zorder=4)
-            ax.legend()
-        
-        if bikestations:
-            ax.scatter(station_locations.LONGITUDE.values,station_locations.LATITUDE.values, c='b',alpha=.4, marker='o',label='Captial Bikeshare Bikestations')
-            ax.set_xlim(-77.13,-76.90)
-            ax.set_ylim(38.79,39)
-            plt.xlabel('Longitude ($^\circ$West)')
-            plt.ylabel('Latitude ($^\circ$North)')
-            ax.legend()
-        
-        ax.set_title(f'Capital Bikeshare And Metro Rail Stations', fontsize=20)
-        return ax
-
+    # - - - Plot the bike stations alongside the metro rail stations
     plot_geoms(lines=True, metrostations=True,bikestations=True)
 
     # we need a distance formula for WTG coords. Enter geopy.distance FTW!
@@ -711,7 +730,17 @@ if __name__ == '__main__':
         rail_station_name = rail_coords[j][2]
         distances[rail_station_name] = list((x[1],x[2]) for x in dist )
 
-    station_xy_list = station_locations[station_locations.TERMINAL_NUMBER == distances[rail_coords[13][2]][0][0]][['LATITUDE','LONGITUDE']].values[0]
-    rail_xy 
+    # station_xy_list = station_locations[station_locations.TERMINAL_NUMBER == distances[rail_coords[13][2]][0][0]][['LATITUDE','LONGITUDE']].values[0]
+    #rail_xy
+    stations_with_railstop_nearby = list()
+    for k,v in distances.items(): 
+        if len(v)>0: 
+            vs = [x for x in v] 
+            for vsi in vs: 
+                print(vsi[0])     
+                stations_with_railstop_nearby.append(vsi[0])
+    
+    
+     
     # - - - End of program
     print('...done \n')
