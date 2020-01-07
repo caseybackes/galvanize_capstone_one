@@ -177,8 +177,8 @@ def time_filter(df, colname, start_time, end_time):
     if type(start_time) != type(dt.time(0,0,0)):
         print('Error: Given start time must be datetime.time() obj.')
         return None
-    mask_low = df[colname] > start_time
-    mask_hi = df[colname] < end_time
+    mask_low = df[colname] >= start_time
+    mask_hi = df[colname] <= end_time
     mask = mask_low & mask_hi
     return df[mask].copy()
     
@@ -398,7 +398,7 @@ def print_args(args):
     
     print(f'--barchart \t{args.barchart}')
     print(f'--geoplot \t{args.geoplot}')
-    print(f'--testgeo \t{args.testgeo}')
+    # print(f'--testgeo \t{args.testgeo}')
     if args.dflim != 0:
         dflim = args.dflim
         print(f'dflim \t{dflim}')
@@ -552,20 +552,8 @@ def popular_stations(df,time_start,time_stop, top_n=10):
         .merge(station_locations, on='TERMINAL_NUMBER', how='left')
     return popular_daytime_stations     
 
-def bikestations_near_railstations(max_distance = 200, showplot=False): 
-    """Returns a dataframe describing the bike stations located within . 
-
-    Parameters
-    ----------
-    max_distance (int)
-        maximum distance in meters to deem a bike station as "close".
-
-    Returns
-    -------
-    list (int values)
-        a list of bike station terminal numbers (ids) that have a rail station within "max_distance"
+def bikestations_near_railstations(max_distance=200, showplot=False):
     
-    """
     bikestation_coords = list(zip(station_locations['LONGITUDE'].values,station_locations['LATITUDE'].values, station_locations['TERMINAL_NUMBER'].values))
     metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
     rail_coords = list(zip(metro_stations.geometry.x,metro_stations.geometry.y, metro_stations.NAME))
@@ -573,47 +561,30 @@ def bikestations_near_railstations(max_distance = 200, showplot=False):
     A dictionary with keys as rail stations will have values that are a list of tuples -> (bikestation_terminal_number, distance from rail station) 
     '''     
     distances = dict()
-    # for each rail station we have data for...
-    for j in range(len(rail_coords)-1): 
-        # a distance list that will contain the bike station coords and terminal number and radial distance in meters
-        dist = list()
-        for i in range(len(bikestation_coords)-1):
-            #print((station_coords[i][2],rail_coords[0][2]),distance(rail_coords[0][:1], station_coords[i][:1]).m)
-            # distances in meters with distance(x,y).m where .m means meters.
-            bikestation_name = bikestation_coords[i][2]
-            bikestation_xy =   bikestation_coords[i][:2] # returns a tuple of (lat,long)
-            rail_xy = rail_coords[j][:2]
-            d = distance(bikestation_xy, rail_xy).m # returns distance in meters with '.m' attribute of Distance obj. 
-            d = int(d)
-            # if the bike station is close to this rail station...
-            if d <= max_distance:
-                # append a sublist of station coords, station term
-                dist.append([bikestation_xy, bikestation_name, d])
-                #plot it on the map
-                if showplot:
-                    # - - - Plot the bike stations alongside the metro rail stations
-                    plot_geoms(lines=True, metrostations=True,bikestations=True)
-                    # draw a line from the rail station to the bike station (if "closeby")
-                    plt.plot([rail_xy[0], bikestation_xy[0]],[rail_xy[1], bikestation_xy[1]],'b--')
-        
-        # sort in place by x[2]=distance
-        dist.sort(key=lambda x: x[2])
-        rail_station_name = rail_coords[j][2]
-        distances[rail_station_name] = list((x[1],x[2]) for x in dist )
+    if showplot:
+        plot_geoms(lines=True, metrostations=True,bikestations=True)
 
-    # accumulator list for stations that are near a rail station
-    stations_with_railstop_nearby = list()
-    # for each item (rail station) in the distances dictionary
-    for k,v in distances.items(): 
-        # if there are any "close" bike stations
-        if len(v)>0: 
-            vs = [x for x in v] 
-            # then append those bike station terminal numbers to the accumulator list
-            for vsi in vs: 
-                # print(vsi[0])     
-                stations_with_railstop_nearby.append(vsi[0])
-    
-    return stations_with_railstop_nearby
+    flagged_bikestations=list()
+
+    for bs in bikestation_coords:
+        for rs in rail_coords:
+            dist = int(distance(bs[0:2],rs[0:2]).m)
+            
+            if dist <= 200:
+                flagged_bikestations.append(bs[2])
+                try:
+                    distances[rs[2]].append((bs,dist))
+                except KeyError as err:
+                    distances[rs[2]]=list()
+                    distances[rs[2]].append((bs,dist))
+                if showplot:
+                    x = [bs[0], rs[0]]
+                    y = [bs[1], rs[1]]
+                    plt.plot(x,y,'b--')
+    filtered_stations_df  = station_locations[station_locations.TERMINAL_NUMBER.isin(flagged_bikestations).copy()
+    return filtered_stations_df,distances
+
+
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -753,8 +724,7 @@ if __name__ == '__main__':
     # we need a distance formula for WTG coords. Enter geopy.distance FTW!
     # source: https://janakiev.com/blog/gps-points-distance-python/
     # for a given rail station, find the bike stations that are less than 200m away. 
-    bikesnearrail = bikestations_near_railstations(max_distance =200)
-
+    bikesnearrail = bikestations_near_railstations(max_distance =200, showplot=True)
 
 
 
