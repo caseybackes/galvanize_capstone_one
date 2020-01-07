@@ -553,7 +553,13 @@ def popular_stations(df,time_start,time_stop, top_n=10):
     return popular_daytime_stations     
 
 def bikestations_near_railstations(max_distance=200, showplot=False):
-    
+    '''returns a filtered copy of station_locations dataframe where entries are bike stations that have at least one 
+    rail station within 200m. Also returns the distances dictionary, with rail stations for keys and values are tuples
+    of closeby bike stations (by terminal number) and distance to the at bikestation from the rail station. Also returns 
+    the matplolib object for the line plot that visualizes the rail stations and any bike station whos radial distance is 
+    less than 200m away. 
+    '''
+
     bikestation_coords = list(zip(station_locations['LONGITUDE'].values,station_locations['LATITUDE'].values, station_locations['TERMINAL_NUMBER'].values))
     metro_stations = gpd.read_file('../misc/Metro_Stations_in_DC/Metro_Stations_in_DC.shp')
     rail_coords = list(zip(metro_stations.geometry.x,metro_stations.geometry.y, metro_stations.NAME))
@@ -565,10 +571,11 @@ def bikestations_near_railstations(max_distance=200, showplot=False):
         plot_geoms(lines=True, metrostations=True,bikestations=True)
 
     flagged_bikestations=list()
-
+    lineplot = None
     for bs in bikestation_coords:
         for rs in rail_coords:
-            dist = int(distance(bs[0:2],rs[0:2]).m)
+            # the distance function requires lat/long in reversed order than what I have it, so "reversed(X_coords)" is now implemented. 
+            dist = int(distance(reversed(bs[0:2]),reversed(rs[0:2])).m)
             
             if dist <= 200:
                 flagged_bikestations.append(bs[2])
@@ -580,9 +587,12 @@ def bikestations_near_railstations(max_distance=200, showplot=False):
                 if showplot:
                     x = [bs[0], rs[0]]
                     y = [bs[1], rs[1]]
-                    plt.plot(x,y,'b--')
-    filtered_stations_df  = station_locations[station_locations.TERMINAL_NUMBER.isin(flagged_bikestations).copy()
-    return filtered_stations_df,distances
+                    lineplot =plt.plot(x,y,'g--',linewidth=.85)
+                    plt.scatter(bs[0], bs[1],color='r')
+    filtered_stations_df  = station_locations[station_locations.TERMINAL_NUMBER.isin(flagged_bikestations)].copy()
+    filtered_stations_df.reset_index(inplace=True)
+    filtered_stations_df.drop('index', axis=1,inplace=True)
+    return filtered_stations_df,distances,lineplot
 
 
 
@@ -657,9 +667,9 @@ if __name__ == '__main__':
     #   1) the morning (3pm-Midnight)?
     # TODO [COMPLETE]: Define a function that returns the popular morning/afternoon/evening bike stations given a start string and stop string of military time.
     
-    popular_morning_stations = popular_stations(df, "0400", "0900",top_n=10)
-    popular_afternoon_stations = popular_stations(df,"0900","1500",top_n=10)
-    popular_evening_stations = popular_stations(df,"1500","2359",top_n=10)
+    popular_morning_stations =   popular_stations(df, "0400", "0900",top_n=10)
+    popular_afternoon_stations = popular_stations(df, "0900", "1500",top_n=10)
+    popular_evening_stations =   popular_stations(df, "1500", "2359",top_n=10)
 
 
     if show_barchart:
