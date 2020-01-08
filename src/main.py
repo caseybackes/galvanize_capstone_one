@@ -3,6 +3,7 @@ import pandas as pd
 import datetime as dt
 import matplotlib.pyplot as plt
 import os
+import math
 #import utm
 import shapefile as shp
 import seaborn as sns
@@ -565,7 +566,7 @@ def bikestations_near_railstations(max_distance=200, showplot=False):
     rail_coords = list(zip(metro_stations.geometry.x,metro_stations.geometry.y, metro_stations.NAME))
     ''' for each Metro rail station, we'll determine which bike stations are less than 200m away. 
     A dictionary with keys as rail stations will have values that are a list of tuples -> (bikestation_terminal_number, distance from rail station) 
-    '''     
+    '''
     distances = dict()
     if showplot:
         plot_geoms(lines=True, metrostations=True,bikestations=True)
@@ -577,7 +578,7 @@ def bikestations_near_railstations(max_distance=200, showplot=False):
             # the distance function requires lat/long in reversed order than what I have it, so "reversed(X_coords)" is now implemented. 
             dist = int(distance(reversed(bs[0:2]),reversed(rs[0:2])).m)
             
-            if dist <= 200:
+            if dist <= max_distance:
                 flagged_bikestations.append(bs[2])
                 try:
                     distances[rs[2]].append((bs,dist))
@@ -726,17 +727,138 @@ if __name__ == '__main__':
         plot_popstations(popular_afternoon_stations, 'Afternoon')
         plot_popstations(popular_evening_stations, 'Evening')
 
-    # ------------------------------------------------------------------------------------------
-    # ------------------------------------------------------------------------------------------
-    # ------------------------------------------------------------------------------------------
+    # - - - - 
+    # Statistical Analysis: 
+    #   Are the bike stations that are "close" to Metro rail stations used more
+    #   in terms of bikes checked out over the year? 
 
 
     # we need a distance formula for WTG coords. Enter geopy.distance FTW!
     # source: https://janakiev.com/blog/gps-points-distance-python/
-    # for a given rail station, find the bike stations that are less than 200m away. 
-    bikesnearrail = bikestations_near_railstations(max_distance =200, showplot=True)
+    # for every rail station, find the bike stations that are less than 200m away. 
+    bikestation_prox_railstation_df, distances_dict, pltimg = bikestations_near_railstations(max_distance =200, showplot=True)
 
+    # The "bikestation_prox_railstation_df" effectively contains a filtered copy of the "station_locations" dataframe describing all bike stations. 
+    # We can look at the median, mean, and IQR for each of these bike stations over (initially) the last year. 
+    '''
+    In:     len(station_locations)                                                                                                                                                                                                                              
+    Out:    578    
 
+     - Of the complete set of bike stations, how many are near a rail station? 
+    
+    In:     len(bikestation_prox_railstation)                                                                                                                                                                                                                              
+    Out:    54
+    
+     - What is the difference between these two groups in terms of utilization over the year? 
+    '''
+    # lets look at the primary DF and filter by bike stations that have a rail station nearby (given by bikestation_prox_railstation_df)
+    df_filtered_for_proximate_railstations = df[df['TERMINAL_NUMBER'].isin(bikestation_prox_railstation_df['TERMINAL_NUMBER'])] 
+    df_time_filtered2019 = df_filtered_for_proximate_railstations[df_filtered_for_proximate_railstations['Start date'].between(dt.date(2018,10,31),dt.date(2019,12,31),inclusive=True)]                                            
+    '''
+    HYPOTHESIS TESTING CHECKPOINT: 
+    We have two samples: bike stations near a rail station and bike stations that are not. 
+    For each group, we want to get a mean of the sums of bike checkouts over the course of a day. 
+    mean(sum(bike checkouts in a day) for day in data range)
+    '''
+    # list accumulaters for the means
+    means_RS = list()
+    normed_means_RS = list()
+
+    means_notRS = list()
+    normed_means_notRS = list()
+    
+    # of all bike stations(terminals), they are either "close to rail station" or not
+    all_terminal_numbers = set(df.TERMINAL_NUMBER)
+    terminals_near_rail = set(df_time_filtered2019.TERMINAL_NUMBER)
+    terminals_not_near_rail = all_terminal_numbers - terminals_near_rail
+    
+    # checking there is no intersection...
+    # >>> test passed. 
+    print('Sorting bike stations into "near rail station" and "not near rail station" and finding the means of bikes checked out per day per station group')
+    for terminal_id in all_terminal_numbers:
+        ID = terminal_id
+        
+        # filter the primary data frame using the terminal number of the current iterations bikestation terminal ID
+        history_of_bikestation= df[df['TERMINAL_NUMBER']== ID] 
+        
+        # determine the capacity via the station_locations_df data frame. 
+        cap = station_locations_df[station_locations_df['TERMINAL_NUMBER']==ID][':STATION_CAPACITY'].values[0]
+        
+        daily_sum_of_checkouts = history_of_bikestation.groupby('Start date').size()
+        checkouts_norm = daily_sum_of_checkouts/cap
+        print(checkouts_norm)
+        
+        if terminal_id in terminals_near_rail:
+            means_RS.append(np.mean(daily_sum_of_checkouts))
+            normed_means_RS.append(np.mean(checkouts_norm))
+        if terminal_id in terminals_not_near_rail:
+            means_notRS.append(np.mean(daily_sum_of_checkouts))
+            normed_means_notRS.append(np.mean(checkouts_norm))
+        if terminal_id not in terminals_not_near_rail and terminal_id not in terminals_near_rail:
+            c = input(f'Something went wrong. Bike terminal {ID} wasnt found in either of the two subsets (near/notnear a RS).')
+
+    # fig = plt.figure(figsize=(8,4))
+    # ax = fig.add_subplot(1,1,1)
+    # a = means_notRS/np.max(means_notRS)
+    # b = means_RS/np.max(means_RS)
+    # ax.hist(a, label = 'Not Near Rail') 
+    # ax.hist(b, label = 'Near Rail') 
+    # plt.legend()
+    # plt.show()
+
+    '''
+    TUESDAY NIGHT:
+    Lets avoid the "sum of bikes checked out per day" and instead focus on "sum of bikes checked out per station group"
+    which gives us the total bike checkouts for each of the two groups over a one-year time span. 
+    Now, since the sample sizes are drastically different (~10x different), we can divide by sample size and get an average 
+    representing transaction count per station for each group. The question here: is the average transaction count per 
+    bike station greater for those stations near Metro Rail (subway) stations or those with no rail station nearby? 
+    '''
+    transaction_total_not_near_rail = df[df['TERMINAL_NUMBER'].isin(terminals_not_near_rail)].size
+    total_stations_not_near_rail = len(terminals_not_near_rail)
+    mu_not_near_rail = transaction_total_not_near_rail/total_stations_not_near_rail
+    # >>> 389486.87861271674 -> transactions per station (not close to rail) over the one year window. 
+
+    transaction_total_near_rail = df[df['TERMINAL_NUMBER'].isin(terminals_near_rail)].size
+    total_stations_near_rail = len(terminals_near_rail)
+    mu_near_rail = transaction_total_near_rail/total_stations_near_rail
+    # >>> 1023500.1886792453 transactions per station (close to rail) over the one year window
+
+    ratio_close_to_not_close = mu_near_rail/mu_not_near_rail
+    # >>> 2.6278168659359507
+    # The rail stations have (on average) 263% more transactions over one year than those stations not near a rail station. 
+    # Lets do a 2sample ztest as deifined by 
+
+    def ztest(p1,p2,d0,n1,n2):
+        #print(p1,p2,d0,n1,n2)
+        numerator = p1-p2-d0
+        pc = p1/n1 + p2/n2
+        denominator = math.sqrt(p1*(1-p1)/n1+ p2*(1-p2)/n2)
+        # denominator = math.sqrt(pc*(1-pc)/n1+ pc*(1-pc)/n2)
+        
+        print(numerator,'/',denominator,'=')
+        return numerator/denominator
+    
+    # and let H0: p1-p2 = 0 
+    # and let Ha: p1-p2 != 0
+    # As if to say the means are not the same in the alternative hypothesis
+    p1 = total_stations_near_rail/len(all_terminal_numbers)
+    p2 = total_stations_not_near_rail/len(all_terminal_numbers)
+    d = 0
+    n1 = total_stations_near_rail
+    n2 = total_stations_not_near_rail
+    ztest(p1,p2,d,n1,n2)
+    # >>> -19.43...
+
+    # This time lets define the porportions as 
+    p2 = transaction_total_near_rail / (transaction_total_near_rail + transaction_total_not_near_rail)
+    p1 = transaction_total_not_near_rail / (transaction_total_near_rail + transaction_total_not_near_rail)
+    d = 0
+    n2 = total_stations_near_rail
+    n1 = total_stations_not_near_rail
+    ztest(p1,p2,d,n1,n2)
+    # >>> -9.794323313419909
+    # Gives a p-value = 10^-22, which is much much less than alpha = 0.05
 
     # - - - End of program
     print('...done \n')
