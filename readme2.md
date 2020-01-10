@@ -9,6 +9,10 @@ The [Capitol Bikeshare](https://Capitolbikeshare.com) transit system is a part o
 
 [fig0]: plots/capitolbikeshare.png "Capitol Bikeshare"
 
+![CapitalBikeshare Dock station][fig01]
+
+[fig01]: plots/dock.png
+
 ### About the Data
 Each quarter, the company publishes updated datasets to [their website](https://Capitolbikeshare.com/system-data), as CSV files for each month in the latest quarter. While the actual data is stored on an AWS S3 bucket, it is available as far back as late 2010. These data amount to 26.5 million rows of bike rental data - more than enough to dig through and find something interesting. The data has no missing values or NaNs, as the transaction data are automatically collected and preformatted at time of sale. The only modification to the data has been to remove test transactions and engineering runs by the Capitol Bikeshare staff. Below is the list of the (original) nine columns/features of each transaction occurance (row) as well as breif descriptions.
 
