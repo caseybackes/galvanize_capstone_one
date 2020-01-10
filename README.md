@@ -37,23 +37,24 @@ Each quarter, the company publishes updated datasets to [their website](https://
 
 Since the spatial information for each of the bike stations is accessbile, it would be nice to get an understanding of the spatial distribution of bike stations across DC. It would be unsurprising to find most of them concentrated near the more heavily populated areas of downtown. 
 
-![Same as above plot, downsampled data set][fig5]
+![Bike station distribution across DC][fig7]
 
-[fig5]:plots/Figure_16.png
+[fig7]:plots/Figure_5.png
 
-And infact we do see something of a concentration of bike rental stations in the downtown and high traffic areas of DC. But there are plenty of bike stations that are not located downtown, and (presumably) not in as heavily populated or high traffic areas. So it might be worth taking a look at where the most popular bike stations are in terms of rental volume per hour. 
+
+And infact we do see something of a concentration of bike rental stations in the downtown and high traffic areas of DC. But there are plenty of bike stations that are not located downtown, and (presumably) not in as heavily populated or high traffic areas. So it might be worth taking a look at where the most popular bike stations are in terms of rental volume per hour. Lets identify the top ten bike stations in total rental volume and then see their average performance over the course of the day.
 
 ![Where do the Morining Bike Commuters Go?][fig3]
 
 [fig3]:plots/Figure_10.png
 
 
+![Same as above plot, downsampled data set][fig5]
+
+[fig5]:plots/Figure_16.png
 
 
 
-![Bike station distribution across DC][fig7]
-
-[fig7]:plots/Figure_5.png
 
 ### Below is actually just the most popular morning stations. 
 #### You'll notice that the most popular bike station to pick up a bike is the Columbus Circle / Union Station. When people come in from the train, it seems they often pick up a bikeshare. 
