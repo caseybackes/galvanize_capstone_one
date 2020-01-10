@@ -58,7 +58,17 @@ And infact we do see something of a concentration of bike rental stations in the
 
 
 
-The immediately obvious trend we see is the volume of bike rentals across all of these stations seems to coincide with commuter rush hour times of 0800 (8am) and 1800 (6pm). Also, it seems the station with the highest volume of bike rentals by far is the one at Columbus Circle / Union Station. And this makes sense as Union station is a major transportation hub in DC - there is a large number of commuters that come in from outside of DC through that train station. But these commuters - and others who live within DC - still need to move through the city to reach their places of work. 
+The immediately obvious trend we see is the volume of bike rentals across all of these stations seems to coincide with commuter rush hour times of 0800 (8am) and 1800 (6pm). Also, it seems the station with the highest volume of bike rentals by far is the one at Columbus Circle / Union Station. And this makes sense as Union station is a major transportation hub in DC - there is a large number of commuters that come in from outside of DC through that train station. 
+
+Let's specifically look at the most popular bike station across day of week and time of day. 
+
+![kde plot][figkde]
+
+[figkde]: plots/Figure_8.png
+
+So it is not surprising to to see how the bike rental volume changes over time during the day and during the week, with a sharp decline in rental volume over the weekends. This is strong evidence that volume of the bike share service is somehow tied to weekday commutes.
+
+But these commuters - and others who live within DC - still need to move through the city to reach their places of work from other bike rental stations. 
 
 Lets see where these stations are. 
 ![Locations of high volume bike rental stations][fig4]
