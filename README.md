@@ -3,14 +3,14 @@
 
 
 
-The [Capitol Bikeshare](https://Capitolbikeshare.com) company rents bikes to its member customers and casual users in most metro areas of Washington DC. These bikes are equiped with basic tracking devices and accumulate a fair amount of data per ride. In this EDA excercise, we will perform some fairly basic statistical analyses focused on the assets (bikes) and the infrastructure (stations) central to the Capitol Bikeshare business model, and make some well-informed and data-driven recommendations to the company. 
+The [Capitol Bikeshare](https://Capitolbikeshare.com) transit system is a part of the DC Metro Transit system, which rents bikes to its member customers and casual users in most metro areas of Washington DC. These bikes are equiped with basic tracking devices and accumulate nine features of data per ride. In the EDA project, I will attempt to learn something interesting from this large store of data. 
 
 ![Capitol Bikeshare][fig0]
 
 [fig0]: plots/capitolbikeshare.png "Capitol Bikeshare"
 
 ### About the Data
-Each quarter, the company publishes updated datasets to [their website](https://Capitolbikeshare.com/system-data), as CSV files for each month in the latest quarter. Data is available as far back as 2010, though for this analysis we will focus on the last two years. Even this relatively small subset of the data consists of around 6.5M rows of transaction data. While this may be quite small compared to 'big data', it is of adequate sample size for basic EDA and determining statistical trends. The data has no missing values or NaNs, as the transaction data are automatically collected and preformatted. The only modification to the data has been to remove test transactions and engineering runs by the Capitol Bikeshare staff. Below is the list of the (original) nine columns/features of each transaction occurance (row) as well as breif descriptions.
+Each quarter, the company publishes updated datasets to [their website](https://Capitolbikeshare.com/system-data), as CSV files for each month in the latest quarter. While the actual data is stored on an AWS S3 bucket, it is available as far back as late 2010. These data amount to 26.5 million rows of bike rental data - more than enough to dig through and find something interesting. The data has no missing values or NaNs, as the transaction data are automatically collected and preformatted at time of sale. The only modification to the data has been to remove test transactions and engineering runs by the Capitol Bikeshare staff. Below is the list of the (original) nine columns/features of each transaction occurance (row) as well as breif descriptions.
 
 **Data Features**
 - Duration – Duration of trip _(type:int; units: seconds)_
@@ -21,7 +21,8 @@ Each quarter, the company publishes updated datasets to [their website](https://
 - Bike Number – Includes ID number of bike used for the trip _(type:string; ex: 'W22771')_
 - Member Type – Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass 3-Day Pass or 5-Day Pass) _(type:string; ex: 'Member' or 'Casual')_
 
-**[Note]** Additionally, a new feature column was made during the EDA to transform the 'Start date' data type as a datetime() object. This allowed segmentation of transactions during various times of the day - categorized as 'morning', 'afternoon', and 'evening' rides. 
+**[Note]** Additionally, two new feature columns were made during the EDA. First was to transform values in the 'Start date' column into a different data type  - a datetime() object. This allowed segmentation of transactions during various times of the day - categorized as 'morning', 'afternoon', and 'evening' rides. Also, additional datasets were collected to introduce additional features to the primary dataset - specifically the latitude and longitude coordinates of the bike stations. Additional useful GIS datasets came from the OpenData.gov.dc website containing geographical boundary and street map lines - this dramatically helped visuallize the distribution of bike stations across DC. Finally, from the same source were additional GIS datasets describing the DC Metro Rail transit system. A tutorial of working with GIS data is outside the scope of this project, but the 'GEOMETRY' column from the shape files were the most helpful from the GIS datasets. Below is an example of the primary data in raw form without additional columns. 
+
 
 
 |   |Duration  |Start date            | End date           |Start station number | Start station                             |End station number |End station                            |Bike number  |Member type       |
@@ -44,32 +45,16 @@ This allows us to frame three questions to pursure in this EDA:
 # Capital Bikeshare Stations Across DC
 _And more plots that I dont know what to do with yet_
 
-### Initial Failure in Properly Loading Data (dont worry, it improves...)
-![Failed Proper Data Loading][fig9]
-
-[fig9]: plots/stocastic_plot.png "Failed Data Load"
-
-
-![Station Locations Across DC][fig2]
-
-[fig2]: plots/Figure_4.png "Stations across DC"
-
 
 ![Where do the Morining Bike Commuters Go?][fig3]
 
 [fig3]:plots/Figure_10.png
 
-![Same as above plot, but zoomed out][fig4]
 
-[fig4]:plots/Figure_15.png
 
 ![Same as above plot, downsampled data set][fig5]
 
 [fig5]:plots/Figure_16.png
-
-![Same as above plot, super sample with green start/end lines][fig6]
-
-[fig6]:plots/Figure_22_ride_network.png
 
 
 ![Bike station distribution across DC][fig7]
