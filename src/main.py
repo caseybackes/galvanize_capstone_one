@@ -202,7 +202,7 @@ def station_super_dict(df,popular_stations_df):
     """
 
     station_time_hist=dict()
-    station_groups = df.groupby('Start station')
+    station_groups = df.groupby('ADDRESS')
     pass    
     # - - - build the super dict
     for station in popular_stations_df.ADDRESS.values: 
@@ -274,7 +274,7 @@ def plot_popstations(popstations_df, name):
     fig.suptitle(f'Top Ten Capital Bikeshare Stations \n Bike Rentals Per Hour in the {name}',fontsize=18)
     plt.subplots_adjust(hspace=0.5)
 
-def plot_geomap(popstation, daytime_rides, daytime,hardstop=False, metrolines=False, metrostations=False):
+def plot_geomap(popstation, daytime_rides, daytime,hardstop=False, metrolines=False, metrostations=False,title=None):
     """Plot the bike stations and lines from start to end for bike rides. 
     
     Parameters
@@ -379,7 +379,10 @@ def plot_geomap(popstation, daytime_rides, daytime,hardstop=False, metrolines=Fa
     ax.set_ylim(38.79,39)
     plt.xlabel('Longitude ($^\circ$West)')
     plt.ylabel('Latitude ($^\circ$North)')
-    ax.set_title(f'Capital Bikeshare \n 10 Highest Performing Stations during the {daytime}', fontsize=20)
+    if title:
+        ax.set_title(title, fontsize=20)
+    else:
+        ax.set_title(f'Capital Bikeshare \n 10 Highest Performing Stations during the {daytime}', fontsize=20)
     plt.legend()
 
 def print_args(args):
@@ -426,21 +429,22 @@ class StationStats(object):
             terminal_number_mask = df['TERMINAL_NUMBER'] == station_terminal_number
             
             # isolate the columns we care about
-            cols_we_care_about = ['Start date', 'Start station number','Start time', 'End time' ]
+            cols_we_care_about = ['Start date', 'TERMINAL_NUMBER','Start time', 'End time' ]
             df_filtered_for_terminal = df[terminal_number_mask][cols_we_care_about].copy()
-
+            df_filtered_for_terminal['Start date'] = df_filtered_for_terminal['Start date'].apply(lambda x: str(x))
             # extract and separate the date and the time from the timestamp
             df_filtered_for_terminal['Timestamp_date'] = df_filtered_for_terminal['Start date'].map(lambda x: x.split(' ')[0])
             df_filtered_for_terminal['Timestamp_hour'] = df_filtered_for_terminal['Start time'].map(lambda x: str(x.hour))
             
             # since all entries are now from the same station, drop the station number (its the same value all the way down).
             # we also no longer need the 'End time' or 'Start time', as we only needed the hour of the start time. 
-            df_filtered_for_terminal.drop(columns=['Start date','Start time', 'End time','Start station number'], inplace = True)
+            # df_filtered_for_terminal.drop(columns=['Start date','Start time', 'End time','TERMINAL_NUMBER'], inplace = True)
+            df_filtered_for_terminal.drop(columns=['Start time', 'End time','TERMINAL_NUMBER'], inplace = True)
             
             # lets look at each date separately for what the ride rates are by hour. 
             # we do this by setting the rate as the number of rides in a particular hour. 
             # this will be collected for each day of the week and analyzed. 
-            groupedby_date = df_filtered_for_terminal.groupby('Timestamp_date')
+            groupedby_date = df_filtered_for_terminal.groupby('Start date')
 
             for datename, dategroup in groupedby_date:
                 dayname = pd.Timestamp(datename).day_name()
@@ -460,7 +464,8 @@ class StationStats(object):
         return pd.DataFrame(data, index = self.rates[daystring].keys() )
 
     def kde(self, colname= 'MEDIAN'):
-        station_df = self.rides[['Start date', 'Start station number', 'TERMINAL_NUMBER']].copy()
+        print('working kde plot...')
+        station_df = self.rides[['Start date', 'TERMINAL_NUMBER']].copy()
         station_df['dayofweek'] = pd.to_datetime(station_df['Start date'].values).dayofweek
         station_df['hour'] = pd.to_datetime(station_df['Start date'].values).hour
         
@@ -472,9 +477,10 @@ class StationStats(object):
         g.fig.suptitle(f"{colname.capitalize()} Bike Station Utilization \n {self.rides['Start station'].values[0]}") # can also get the figure from plt.gcf()
         g.set_axis_labels('Day of Week','Time of Day (0-24)' )
         g.ax_joint.set_xticklabels(['','Mon','Tue','Wen','Thu','Fri','Sut','Sun'])
+        print(' ... done')
         return g
 
-def plot_geoms(lines=False, metrostations=False, bikestations=False):
+def plot_geoms(lines=False, metrostations=False, bikestations=False, title=None):
     # - - - READ IN SHAPE FILE FOR BORDER OF DC
     # data source: https://opendata.dc.gov/datasets/23246020d6894453bdfcee00956df818_41
     gpd_washborder = gpd.read_file('../misc/Washington_DC_Boundary/Washington_DC_Boundary.shp')
@@ -503,14 +509,17 @@ def plot_geoms(lines=False, metrostations=False, bikestations=False):
         ax.legend()
     
     if bikestations:
+
         ax.scatter(station_locations.LONGITUDE.values,station_locations.LATITUDE.values, c='b',alpha=.4, marker='o',label='Captial Bikeshare Bikestations')
         ax.set_xlim(-77.13,-76.90)
         ax.set_ylim(38.79,39)
         plt.xlabel('Longitude ($^\circ$West)')
         plt.ylabel('Latitude ($^\circ$North)')
         ax.legend()
-    
-    ax.set_title(f'Capital Bikeshare And Metro Rail Stations', fontsize=20)
+    if title:
+        ax.set_title(title, fontsize=20)
+    else:
+        ax.set_title(f'Capital Bikeshare And Metro Rail Stations', fontsize=20)
     return ax
 
 def popular_stations(df,time_start,time_stop, top_n=10):
@@ -595,7 +604,7 @@ def bikestations_near_railstations(max_distance=200, showplot=False):
     filtered_stations_df.drop('index', axis=1,inplace=True)
     return filtered_stations_df,distances,lineplot
 
-
+    
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # - - - - MAIN  - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -626,7 +635,7 @@ if __name__ == '__main__':
     # - - - Program appears to hang while handling the remaining code base. Output a "I am thinking" status.
     print('Doing data science...')
 
-    # - - - FEATURE AND DATA ENGINEERING 
+    print('# - - - FEATURE AND DATA ENGINEERING - - - #')
     # the locations of the bike stations in lat/long are found in another dataset from Open Data DC:
     # https://opendata.dc.gov/datasets/capital-bike-share-locations;
     # detailed description of data from this file can be found here:
@@ -643,19 +652,23 @@ if __name__ == '__main__':
     df['Start time'] =[x.time() for x in pd.to_datetime((df['Start date']))]     
     df['End time'] =[x.time() for x in pd.to_datetime((df['End date']))]     
     
-    # - - - DATA CLEANING
+    print('# - - - DATA CLEANING - - - #')
     # drop unnecessary columns 
     df.drop(['End date', 'Start station', 'End station', 'Member type'], axis = 1, inplace=True)
     # drop redundant time from 'start date' col
     df['Start date'] = df['Start date'].apply(lambda x: x.split(' ')[0])
+    df['Start date'] = df['Start date'].apply(lambda x: dt.date(   int(x.split('-')[0]), int(x.split('-')[1]), int(x.split('-')[2]) ))
     df.drop('Start station number', axis=1, inplace=True)
+
+
     # - - - CLASS OBJECT INSTANTIATION: BIKEREPORT()
     # - - - Which bikes (by bike number) have been used the most (by duration)?
+    print('# - - - BUILDING BIKE REPORT OBJECT - - - #')
     most_used_bikes_10 = df[['Bike number', 'Duration']].groupby('Bike number').agg(sum).sort_values(by='Duration', ascending = False)[:10]
     
 
     # - - - Generate reports for each of the top ten most used bikes.
-    show_bike_reports = True
+    show_bike_reports = False
     if show_bike_reports:
         for i in range(9):
             br = BikeReport(df, most_used_bikes_10.iloc[i].name)
@@ -667,13 +680,17 @@ if __name__ == '__main__':
     #   2) the afternoon (9am-3pm)?
     #   1) the morning (3pm-Midnight)?
     # TODO [COMPLETE]: Define a function that returns the popular morning/afternoon/evening bike stations given a start string and stop string of military time.
-    
+    print('# - - - DETERMINING POPULAR BIKE STATIONS BY TIME OF DAY - - - #')
+
     popular_morning_stations =   popular_stations(df, "0400", "0900",top_n=10)
     popular_afternoon_stations = popular_stations(df, "0900", "1500",top_n=10)
     popular_evening_stations =   popular_stations(df, "1500", "2359",top_n=10)
 
 
+
     if show_barchart:
+        print('# - - - GENERATING BAR CHART OF POPULAR STATION RENTAL VOLUME - - - #')
+
         # - - - select a style
         plt.style.use('fivethirtyeight')
         fig,ax = plt.subplots(figsize=(20,10))
@@ -707,6 +724,24 @@ if __name__ == '__main__':
         ax.set_title("Top 10 Popular Bike Stations by Time of Day")
         fig.tight_layout(pad=1)
 
+    popstations = list()
+    popstations.append(list(popular_morning_stations.TERMINAL_NUMBER.values))
+    popstations.append(list(popular_afternoon_stations.TERMINAL_NUMBER.values))
+    popstations.append(list(popular_evening_stations.TERMINAL_NUMBER.values))
+    popstations = [item for sublist in popstations for item in sublist] #thanks stack overflow
+    popstations_df = station_locations[station_locations['TERMINAL_NUMBER'].isin(popstations)]
+    plot_geoms(title='Highest Volume Bike Stations')
+    for s in popstations:
+        #sx = s['LATITUDE']
+        slat = station_locations[station_locations['TERMINAL_NUMBER']==s]['LATITUDE'].values[0]
+        slong = station_locations[station_locations['TERMINAL_NUMBER']==s]['LONGITUDE'].values[0]
+        #print(slat,slong)
+        sname = station_locations[station_locations['TERMINAL_NUMBER']==s]['ADDRESS'].values[0]
+        plt.scatter(slong,slat,marker='o',label = sname)
+    #plt.legend()
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
+
+    plt.show(block=False)
 
     # ------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------
@@ -718,6 +753,8 @@ if __name__ == '__main__':
     # Each station's dictionary will all be stored in a 'super dictionary'
 
     if show_barchart:
+        print('# - - - PLOTTING POPULAR STATIONS BY TIME OF DAY - - - #')
+
         station_time_hist2_pop_morn_stations = station_super_dict(df, popular_morning_stations)
         station_time_hist2_pop_aft_stations = station_super_dict(df, popular_afternoon_stations)
         station_time_hist2_pop_eve_stations = station_super_dict(df, popular_evening_stations)
@@ -732,6 +769,7 @@ if __name__ == '__main__':
     #   Are the bike stations that are "close" to Metro rail stations used more
     #   in terms of bikes checked out over the year? 
 
+    print('# - - - DETERMINING DISTANCE FROM EACH RAIL STATIONS BIKE STATIONS - - - #')
 
     # we need a distance formula for WTG coords. Enter geopy.distance FTW!
     # source: https://janakiev.com/blog/gps-points-distance-python/
@@ -749,62 +787,27 @@ if __name__ == '__main__':
     In:     len(bikestation_prox_railstation)                                                                                                                                                                                                                              
     Out:    54
     
-     - What is the difference between these two groups in terms of utilization over the year? 
+     - What is the difference between these two groups in terms of utilization over a year? 
     '''
     # lets look at the primary DF and filter by bike stations that have a rail station nearby (given by bikestation_prox_railstation_df)
+
+    print('# - - - FILTERING MAIN DATAFRAME FOR BIKE STATIONS WITHIN 200m OF RAIL STATIONS - - - #')
     df_filtered_for_proximate_railstations = df[df['TERMINAL_NUMBER'].isin(bikestation_prox_railstation_df['TERMINAL_NUMBER'])] 
     df_time_filtered2019 = df_filtered_for_proximate_railstations[df_filtered_for_proximate_railstations['Start date'].between(dt.date(2018,10,31),dt.date(2019,12,31),inclusive=True)]                                            
+    
+    
     '''
     HYPOTHESIS TESTING CHECKPOINT: 
     We have two samples: bike stations near a rail station and bike stations that are not. 
     For each group, we want to get a mean of the sums of bike checkouts over the course of a day. 
     mean(sum(bike checkouts in a day) for day in data range)
     '''
-    # list accumulaters for the means
-    means_RS = list()
-    normed_means_RS = list()
 
-    means_notRS = list()
-    normed_means_notRS = list()
     
     # of all bike stations(terminals), they are either "close to rail station" or not
     all_terminal_numbers = set(df.TERMINAL_NUMBER)
     terminals_near_rail = set(df_time_filtered2019.TERMINAL_NUMBER)
     terminals_not_near_rail = all_terminal_numbers - terminals_near_rail
-    
-    # checking there is no intersection...
-    # >>> test passed. 
-    print('Sorting bike stations into "near rail station" and "not near rail station" and finding the means of bikes checked out per day per station group')
-    for terminal_id in all_terminal_numbers:
-        ID = terminal_id
-        
-        # filter the primary data frame using the terminal number of the current iterations bikestation terminal ID
-        history_of_bikestation= df[df['TERMINAL_NUMBER']== ID] 
-        
-        # determine the capacity via the station_locations_df data frame. 
-        cap = station_locations_df[station_locations_df['TERMINAL_NUMBER']==ID][':STATION_CAPACITY'].values[0]
-        
-        daily_sum_of_checkouts = history_of_bikestation.groupby('Start date').size()
-        checkouts_norm = daily_sum_of_checkouts/cap
-        print(checkouts_norm)
-        
-        if terminal_id in terminals_near_rail:
-            means_RS.append(np.mean(daily_sum_of_checkouts))
-            normed_means_RS.append(np.mean(checkouts_norm))
-        if terminal_id in terminals_not_near_rail:
-            means_notRS.append(np.mean(daily_sum_of_checkouts))
-            normed_means_notRS.append(np.mean(checkouts_norm))
-        if terminal_id not in terminals_not_near_rail and terminal_id not in terminals_near_rail:
-            c = input(f'Something went wrong. Bike terminal {ID} wasnt found in either of the two subsets (near/notnear a RS).')
-
-    # fig = plt.figure(figsize=(8,4))
-    # ax = fig.add_subplot(1,1,1)
-    # a = means_notRS/np.max(means_notRS)
-    # b = means_RS/np.max(means_RS)
-    # ax.hist(a, label = 'Not Near Rail') 
-    # ax.hist(b, label = 'Near Rail') 
-    # plt.legend()
-    # plt.show()
 
     '''
     TUESDAY NIGHT:
@@ -814,51 +817,114 @@ if __name__ == '__main__':
     representing transaction count per station for each group. The question here: is the average transaction count per 
     bike station greater for those stations near Metro Rail (subway) stations or those with no rail station nearby? 
     '''
+    print('# - - - DETERMIMING RATIO OF RENTAL VOLUME BETWEEN "NEAR RAIL" AND "NOT NEAR RAIL" BIKE STATIONS - - - #')
+
     transaction_total_not_near_rail = df[df['TERMINAL_NUMBER'].isin(terminals_not_near_rail)].size
     total_stations_not_near_rail = len(terminals_not_near_rail)
-    mu_not_near_rail = transaction_total_not_near_rail/total_stations_not_near_rail
-    # >>> 389486.87861271674 -> transactions per station (not close to rail) over the one year window. 
 
     transaction_total_near_rail = df[df['TERMINAL_NUMBER'].isin(terminals_near_rail)].size
     total_stations_near_rail = len(terminals_near_rail)
-    mu_near_rail = transaction_total_near_rail/total_stations_near_rail
-    # >>> 1023500.1886792453 transactions per station (close to rail) over the one year window
 
-    ratio_close_to_not_close = mu_near_rail/mu_not_near_rail
-    # >>> 2.6278168659359507
-    # The rail stations have (on average) 263% more transactions over one year than those stations not near a rail station. 
-    # Lets do a 2sample ztest as deifined by 
-
-    def ztest(p1,p2,d0,n1,n2):
-        #print(p1,p2,d0,n1,n2)
-        numerator = p1-p2-d0
-        pc = p1/n1 + p2/n2
-        denominator = math.sqrt(p1*(1-p1)/n1+ p2*(1-p2)/n2)
-        # denominator = math.sqrt(pc*(1-pc)/n1+ pc*(1-pc)/n2)
-        
-        print(numerator,'/',denominator,'=')
-        return numerator/denominator
+    # Ratio: (bike rentals near a rail station) to (bike rentals not near a rail station)
+    station_group_ratio = transaction_total_near_rail / transaction_total_not_near_rail
+    # >>> 0.268351
+    # Which would be unremarkable if there were also 0.26 as many bike stations near rail stations as not. BUT...!
+    # when we divide by sample size for each group we get 
+    station_groups_ratio_per_station=(transaction_total_near_rail/total_stations_near_rail) / (transaction_total_not_near_rail/total_stations_not_near_rail) 
+    # >>> 2.62781
     
-    # and let H0: p1-p2 = 0 
-    # and let Ha: p1-p2 != 0
-    # As if to say the means are not the same in the alternative hypothesis
-    p1 = total_stations_near_rail/len(all_terminal_numbers)
-    p2 = total_stations_not_near_rail/len(all_terminal_numbers)
-    d = 0
-    n1 = total_stations_near_rail
-    n2 = total_stations_not_near_rail
-    ztest(p1,p2,d,n1,n2)
-    # >>> -19.43...
 
-    # This time lets define the porportions as 
-    p2 = transaction_total_near_rail / (transaction_total_near_rail + transaction_total_not_near_rail)
-    p1 = transaction_total_not_near_rail / (transaction_total_near_rail + transaction_total_not_near_rail)
-    d = 0
-    n2 = total_stations_near_rail
-    n1 = total_stations_not_near_rail
-    ztest(p1,p2,d,n1,n2)
-    # >>> -9.794323313419909
-    # Gives a p-value = 10^-22, which is much much less than alpha = 0.05
+    fig = plt.figure()
+    ax1 = fig.add_subplot(1,2,1)
+    ax2 = fig.add_subplot(1,2,2)
+    rental_count_by_station_cat = (transaction_total_near_rail,transaction_total_not_near_rail)
+    rental_count_per_station_count_per_station_cat = (transaction_total_near_rail/total_stations_near_rail,transaction_total_not_near_rail/total_stations_not_near_rail)
+    tick_loc = (1,2)
+
+    ax1.bar(tick_loc, rental_count_by_station_cat)
+    ax1.set_xticks(ticks=tick_loc)
+    ax1.set_xticklabels(('Near Rail','Not Near Rail'))
+    ax1.set_title('Rental Count by Station Category')
+
+    ax2.bar(tick_loc, rental_count_per_station_count_per_station_cat)
+    ax2.set_xticks(ticks=tick_loc)
+    ax2.set_xticklabels(('Near Rail','Not Near Rail'))
+    ax2.set_title('Rental Count Per Station by Station Category')
+
+    plt.show(block=False)
+    
+    
+    print('# - - - PLOTTING THE METRO STATION MAP AND 2019 BIKE STATIONS CLOSE TO RAIL  - - - #')
+
+    # show the bike stations that are close (within 200m) to a rail station
+    plot_geoms(lines=True, metrostations=True,bikestations=False)
+    x = df_time_filtered2019.LONGITUDE.values
+    y = df_time_filtered2019.LATITUDE.values
+    plt.scatter(x,y,color='r',marker ="D", label="Bike Stations Near Rail")
+    plt.legend()
+    plt.show(block=False) 
+
+    # show the utilization of each of the "near rail" bike stations over time
+    # This plot shows the seasonal cycle throug the 9 years of data, highlighting the dramatic drop in bikeshare rentals during the winter. 
+    
+    print('# - - - DETERMINING THE WEEKLY VOLUME OF "NEAR RAIL" BIKE STATIONS ACROSS ALL OF DATASET (2010-2019) - - - #')
+
+    stations_near_rail_df = df[df['TERMINAL_NUMBER'].isin(terminals_near_rail)] 
+    weekly_sum_of_rentals_by_station_df = pd.DataFrame(index = [f'{yr}-{wknum}' for yr in range(2010,2020) for wknum in range(1,54) ],
+    columns=[str(x) for x in sorted(list(terminals_near_rail))],data=0)
+    
+    for station in sorted(list(terminals_near_rail)):
+        
+        station_df = stations_near_rail_df[stations_near_rail_df['TERMINAL_NUMBER'] == station].copy().sort_values(by='Start date')
+        station_df['Start date ordinal'] = station_df['Start date'].apply(lambda x: x.toordinal())
+        grpby_dt = station_df.groupby('Start date ordinal')
+        print(f'Aggregating daily usage for Station {station}')
+        
+        for daynum,group_df in grpby_dt:
+            weeknum = dt.date.isocalendar(dt.date.fromordinal(daynum))[1] 
+            yr =dt.date.isocalendar(dt.date.fromordinal(daynum))[0]
+            index_for_df = f'{yr}-{weeknum}'
+            weekly_sum_of_rentals_by_station_df[str(station)].loc[index_for_df]+=group_df.size
+    
+    # Since there are so many lines on top of each other, lets look at just a few that are close to each other. 
+    # There are two stations near each other. Lets see how their bike rental activity compares over time. 
+    print('# - - - COMPARING RENTAL VOLUME OF BIKE STATIONS IN CLOSE PROXIMITY OVER ALL OF DATASET TIME RANGE - - - #')
+    
+    station_terminal_pair1 = ['31650','31208']
+    station_terminal_pair2 = ['31254','31291']
+    station_terminal_pair3 = ['31124','31105']
+    
+    def compare_bikestations(station_terminal_pair, wk_start=0):
+        '''station_terminal_pair: two station terminal numbers to compare visually
+        wk - week number from 0 to 529'''
+        station1 = station_locations[station_locations['TERMINAL_NUMBER']==int(station_terminal_pair[0])]
+        station2 = station_locations[station_locations['TERMINAL_NUMBER']==int(station_terminal_pair[1])]
+        station1_name = station_locations[station_locations['TERMINAL_NUMBER']==int(station_terminal_pair[0])].ADDRESS.values[0]
+        station2_name = station_locations[station_locations['TERMINAL_NUMBER']==int(station_terminal_pair[1])].ADDRESS.values[0]
+
+        # plot the geometry data for metrolines and metro stations with only two "close proximity" bike stations to compare rental volume
+        plot_geoms(lines=True, metrostations=True, bikestations=False)   
+        plt.scatter(station1.LONGITUDE, station1.LATITUDE,color='r',marker='o', label=station1.ADDRESS.values)
+        plt.scatter(station2.LONGITUDE, station2.LATITUDE,color='b',marker='o', label=station2.ADDRESS.values)
+        plt.legend()
+        plt.show(block=False)
+        
+        fig,ax = plt.subplots()
+        ax = weekly_sum_of_rentals_by_station_df[station_terminal_pair][wk_start::].plot() 
+        ax.legend((station1_name,station2_name))
+        plt.title('Comparing Rental Volume of Two Nearby Bike Stations')
+        #ax.set_xticklabels((weekly_sum_of_rentals_by_station_df.index.values[0:-1:13]))   
+        ax.set_xlabel('YEAR - #Week')
+        ax.set_ylabel('Weekly Ride Count per Station')
+        plt.show(block=False)
+    
+    compare_bikestations(station_terminal_pair1,wk_start=250)
+    compare_bikestations(station_terminal_pair2,wk_start=250)
+    compare_bikestations(station_terminal_pair3,wk_start=250)
+
+
+
+
 
     # - - - End of program
     print('...done \n')
