@@ -41,6 +41,7 @@ Since the spatial information for each of the bike stations is accessbile, it wo
 
 [fig1]:plots/bikestation_distribution.png "Plot name"
 
+### Popular Bike Stations by Bike Rental Volume
 And infact we do see something of a concentration of bike rental stations in the downtown and high traffic areas of DC. But there are plenty of bike stations that are not located downtown, and (presumably) not in as heavily populated or high traffic areas. So it might be worth taking a look at where the most popular bike stations are in terms of rental volume. We can segment this further by looking at each station's rental volume in the morning, afternoon, and evening. 
 
 ![Top ten bike stations by time of day][fig2]
@@ -85,6 +86,7 @@ Let's take the GIS data that describes the Metro Rail Lines and Stations, and su
 
 [fig72]:plots/bikesnearrail2.png
 
+### Proportion Analysis
 If we collect the total number of bike rentals across our dataset of 25 million+ rows, and count those that are checked out at a bike station with a rail station within 200 meters against those that are checked out at bike stations farter than 200 meters from a rail station. Of course, there are fewer bike stations in close proximity to the rail stations - by about 9.8 times as many not near a rail station. 
 
 Out of the 572 bike stations in the dataset...
