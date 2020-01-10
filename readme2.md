@@ -122,31 +122,38 @@ Focusing now on just those stations located near a rail station, we might ask wh
 
 I was able to find three such pairs of stations that are located near a Metro Rail station. In fact, there were several such pairs, which raises more questions. But we will focus on exploring the rental volume of the pairs over time. 
 
-![adjacent stations rental volume PAIR 1][figpair1]
-
-[figpair1]: plots/comparing_nearby_stations_volume1.png
 
 ![adjacent stations rental volume PAIR 1 map][figpair1map]
 
 [figpair1map]: plots/comparing_nearby_stations_volume1map.png
 
+![adjacent stations rental volume PAIR 1][figpair1]
 
-![adjacent stations rental volume PAIR 2][figpair2]
+[figpair1]: plots/comparing_nearby_stations_volume1.png
 
-[figpair2]: plots/comparing_nearby_stations_volume2.png
+
+
 
 ![adjacent stations rental volume PAIR 2 map][figpair2map]
 
 [figpair2map]: plots/comparing_nearby_stations_volume2map.png
 
+![adjacent stations rental volume PAIR 2][figpair2]
+
+[figpair2]: plots/comparing_nearby_stations_volume2.png
+
+
+
+
+![adjacent stations rental volume PAIR 3 map][figpair3map]
+
+[figpair3map]: plots/comparing_nearby_stations_volume3map.png
 
 ![adjacent stations rental volume PAIR 3][figpair3]
 
 [figpair3]: plots/comparing_nearby_stations_volume3.png
 
-![adjacent stations rental volume PAIR 3 map][figpair3map]
 
-[figpair3map]: plots/comparing_nearby_stations_volume3map.png
 
 Just from looking at these three samples we can learn a few things. First, there is a clear cyclic pattern in rental volume over the year. This makes more sense when we remember that winters in Washington DC can be quite cold, and the snow can make it quite dangerous to engage in bikeshare. Second, for each of these samples, which were drawn at random, we have in each case that when a new bike rental station is brought up near an existing one, it will eventually out perform the older one. 
 
