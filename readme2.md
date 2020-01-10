@@ -6,6 +6,7 @@
 The [Capitol Bikeshare](https://Capitolbikeshare.com) transit system is a part of the DC Metro Transit system, which rents bikes to its member customers and casual users in most metro areas of Washington DC. These bikes are equiped with basic tracking devices and accumulate nine features of data per ride. In the EDA project, I will attempt to learn something interesting from this large store of data. 
 
 ![Capitol Bikeshare][fig0]
+
 [fig0]: plots/capitolbikeshare.png "Capitol Bikeshare"
 
 ### About the Data
