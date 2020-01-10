@@ -33,18 +33,15 @@ Each quarter, the company publishes updated datasets to [their website](https://
 |3  |   606    |2018-05-01 00:01:22   |2018-05-01 00:11:29 |31104                |Adams Mill & Columbia Rd NW                |31509              |New Jersey Ave & R St NW               |W00822       |Member            |
 |4  |   582    |2018-05-01 00:04:52   |2018-05-01 00:14:34 |31129                |15th St & Pennsylvania Ave NW/Pershing Park|31118              |3rd & Elm St NW                        |W21846       |Member            |
 
-### Lets ask some interesting and relavent business questions
-Keeping the business assets and infrastructure at top of mind, we may want to ask how all of our stations are doing in terms of ride rate (defined as rides initiated at a particular start station). Those with the lowest ride rates may warrent further investigation, but knowing the most popular bike stations is useful as well. 
+### Capital Bikeshare Stations Across DC
 
-Perhaps, we could recommend a few stations for the company to restock or return bikes to in order to reduce idle time of the bikes and improve ride rates at various stations. Additionally, we may want to identify the bikes that have the longest cumulative "Duration", and expect them to need servicing soon. 
-This allows us to frame three questions to pursure in this EDA: 
-1. What stations/locations have the top and bottom X% of ride rates? How long are bikes idle at each station? 
-2. Question here
+Since the spatial information for each of the bike stations is accessbile, it would be nice to get an understanding of the spatial distribution of bike stations across DC. It would be unsurprising to find most of them concentrated near the more heavily populated areas of downtown. 
 
+![Same as above plot, downsampled data set][fig5]
 
-# Capital Bikeshare Stations Across DC
-_And more plots that I dont know what to do with yet_
+[fig5]:plots/Figure_16.png
 
+And infact we do see something of a concentration of bike rental stations in the downtown and high traffic areas of DC. But there are plenty of bike stations that are not located downtown, and (presumably) not in as heavily populated or high traffic areas. So it might be worth taking a look at where the most popular bike stations are in terms of rental volume per hour. 
 
 ![Where do the Morining Bike Commuters Go?][fig3]
 
@@ -52,9 +49,6 @@ _And more plots that I dont know what to do with yet_
 
 
 
-![Same as above plot, downsampled data set][fig5]
-
-[fig5]:plots/Figure_16.png
 
 
 ![Bike station distribution across DC][fig7]
